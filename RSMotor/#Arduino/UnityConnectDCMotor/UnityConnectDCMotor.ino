@@ -3,6 +3,7 @@
 #include <ConnectUnityManage.h>
 #include <FlexiTimer2.h>
 #include "rs.h"
+#include "interval.h"
 
 //+++設定++++++++++++++++++++++++++++++
 //baudRate = 115200
@@ -26,6 +27,8 @@ bool _lp;
 #define CMD_B3 0xB3 //
 #define CMD_B4 0xB4 //
 
+//SendData Format ※別の変数にコピーしてから置換する
+String sendData_Status = "255,@1,@2\t";  //ヘッダー0xFF
 
 //SendData(One Byte)
 struct sendCmd {
@@ -38,13 +41,12 @@ struct sendCmd {
   bool flg_1 : 1; //
   bool flg_0 : 1;
 };
-struct sendCmd SendCmd_Info;
+struct sendCmd SendCmd_Info = {false, false, false, false, false, false, false, false};
 
 //割り込み周期用(us)
 const unsigned int oneloop = 40;
 
 const unsigned int LOOP_TIME_US = 10000;  //ループ関数の周期(μsec)
-int processingTime; //loopの頭から最後までの処理時間
 
 //モーター用
 int _tmpSpeed;
@@ -72,109 +74,41 @@ void interrupt_loop() {
 }
 
 void loop() {
-  //デバッグモードでもコマンド受信モードでも一定周期にしないと割込み周期の処理速度に影響する
-  processingTime = micros();
 
-  _lp = !_lp;
-  digitalWrite(PIN_LOOP_DEBUG, _lp);
+  //データ受信・処理・送信
+  interval<LOOP_TIME_US>::run([] {
+    _lp = !_lp;
+    digitalWrite(PIN_LOOP_DEBUG, _lp);
 
 #if false
-  //デバッグ用
-  _rs.Debug_SetTargetSpeed();
+    //デバッグ用
+    _rs.Debug_SetTargetSpeed();
 #else
-  //データを受信
-  con.GetReceiveData();
+    //データを受信
+    con.GetReceiveData();
 
-  //受信データを解析
-  ChkReceiveData();
+    //受信データを解析
+    ChkReceiveData();
 
-  //目標スピードを更新
-  _rs.SetTargetSpeed(_tmpSpeed);
+    //目標スピードを更新
+    _rs.SetTargetSpeed(_tmpSpeed);
 
-  //送信データを生成,送信
-  SetSendData();
-
+    //送信データを生成,送信
+    SetSendData();
 #endif
-
-
-  //一連の処理にかかった時間を考慮して待ち時間を設定する
-  wait_ConstantLoop();
-}
-
-void wait_ConstantLoop() {
-  processingTime = micros() - processingTime;
-  long loopWaitTime = LOOP_TIME_US - processingTime;
-
-  if (loopWaitTime < 0)  return;
-
-  long start_time = micros();
-  while ( micros() - start_time < loopWaitTime) {};
+  });
 }
 
 //受信データを解析
 void ChkReceiveData() {
-  Update_Command(con.OneSetCmd, con.ReceiveCmd);
-}
-
-//送信データを生成
-void SetSendData() {
-  con.sendData = "";
-
-  //ヘッダー
-  //全てTrue
-  con.sendData += 0xFF;
-  con.sendData += ",";
-
-  //ステータス  
-  //flg_6 : 1周期On(true) , Off(false)
-  //flg_5 : プラス方向の回転
-  //flg_4 : マイナス方向の回転
-  SendCmd_Info.flg_7 = true;
-  SendCmd_Info.flg_6 = _rs.CreateSendData_isOn();
-  bool _sw = _rs.CreateSendData_isNormalRotation();
-  SendCmd_Info.flg_5 = _sw;
-  SendCmd_Info.flg_4 = !_sw;
-  SendCmd_Info.flg_3 = false;
-  SendCmd_Info.flg_2 = false;
-  SendCmd_Info.flg_1 = false;
-  SendCmd_Info.flg_0 = false;
-
-  con.sendData += GetSendCmd_Status();
-  con.sendData += ",";
-
-  //目標速度(絶対値)
-  con.sendData += String(abs(_rs.Get_targetSpeed()));
-  con.sendData += '\t';
-
-  //送信
-  con.Send();
-}
-
-//送信コマンドの生成
-String GetSendCmd_Status() {
-  byte _c = (byte)((SendCmd_Info.flg_7 << 7) |
-                   (SendCmd_Info.flg_6 << 6) |
-                   (SendCmd_Info.flg_5 << 5) |
-                   (SendCmd_Info.flg_4 << 4) |
-                   (SendCmd_Info.flg_3 << 3) |
-                   (SendCmd_Info.flg_2 << 2) |
-                   (SendCmd_Info.flg_1 << 1) |
-                   (SendCmd_Info.flg_0)
-                  );
-  return String(_c);
-}
-
-//[CommandType] procceing Receive Data
-//各プロジェクトで異なる
-void Update_Command(int size, byte rCmd[][3]) {
   byte cmd_main;
   byte cmd_sub1;
   byte cmd_sub2;
   //+++++++++++++++++++++++++++
-  for (int i = 0; i < size; i++) {
-    cmd_main = rCmd[i][0];
-    cmd_sub1 = rCmd[i][1];
-    cmd_sub2 = rCmd[i][2];
+  for (int i = 0; i < con.OneSetCmd; i++) {
+    cmd_main = con.ReceiveCmd[i][0];
+    cmd_sub1 = con.ReceiveCmd[i][1];
+    cmd_sub2 = con.ReceiveCmd[i][2];
     switch (cmd_main) {
       //--------------------
       case CMD_A0://Start
@@ -190,13 +124,44 @@ void Update_Command(int size, byte rCmd[][3]) {
         _tmpSpeed *= -1;
         break;
     }
-    //これがないとReceiveCmdを初期化できない！
-    con.ReceiveCmd[i][0] = (byte)0;
-    con.ReceiveCmd[i][1] = (byte)0;
-    con.ReceiveCmd[i][2] = (byte)0;
   }
 }
 
+//送信データを生成
+void SetSendData() {
+  con.sendData = "";
+  String _tmp = sendData_Status;
 
+  //ステータス
+  //flg_6 : 1周期On(true) , Off(false)
+  //flg_5 : プラス方向の回転
+  //flg_4 : マイナス方向の回転
+  SendCmd_Info.flg_6 = _rs.CreateSendData_isOn();
+  bool _sw = _rs.CreateSendData_isNormalRotation();
+  SendCmd_Info.flg_5 = _sw;
+  SendCmd_Info.flg_4 = !_sw;
 
+  _tmp.replace("@1", GetSendCmd_Status());
+
+  //目標速度(絶対値)
+  _tmp.replace("@2", String(abs(_rs.Get_targetSpeed())));
+  con.sendData = _tmp;
+
+  //送信
+  con.Send();
+}
+
+//ステータスから送信コマンドの生成
+String GetSendCmd_Status() {
+  byte _b = (byte)((SendCmd_Info.flg_7 << 7) |
+                   (SendCmd_Info.flg_6 << 6) |
+                   (SendCmd_Info.flg_5 << 5) |
+                   (SendCmd_Info.flg_4 << 4) |
+                   (SendCmd_Info.flg_3 << 3) |
+                   (SendCmd_Info.flg_2 << 2) |
+                   (SendCmd_Info.flg_1 << 1) |
+                   (SendCmd_Info.flg_0)
+                  );
+  return String(_b);
+}
 
