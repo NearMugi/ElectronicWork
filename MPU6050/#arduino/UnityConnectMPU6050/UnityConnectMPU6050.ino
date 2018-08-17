@@ -4,7 +4,6 @@
 //SCL -> A5
 //SDA -> A4
 #include "ConnectUnityManage.h"
-#include "interval.h"
 #include <FlexiTimer2.h>
 #include "MPU6050_Manage.h"
 //+++設定++++++++++++++++++++++++++++++
@@ -20,7 +19,7 @@ bool isCalibration;
 
 //MPU6050の初期化時に使用するオフセット
 //CalibrationがOFFの時に適用される
-int CalOfs[4] = {0, 0, 0, 0}; //Gyro x,y,z, Accel z
+int CalOfs[4] = {167, -27, -18, 1072}; //Gyro x,y,z, Accel z
 
 //MPU6050から取得するデータ
 float mpu6050_EulerAngle[3];  //[x,y,z]
@@ -79,7 +78,9 @@ struct sendCmd {
 };
 struct sendCmd SendCmd_Info;
 
-const unsigned int LOOP_TIME_US = 10000;  //ループ関数の周期(μsec)
+//ループ周期(us)
+#include "interval.h"
+#define LOOP_TIME_US 10000
 
 void ValueInit() {
   //MPU6050から取得するデータ

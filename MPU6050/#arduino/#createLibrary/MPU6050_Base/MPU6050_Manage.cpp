@@ -202,6 +202,12 @@ void MPU6050_Manage::Get_Quaternion(float v[4]) {
   v[3] = q.z;
 }
 
+void MPU6050_Manage::Get_Gravity(float v[3]) {
+  v[0] = gravity.x;
+  v[1] = gravity.y;
+  v[2] = gravity.z;
+}
+
 void MPU6050_Manage::Get_RealAccel(int v[3]) {
   v[0] = aaReal.x;
   v[1] = aaReal.y;

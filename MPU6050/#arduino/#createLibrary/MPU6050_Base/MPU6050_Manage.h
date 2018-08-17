@@ -8,6 +8,7 @@ class MPU6050_Manage {
     void updateValue();
     void Get_EulerAngle(float v[3]);
     void Get_Quaternion(float v[4]);
+    void Get_Gravity(float v[3]);
     void Get_RealAccel(int v[3]);
     void Get_WorldAccel(int v[3]);
     void Get_teapotPacket(uint8_t v[14]);
