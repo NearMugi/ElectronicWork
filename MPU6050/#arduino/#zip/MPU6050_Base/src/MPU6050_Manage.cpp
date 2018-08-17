@@ -23,7 +23,6 @@
   THE SOFTWARE.
   ===============================================
 */
-
 #include "I2Cdev.h"
 #include "MPU6050_6Axis_MotionApps20.h"
 #if I2CDEV_IMPLEMENTATION == I2CDEV_ARDUINO_WIRE
@@ -31,7 +30,9 @@
 #endif
 
 #include "MPU6050_Manage.h"
+#include "MPU6050_Calibration.h"
 MPU6050 mpu;
+MPU6050_Calibration cal;
 
 // orientation/motion vars
 Quaternion q;           // [w, x, y, z]         quaternion container
@@ -51,10 +52,26 @@ uint8_t fifoBuffer[64]; // FIFO storage buffer
 // packet structure for InvenSense teapot demo
 uint8_t teapotPacket[14] = { '$', 0x02, 0, 0, 0, 0, 0, 0, 0, 0, 0x00, 0x00, '\r', '\n' };
 
-#include "MPU6050_Calibration.h"
-MPU6050_Calibration cal;
+bool isGetQuaternion = false;
+bool isGetGravity = false;
+bool isGetAccel = false;
+bool isGetLinearAccel = false;
+bool isGetLinearAccelInWorld = false;
+bool isGetYawPitchRoll = false;
 
-void MPU6050_Manage::reset(){
+String Msg;
+
+MPU6050_Manage::MPU6050_Manage(bool _isGetQuaternion, bool _isGetGravity, bool _isGetAccel, bool _isGetLinearAccel, bool _isGetLinearAccelInWorld, bool _isGetYawPitchRoll) {
+  isGetQuaternion = _isGetQuaternion;
+  isGetGravity = _isGetGravity;
+  isGetAccel = _isGetAccel;
+  isGetLinearAccel = _isGetLinearAccel;
+  isGetLinearAccelInWorld = _isGetLinearAccelInWorld;
+  isGetYawPitchRoll = _isGetYawPitchRoll;
+}
+
+
+void MPU6050_Manage::reset() {
   isFinishInitialize = false;
 }
 
@@ -74,13 +91,18 @@ void MPU6050_Manage::init(bool _isCalibration, int _ofs[4]) {
 
   // verify connection
   Serial.println(F("Testing device connections..."));
-  Serial.println(mpu.testConnection() ? F("MPU6050 connection successful") : F("MPU6050 connection failed"));
 
-
+  if (mpu.testConnection()) {
+    Msg = F("MPU6050 connection successful");
+  } else {
+    Msg = F("MPU6050 connection failed");
+  }
 
   //Calibration
   if (_isCalibration) {
     Serial.println("\n[Start Calibration]");
+    Msg = F("Start Calibration...");
+
     bool isEnd = false;
     cal.init(mpu);
     while (!isEnd) {
@@ -90,6 +112,8 @@ void MPU6050_Manage::init(bool _isCalibration, int _ofs[4]) {
     CalOfs[1] = cal.GetOfs_GyroY();
     CalOfs[2] = cal.GetOfs_GyroZ();
     CalOfs[3] = cal.GetOfs_AcelZ();
+    Msg = F("End Calibration!");
+
   } else {
     CalOfs[0] = _ofs[0];
     CalOfs[1] = _ofs[1];
@@ -112,6 +136,7 @@ void MPU6050_Manage::init(bool _isCalibration, int _ofs[4]) {
   mpu.setZGyroOffset(CalOfs[2]);
   mpu.setZAccelOffset(CalOfs[3]);
 
+
   // make sure it worked (returns 0 if so)
   if (devStatus == 0) {
     // turn on the DMP, now that it's ready
@@ -127,6 +152,10 @@ void MPU6050_Manage::init(bool _isCalibration, int _ofs[4]) {
 
     // get expected DMP packet size for later comparison
     packetSize = mpu.dmpGetFIFOPacketSize();
+
+    Msg = F("DMP ready! packetSize:");
+    Msg.concat(String(packetSize));
+
   } else {
     // ERROR!
     // 1 = initial memory load failed
@@ -141,8 +170,12 @@ void MPU6050_Manage::init(bool _isCalibration, int _ofs[4]) {
 }
 
 void MPU6050_Manage::updateValue() {
+  Msg = "";
   // if programming failed, don't try to do anything
-  if (!dmpReady)   return;
+  if (!dmpReady) {
+    Msg = "DMP Not Ready";
+    return;
+  }
 
   //get INT_STATUS byte
   mpuIntStatus = mpu.getIntStatus();
@@ -156,18 +189,19 @@ void MPU6050_Manage::updateValue() {
       // オーバーフローを検出したらFIFOをリセット(そもそも検出されないコトあり…)
       mpu.resetFIFO();
       Serial.println(F("FIFO overflow!"));
+      Msg = F("FIFO overflow!");
     }
     else if ((mpuIntStatus & 0x02) && (packetSize <= fifoCount))
     {
       // データの読み出し可能
       // FIFOよりデータを読み出す
       mpu.getFIFOBytes(fifoBuffer, packetSize);
-      mpu.dmpGetQuaternion(&q, fifoBuffer);
-      mpu.dmpGetGravity(&gravity, &q);
-      mpu.dmpGetAccel(&aa, fifoBuffer);
-      mpu.dmpGetLinearAccel(&aaReal, &aa, &gravity);
-      mpu.dmpGetLinearAccelInWorld(&aaWorld, &aaReal, &q);
-      mpu.dmpGetYawPitchRoll(ypr, &q, &gravity);
+      if(isGetQuaternion) mpu.dmpGetQuaternion(&q, fifoBuffer);
+      if(isGetGravity) mpu.dmpGetGravity(&gravity, &q);
+      if(isGetAccel) mpu.dmpGetAccel(&aa, fifoBuffer);
+      if(isGetLinearAccel) mpu.dmpGetLinearAccel(&aaReal, &aa, &gravity);
+      if(isGetLinearAccelInWorld) mpu.dmpGetLinearAccelInWorld(&aaWorld, &aaReal, &q);
+      if(isGetYawPitchRoll) mpu.dmpGetYawPitchRoll(ypr, &q, &gravity);
     }
   }
 }
@@ -214,4 +248,7 @@ void MPU6050_Manage::Get_teapotPacket(uint8_t v[14]) {
   }
 }
 
+String MPU6050_Manage::GetMsg() {
+  return Msg;
+}
 

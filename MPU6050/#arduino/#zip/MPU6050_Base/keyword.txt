@@ -1,0 +1,19 @@
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+MPU6050_Manage	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+reset	KEYWORD2
+init	KEYWORD2
+updateValue	KEYWORD2
+Get_EulerAngle	KEYWORD2
+Get_Quaternion	KEYWORD2
+Get_RealAccel	KEYWORD2
+Get_WorldAccel	KEYWORD2
+Get_teapotPacket	KEYWORD2
+GetMsg	KEYWORD2

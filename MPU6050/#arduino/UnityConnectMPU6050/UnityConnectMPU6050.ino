@@ -13,7 +13,13 @@
 //splitPoint = ','
 //++++++++++++++++++++++++++++++++++++
 ConnectUnityManage con;
-MPU6050_Manage mpu_main;
+#define QUATERNION true
+#define GRAVITY true
+#define ACCEL true
+#define LINEARACCEL true
+#define LINEARACCELINWORLD true
+#define YAWPITCHROLL true
+MPU6050_Manage mpu_main(QUATERNION, GRAVITY, ACCEL, LINEARACCEL, LINEARACCELINWORLD, YAWPITCHROLL);
 
 //Calibration ON/OFF
 bool isCalibration;
