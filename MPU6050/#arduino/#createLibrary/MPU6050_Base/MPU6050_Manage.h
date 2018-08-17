@@ -3,7 +3,6 @@
 
 class MPU6050_Manage {
   public:
-    MPU6050_Manage(bool _isGetQuaternion, bool _isGetGravity, bool _isGetAccel, bool _isGetLinearAccel, bool _isGetLinearAccelInWorld, bool _isGetYawPitchRoll);
     void reset();
     void init(bool _isCalibration, int _ofs[4]);
     void updateValue();

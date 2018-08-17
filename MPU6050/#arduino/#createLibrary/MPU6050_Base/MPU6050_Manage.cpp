@@ -52,24 +52,7 @@ uint8_t fifoBuffer[64]; // FIFO storage buffer
 // packet structure for InvenSense teapot demo
 uint8_t teapotPacket[14] = { '$', 0x02, 0, 0, 0, 0, 0, 0, 0, 0, 0x00, 0x00, '\r', '\n' };
 
-bool isGetQuaternion = false;
-bool isGetGravity = false;
-bool isGetAccel = false;
-bool isGetLinearAccel = false;
-bool isGetLinearAccelInWorld = false;
-bool isGetYawPitchRoll = false;
-
 String Msg;
-
-MPU6050_Manage::MPU6050_Manage(bool _isGetQuaternion, bool _isGetGravity, bool _isGetAccel, bool _isGetLinearAccel, bool _isGetLinearAccelInWorld, bool _isGetYawPitchRoll) {
-  isGetQuaternion = _isGetQuaternion;
-  isGetGravity = _isGetGravity;
-  isGetAccel = _isGetAccel;
-  isGetLinearAccel = _isGetLinearAccel;
-  isGetLinearAccelInWorld = _isGetLinearAccelInWorld;
-  isGetYawPitchRoll = _isGetYawPitchRoll;
-}
-
 
 void MPU6050_Manage::reset() {
   isFinishInitialize = false;
@@ -196,12 +179,12 @@ void MPU6050_Manage::updateValue() {
       // データの読み出し可能
       // FIFOよりデータを読み出す
       mpu.getFIFOBytes(fifoBuffer, packetSize);
-      if(isGetQuaternion) mpu.dmpGetQuaternion(&q, fifoBuffer);
-      if(isGetGravity) mpu.dmpGetGravity(&gravity, &q);
-      if(isGetAccel) mpu.dmpGetAccel(&aa, fifoBuffer);
-      if(isGetLinearAccel) mpu.dmpGetLinearAccel(&aaReal, &aa, &gravity);
-      if(isGetLinearAccelInWorld) mpu.dmpGetLinearAccelInWorld(&aaWorld, &aaReal, &q);
-      if(isGetYawPitchRoll) mpu.dmpGetYawPitchRoll(ypr, &q, &gravity);
+      mpu.dmpGetQuaternion(&q, fifoBuffer);
+      mpu.dmpGetGravity(&gravity, &q);
+      mpu.dmpGetAccel(&aa, fifoBuffer);
+      mpu.dmpGetLinearAccel(&aaReal, &aa, &gravity);
+      mpu.dmpGetLinearAccelInWorld(&aaWorld, &aaReal, &q);
+      mpu.dmpGetYawPitchRoll(ypr, &q, &gravity);
     }
   }
 }
