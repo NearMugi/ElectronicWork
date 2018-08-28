@@ -1,5 +1,5 @@
 // BLE Nano2 Ltika
-#define PIN_LED P0_11
+#define PIN_LED D13
 
 void setup() {
   pinMode(PIN_LED, OUTPUT);
