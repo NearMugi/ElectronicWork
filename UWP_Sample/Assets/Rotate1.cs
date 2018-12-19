@@ -4,8 +4,15 @@ using UnityEngine;
 
 public class Rotate1 : MonoBehaviour
 {
+    Transform _target;
+
+    private void Start()
+    {
+        _target = GetComponent<Transform>();
+    }
+
     void Update()
     {
-        this.GetComponent<Transform>().Rotate(0.0f, 1.0f, 0.0f);
+        _target.Rotate(0.0f, 1.0f, 0.0f);
     }
 }

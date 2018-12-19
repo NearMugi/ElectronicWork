@@ -7,6 +7,7 @@ public class fps : MonoBehaviour
 {
     int frameCount;
     float prevTime;
+    Text _txt;
 
     private void Awake()
     {
@@ -17,6 +18,7 @@ public class fps : MonoBehaviour
     {
         frameCount = 0;
         prevTime = 0.0f;
+        _txt = this.GetComponent<Text>();
     }
 
     void Update()
@@ -26,7 +28,7 @@ public class fps : MonoBehaviour
 
         if (time >= 0.5f)
         {
-            this.GetComponent<Text>().text = (frameCount / time).ToString("0.00");
+            _txt.text = (frameCount / time).ToString("0.00");
 
             frameCount = 0;
             prevTime = Time.realtimeSinceStartup;
