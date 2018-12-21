@@ -776,7 +776,6 @@ extern const uint32_t ASCIIEncoding_GetMaxByteCount_m3E3C11035D964A46F26D24DB478
 extern const uint32_t ASCIIEncoding_GetMaxCharCount_m828DD0F81FA2A3F84D9105199D12D30D04C0E3D3_MetadataUsageId;
 extern const uint32_t ASCIIEncoding_GetString_m5EDDED54D91906259EC8CFABF0450194427EC01B_MetadataUsageId;
 extern const uint32_t EvidenceEnumerator_MoveNext_mC9D2715D6026F22D7A0CE13DB1EC9E1EBAFFC0A6_MetadataUsageId;
-extern const uint32_t EvidenceEnumerator_Reset_m7C34F282CC975B8A002C37B26605B31997CEA37C_MetadataUsageId;
 extern const uint32_t EvidenceEnumerator_get_Current_m375A68A8EB0A859A10B82241A0A12BDD1904432B_MetadataUsageId;
 extern const uint32_t Evidence_GetEnumerator_m03EB4131E670C6BAFA8C155ABCD98637699AA43E_MetadataUsageId;
 extern const uint32_t Parser_DetermineFormat_m4E51199D68F8F4B8472111CAB3FD8EBD1439CB5B_MetadataUsageId;
@@ -13654,6 +13653,8 @@ extern "C" IL2CPP_METHOD_ATTR String_t* Single_ToString_m2B1556CFBBD088D285A0B0E
 extern "C" IL2CPP_METHOD_ATTR NumberFormatInfo_tFDF57037EBC5BC833D0A53EF0327B805994860A8 * NumberFormatInfo_GetInstance_m713D298B436F3765F059FEA6C446F0A6ABF0A89A (RuntimeObject* ___formatProvider0, const RuntimeMethod* method);
 // System.String System.Single::ToString(System.IFormatProvider)
 extern "C" IL2CPP_METHOD_ATTR String_t* Single_ToString_m578EAE7D490B9ACEF7116E4E824DC2F1E8F25A2F (float* __this, RuntimeObject* ___provider0, const RuntimeMethod* method);
+// System.String System.Single::ToString(System.String)
+extern "C" IL2CPP_METHOD_ATTR String_t* Single_ToString_m211B5E14B0C60667C56838D5C3788CFA58670DDE (float* __this, String_t* ___format0, const RuntimeMethod* method);
 // System.String System.Single::ToString(System.String,System.IFormatProvider)
 extern "C" IL2CPP_METHOD_ATTR String_t* Single_ToString_mCF682C2751EC9B98F1CE5455066B92D7D3356756 (float* __this, String_t* ___format0, RuntimeObject* ___provider1, const RuntimeMethod* method);
 // System.Single System.Single::Parse(System.String,System.Globalization.NumberStyles,System.Globalization.NumberFormatInfo)
@@ -16691,56 +16692,6 @@ IL_0047:
 	{
 		bool L_10 = V_0;
 		return L_10;
-	}
-}
-// System.Void System.Security.Policy.Evidence/EvidenceEnumerator::Reset()
-extern "C" IL2CPP_METHOD_ATTR void EvidenceEnumerator_Reset_m7C34F282CC975B8A002C37B26605B31997CEA37C (EvidenceEnumerator_t6E9E6856C90081E4B1A731097D6FE1D14EC680B3 * __this, const RuntimeMethod* method)
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_method (EvidenceEnumerator_Reset_m7C34F282CC975B8A002C37B26605B31997CEA37C_MetadataUsageId);
-		s_Il2CppMethodInitialized = true;
-	}
-	{
-		RuntimeObject* L_0 = __this->get_hostEnum_1();
-		if (!L_0)
-		{
-			goto IL_0021;
-		}
-	}
-	{
-		RuntimeObject* L_1 = __this->get_hostEnum_1();
-		NullCheck(L_1);
-		InterfaceActionInvoker0::Invoke(2 /* System.Void System.Collections.IEnumerator::Reset() */, IEnumerator_t8789118187258CC88B77AFAC6315B5AF87D3E18A_il2cpp_TypeInfo_var, L_1);
-		RuntimeObject* L_2 = __this->get_hostEnum_1();
-		__this->set_currentEnum_0(L_2);
-		goto IL_002d;
-	}
-
-IL_0021:
-	{
-		RuntimeObject* L_3 = __this->get_assemblyEnum_2();
-		__this->set_currentEnum_0(L_3);
-	}
-
-IL_002d:
-	{
-		RuntimeObject* L_4 = __this->get_assemblyEnum_2();
-		if (!L_4)
-		{
-			goto IL_0040;
-		}
-	}
-	{
-		RuntimeObject* L_5 = __this->get_assemblyEnum_2();
-		NullCheck(L_5);
-		InterfaceActionInvoker0::Invoke(2 /* System.Void System.Collections.IEnumerator::Reset() */, IEnumerator_t8789118187258CC88B77AFAC6315B5AF87D3E18A_il2cpp_TypeInfo_var, L_5);
-	}
-
-IL_0040:
-	{
-		return;
 	}
 }
 // System.Object System.Security.Policy.Evidence/EvidenceEnumerator::get_Current()
@@ -23375,6 +23326,22 @@ extern "C"  String_t* Single_ToString_m578EAE7D490B9ACEF7116E4E824DC2F1E8F25A2F_
 {
 	float* _thisAdjusted = reinterpret_cast<float*>(__this + 1);
 	return Single_ToString_m578EAE7D490B9ACEF7116E4E824DC2F1E8F25A2F(_thisAdjusted, ___provider0, method);
+}
+// System.String System.Single::ToString(System.String)
+extern "C" IL2CPP_METHOD_ATTR String_t* Single_ToString_m211B5E14B0C60667C56838D5C3788CFA58670DDE (float* __this, String_t* ___format0, const RuntimeMethod* method)
+{
+	{
+		float L_0 = *((float*)__this);
+		String_t* L_1 = ___format0;
+		NumberFormatInfo_tFDF57037EBC5BC833D0A53EF0327B805994860A8 * L_2 = NumberFormatInfo_get_CurrentInfo_m595DF03E32E0C5B01F1EC45F7264B2BD09BA61C9(/*hidden argument*/NULL);
+		String_t* L_3 = Number_FormatSingle_m323E2B56236A6DAA51251B75618122C0A58F5256(L_0, L_1, L_2, /*hidden argument*/NULL);
+		return L_3;
+	}
+}
+extern "C"  String_t* Single_ToString_m211B5E14B0C60667C56838D5C3788CFA58670DDE_AdjustorThunk (RuntimeObject * __this, String_t* ___format0, const RuntimeMethod* method)
+{
+	float* _thisAdjusted = reinterpret_cast<float*>(__this + 1);
+	return Single_ToString_m211B5E14B0C60667C56838D5C3788CFA58670DDE(_thisAdjusted, ___format0, method);
 }
 // System.String System.Single::ToString(System.String,System.IFormatProvider)
 extern "C" IL2CPP_METHOD_ATTR String_t* Single_ToString_mCF682C2751EC9B98F1CE5455066B92D7D3356756 (float* __this, String_t* ___format0, RuntimeObject* ___provider1, const RuntimeMethod* method)
