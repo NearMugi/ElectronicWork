@@ -1429,6 +1429,7 @@ extern const uint32_t X509Certificate2Collection__cctor_m8F5A775DC6302B95D1CA30B
 extern const uint32_t X509CertificateCollection_GetEnumerator_mD28E40E9104E833480FA012B1CE905AC08A7AD4F_MetadataUsageId;
 extern const uint32_t X509CertificateEnumerator_MoveNext_m472F420F968A52D970486D21BFFABCCE5329F714_MetadataUsageId;
 extern const uint32_t X509CertificateEnumerator_System_Collections_IEnumerator_MoveNext_m99B025AB34B4F5CFAD7836A73D01FBE1AEA019F4_MetadataUsageId;
+extern const uint32_t X509CertificateEnumerator_System_Collections_IEnumerator_Reset_m7EC63F5898E3A9881E73EB6205238C31ED4CC323_MetadataUsageId;
 extern const uint32_t X509CertificateEnumerator_System_Collections_IEnumerator_get_Current_m92ACFD522418E3D722E6C723FA93FBFC7A1A3EBC_MetadataUsageId;
 extern const uint32_t X509CertificateEnumerator__ctor_m81F0C80052FB25D722E5E66D5121D9F559A2EEB4_MetadataUsageId;
 extern const uint32_t X509CertificateEnumerator_get_Current_mDA87DA5B1CD027E452E22112ED43423F95573BE0_MetadataUsageId;
@@ -1439,6 +1440,7 @@ extern const uint32_t X509CertificateImplCollection_get_Item_m24CA14D68946B6E000
 extern const uint32_t X509ChainElementCollection_System_Collections_IEnumerable_GetEnumerator_mA687F2811DD1F678D629FC166F4288DD340D02F9_MetadataUsageId;
 extern const uint32_t X509ChainElementCollection__ctor_m035B6BC8E21811A1536A60FFA9BAB9A4159323E3_MetadataUsageId;
 extern const uint32_t X509ChainElementEnumerator_MoveNext_mF90FBF977D510F6FCF47D5B8CB34254C2822A775_MetadataUsageId;
+extern const uint32_t X509ChainElementEnumerator_Reset_m1D149AB7FF36C6200FB205408D5E856FCE624CCA_MetadataUsageId;
 extern const uint32_t X509ChainElementEnumerator_System_Collections_IEnumerator_get_Current_mC3EC8EDFD95897AD140B4F680905E65D8B04B49C_MetadataUsageId;
 extern const uint32_t X509ChainElementEnumerator__ctor_mC91FB54A5BD2C0B0E972FBCA193C5A453FC6957A_MetadataUsageId;
 extern const uint32_t X509ChainImplMono__cctor_m95136BE1101C06B64816562118FA9E3502406EB2_MetadataUsageId;
@@ -17620,6 +17622,14 @@ IL_0017:
 		return (bool)1;
 	}
 }
+// System.Void System.Security.Cryptography.OidEnumerator::Reset()
+extern "C" IL2CPP_METHOD_ATTR void OidEnumerator_Reset_m5006C3B1283711E2BDDEA6C25FDF93BBB900195E (OidEnumerator_tC2DB288576C575B69F7934274DDD8A5868CEF97C * __this, const RuntimeMethod* method)
+{
+	{
+		__this->set_m_current_1((-1));
+		return;
+	}
+}
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
@@ -18592,6 +18602,22 @@ extern "C" IL2CPP_METHOD_ATTR bool X509CertificateEnumerator_System_Collections_
 		return L_1;
 	}
 }
+// System.Void System.Security.Cryptography.X509Certificates.X509CertificateCollection/X509CertificateEnumerator::System.Collections.IEnumerator.Reset()
+extern "C" IL2CPP_METHOD_ATTR void X509CertificateEnumerator_System_Collections_IEnumerator_Reset_m7EC63F5898E3A9881E73EB6205238C31ED4CC323 (X509CertificateEnumerator_t99AEDECD77BFC6083D8C98F9760BF7876D5B886B * __this, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (X509CertificateEnumerator_System_Collections_IEnumerator_Reset_m7EC63F5898E3A9881E73EB6205238C31ED4CC323_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		RuntimeObject* L_0 = __this->get_enumerator_0();
+		NullCheck(L_0);
+		InterfaceActionInvoker0::Invoke(2 /* System.Void System.Collections.IEnumerator::Reset() */, IEnumerator_t8789118187258CC88B77AFAC6315B5AF87D3E18A_il2cpp_TypeInfo_var, L_0);
+		return;
+	}
+}
 // System.Boolean System.Security.Cryptography.X509Certificates.X509CertificateCollection/X509CertificateEnumerator::MoveNext()
 extern "C" IL2CPP_METHOD_ATTR bool X509CertificateEnumerator_MoveNext_m472F420F968A52D970486D21BFFABCCE5329F714 (X509CertificateEnumerator_t99AEDECD77BFC6083D8C98F9760BF7876D5B886B * __this, const RuntimeMethod* method)
 {
@@ -19064,6 +19090,22 @@ extern "C" IL2CPP_METHOD_ATTR bool X509ChainElementEnumerator_MoveNext_mF90FBF97
 		NullCheck(L_0);
 		bool L_1 = InterfaceFuncInvoker0< bool >::Invoke(0 /* System.Boolean System.Collections.IEnumerator::MoveNext() */, IEnumerator_t8789118187258CC88B77AFAC6315B5AF87D3E18A_il2cpp_TypeInfo_var, L_0);
 		return L_1;
+	}
+}
+// System.Void System.Security.Cryptography.X509Certificates.X509ChainElementEnumerator::Reset()
+extern "C" IL2CPP_METHOD_ATTR void X509ChainElementEnumerator_Reset_m1D149AB7FF36C6200FB205408D5E856FCE624CCA (X509ChainElementEnumerator_tEF7D4F9F87BAAF9A067923B6D4686C2AA4DB5B20 * __this, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (X509ChainElementEnumerator_Reset_m1D149AB7FF36C6200FB205408D5E856FCE624CCA_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		RuntimeObject* L_0 = __this->get_enumerator_0();
+		NullCheck(L_0);
+		InterfaceActionInvoker0::Invoke(2 /* System.Void System.Collections.IEnumerator::Reset() */, IEnumerator_t8789118187258CC88B77AFAC6315B5AF87D3E18A_il2cpp_TypeInfo_var, L_0);
+		return;
 	}
 }
 #ifdef __clang__

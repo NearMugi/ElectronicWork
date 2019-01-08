@@ -1062,6 +1062,7 @@ extern const uint32_t X509CertificateCollection_GetEnumerator_mF727FC348ED5A98CB
 extern const uint32_t X509CertificateCollection_get_Item_m9D86EAB41F196198DE5A0B855200B33F97BEEC82_MetadataUsageId;
 extern const uint32_t X509CertificateEnumerator_MoveNext_m5862EE69AF1A64DCF32885052BBD7429381BA7D2_MetadataUsageId;
 extern const uint32_t X509CertificateEnumerator_System_Collections_IEnumerator_MoveNext_m2F728922369DD616AA819677BB1730477872A0F5_MetadataUsageId;
+extern const uint32_t X509CertificateEnumerator_System_Collections_IEnumerator_Reset_m014A48D073D1DF62A4D8631ED07E8B3BC6EA8834_MetadataUsageId;
 extern const uint32_t X509CertificateEnumerator_System_Collections_IEnumerator_get_Current_m1E28B3521979906042C16BB51337ADD7CD43B945_MetadataUsageId;
 extern const uint32_t X509CertificateEnumerator__ctor_m907435AC45CD48DA1C82DB9C34480DC0BEAEF38F_MetadataUsageId;
 extern const uint32_t X509CertificateEnumerator_get_Current_m0B73ED629E9F6E2EAC80B699C9F6B0DFFF566089_MetadataUsageId;
@@ -35304,6 +35305,22 @@ extern "C" IL2CPP_METHOD_ATTR bool X509CertificateEnumerator_System_Collections_
 		NullCheck(L_0);
 		bool L_1 = InterfaceFuncInvoker0< bool >::Invoke(0 /* System.Boolean System.Collections.IEnumerator::MoveNext() */, IEnumerator_t8789118187258CC88B77AFAC6315B5AF87D3E18A_il2cpp_TypeInfo_var, L_0);
 		return L_1;
+	}
+}
+// System.Void Mono.Security.X509.X509CertificateCollection/X509CertificateEnumerator::System.Collections.IEnumerator.Reset()
+extern "C" IL2CPP_METHOD_ATTR void X509CertificateEnumerator_System_Collections_IEnumerator_Reset_m014A48D073D1DF62A4D8631ED07E8B3BC6EA8834 (X509CertificateEnumerator_tA97ABD952DA2AEEF45D70B07B2267A0E5B29D92F * __this, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (X509CertificateEnumerator_System_Collections_IEnumerator_Reset_m014A48D073D1DF62A4D8631ED07E8B3BC6EA8834_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		RuntimeObject* L_0 = __this->get_enumerator_0();
+		NullCheck(L_0);
+		InterfaceActionInvoker0::Invoke(2 /* System.Void System.Collections.IEnumerator::Reset() */, IEnumerator_t8789118187258CC88B77AFAC6315B5AF87D3E18A_il2cpp_TypeInfo_var, L_0);
+		return;
 	}
 }
 // System.Boolean Mono.Security.X509.X509CertificateCollection/X509CertificateEnumerator::MoveNext()
