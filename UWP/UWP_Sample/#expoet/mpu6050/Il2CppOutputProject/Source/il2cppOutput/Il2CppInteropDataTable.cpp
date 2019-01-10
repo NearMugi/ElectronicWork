@@ -8034,8 +8034,6 @@ extern "C" Il2CppIUnknown* CreateComCallableWrapperFor_AnimationClipU5BU5D_t26BC
 extern const RuntimeType AnimationClipU5BU5D_t26BCE82D4E5CBA43CAD83905725B4D6D500B3E36_0_0_0;
 extern "C" Il2CppIUnknown* CreateComCallableWrapperFor_MotionU5BU5D_tCFFDE8F73602F2856AC9CD59D19FF14659B8B7F6(RuntimeObject* obj);
 extern const RuntimeType MotionU5BU5D_tCFFDE8F73602F2856AC9CD59D19FF14659B8B7F6_0_0_0;
-extern "C" Il2CppIUnknown* CreateComCallableWrapperFor_MpuSensorValueU5BU5D_t6A57BCA4236E5E4934F15848CDEE8E8C34249CF6(RuntimeObject* obj);
-extern const RuntimeType MpuSensorValueU5BU5D_t6A57BCA4236E5E4934F15848CDEE8E8C34249CF6_0_0_0;
 extern const RuntimeType IAsyncOperation_1_t6C79000B30E830F251BD3C445197FD2A2DCB0F62_0_0_0;
 extern const RuntimeType IVector_1_tCD20AF461783D0D1EF8074C8B49F3EEAEAF9A97A_0_0_0;
 extern const RuntimeType IList_1_t7653E14B480113A2A03D49EE7A3DB0A3F7E85C55_0_0_0;
@@ -11829,21 +11827,11 @@ extern "C" Il2CppIUnknown* CreateComCallableWrapperFor_EmptyInternalEnumerator_1
 extern const RuntimeType EmptyInternalEnumerator_1_tA7B830B77EB51C191E82265B1940925010E25E09_0_0_0;
 extern "C" Il2CppIUnknown* CreateComCallableWrapperFor_InternalEnumerator_1_tAAC0146C4338C24E79BBE82AD770616126458BCE(RuntimeObject* obj);
 extern const RuntimeType InternalEnumerator_1_tAAC0146C4338C24E79BBE82AD770616126458BCE_0_0_0;
-extern "C" Il2CppIUnknown* CreateComCallableWrapperFor_EmptyInternalEnumerator_1_tC94175C6E9F06421BD2B47A8E834AC48C00767B1(RuntimeObject* obj);
-extern const RuntimeType EmptyInternalEnumerator_1_tC94175C6E9F06421BD2B47A8E834AC48C00767B1_0_0_0;
-extern "C" Il2CppIUnknown* CreateComCallableWrapperFor_InternalEnumerator_1_t4D89463675737DCE13E6BE7A33DE23373ED18088(RuntimeObject* obj);
-extern const RuntimeType InternalEnumerator_1_t4D89463675737DCE13E6BE7A33DE23373ED18088_0_0_0;
-extern "C" Il2CppIUnknown* CreateComCallableWrapperFor_List_1_t297D9BE72E382594DC73FD4A6DE87C7EE12CF7A6(RuntimeObject* obj);
-extern const RuntimeType List_1_t297D9BE72E382594DC73FD4A6DE87C7EE12CF7A6_0_0_0;
-extern "C" Il2CppIUnknown* CreateComCallableWrapperFor_ReadOnlyCollection_1_t84CC4EC2B41CE9F3933648A2D04A092E6ACCA12A(RuntimeObject* obj);
-extern const RuntimeType ReadOnlyCollection_1_t84CC4EC2B41CE9F3933648A2D04A092E6ACCA12A_0_0_0;
-extern "C" Il2CppIUnknown* CreateComCallableWrapperFor_Enumerator_tF8442E683B3E29E610E11DEEF7A52076AD34ABAC(RuntimeObject* obj);
-extern const RuntimeType Enumerator_tF8442E683B3E29E610E11DEEF7A52076AD34ABAC_0_0_0;
 extern "C" Il2CppIUnknown* CreateComCallableWrapperFor_Task_1_t663F0DD1A0E90D28D3CEF0BC8BA9BE4CFB6E333A(RuntimeObject* obj);
 extern const RuntimeType Task_1_t663F0DD1A0E90D28D3CEF0BC8BA9BE4CFB6E333A_0_0_0;
 extern "C" Il2CppIUnknown* CreateComCallableWrapperFor_Task_1_tD3B099F9273247ADC3D43275EE7A9830B000533B(RuntimeObject* obj);
 extern const RuntimeType Task_1_tD3B099F9273247ADC3D43275EE7A9830B000533B_0_0_0;
-extern Il2CppInteropData g_Il2CppInteropData[3107] = 
+extern Il2CppInteropData g_Il2CppInteropData[3101] = 
 {
 	{ NULL, NULL, NULL, NULL, CreateComCallableWrapperFor_RegistryKey_t29D81BFF6D6710C7AF7557F80446D514B0AB7574, NULL, &RegistryKey_t29D81BFF6D6710C7AF7557F80446D514B0AB7574_0_0_0 } /* Microsoft.Win32.RegistryKey */,
 	{ NULL, NULL, NULL, NULL, CreateComCallableWrapperFor_SafeFileHandle_tE1B31BE63CD11BBF2B9B6A205A72735F32EB1BCB, NULL, &SafeFileHandle_tE1B31BE63CD11BBF2B9B6A205A72735F32EB1BCB_0_0_0 } /* Microsoft.Win32.SafeHandles.SafeFileHandle */,
@@ -12758,7 +12746,6 @@ extern Il2CppInteropData g_Il2CppInteropData[3107] =
 	{ NULL, NULL, NULL, NULL, CreateComCallableWrapperFor_GB18030MapU5BU5D_tE3F2C54FFBD02AFF94006891BA0F4E9166B02848, NULL, &GB18030MapU5BU5D_tE3F2C54FFBD02AFF94006891BA0F4E9166B02848_0_0_0 } /* I18N.CJK.GB18030Source/GB18030Map[] */,
 	{ NULL, NULL, NULL, NULL, CreateComCallableWrapperFor_AnimationClipU5BU5D_t26BCE82D4E5CBA43CAD83905725B4D6D500B3E36, NULL, &AnimationClipU5BU5D_t26BCE82D4E5CBA43CAD83905725B4D6D500B3E36_0_0_0 } /* UnityEngine.AnimationClip[] */,
 	{ NULL, NULL, NULL, NULL, CreateComCallableWrapperFor_MotionU5BU5D_tCFFDE8F73602F2856AC9CD59D19FF14659B8B7F6, NULL, &MotionU5BU5D_tCFFDE8F73602F2856AC9CD59D19FF14659B8B7F6_0_0_0 } /* UnityEngine.Motion[] */,
-	{ NULL, NULL, NULL, NULL, CreateComCallableWrapperFor_MpuSensorValueU5BU5D_t6A57BCA4236E5E4934F15848CDEE8E8C34249CF6, NULL, &MpuSensorValueU5BU5D_t6A57BCA4236E5E4934F15848CDEE8E8C34249CF6_0_0_0 } /* mpu6050.MpuSensorValue[] */,
 	{ NULL, NULL, NULL, NULL, NULL, &IAsyncOperation_1_t6C79000B30E830F251BD3C445197FD2A2DCB0F62::IID, &IAsyncOperation_1_t6C79000B30E830F251BD3C445197FD2A2DCB0F62_0_0_0 } /* Windows.Foundation.IAsyncOperation`1<System.Object> */,
 	{ NULL, NULL, NULL, NULL, NULL, &IVector_1_tCD20AF461783D0D1EF8074C8B49F3EEAEAF9A97A::IID, &IVector_1_tCD20AF461783D0D1EF8074C8B49F3EEAEAF9A97A_0_0_0 } /* Windows.Foundation.Collections.IVector`1<System.Boolean> */,
 	{ NULL, NULL, NULL, NULL, NULL, &IVector_1_tCD20AF461783D0D1EF8074C8B49F3EEAEAF9A97A::IID, &IList_1_t7653E14B480113A2A03D49EE7A3DB0A3F7E85C55_0_0_0 } /* System.Collections.Generic.IList`1<System.Boolean> */,
@@ -14944,11 +14931,6 @@ extern Il2CppInteropData g_Il2CppInteropData[3107] =
 	{ NULL, NULL, NULL, NULL, CreateComCallableWrapperFor_InternalEnumerator_1_t9B92B8221518D9348BE497550671B4FE0716ABAD, NULL, &InternalEnumerator_1_t9B92B8221518D9348BE497550671B4FE0716ABAD_0_0_0 } /* System.Array/InternalEnumerator`1<UnityEngine.AnimationClip> */,
 	{ NULL, NULL, NULL, NULL, CreateComCallableWrapperFor_EmptyInternalEnumerator_1_tA7B830B77EB51C191E82265B1940925010E25E09, NULL, &EmptyInternalEnumerator_1_tA7B830B77EB51C191E82265B1940925010E25E09_0_0_0 } /* System.Array/EmptyInternalEnumerator`1<UnityEngine.Motion> */,
 	{ NULL, NULL, NULL, NULL, CreateComCallableWrapperFor_InternalEnumerator_1_tAAC0146C4338C24E79BBE82AD770616126458BCE, NULL, &InternalEnumerator_1_tAAC0146C4338C24E79BBE82AD770616126458BCE_0_0_0 } /* System.Array/InternalEnumerator`1<UnityEngine.Motion> */,
-	{ NULL, NULL, NULL, NULL, CreateComCallableWrapperFor_EmptyInternalEnumerator_1_tC94175C6E9F06421BD2B47A8E834AC48C00767B1, NULL, &EmptyInternalEnumerator_1_tC94175C6E9F06421BD2B47A8E834AC48C00767B1_0_0_0 } /* System.Array/EmptyInternalEnumerator`1<mpu6050.MpuSensorValue> */,
-	{ NULL, NULL, NULL, NULL, CreateComCallableWrapperFor_InternalEnumerator_1_t4D89463675737DCE13E6BE7A33DE23373ED18088, NULL, &InternalEnumerator_1_t4D89463675737DCE13E6BE7A33DE23373ED18088_0_0_0 } /* System.Array/InternalEnumerator`1<mpu6050.MpuSensorValue> */,
-	{ NULL, NULL, NULL, NULL, CreateComCallableWrapperFor_List_1_t297D9BE72E382594DC73FD4A6DE87C7EE12CF7A6, NULL, &List_1_t297D9BE72E382594DC73FD4A6DE87C7EE12CF7A6_0_0_0 } /* System.Collections.Generic.List`1<mpu6050.MpuSensorValue> */,
-	{ NULL, NULL, NULL, NULL, CreateComCallableWrapperFor_ReadOnlyCollection_1_t84CC4EC2B41CE9F3933648A2D04A092E6ACCA12A, NULL, &ReadOnlyCollection_1_t84CC4EC2B41CE9F3933648A2D04A092E6ACCA12A_0_0_0 } /* System.Collections.ObjectModel.ReadOnlyCollection`1<mpu6050.MpuSensorValue> */,
-	{ NULL, NULL, NULL, NULL, CreateComCallableWrapperFor_Enumerator_tF8442E683B3E29E610E11DEEF7A52076AD34ABAC, NULL, &Enumerator_tF8442E683B3E29E610E11DEEF7A52076AD34ABAC_0_0_0 } /* System.Collections.Generic.List`1/Enumerator<mpu6050.MpuSensorValue> */,
 	{ NULL, NULL, NULL, NULL, CreateComCallableWrapperFor_Task_1_t663F0DD1A0E90D28D3CEF0BC8BA9BE4CFB6E333A, NULL, &Task_1_t663F0DD1A0E90D28D3CEF0BC8BA9BE4CFB6E333A_0_0_0 } /* System.Threading.Tasks.Task`1<Windows.Devices.Enumeration.DeviceInformationCollection> */,
 	{ NULL, NULL, NULL, NULL, CreateComCallableWrapperFor_Task_1_tD3B099F9273247ADC3D43275EE7A9830B000533B, NULL, &Task_1_tD3B099F9273247ADC3D43275EE7A9830B000533B_0_0_0 } /* System.Threading.Tasks.Task`1<Windows.Devices.I2c.I2cDevice> */,
 	NULL,

@@ -24,13 +24,6 @@ namespace mpu6050
         public float GyroZ { get; set; }
     }
 
-    public class MpuSensorEventArgs : EventArgs
-    {
-        public byte Status { get; set; }
-        public float SamplePeriod { get; set; }
-        public MpuSensorValue[] Values { get; set; }
-    }
-
     public partial class MPU6050 : IDisposable
     {
         MpuSensorValue LastValues { get; set; }
@@ -165,11 +158,6 @@ namespace mpu6050
                 }
                 if ((interrupt_status & 0x1) != 0)
                 {
-                    MpuSensorEventArgs ea = new MpuSensorEventArgs();
-                    ea.Status = (byte)interrupt_status;
-                    ea.SamplePeriod = 0.02f;
-                    List<MpuSensorValue> l = new List<MpuSensorValue>();
-
                     int count = ReadWord(FIFO_COUNT);
 
                     while (count >= SensorBytes)
@@ -184,15 +172,6 @@ namespace mpu6050
                         short xg = (short)((int)data[6] << 8 | (int)data[7]);
                         short yg = (short)((int)data[8] << 8 | (int)data[9]);
                         short zg = (short)((int)data[10] << 8 | (int)data[11]);
-
-                        MpuSensorValue sv = new MpuSensorValue();
-                        sv.AccelerationX = (float)xa / (float)16384;
-                        sv.AccelerationY = (float)ya / (float)16384;
-                        sv.AccelerationZ = (float)za / (float)16384;
-                        sv.GyroX = (float)xg / (float)131;
-                        sv.GyroY = (float)yg / (float)131;
-                        sv.GyroZ = (float)zg / (float)131;
-                        l.Add(sv);
 
                         LastValues.AccelerationX = (float)xa / (float)16384;
                         LastValues.AccelerationY = (float)ya / (float)16384;

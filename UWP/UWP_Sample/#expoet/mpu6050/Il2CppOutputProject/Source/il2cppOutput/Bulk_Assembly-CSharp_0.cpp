@@ -81,10 +81,6 @@ struct ByteU5BU5D_tD06FDBE8142446525DF1C40351D523A228373821;
 struct CharU5BU5D_t4CC6ABF0AD71BEC97E3C2F1E9C5677E46D3A75C2;
 // System.Collections.Generic.Dictionary`2<System.Int32,System.Threading.Tasks.Task>
 struct Dictionary_2_t70161CFEB8DA3C79E19E31D0ED948D3C2925095F;
-// System.Collections.Generic.List`1<System.Object>
-struct List_1_t05CC3C859AB5E6024394EF9A42E3E696628CA02D;
-// System.Collections.Generic.List`1<mpu6050.MpuSensorValue>
-struct List_1_t297D9BE72E382594DC73FD4A6DE87C7EE12CF7A6;
 // System.Collections.IDictionary
 struct IDictionary_t1BD5C1546718A374EA8122FBD6C6EE45331E8CE7;
 // System.Collections.IEnumerator
@@ -95,8 +91,6 @@ struct DelegateData_t1BF9F691B56DAE5F8C28C5E084FDE94F15F27BBE;
 struct DelegateU5BU5D_tDFCDEE2A6322F96C0FE49AF47E9ADB8C4B294E86;
 // System.Diagnostics.StackTrace[]
 struct StackTraceU5BU5D_t855F09649EA34DEE7C1B6F088E0538E3CCC3F196;
-// System.EventArgs
-struct EventArgs_t8E6CA180BE0E56674C6407011A94BAF7C757352E;
 // System.Exception
 struct Exception_t;
 // System.Func`1<System.Threading.Tasks.Task/ContingentProperties>
@@ -253,16 +247,11 @@ struct fps_t1EBD7C643A92A614792189871C4754CE3AB0DE3A;
 struct getMPU6050_tCBCCA9F5E14FCC3066C980E690F214D4C0319676;
 // mpu6050.MPU6050
 struct MPU6050_tB510E16AC7A8543789ABECF11C4A1EC40B398EF9;
-// mpu6050.MpuSensorEventArgs
-struct MpuSensorEventArgs_t3E4AFC6A818B2F6F7F00F0564CA73B2942269A01;
 // mpu6050.MpuSensorValue
 struct MpuSensorValue_t7A67A2F92DE2F1C8BE635E8F03892624EA926C6D;
-// mpu6050.MpuSensorValue[]
-struct MpuSensorValueU5BU5D_t6A57BCA4236E5E4934F15848CDEE8E8C34249CF6;
 
 extern RuntimeClass* Action_1_tA9B13087386E8D960F2E4CE727FD58EB0670C6FD_il2cpp_TypeInfo_var;
 extern RuntimeClass* ByteU5BU5D_tD06FDBE8142446525DF1C40351D523A228373821_il2cpp_TypeInfo_var;
-extern RuntimeClass* EventArgs_t8E6CA180BE0E56674C6407011A94BAF7C757352E_il2cpp_TypeInfo_var;
 extern RuntimeClass* Exception_t_il2cpp_TypeInfo_var;
 extern RuntimeClass* Func_2_t06A0E05929AF5ADF49DBCC082CAF8D4056C9867E_il2cpp_TypeInfo_var;
 extern RuntimeClass* GC_tC1D7BD74E8F44ECCEF5CD2B5D84BFF9AAE02D01D_il2cpp_TypeInfo_var;
@@ -270,10 +259,8 @@ extern RuntimeClass* GUI_t3E5CBC6B113E392EBBE1453DEF2B7CD020F345AA_il2cpp_TypeIn
 extern RuntimeClass* GameObject_tBD1244AD56B4E59AAD76E5E7C9282EC5CE434F0F_il2cpp_TypeInfo_var;
 extern RuntimeClass* I2cConnectionSettings_tDD980C2F6B9B5A626B91FCA02033271C84B6B1C3_il2cpp_TypeInfo_var;
 extern RuntimeClass* IReadOnlyList_1_t24BEFFB31822663BC19FF6104A04EEA251272897_il2cpp_TypeInfo_var;
-extern RuntimeClass* List_1_t297D9BE72E382594DC73FD4A6DE87C7EE12CF7A6_il2cpp_TypeInfo_var;
 extern RuntimeClass* MPU6050_tB510E16AC7A8543789ABECF11C4A1EC40B398EF9_il2cpp_TypeInfo_var;
 extern RuntimeClass* Mathf_tFBDE6467D269BFE410605C7D806FD9991D4A89CB_il2cpp_TypeInfo_var;
-extern RuntimeClass* MpuSensorEventArgs_t3E4AFC6A818B2F6F7F00F0564CA73B2942269A01_il2cpp_TypeInfo_var;
 extern RuntimeClass* MpuSensorValue_t7A67A2F92DE2F1C8BE635E8F03892624EA926C6D_il2cpp_TypeInfo_var;
 extern RuntimeClass* NotSupportedException_tE75B318D6590A02A5D9B29FD97409B1750FA0010_il2cpp_TypeInfo_var;
 extern RuntimeClass* Object_tAE11E5E46CD5C37C9F3E8950C00CD8B45666A2D0_il2cpp_TypeInfo_var;
@@ -339,8 +326,6 @@ extern const RuntimeMethod* Component_GetComponent_TisCapsuleCollider_t5FD15B9E7
 extern const RuntimeMethod* Component_GetComponent_TisRigidbody_tE0A58EE5A1F7DC908EFFB4F0D795AC9552A750A5_m3F58A77E3F62D9C80D7B49BA04E3D4809264FD5C_RuntimeMethod_var;
 extern const RuntimeMethod* Component_GetComponent_TisTransform_tBB9E78A2766C3C83599A8F66EDE7D1FCAFC66EDA_m9885424E349D692D715FADED33BD0E2D0CEFB20F_RuntimeMethod_var;
 extern const RuntimeMethod* Func_2__ctor_m61D418873A213C72A3849D8A5145AC2A8842879C_RuntimeMethod_var;
-extern const RuntimeMethod* List_1_Add_m90B14063419879556CFBEF12A820D99FAB2DD6D1_RuntimeMethod_var;
-extern const RuntimeMethod* List_1__ctor_m46052E66FE5CBEC4CAF1FC79FF1FE6FACFAF99C4_RuntimeMethod_var;
 extern const RuntimeMethod* MPU6050_Interrupt_mF60C15136E05313C476619F086795A2E0F5D97E6_RuntimeMethod_var;
 extern const RuntimeMethod* TaskAwaiter_1_GetResult_m1D9FFDC78B08E211B8341CAE0C335B60BB43B069_RuntimeMethod_var;
 extern const RuntimeMethod* TaskAwaiter_1_GetResult_m7578B28CF8B63C064016453EBA95D58C4A058EF8_RuntimeMethod_var;
@@ -369,12 +354,10 @@ extern const uint32_t IdleChanger_Start_m32916736CABCCE8FC2FC7A571A38015C4467CEF
 extern const uint32_t IdleChanger_Update_m82B04EBDAC8E7DA84407C8BD22DEB460BE805A59_MetadataUsageId;
 extern const uint32_t MPU6050_Dispose_mAFF65367BE4E3FAD26C093B8A703813D1708CE60_MetadataUsageId;
 extern const uint32_t MPU6050_InitHardware_m70E9C8CC277AC5BD755F4F4BD0DB7E2C8BA0F8D8_MetadataUsageId;
-extern const uint32_t MPU6050_Interrupt_mF60C15136E05313C476619F086795A2E0F5D97E6_MetadataUsageId;
 extern const uint32_t MPU6050_ReadByte_mAD3872A34BFB3D23C077457AC18EBCA42106021F_MetadataUsageId;
 extern const uint32_t MPU6050_ReadBytes_m9054F514AB1D96EDAE64A81291EA0C95030672C0_MetadataUsageId;
 extern const uint32_t MPU6050_WriteByte_mFD953ED5EED04CE2B3AF950F3CCF3771D0A53872_MetadataUsageId;
 extern const uint32_t MPU6050_writeBytes_m02A111EAA8E20AAA9EC597931F025C97F13F3CAF_MetadataUsageId;
-extern const uint32_t MpuSensorEventArgs__ctor_m513CA5AC15E82F61BD111BBF60D628B5D143BB6C_MetadataUsageId;
 extern const uint32_t Rotate1_Start_mA0717CC355E13476AE3B5003D416460E41822753_MetadataUsageId;
 extern const uint32_t Rotate_Start_mFF56EB83C79B5DEC931AA33F269381DD6A526FEC_MetadataUsageId;
 extern const uint32_t SceneLoader_OnGUI_m89CFFC2EB12464B32F0C6C79B3C986468052CE98_MetadataUsageId;
@@ -412,7 +395,6 @@ struct IVectorView_1_t16EB58932EA468389C19C204DF879A8D5477BA58;
 struct ByteU5BU5D_tD06FDBE8142446525DF1C40351D523A228373821;
 struct AnimationClipU5BU5D_t26BCE82D4E5CBA43CAD83905725B4D6D500B3E36;
 struct GUILayoutOptionU5BU5D_tAB2AD0A365DBD2277A04E397AE8E1430A022AF1B;
-struct MpuSensorValueU5BU5D_t6A57BCA4236E5E4934F15848CDEE8E8C34249CF6;
 
 
 #ifndef U3CMODULEU3E_T6CDDDF959E7E18A6744E43B613F41CDAC780256A_H
@@ -652,121 +634,6 @@ struct Il2CppArrayBounds;
 #pragma clang diagnostic pop
 #endif
 #endif // RUNTIMEARRAY_H
-#ifndef LIST_1_T297D9BE72E382594DC73FD4A6DE87C7EE12CF7A6_H
-#define LIST_1_T297D9BE72E382594DC73FD4A6DE87C7EE12CF7A6_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// System.Collections.Generic.List`1<mpu6050.MpuSensorValue>
-struct  List_1_t297D9BE72E382594DC73FD4A6DE87C7EE12CF7A6  : public RuntimeObject
-{
-public:
-	// T[] System.Collections.Generic.List`1::_items
-	MpuSensorValueU5BU5D_t6A57BCA4236E5E4934F15848CDEE8E8C34249CF6* ____items_1;
-	// System.Int32 System.Collections.Generic.List`1::_size
-	int32_t ____size_2;
-	// System.Int32 System.Collections.Generic.List`1::_version
-	int32_t ____version_3;
-	// System.Object System.Collections.Generic.List`1::_syncRoot
-	RuntimeObject * ____syncRoot_4;
-
-public:
-	inline static int32_t get_offset_of__items_1() { return static_cast<int32_t>(offsetof(List_1_t297D9BE72E382594DC73FD4A6DE87C7EE12CF7A6, ____items_1)); }
-	inline MpuSensorValueU5BU5D_t6A57BCA4236E5E4934F15848CDEE8E8C34249CF6* get__items_1() const { return ____items_1; }
-	inline MpuSensorValueU5BU5D_t6A57BCA4236E5E4934F15848CDEE8E8C34249CF6** get_address_of__items_1() { return &____items_1; }
-	inline void set__items_1(MpuSensorValueU5BU5D_t6A57BCA4236E5E4934F15848CDEE8E8C34249CF6* value)
-	{
-		____items_1 = value;
-		Il2CppCodeGenWriteBarrier((&____items_1), value);
-	}
-
-	inline static int32_t get_offset_of__size_2() { return static_cast<int32_t>(offsetof(List_1_t297D9BE72E382594DC73FD4A6DE87C7EE12CF7A6, ____size_2)); }
-	inline int32_t get__size_2() const { return ____size_2; }
-	inline int32_t* get_address_of__size_2() { return &____size_2; }
-	inline void set__size_2(int32_t value)
-	{
-		____size_2 = value;
-	}
-
-	inline static int32_t get_offset_of__version_3() { return static_cast<int32_t>(offsetof(List_1_t297D9BE72E382594DC73FD4A6DE87C7EE12CF7A6, ____version_3)); }
-	inline int32_t get__version_3() const { return ____version_3; }
-	inline int32_t* get_address_of__version_3() { return &____version_3; }
-	inline void set__version_3(int32_t value)
-	{
-		____version_3 = value;
-	}
-
-	inline static int32_t get_offset_of__syncRoot_4() { return static_cast<int32_t>(offsetof(List_1_t297D9BE72E382594DC73FD4A6DE87C7EE12CF7A6, ____syncRoot_4)); }
-	inline RuntimeObject * get__syncRoot_4() const { return ____syncRoot_4; }
-	inline RuntimeObject ** get_address_of__syncRoot_4() { return &____syncRoot_4; }
-	inline void set__syncRoot_4(RuntimeObject * value)
-	{
-		____syncRoot_4 = value;
-		Il2CppCodeGenWriteBarrier((&____syncRoot_4), value);
-	}
-};
-
-struct List_1_t297D9BE72E382594DC73FD4A6DE87C7EE12CF7A6_StaticFields
-{
-public:
-	// T[] System.Collections.Generic.List`1::_emptyArray
-	MpuSensorValueU5BU5D_t6A57BCA4236E5E4934F15848CDEE8E8C34249CF6* ____emptyArray_5;
-
-public:
-	inline static int32_t get_offset_of__emptyArray_5() { return static_cast<int32_t>(offsetof(List_1_t297D9BE72E382594DC73FD4A6DE87C7EE12CF7A6_StaticFields, ____emptyArray_5)); }
-	inline MpuSensorValueU5BU5D_t6A57BCA4236E5E4934F15848CDEE8E8C34249CF6* get__emptyArray_5() const { return ____emptyArray_5; }
-	inline MpuSensorValueU5BU5D_t6A57BCA4236E5E4934F15848CDEE8E8C34249CF6** get_address_of__emptyArray_5() { return &____emptyArray_5; }
-	inline void set__emptyArray_5(MpuSensorValueU5BU5D_t6A57BCA4236E5E4934F15848CDEE8E8C34249CF6* value)
-	{
-		____emptyArray_5 = value;
-		Il2CppCodeGenWriteBarrier((&____emptyArray_5), value);
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // LIST_1_T297D9BE72E382594DC73FD4A6DE87C7EE12CF7A6_H
-#ifndef EVENTARGS_T8E6CA180BE0E56674C6407011A94BAF7C757352E_H
-#define EVENTARGS_T8E6CA180BE0E56674C6407011A94BAF7C757352E_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// System.EventArgs
-struct  EventArgs_t8E6CA180BE0E56674C6407011A94BAF7C757352E  : public RuntimeObject
-{
-public:
-
-public:
-};
-
-struct EventArgs_t8E6CA180BE0E56674C6407011A94BAF7C757352E_StaticFields
-{
-public:
-	// System.EventArgs System.EventArgs::Empty
-	EventArgs_t8E6CA180BE0E56674C6407011A94BAF7C757352E * ___Empty_0;
-
-public:
-	inline static int32_t get_offset_of_Empty_0() { return static_cast<int32_t>(offsetof(EventArgs_t8E6CA180BE0E56674C6407011A94BAF7C757352E_StaticFields, ___Empty_0)); }
-	inline EventArgs_t8E6CA180BE0E56674C6407011A94BAF7C757352E * get_Empty_0() const { return ___Empty_0; }
-	inline EventArgs_t8E6CA180BE0E56674C6407011A94BAF7C757352E ** get_address_of_Empty_0() { return &___Empty_0; }
-	inline void set_Empty_0(EventArgs_t8E6CA180BE0E56674C6407011A94BAF7C757352E * value)
-	{
-		___Empty_0 = value;
-		Il2CppCodeGenWriteBarrier((&___Empty_0), value);
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // EVENTARGS_T8E6CA180BE0E56674C6407011A94BAF7C757352E_H
 #ifndef EXCEPTION_T_H
 #define EXCEPTION_T_H
 #ifdef __clang__
@@ -2871,56 +2738,6 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // I2CDEVICE_T98FC86BEF8346B93999084F247BB5BDE4D946128_H
-#ifndef MPUSENSOREVENTARGS_T3E4AFC6A818B2F6F7F00F0564CA73B2942269A01_H
-#define MPUSENSOREVENTARGS_T3E4AFC6A818B2F6F7F00F0564CA73B2942269A01_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// mpu6050.MpuSensorEventArgs
-struct  MpuSensorEventArgs_t3E4AFC6A818B2F6F7F00F0564CA73B2942269A01  : public EventArgs_t8E6CA180BE0E56674C6407011A94BAF7C757352E
-{
-public:
-	// System.Byte mpu6050.MpuSensorEventArgs::<Status>k__BackingField
-	uint8_t ___U3CStatusU3Ek__BackingField_1;
-	// System.Single mpu6050.MpuSensorEventArgs::<SamplePeriod>k__BackingField
-	float ___U3CSamplePeriodU3Ek__BackingField_2;
-	// mpu6050.MpuSensorValue[] mpu6050.MpuSensorEventArgs::<Values>k__BackingField
-	MpuSensorValueU5BU5D_t6A57BCA4236E5E4934F15848CDEE8E8C34249CF6* ___U3CValuesU3Ek__BackingField_3;
-
-public:
-	inline static int32_t get_offset_of_U3CStatusU3Ek__BackingField_1() { return static_cast<int32_t>(offsetof(MpuSensorEventArgs_t3E4AFC6A818B2F6F7F00F0564CA73B2942269A01, ___U3CStatusU3Ek__BackingField_1)); }
-	inline uint8_t get_U3CStatusU3Ek__BackingField_1() const { return ___U3CStatusU3Ek__BackingField_1; }
-	inline uint8_t* get_address_of_U3CStatusU3Ek__BackingField_1() { return &___U3CStatusU3Ek__BackingField_1; }
-	inline void set_U3CStatusU3Ek__BackingField_1(uint8_t value)
-	{
-		___U3CStatusU3Ek__BackingField_1 = value;
-	}
-
-	inline static int32_t get_offset_of_U3CSamplePeriodU3Ek__BackingField_2() { return static_cast<int32_t>(offsetof(MpuSensorEventArgs_t3E4AFC6A818B2F6F7F00F0564CA73B2942269A01, ___U3CSamplePeriodU3Ek__BackingField_2)); }
-	inline float get_U3CSamplePeriodU3Ek__BackingField_2() const { return ___U3CSamplePeriodU3Ek__BackingField_2; }
-	inline float* get_address_of_U3CSamplePeriodU3Ek__BackingField_2() { return &___U3CSamplePeriodU3Ek__BackingField_2; }
-	inline void set_U3CSamplePeriodU3Ek__BackingField_2(float value)
-	{
-		___U3CSamplePeriodU3Ek__BackingField_2 = value;
-	}
-
-	inline static int32_t get_offset_of_U3CValuesU3Ek__BackingField_3() { return static_cast<int32_t>(offsetof(MpuSensorEventArgs_t3E4AFC6A818B2F6F7F00F0564CA73B2942269A01, ___U3CValuesU3Ek__BackingField_3)); }
-	inline MpuSensorValueU5BU5D_t6A57BCA4236E5E4934F15848CDEE8E8C34249CF6* get_U3CValuesU3Ek__BackingField_3() const { return ___U3CValuesU3Ek__BackingField_3; }
-	inline MpuSensorValueU5BU5D_t6A57BCA4236E5E4934F15848CDEE8E8C34249CF6** get_address_of_U3CValuesU3Ek__BackingField_3() { return &___U3CValuesU3Ek__BackingField_3; }
-	inline void set_U3CValuesU3Ek__BackingField_3(MpuSensorValueU5BU5D_t6A57BCA4236E5E4934F15848CDEE8E8C34249CF6* value)
-	{
-		___U3CValuesU3Ek__BackingField_3 = value;
-		Il2CppCodeGenWriteBarrier((&___U3CValuesU3Ek__BackingField_3), value);
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // MPUSENSOREVENTARGS_T3E4AFC6A818B2F6F7F00F0564CA73B2942269A01_H
 #ifndef MOUSEBUTTONDOWN_T34BD7D7404D43C8344424AE1F0BDBC9D6EBF857A_H
 #define MOUSEBUTTONDOWN_T34BD7D7404D43C8344424AE1F0BDBC9D6EBF857A_H
 #ifdef __clang__
@@ -5770,43 +5587,6 @@ public:
 		m_Items[index] = value;
 	}
 };
-// mpu6050.MpuSensorValue[]
-struct MpuSensorValueU5BU5D_t6A57BCA4236E5E4934F15848CDEE8E8C34249CF6  : public RuntimeArray
-{
-public:
-	ALIGN_FIELD (8) MpuSensorValue_t7A67A2F92DE2F1C8BE635E8F03892624EA926C6D * m_Items[1];
-
-public:
-	inline MpuSensorValue_t7A67A2F92DE2F1C8BE635E8F03892624EA926C6D * GetAt(il2cpp_array_size_t index) const
-	{
-		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
-		return m_Items[index];
-	}
-	inline MpuSensorValue_t7A67A2F92DE2F1C8BE635E8F03892624EA926C6D ** GetAddressAt(il2cpp_array_size_t index)
-	{
-		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
-		return m_Items + index;
-	}
-	inline void SetAt(il2cpp_array_size_t index, MpuSensorValue_t7A67A2F92DE2F1C8BE635E8F03892624EA926C6D * value)
-	{
-		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
-		m_Items[index] = value;
-		Il2CppCodeGenWriteBarrier(m_Items + index, value);
-	}
-	inline MpuSensorValue_t7A67A2F92DE2F1C8BE635E8F03892624EA926C6D * GetAtUnchecked(il2cpp_array_size_t index) const
-	{
-		return m_Items[index];
-	}
-	inline MpuSensorValue_t7A67A2F92DE2F1C8BE635E8F03892624EA926C6D ** GetAddressAtUnchecked(il2cpp_array_size_t index)
-	{
-		return m_Items + index;
-	}
-	inline void SetAtUnchecked(il2cpp_array_size_t index, MpuSensorValue_t7A67A2F92DE2F1C8BE635E8F03892624EA926C6D * value)
-	{
-		m_Items[index] = value;
-		Il2CppCodeGenWriteBarrier(m_Items + index, value);
-	}
-};
 
 
 // !!0 UnityEngine.Component::GetComponent<System.Object>()
@@ -5815,10 +5595,6 @@ extern "C" IL2CPP_METHOD_ATTR RuntimeObject * Component_GetComponent_TisRuntimeO
 extern "C" IL2CPP_METHOD_ATTR ObjectU5BU5D_t3C9242B5C88A48B2A5BD9FDA6CD0024E792AF08A* Array_Empty_TisRuntimeObject_m9CF99326FAC8A01A4A25C90AA97F0799BA35ECAB_gshared (const RuntimeMethod* method);
 // System.Void System.Runtime.CompilerServices.AsyncVoidMethodBuilder::Start<mpu6050.MPU6050/<InitHardware>d__27>(!!0&)
 extern "C" IL2CPP_METHOD_ATTR void AsyncVoidMethodBuilder_Start_TisU3CInitHardwareU3Ed__27_tA8F31EC47944D8E63048C60ED577BF337DC94941_mC3F09173DCEFB961F42BF1BBCC76639E614AB295_gshared (AsyncVoidMethodBuilder_t44E3C9B52B019BB5BDCC0E1BB83188B536161CFF * __this, U3CInitHardwareU3Ed__27_tA8F31EC47944D8E63048C60ED577BF337DC94941 * p0, const RuntimeMethod* method);
-// System.Void System.Collections.Generic.List`1<System.Object>::.ctor()
-extern "C" IL2CPP_METHOD_ATTR void List_1__ctor_mC832F1AC0F814BAEB19175F5D7972A7507508BC3_gshared (List_1_t05CC3C859AB5E6024394EF9A42E3E696628CA02D * __this, const RuntimeMethod* method);
-// System.Void System.Collections.Generic.List`1<System.Object>::Add(!0)
-extern "C" IL2CPP_METHOD_ATTR void List_1_Add_m6930161974C7504C80F52EC379EF012387D43138_gshared (List_1_t05CC3C859AB5E6024394EF9A42E3E696628CA02D * __this, RuntimeObject * p0, const RuntimeMethod* method);
 // System.Void System.Func`2<System.Object,System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken>::.ctor(System.Object,System.IntPtr)
 extern "C" IL2CPP_METHOD_ATTR void Func_2__ctor_m629EDBD1F6267E25327CD490F00AAABBD3D6EA2F_gshared (Func_2_t80700DE803AC202B9E949DB51E593F052DD8B5CB * __this, RuntimeObject * p0, intptr_t p1, const RuntimeMethod* method);
 // System.Void System.Action`1<System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken>::.ctor(System.Object,System.IntPtr)
@@ -6098,17 +5874,6 @@ inline void AsyncVoidMethodBuilder_Start_TisU3CInitHardwareU3Ed__27_tA8F31EC4794
 extern "C" IL2CPP_METHOD_ATTR uint8_t MPU6050_ReadByte_mAD3872A34BFB3D23C077457AC18EBCA42106021F (MPU6050_tB510E16AC7A8543789ABECF11C4A1EC40B398EF9 * __this, uint8_t ___regAddr0, const RuntimeMethod* method);
 // System.Void mpu6050.MPU6050::WriteByte(System.Byte,System.Byte)
 extern "C" IL2CPP_METHOD_ATTR void MPU6050_WriteByte_mFD953ED5EED04CE2B3AF950F3CCF3771D0A53872 (MPU6050_tB510E16AC7A8543789ABECF11C4A1EC40B398EF9 * __this, uint8_t ___regAddr0, uint8_t ___data1, const RuntimeMethod* method);
-// System.Void mpu6050.MpuSensorEventArgs::.ctor()
-extern "C" IL2CPP_METHOD_ATTR void MpuSensorEventArgs__ctor_m513CA5AC15E82F61BD111BBF60D628B5D143BB6C (MpuSensorEventArgs_t3E4AFC6A818B2F6F7F00F0564CA73B2942269A01 * __this, const RuntimeMethod* method);
-// System.Void mpu6050.MpuSensorEventArgs::set_Status(System.Byte)
-extern "C" IL2CPP_METHOD_ATTR void MpuSensorEventArgs_set_Status_m9C6CCAD68D974F2B1D64D0444BE9422C13AFAE98 (MpuSensorEventArgs_t3E4AFC6A818B2F6F7F00F0564CA73B2942269A01 * __this, uint8_t ___value0, const RuntimeMethod* method);
-// System.Void mpu6050.MpuSensorEventArgs::set_SamplePeriod(System.Single)
-extern "C" IL2CPP_METHOD_ATTR void MpuSensorEventArgs_set_SamplePeriod_m56A0B0CC914482CEC938112FCAA95CA692C1011A (MpuSensorEventArgs_t3E4AFC6A818B2F6F7F00F0564CA73B2942269A01 * __this, float ___value0, const RuntimeMethod* method);
-// System.Void System.Collections.Generic.List`1<mpu6050.MpuSensorValue>::.ctor()
-inline void List_1__ctor_m46052E66FE5CBEC4CAF1FC79FF1FE6FACFAF99C4 (List_1_t297D9BE72E382594DC73FD4A6DE87C7EE12CF7A6 * __this, const RuntimeMethod* method)
-{
-	((  void (*) (List_1_t297D9BE72E382594DC73FD4A6DE87C7EE12CF7A6 *, const RuntimeMethod*))List_1__ctor_mC832F1AC0F814BAEB19175F5D7972A7507508BC3_gshared)(__this, method);
-}
 // System.UInt16 mpu6050.MPU6050::ReadWord(System.Byte)
 extern "C" IL2CPP_METHOD_ATTR uint16_t MPU6050_ReadWord_m3A19AD3771B9FF6647121023495614BAD501ED08 (MPU6050_tB510E16AC7A8543789ABECF11C4A1EC40B398EF9 * __this, uint8_t ___address0, const RuntimeMethod* method);
 // System.Void mpu6050.MpuSensorValue::set_AccelerationX(System.Single)
@@ -6123,11 +5888,6 @@ extern "C" IL2CPP_METHOD_ATTR void MpuSensorValue_set_GyroX_m70C6C473B24E12D39F7
 extern "C" IL2CPP_METHOD_ATTR void MpuSensorValue_set_GyroY_m6DAFD785D936EFFFD8327D946879ECF78FA02AFD (MpuSensorValue_t7A67A2F92DE2F1C8BE635E8F03892624EA926C6D * __this, float ___value0, const RuntimeMethod* method);
 // System.Void mpu6050.MpuSensorValue::set_GyroZ(System.Single)
 extern "C" IL2CPP_METHOD_ATTR void MpuSensorValue_set_GyroZ_m3DB75586A201A052473F74B2CA73ED626C169421 (MpuSensorValue_t7A67A2F92DE2F1C8BE635E8F03892624EA926C6D * __this, float ___value0, const RuntimeMethod* method);
-// System.Void System.Collections.Generic.List`1<mpu6050.MpuSensorValue>::Add(!0)
-inline void List_1_Add_m90B14063419879556CFBEF12A820D99FAB2DD6D1 (List_1_t297D9BE72E382594DC73FD4A6DE87C7EE12CF7A6 * __this, MpuSensorValue_t7A67A2F92DE2F1C8BE635E8F03892624EA926C6D * p0, const RuntimeMethod* method)
-{
-	((  void (*) (List_1_t297D9BE72E382594DC73FD4A6DE87C7EE12CF7A6 *, MpuSensorValue_t7A67A2F92DE2F1C8BE635E8F03892624EA926C6D *, const RuntimeMethod*))List_1_Add_m6930161974C7504C80F52EC379EF012387D43138_gshared)(__this, p0, method);
-}
 // System.Void Windows.Devices.Gpio.GpioPin::Dispose()
 extern "C" IL2CPP_METHOD_ATTR void GpioPin_Dispose_m46B24E4094B8C34880CF02402A0AC7B271C47DD8 (GpioPin_t782D38614B9E65AA121B64278CA7BA467F5B8FD9 * __this, const RuntimeMethod* method);
 // System.Void Windows.Devices.I2c.I2cDevice::Dispose()
@@ -6243,8 +6003,6 @@ extern "C" IL2CPP_METHOD_ATTR void U3CInitHardwareU3Ed__27_MoveNext_m7CCC4618D88
 extern "C" IL2CPP_METHOD_ATTR void AsyncVoidMethodBuilder_SetStateMachine_mF3AEE42ED8474F11A5521D94271E884CF99E65B3 (AsyncVoidMethodBuilder_t44E3C9B52B019BB5BDCC0E1BB83188B536161CFF * __this, RuntimeObject* p0, const RuntimeMethod* method);
 // System.Void mpu6050.MPU6050/<InitHardware>d__27::SetStateMachine(System.Runtime.CompilerServices.IAsyncStateMachine)
 extern "C" IL2CPP_METHOD_ATTR void U3CInitHardwareU3Ed__27_SetStateMachine_mF29A99521704C0977B89979C1B8B686663BC507D (U3CInitHardwareU3Ed__27_tA8F31EC47944D8E63048C60ED577BF337DC94941 * __this, RuntimeObject* ___stateMachine0, const RuntimeMethod* method);
-// System.Void System.EventArgs::.ctor()
-extern "C" IL2CPP_METHOD_ATTR void EventArgs__ctor_m3551293259861C5A78CD47689D559F828ED29DF7 (EventArgs_t8E6CA180BE0E56674C6407011A94BAF7C757352E * __this, const RuntimeMethod* method);
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
@@ -8850,228 +8608,168 @@ extern "C" IL2CPP_METHOD_ATTR void MPU6050_InitHardware_m70E9C8CC277AC5BD755F4F4
 // System.Void mpu6050.MPU6050::Interrupt(Windows.Devices.Gpio.GpioPin,Windows.Devices.Gpio.GpioPinValueChangedEventArgs)
 extern "C" IL2CPP_METHOD_ATTR void MPU6050_Interrupt_mF60C15136E05313C476619F086795A2E0F5D97E6 (MPU6050_tB510E16AC7A8543789ABECF11C4A1EC40B398EF9 * __this, GpioPin_t782D38614B9E65AA121B64278CA7BA467F5B8FD9 * ___sender0, GpioPinValueChangedEventArgs_tB39504B0C43290BD55646E34B001AA46FE63796F * ___args1, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_method (MPU6050_Interrupt_mF60C15136E05313C476619F086795A2E0F5D97E6_MetadataUsageId);
-		s_Il2CppMethodInitialized = true;
-	}
 	int32_t V_0 = 0;
-	List_1_t297D9BE72E382594DC73FD4A6DE87C7EE12CF7A6 * V_1 = NULL;
-	int32_t V_2 = 0;
-	ByteU5BU5D_tD06FDBE8142446525DF1C40351D523A228373821* V_3 = NULL;
+	ByteU5BU5D_tD06FDBE8142446525DF1C40351D523A228373821* V_1 = NULL;
+	int16_t V_2 = 0;
+	int16_t V_3 = 0;
 	int16_t V_4 = 0;
 	int16_t V_5 = 0;
 	int16_t V_6 = 0;
 	int16_t V_7 = 0;
-	int16_t V_8 = 0;
-	int16_t V_9 = 0;
-	MpuSensorValue_t7A67A2F92DE2F1C8BE635E8F03892624EA926C6D * V_10 = NULL;
+	uint8_t G_B3_0 = 0x0;
+	uint8_t G_B2_0 = 0x0;
 	{
 		// if (_mpu6050Device != null)
 		I2cDevice_t98FC86BEF8346B93999084F247BB5BDE4D946128 * L_0 = __this->get__mpu6050Device_15();
 		if (!L_0)
 		{
-			goto IL_01a1;
+			goto IL_010f;
 		}
 	}
 	{
 		// int interrupt_status = ReadByte(INT_STATUS);
 		uint8_t L_1 = MPU6050_ReadByte_mAD3872A34BFB3D23C077457AC18EBCA42106021F(__this, (uint8_t)((int32_t)58), /*hidden argument*/NULL);
-		V_0 = L_1;
 		// if ((interrupt_status & 0x10) != 0)
-		int32_t L_2 = V_0;
+		uint8_t L_2 = L_1;
+		G_B2_0 = L_2;
 		if (!((int32_t)((int32_t)L_2&(int32_t)((int32_t)16))))
 		{
-			goto IL_0024;
+			G_B3_0 = L_2;
+			goto IL_0023;
 		}
 	}
 	{
 		// WriteByte(USER_CTRL, 0x44); // reset and enable fifo
 		MPU6050_WriteByte_mFD953ED5EED04CE2B3AF950F3CCF3771D0A53872(__this, (uint8_t)((int32_t)106), (uint8_t)((int32_t)68), /*hidden argument*/NULL);
+		G_B3_0 = G_B2_0;
 	}
 
-IL_0024:
+IL_0023:
 	{
 		// if ((interrupt_status & 0x1) != 0)
-		int32_t L_3 = V_0;
-		if (!((int32_t)((int32_t)L_3&(int32_t)1)))
+		if (!((int32_t)((int32_t)G_B3_0&(int32_t)1)))
 		{
-			goto IL_01a1;
+			goto IL_010f;
 		}
 	}
 	{
-		// MpuSensorEventArgs ea = new MpuSensorEventArgs();
-		MpuSensorEventArgs_t3E4AFC6A818B2F6F7F00F0564CA73B2942269A01 * L_4 = (MpuSensorEventArgs_t3E4AFC6A818B2F6F7F00F0564CA73B2942269A01 *)il2cpp_codegen_object_new(MpuSensorEventArgs_t3E4AFC6A818B2F6F7F00F0564CA73B2942269A01_il2cpp_TypeInfo_var);
-		MpuSensorEventArgs__ctor_m513CA5AC15E82F61BD111BBF60D628B5D143BB6C(L_4, /*hidden argument*/NULL);
-		// ea.Status = (byte)interrupt_status;
-		MpuSensorEventArgs_t3E4AFC6A818B2F6F7F00F0564CA73B2942269A01 * L_5 = L_4;
-		int32_t L_6 = V_0;
-		NullCheck(L_5);
-		MpuSensorEventArgs_set_Status_m9C6CCAD68D974F2B1D64D0444BE9422C13AFAE98(L_5, (uint8_t)(((int32_t)((uint8_t)L_6))), /*hidden argument*/NULL);
-		// ea.SamplePeriod = 0.02f;
-		NullCheck(L_5);
-		MpuSensorEventArgs_set_SamplePeriod_m56A0B0CC914482CEC938112FCAA95CA692C1011A(L_5, (0.02f), /*hidden argument*/NULL);
-		// List<MpuSensorValue> l = new List<MpuSensorValue>();
-		List_1_t297D9BE72E382594DC73FD4A6DE87C7EE12CF7A6 * L_7 = (List_1_t297D9BE72E382594DC73FD4A6DE87C7EE12CF7A6 *)il2cpp_codegen_object_new(List_1_t297D9BE72E382594DC73FD4A6DE87C7EE12CF7A6_il2cpp_TypeInfo_var);
-		List_1__ctor_m46052E66FE5CBEC4CAF1FC79FF1FE6FACFAF99C4(L_7, /*hidden argument*/List_1__ctor_m46052E66FE5CBEC4CAF1FC79FF1FE6FACFAF99C4_RuntimeMethod_var);
-		V_1 = L_7;
 		// int count = ReadWord(FIFO_COUNT);
-		uint16_t L_8 = MPU6050_ReadWord_m3A19AD3771B9FF6647121023495614BAD501ED08(__this, (uint8_t)((int32_t)114), /*hidden argument*/NULL);
-		V_2 = L_8;
-		goto IL_0199;
+		uint16_t L_3 = MPU6050_ReadWord_m3A19AD3771B9FF6647121023495614BAD501ED08(__this, (uint8_t)((int32_t)114), /*hidden argument*/NULL);
+		V_0 = L_3;
+		goto IL_0107;
 	}
 
-IL_0057:
+IL_0038:
 	{
 		// byte[] data = ReadBytes(FIFO_R_W, (byte)SensorBytes);
-		ByteU5BU5D_tD06FDBE8142446525DF1C40351D523A228373821* L_9 = MPU6050_ReadBytes_m9054F514AB1D96EDAE64A81291EA0C95030672C0(__this, (uint8_t)((int32_t)116), ((int32_t)12), /*hidden argument*/NULL);
-		V_3 = L_9;
+		ByteU5BU5D_tD06FDBE8142446525DF1C40351D523A228373821* L_4 = MPU6050_ReadBytes_m9054F514AB1D96EDAE64A81291EA0C95030672C0(__this, (uint8_t)((int32_t)116), ((int32_t)12), /*hidden argument*/NULL);
+		V_1 = L_4;
 		// count -= SensorBytes;
-		int32_t L_10 = V_2;
-		V_2 = ((int32_t)il2cpp_codegen_subtract((int32_t)L_10, (int32_t)((int32_t)12)));
+		int32_t L_5 = V_0;
+		V_0 = ((int32_t)il2cpp_codegen_subtract((int32_t)L_5, (int32_t)((int32_t)12)));
 		// short xa = (short)((int)data[0] << 8 | (int)data[1]);
-		ByteU5BU5D_tD06FDBE8142446525DF1C40351D523A228373821* L_11 = V_3;
-		NullCheck(L_11);
-		int32_t L_12 = 0;
-		uint8_t L_13 = (L_11)->GetAt(static_cast<il2cpp_array_size_t>(L_12));
-		ByteU5BU5D_tD06FDBE8142446525DF1C40351D523A228373821* L_14 = V_3;
-		NullCheck(L_14);
-		int32_t L_15 = 1;
-		uint8_t L_16 = (L_14)->GetAt(static_cast<il2cpp_array_size_t>(L_15));
-		V_4 = (((int16_t)((int16_t)((int32_t)((int32_t)((int32_t)((int32_t)L_13<<(int32_t)8))|(int32_t)L_16)))));
+		ByteU5BU5D_tD06FDBE8142446525DF1C40351D523A228373821* L_6 = V_1;
+		NullCheck(L_6);
+		int32_t L_7 = 0;
+		uint8_t L_8 = (L_6)->GetAt(static_cast<il2cpp_array_size_t>(L_7));
+		ByteU5BU5D_tD06FDBE8142446525DF1C40351D523A228373821* L_9 = V_1;
+		NullCheck(L_9);
+		int32_t L_10 = 1;
+		uint8_t L_11 = (L_9)->GetAt(static_cast<il2cpp_array_size_t>(L_10));
+		V_2 = (((int16_t)((int16_t)((int32_t)((int32_t)((int32_t)((int32_t)L_8<<(int32_t)8))|(int32_t)L_11)))));
 		// short ya = (short)((int)data[2] << 8 | (int)data[3]);
-		ByteU5BU5D_tD06FDBE8142446525DF1C40351D523A228373821* L_17 = V_3;
-		NullCheck(L_17);
-		int32_t L_18 = 2;
-		uint8_t L_19 = (L_17)->GetAt(static_cast<il2cpp_array_size_t>(L_18));
-		ByteU5BU5D_tD06FDBE8142446525DF1C40351D523A228373821* L_20 = V_3;
-		NullCheck(L_20);
-		int32_t L_21 = 3;
-		uint8_t L_22 = (L_20)->GetAt(static_cast<il2cpp_array_size_t>(L_21));
-		V_5 = (((int16_t)((int16_t)((int32_t)((int32_t)((int32_t)((int32_t)L_19<<(int32_t)8))|(int32_t)L_22)))));
+		ByteU5BU5D_tD06FDBE8142446525DF1C40351D523A228373821* L_12 = V_1;
+		NullCheck(L_12);
+		int32_t L_13 = 2;
+		uint8_t L_14 = (L_12)->GetAt(static_cast<il2cpp_array_size_t>(L_13));
+		ByteU5BU5D_tD06FDBE8142446525DF1C40351D523A228373821* L_15 = V_1;
+		NullCheck(L_15);
+		int32_t L_16 = 3;
+		uint8_t L_17 = (L_15)->GetAt(static_cast<il2cpp_array_size_t>(L_16));
+		V_3 = (((int16_t)((int16_t)((int32_t)((int32_t)((int32_t)((int32_t)L_14<<(int32_t)8))|(int32_t)L_17)))));
 		// short za = (short)((int)data[4] << 8 | (int)data[5]);
-		ByteU5BU5D_tD06FDBE8142446525DF1C40351D523A228373821* L_23 = V_3;
-		NullCheck(L_23);
-		int32_t L_24 = 4;
-		uint8_t L_25 = (L_23)->GetAt(static_cast<il2cpp_array_size_t>(L_24));
-		ByteU5BU5D_tD06FDBE8142446525DF1C40351D523A228373821* L_26 = V_3;
-		NullCheck(L_26);
-		int32_t L_27 = 5;
-		uint8_t L_28 = (L_26)->GetAt(static_cast<il2cpp_array_size_t>(L_27));
-		V_6 = (((int16_t)((int16_t)((int32_t)((int32_t)((int32_t)((int32_t)L_25<<(int32_t)8))|(int32_t)L_28)))));
+		ByteU5BU5D_tD06FDBE8142446525DF1C40351D523A228373821* L_18 = V_1;
+		NullCheck(L_18);
+		int32_t L_19 = 4;
+		uint8_t L_20 = (L_18)->GetAt(static_cast<il2cpp_array_size_t>(L_19));
+		ByteU5BU5D_tD06FDBE8142446525DF1C40351D523A228373821* L_21 = V_1;
+		NullCheck(L_21);
+		int32_t L_22 = 5;
+		uint8_t L_23 = (L_21)->GetAt(static_cast<il2cpp_array_size_t>(L_22));
+		V_4 = (((int16_t)((int16_t)((int32_t)((int32_t)((int32_t)((int32_t)L_20<<(int32_t)8))|(int32_t)L_23)))));
 		// short xg = (short)((int)data[6] << 8 | (int)data[7]);
-		ByteU5BU5D_tD06FDBE8142446525DF1C40351D523A228373821* L_29 = V_3;
-		NullCheck(L_29);
-		int32_t L_30 = 6;
-		uint8_t L_31 = (L_29)->GetAt(static_cast<il2cpp_array_size_t>(L_30));
-		ByteU5BU5D_tD06FDBE8142446525DF1C40351D523A228373821* L_32 = V_3;
-		NullCheck(L_32);
-		int32_t L_33 = 7;
-		uint8_t L_34 = (L_32)->GetAt(static_cast<il2cpp_array_size_t>(L_33));
-		V_7 = (((int16_t)((int16_t)((int32_t)((int32_t)((int32_t)((int32_t)L_31<<(int32_t)8))|(int32_t)L_34)))));
+		ByteU5BU5D_tD06FDBE8142446525DF1C40351D523A228373821* L_24 = V_1;
+		NullCheck(L_24);
+		int32_t L_25 = 6;
+		uint8_t L_26 = (L_24)->GetAt(static_cast<il2cpp_array_size_t>(L_25));
+		ByteU5BU5D_tD06FDBE8142446525DF1C40351D523A228373821* L_27 = V_1;
+		NullCheck(L_27);
+		int32_t L_28 = 7;
+		uint8_t L_29 = (L_27)->GetAt(static_cast<il2cpp_array_size_t>(L_28));
+		V_5 = (((int16_t)((int16_t)((int32_t)((int32_t)((int32_t)((int32_t)L_26<<(int32_t)8))|(int32_t)L_29)))));
 		// short yg = (short)((int)data[8] << 8 | (int)data[9]);
-		ByteU5BU5D_tD06FDBE8142446525DF1C40351D523A228373821* L_35 = V_3;
-		NullCheck(L_35);
-		int32_t L_36 = 8;
-		uint8_t L_37 = (L_35)->GetAt(static_cast<il2cpp_array_size_t>(L_36));
-		ByteU5BU5D_tD06FDBE8142446525DF1C40351D523A228373821* L_38 = V_3;
-		NullCheck(L_38);
-		int32_t L_39 = ((int32_t)9);
-		uint8_t L_40 = (L_38)->GetAt(static_cast<il2cpp_array_size_t>(L_39));
-		V_8 = (((int16_t)((int16_t)((int32_t)((int32_t)((int32_t)((int32_t)L_37<<(int32_t)8))|(int32_t)L_40)))));
+		ByteU5BU5D_tD06FDBE8142446525DF1C40351D523A228373821* L_30 = V_1;
+		NullCheck(L_30);
+		int32_t L_31 = 8;
+		uint8_t L_32 = (L_30)->GetAt(static_cast<il2cpp_array_size_t>(L_31));
+		ByteU5BU5D_tD06FDBE8142446525DF1C40351D523A228373821* L_33 = V_1;
+		NullCheck(L_33);
+		int32_t L_34 = ((int32_t)9);
+		uint8_t L_35 = (L_33)->GetAt(static_cast<il2cpp_array_size_t>(L_34));
+		V_6 = (((int16_t)((int16_t)((int32_t)((int32_t)((int32_t)((int32_t)L_32<<(int32_t)8))|(int32_t)L_35)))));
 		// short zg = (short)((int)data[10] << 8 | (int)data[11]);
-		ByteU5BU5D_tD06FDBE8142446525DF1C40351D523A228373821* L_41 = V_3;
-		NullCheck(L_41);
-		int32_t L_42 = ((int32_t)10);
-		uint8_t L_43 = (L_41)->GetAt(static_cast<il2cpp_array_size_t>(L_42));
-		ByteU5BU5D_tD06FDBE8142446525DF1C40351D523A228373821* L_44 = V_3;
-		NullCheck(L_44);
-		int32_t L_45 = ((int32_t)11);
-		uint8_t L_46 = (L_44)->GetAt(static_cast<il2cpp_array_size_t>(L_45));
-		V_9 = (((int16_t)((int16_t)((int32_t)((int32_t)((int32_t)((int32_t)L_43<<(int32_t)8))|(int32_t)L_46)))));
-		// MpuSensorValue sv = new MpuSensorValue();
-		MpuSensorValue_t7A67A2F92DE2F1C8BE635E8F03892624EA926C6D * L_47 = (MpuSensorValue_t7A67A2F92DE2F1C8BE635E8F03892624EA926C6D *)il2cpp_codegen_object_new(MpuSensorValue_t7A67A2F92DE2F1C8BE635E8F03892624EA926C6D_il2cpp_TypeInfo_var);
-		MpuSensorValue__ctor_m31D715FC101067DF75CC937A2FFFD809DCC7844E(L_47, /*hidden argument*/NULL);
-		V_10 = L_47;
-		// sv.AccelerationX = (float)xa / (float)16384;
-		MpuSensorValue_t7A67A2F92DE2F1C8BE635E8F03892624EA926C6D * L_48 = V_10;
-		int16_t L_49 = V_4;
-		NullCheck(L_48);
-		MpuSensorValue_set_AccelerationX_m0BFF65B351ACA40D38EC00A7B9EFE37C6424CE7D(L_48, ((float)((float)(((float)((float)L_49)))/(float)(16384.0f))), /*hidden argument*/NULL);
-		// sv.AccelerationY = (float)ya / (float)16384;
-		MpuSensorValue_t7A67A2F92DE2F1C8BE635E8F03892624EA926C6D * L_50 = V_10;
-		int16_t L_51 = V_5;
-		NullCheck(L_50);
-		MpuSensorValue_set_AccelerationY_m6DDFF1B7FAE02A7FF13FCCC9D79EC8F58D083E8C(L_50, ((float)((float)(((float)((float)L_51)))/(float)(16384.0f))), /*hidden argument*/NULL);
-		// sv.AccelerationZ = (float)za / (float)16384;
-		MpuSensorValue_t7A67A2F92DE2F1C8BE635E8F03892624EA926C6D * L_52 = V_10;
-		int16_t L_53 = V_6;
-		NullCheck(L_52);
-		MpuSensorValue_set_AccelerationZ_mE09E239429B036752F410262981309F396E7058E(L_52, ((float)((float)(((float)((float)L_53)))/(float)(16384.0f))), /*hidden argument*/NULL);
-		// sv.GyroX = (float)xg / (float)131;
-		MpuSensorValue_t7A67A2F92DE2F1C8BE635E8F03892624EA926C6D * L_54 = V_10;
-		int16_t L_55 = V_7;
-		NullCheck(L_54);
-		MpuSensorValue_set_GyroX_m70C6C473B24E12D39F7572A5513C7BF8A2AAE034(L_54, ((float)((float)(((float)((float)L_55)))/(float)(131.0f))), /*hidden argument*/NULL);
-		// sv.GyroY = (float)yg / (float)131;
-		MpuSensorValue_t7A67A2F92DE2F1C8BE635E8F03892624EA926C6D * L_56 = V_10;
-		int16_t L_57 = V_8;
-		NullCheck(L_56);
-		MpuSensorValue_set_GyroY_m6DAFD785D936EFFFD8327D946879ECF78FA02AFD(L_56, ((float)((float)(((float)((float)L_57)))/(float)(131.0f))), /*hidden argument*/NULL);
-		// sv.GyroZ = (float)zg / (float)131;
-		MpuSensorValue_t7A67A2F92DE2F1C8BE635E8F03892624EA926C6D * L_58 = V_10;
-		int16_t L_59 = V_9;
-		NullCheck(L_58);
-		MpuSensorValue_set_GyroZ_m3DB75586A201A052473F74B2CA73ED626C169421(L_58, ((float)((float)(((float)((float)L_59)))/(float)(131.0f))), /*hidden argument*/NULL);
-		// l.Add(sv);
-		List_1_t297D9BE72E382594DC73FD4A6DE87C7EE12CF7A6 * L_60 = V_1;
-		MpuSensorValue_t7A67A2F92DE2F1C8BE635E8F03892624EA926C6D * L_61 = V_10;
-		NullCheck(L_60);
-		List_1_Add_m90B14063419879556CFBEF12A820D99FAB2DD6D1(L_60, L_61, /*hidden argument*/List_1_Add_m90B14063419879556CFBEF12A820D99FAB2DD6D1_RuntimeMethod_var);
+		ByteU5BU5D_tD06FDBE8142446525DF1C40351D523A228373821* L_36 = V_1;
+		NullCheck(L_36);
+		int32_t L_37 = ((int32_t)10);
+		uint8_t L_38 = (L_36)->GetAt(static_cast<il2cpp_array_size_t>(L_37));
+		ByteU5BU5D_tD06FDBE8142446525DF1C40351D523A228373821* L_39 = V_1;
+		NullCheck(L_39);
+		int32_t L_40 = ((int32_t)11);
+		uint8_t L_41 = (L_39)->GetAt(static_cast<il2cpp_array_size_t>(L_40));
+		V_7 = (((int16_t)((int16_t)((int32_t)((int32_t)((int32_t)((int32_t)L_38<<(int32_t)8))|(int32_t)L_41)))));
 		// LastValues.AccelerationX = (float)xa / (float)16384;
-		MpuSensorValue_t7A67A2F92DE2F1C8BE635E8F03892624EA926C6D * L_62 = MPU6050_get_LastValues_mA90BD6D96BC5F6B9FD40D830869BC39F864A4B9F(__this, /*hidden argument*/NULL);
-		int16_t L_63 = V_4;
-		NullCheck(L_62);
-		MpuSensorValue_set_AccelerationX_m0BFF65B351ACA40D38EC00A7B9EFE37C6424CE7D(L_62, ((float)((float)(((float)((float)L_63)))/(float)(16384.0f))), /*hidden argument*/NULL);
+		MpuSensorValue_t7A67A2F92DE2F1C8BE635E8F03892624EA926C6D * L_42 = MPU6050_get_LastValues_mA90BD6D96BC5F6B9FD40D830869BC39F864A4B9F(__this, /*hidden argument*/NULL);
+		int16_t L_43 = V_2;
+		NullCheck(L_42);
+		MpuSensorValue_set_AccelerationX_m0BFF65B351ACA40D38EC00A7B9EFE37C6424CE7D(L_42, ((float)((float)(((float)((float)L_43)))/(float)(16384.0f))), /*hidden argument*/NULL);
 		// LastValues.AccelerationY = (float)ya / (float)16384;
-		MpuSensorValue_t7A67A2F92DE2F1C8BE635E8F03892624EA926C6D * L_64 = MPU6050_get_LastValues_mA90BD6D96BC5F6B9FD40D830869BC39F864A4B9F(__this, /*hidden argument*/NULL);
-		int16_t L_65 = V_5;
-		NullCheck(L_64);
-		MpuSensorValue_set_AccelerationY_m6DDFF1B7FAE02A7FF13FCCC9D79EC8F58D083E8C(L_64, ((float)((float)(((float)((float)L_65)))/(float)(16384.0f))), /*hidden argument*/NULL);
+		MpuSensorValue_t7A67A2F92DE2F1C8BE635E8F03892624EA926C6D * L_44 = MPU6050_get_LastValues_mA90BD6D96BC5F6B9FD40D830869BC39F864A4B9F(__this, /*hidden argument*/NULL);
+		int16_t L_45 = V_3;
+		NullCheck(L_44);
+		MpuSensorValue_set_AccelerationY_m6DDFF1B7FAE02A7FF13FCCC9D79EC8F58D083E8C(L_44, ((float)((float)(((float)((float)L_45)))/(float)(16384.0f))), /*hidden argument*/NULL);
 		// LastValues.AccelerationZ = (float)za / (float)16384;
-		MpuSensorValue_t7A67A2F92DE2F1C8BE635E8F03892624EA926C6D * L_66 = MPU6050_get_LastValues_mA90BD6D96BC5F6B9FD40D830869BC39F864A4B9F(__this, /*hidden argument*/NULL);
-		int16_t L_67 = V_6;
-		NullCheck(L_66);
-		MpuSensorValue_set_AccelerationZ_mE09E239429B036752F410262981309F396E7058E(L_66, ((float)((float)(((float)((float)L_67)))/(float)(16384.0f))), /*hidden argument*/NULL);
+		MpuSensorValue_t7A67A2F92DE2F1C8BE635E8F03892624EA926C6D * L_46 = MPU6050_get_LastValues_mA90BD6D96BC5F6B9FD40D830869BC39F864A4B9F(__this, /*hidden argument*/NULL);
+		int16_t L_47 = V_4;
+		NullCheck(L_46);
+		MpuSensorValue_set_AccelerationZ_mE09E239429B036752F410262981309F396E7058E(L_46, ((float)((float)(((float)((float)L_47)))/(float)(16384.0f))), /*hidden argument*/NULL);
 		// LastValues.GyroX = (float)xg / (float)131;
-		MpuSensorValue_t7A67A2F92DE2F1C8BE635E8F03892624EA926C6D * L_68 = MPU6050_get_LastValues_mA90BD6D96BC5F6B9FD40D830869BC39F864A4B9F(__this, /*hidden argument*/NULL);
-		int16_t L_69 = V_7;
-		NullCheck(L_68);
-		MpuSensorValue_set_GyroX_m70C6C473B24E12D39F7572A5513C7BF8A2AAE034(L_68, ((float)((float)(((float)((float)L_69)))/(float)(131.0f))), /*hidden argument*/NULL);
+		MpuSensorValue_t7A67A2F92DE2F1C8BE635E8F03892624EA926C6D * L_48 = MPU6050_get_LastValues_mA90BD6D96BC5F6B9FD40D830869BC39F864A4B9F(__this, /*hidden argument*/NULL);
+		int16_t L_49 = V_5;
+		NullCheck(L_48);
+		MpuSensorValue_set_GyroX_m70C6C473B24E12D39F7572A5513C7BF8A2AAE034(L_48, ((float)((float)(((float)((float)L_49)))/(float)(131.0f))), /*hidden argument*/NULL);
 		// LastValues.GyroY = (float)yg / (float)131;
-		MpuSensorValue_t7A67A2F92DE2F1C8BE635E8F03892624EA926C6D * L_70 = MPU6050_get_LastValues_mA90BD6D96BC5F6B9FD40D830869BC39F864A4B9F(__this, /*hidden argument*/NULL);
-		int16_t L_71 = V_8;
-		NullCheck(L_70);
-		MpuSensorValue_set_GyroY_m6DAFD785D936EFFFD8327D946879ECF78FA02AFD(L_70, ((float)((float)(((float)((float)L_71)))/(float)(131.0f))), /*hidden argument*/NULL);
+		MpuSensorValue_t7A67A2F92DE2F1C8BE635E8F03892624EA926C6D * L_50 = MPU6050_get_LastValues_mA90BD6D96BC5F6B9FD40D830869BC39F864A4B9F(__this, /*hidden argument*/NULL);
+		int16_t L_51 = V_6;
+		NullCheck(L_50);
+		MpuSensorValue_set_GyroY_m6DAFD785D936EFFFD8327D946879ECF78FA02AFD(L_50, ((float)((float)(((float)((float)L_51)))/(float)(131.0f))), /*hidden argument*/NULL);
 		// LastValues.GyroZ = (float)zg / (float)131;
-		MpuSensorValue_t7A67A2F92DE2F1C8BE635E8F03892624EA926C6D * L_72 = MPU6050_get_LastValues_mA90BD6D96BC5F6B9FD40D830869BC39F864A4B9F(__this, /*hidden argument*/NULL);
-		int16_t L_73 = V_9;
-		NullCheck(L_72);
-		MpuSensorValue_set_GyroZ_m3DB75586A201A052473F74B2CA73ED626C169421(L_72, ((float)((float)(((float)((float)L_73)))/(float)(131.0f))), /*hidden argument*/NULL);
+		MpuSensorValue_t7A67A2F92DE2F1C8BE635E8F03892624EA926C6D * L_52 = MPU6050_get_LastValues_mA90BD6D96BC5F6B9FD40D830869BC39F864A4B9F(__this, /*hidden argument*/NULL);
+		int16_t L_53 = V_7;
+		NullCheck(L_52);
+		MpuSensorValue_set_GyroZ_m3DB75586A201A052473F74B2CA73ED626C169421(L_52, ((float)((float)(((float)((float)L_53)))/(float)(131.0f))), /*hidden argument*/NULL);
 	}
 
-IL_0199:
+IL_0107:
 	{
 		// while (count >= SensorBytes)
-		int32_t L_74 = V_2;
-		if ((((int32_t)L_74) >= ((int32_t)((int32_t)12))))
+		int32_t L_54 = V_0;
+		if ((((int32_t)L_54) >= ((int32_t)((int32_t)12))))
 		{
-			goto IL_0057;
+			goto IL_0038;
 		}
 	}
 
-IL_01a1:
+IL_010f:
 	{
 		// }
 		return;
@@ -9618,86 +9316,6 @@ extern "C"  void U3CInitHardwareU3Ed__27_SetStateMachine_mF29A99521704C0977B8997
 {
 	U3CInitHardwareU3Ed__27_tA8F31EC47944D8E63048C60ED577BF337DC94941 * _thisAdjusted = reinterpret_cast<U3CInitHardwareU3Ed__27_tA8F31EC47944D8E63048C60ED577BF337DC94941 *>(__this + 1);
 	U3CInitHardwareU3Ed__27_SetStateMachine_mF29A99521704C0977B89979C1B8B686663BC507D(_thisAdjusted, ___stateMachine0, method);
-}
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-// System.Byte mpu6050.MpuSensorEventArgs::get_Status()
-extern "C" IL2CPP_METHOD_ATTR uint8_t MpuSensorEventArgs_get_Status_m7CD29C5A8B02067520EFA5353B2242F8773E2CD0 (MpuSensorEventArgs_t3E4AFC6A818B2F6F7F00F0564CA73B2942269A01 * __this, const RuntimeMethod* method)
-{
-	{
-		// public byte Status { get; set; }
-		uint8_t L_0 = __this->get_U3CStatusU3Ek__BackingField_1();
-		return L_0;
-	}
-}
-// System.Void mpu6050.MpuSensorEventArgs::set_Status(System.Byte)
-extern "C" IL2CPP_METHOD_ATTR void MpuSensorEventArgs_set_Status_m9C6CCAD68D974F2B1D64D0444BE9422C13AFAE98 (MpuSensorEventArgs_t3E4AFC6A818B2F6F7F00F0564CA73B2942269A01 * __this, uint8_t ___value0, const RuntimeMethod* method)
-{
-	{
-		// public byte Status { get; set; }
-		uint8_t L_0 = ___value0;
-		__this->set_U3CStatusU3Ek__BackingField_1(L_0);
-		return;
-	}
-}
-// System.Single mpu6050.MpuSensorEventArgs::get_SamplePeriod()
-extern "C" IL2CPP_METHOD_ATTR float MpuSensorEventArgs_get_SamplePeriod_m9AAADA8D28C3F0830EE4C24EED3D871B1C04B4D9 (MpuSensorEventArgs_t3E4AFC6A818B2F6F7F00F0564CA73B2942269A01 * __this, const RuntimeMethod* method)
-{
-	{
-		// public float SamplePeriod { get; set; }
-		float L_0 = __this->get_U3CSamplePeriodU3Ek__BackingField_2();
-		return L_0;
-	}
-}
-// System.Void mpu6050.MpuSensorEventArgs::set_SamplePeriod(System.Single)
-extern "C" IL2CPP_METHOD_ATTR void MpuSensorEventArgs_set_SamplePeriod_m56A0B0CC914482CEC938112FCAA95CA692C1011A (MpuSensorEventArgs_t3E4AFC6A818B2F6F7F00F0564CA73B2942269A01 * __this, float ___value0, const RuntimeMethod* method)
-{
-	{
-		// public float SamplePeriod { get; set; }
-		float L_0 = ___value0;
-		__this->set_U3CSamplePeriodU3Ek__BackingField_2(L_0);
-		return;
-	}
-}
-// mpu6050.MpuSensorValue[] mpu6050.MpuSensorEventArgs::get_Values()
-extern "C" IL2CPP_METHOD_ATTR MpuSensorValueU5BU5D_t6A57BCA4236E5E4934F15848CDEE8E8C34249CF6* MpuSensorEventArgs_get_Values_mA6010574C273920FEAC5961FEAA79B41C7786494 (MpuSensorEventArgs_t3E4AFC6A818B2F6F7F00F0564CA73B2942269A01 * __this, const RuntimeMethod* method)
-{
-	{
-		// public MpuSensorValue[] Values { get; set; }
-		MpuSensorValueU5BU5D_t6A57BCA4236E5E4934F15848CDEE8E8C34249CF6* L_0 = __this->get_U3CValuesU3Ek__BackingField_3();
-		return L_0;
-	}
-}
-// System.Void mpu6050.MpuSensorEventArgs::set_Values(mpu6050.MpuSensorValue[])
-extern "C" IL2CPP_METHOD_ATTR void MpuSensorEventArgs_set_Values_m688C42C0B7D1727E7D7AA90C5D2BAEFB71FBF5EC (MpuSensorEventArgs_t3E4AFC6A818B2F6F7F00F0564CA73B2942269A01 * __this, MpuSensorValueU5BU5D_t6A57BCA4236E5E4934F15848CDEE8E8C34249CF6* ___value0, const RuntimeMethod* method)
-{
-	{
-		// public MpuSensorValue[] Values { get; set; }
-		MpuSensorValueU5BU5D_t6A57BCA4236E5E4934F15848CDEE8E8C34249CF6* L_0 = ___value0;
-		__this->set_U3CValuesU3Ek__BackingField_3(L_0);
-		return;
-	}
-}
-// System.Void mpu6050.MpuSensorEventArgs::.ctor()
-extern "C" IL2CPP_METHOD_ATTR void MpuSensorEventArgs__ctor_m513CA5AC15E82F61BD111BBF60D628B5D143BB6C (MpuSensorEventArgs_t3E4AFC6A818B2F6F7F00F0564CA73B2942269A01 * __this, const RuntimeMethod* method)
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_method (MpuSensorEventArgs__ctor_m513CA5AC15E82F61BD111BBF60D628B5D143BB6C_MetadataUsageId);
-		s_Il2CppMethodInitialized = true;
-	}
-	{
-		IL2CPP_RUNTIME_CLASS_INIT(EventArgs_t8E6CA180BE0E56674C6407011A94BAF7C757352E_il2cpp_TypeInfo_var);
-		EventArgs__ctor_m3551293259861C5A78CD47689D559F828ED29DF7(__this, /*hidden argument*/NULL);
-		return;
-	}
 }
 #ifdef __clang__
 #pragma clang diagnostic pop
