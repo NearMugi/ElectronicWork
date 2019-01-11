@@ -79,10 +79,6 @@
     </ClCompile>
     <ClCompile Include="Source\il2cppOutput\Bulk_Generics_2.cpp">
     </ClCompile>
-    <ClCompile Include="Source\il2cppOutput\Bulk_Generics_20.cpp">
-    </ClCompile>
-    <ClCompile Include="Source\il2cppOutput\Bulk_Generics_21.cpp">
-    </ClCompile>
     <ClCompile Include="Source\il2cppOutput\Bulk_Generics_3.cpp">
     </ClCompile>
     <ClCompile Include="Source\il2cppOutput\Bulk_Generics_4.cpp">
@@ -156,8 +152,6 @@
     <ClCompile Include="Source\il2cppOutput\Bulk_System.Core_0.cpp">
     </ClCompile>
     <ClCompile Include="Source\il2cppOutput\Bulk_System.ObjectModel_0.cpp">
-    </ClCompile>
-    <ClCompile Include="Source\il2cppOutput\Bulk_System.Runtime.InteropServices.WindowsRuntime_0.cpp">
     </ClCompile>
     <ClCompile Include="Source\il2cppOutput\Bulk_System.Runtime.WindowsRuntime.UI.Xaml_0.cpp">
     </ClCompile>
@@ -256,8 +250,6 @@
     <ClCompile Include="Source\il2cppOutput\Il2CppComCallableWrappers12.cpp">
     </ClCompile>
     <ClCompile Include="Source\il2cppOutput\Il2CppComCallableWrappers13.cpp">
-    </ClCompile>
-    <ClCompile Include="Source\il2cppOutput\Il2CppComCallableWrappers14.cpp">
     </ClCompile>
     <ClCompile Include="Source\il2cppOutput\Il2CppComCallableWrappers2.cpp">
     </ClCompile>
@@ -366,8 +358,6 @@
     <ClCompile Include="Source\il2cppOutput\Il2CppProjectedComCallableWrapperMethods1.cpp">
     </ClCompile>
     <ClCompile Include="Source\il2cppOutput\Il2CppProjectedComCallableWrapperMethods2.cpp">
-    </ClCompile>
-    <ClCompile Include="Source\il2cppOutput\Il2CppProjectedComCallableWrapperMethods3.cpp">
     </ClCompile>
     <ClCompile Include="Source\il2cppOutput\Il2CppTypeDefinitions.cpp">
     </ClCompile>

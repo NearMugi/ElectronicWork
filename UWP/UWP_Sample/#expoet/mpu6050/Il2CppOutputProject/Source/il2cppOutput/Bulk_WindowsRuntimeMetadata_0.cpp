@@ -40,10 +40,6 @@ struct IDictionary_t1BD5C1546718A374EA8122FBD6C6EE45331E8CE7;
 struct IEnumerator_t8789118187258CC88B77AFAC6315B5AF87D3E18A;
 // System.DateTimeOffset[]
 struct DateTimeOffsetU5BU5D_tA6AB0D688B74AD64A882F6A8D9824B6AD00813D7;
-// System.DelegateData
-struct DelegateData_t1BF9F691B56DAE5F8C28C5E084FDE94F15F27BBE;
-// System.Delegate[]
-struct DelegateU5BU5D_tDFCDEE2A6322F96C0FE49AF47E9ADB8C4B294E86;
 // System.Diagnostics.StackTrace[]
 struct StackTraceU5BU5D_t855F09649EA34DEE7C1B6F088E0538E3CCC3F196;
 // System.Double[]
@@ -66,8 +62,6 @@ struct ObjectU5BU5D_t3C9242B5C88A48B2A5BD9FDA6CD0024E792AF08A;
 struct Binder_t4D5CB06963501D32847C057B57157D6DC49CA759;
 // System.Reflection.MemberFilter
 struct MemberFilter_t25C1BD92C42BE94426E300787C13C452CB89B381;
-// System.Reflection.MethodInfo
-struct MethodInfo_t;
 // System.Runtime.InteropServices.WindowsRuntime.IBindableIterableToIEnumerableAdapter
 struct IBindableIterableToIEnumerableAdapter_tBDFD2FEA71EB42498F2BF8331CE76ECB29090D9A;
 // System.Runtime.InteropServices.WindowsRuntime.IClosableToIDisposableAdapter
@@ -134,10 +128,6 @@ struct IDeviceInformationStatics_t72A60758F8653A3D9861C4D4328DBD158FBF897C;
 struct IDeviceInformationStatics2_t82D229778697DAEC7702B1FC613336E264251406;
 // Windows.Devices.Gpio.GpioController
 struct GpioController_t9EC04AE9960323D7AD5D38705D1A92E5DF62079D;
-// Windows.Devices.Gpio.GpioPin
-struct GpioPin_t782D38614B9E65AA121B64278CA7BA467F5B8FD9;
-// Windows.Devices.Gpio.GpioPinValueChangedEventArgs
-struct GpioPinValueChangedEventArgs_tB39504B0C43290BD55646E34B001AA46FE63796F;
 // Windows.Devices.Gpio.IGpioControllerStatics
 struct IGpioControllerStatics_t3CE1F2BBFF586BDE901C22ACC06E97B67051D5FB;
 // Windows.Devices.Gpio.IGpioControllerStatics2
@@ -208,8 +198,6 @@ struct PointU5BU5D_tD91AB35E3284C9E9789C9BA78F4B2C58A2E4FF11;
 struct RectU5BU5D_t04A0BEA0B6C281BD9A695F537DC48BF7576C358F;
 // Windows.Foundation.Size[]
 struct SizeU5BU5D_t9B66FD0DE66BE54A0260714C9F6BBD896A4FDD0B;
-// Windows.Foundation.TypedEventHandler`2<Windows.Devices.Gpio.GpioPin,Windows.Devices.Gpio.GpioPinValueChangedEventArgs>
-struct TypedEventHandler_2_t91F1ECD6C7BB5E599B3AAE6BAAD74D341D7A96BE;
 // Windows.Foundation.Uri
 struct Uri_t7FCD0E500DB4C1478C55F5F495474206BC3E6249;
 // Windows.Foundation.WwwFormUrlDecoder
@@ -227,7 +215,6 @@ extern RuntimeClass* DateTimeOffsetU5BU5D_tA6AB0D688B74AD64A882F6A8D9824B6AD0081
 extern RuntimeClass* DeviceInformation_t6188B770C92A6C990958DA0821869BF350ED39C9_il2cpp_TypeInfo_var;
 extern RuntimeClass* DoubleU5BU5D_tF9383437DDA9EAC9F60627E9E6E2045CF7CB182D_il2cpp_TypeInfo_var;
 extern RuntimeClass* GpioController_t9EC04AE9960323D7AD5D38705D1A92E5DF62079D_il2cpp_TypeInfo_var;
-extern RuntimeClass* GpioPin_t782D38614B9E65AA121B64278CA7BA467F5B8FD9_il2cpp_TypeInfo_var;
 extern RuntimeClass* GuidU5BU5D_t5CC024A2CAE5304311E0B961142A216C0972B0FF_il2cpp_TypeInfo_var;
 extern RuntimeClass* I2cConnectionSettings_tDD980C2F6B9B5A626B91FCA02033271C84B6B1C3_il2cpp_TypeInfo_var;
 extern RuntimeClass* I2cDevice_t98FC86BEF8346B93999084F247BB5BDE4D946128_il2cpp_TypeInfo_var;
@@ -256,7 +243,6 @@ extern RuntimeClass* UInt64U5BU5D_tA808FE881491284FF25AFDF5C4BC92A826031EF4_il2c
 extern RuntimeClass* Uri_t7FCD0E500DB4C1478C55F5F495474206BC3E6249_il2cpp_TypeInfo_var;
 extern RuntimeClass* Uri_t87E4A94B2901F5EEDD18AA72C3DB1B00E672D68E_il2cpp_TypeInfo_var;
 extern RuntimeClass* WwwFormUrlDecoder_t1AF3B69B4D346D52B2481522562D3C6A49752E14_il2cpp_TypeInfo_var;
-extern RuntimeClass* __Il2CppComDelegate_t0A30496F74225C39A0CF7FADB94934C0536120FD_il2cpp_TypeInfo_var;
 extern String_t* _stringLiteral5F82205BEDF93F9FC5534E27F6D5798CA8E49C9A;
 extern String_t* _stringLiteral7DA9F73A36ABE2E58D56D121E5A7E2C3CF329C27;
 extern const RuntimeMethod* IInspectableToIReadOnlyCollectionAdapter_1_System_Collections_Generic_IReadOnlyCollection_1_get_Count_mCBCA021033172E7B28D67E9129869A37CF3B1127_RuntimeMethod_var;
@@ -274,9 +260,6 @@ extern const uint32_t DeviceInformationCollection_get_Count_m4DA52574D663F90E25E
 extern const uint32_t DeviceInformationCollection_get_Item_m9CA1CF392D93688E65129C68532893841BF12FF7_MetadataUsageId;
 extern const uint32_t DeviceInformation_FindAllAsync_m996740009B773388FBCC4B81D5BC9CF099B4F141_MetadataUsageId;
 extern const uint32_t GpioController_GetDefault_mB4A541F47D43F3062A9FBCC2F810ECA3A725DEEC_MetadataUsageId;
-extern const uint32_t GpioController_OpenPin_mE9FA0FA345F5C75BC2FD4371DAA2336B80ECC810_MetadataUsageId;
-extern const uint32_t GpioPin_Dispose_m46B24E4094B8C34880CF02402A0AC7B271C47DD8_MetadataUsageId;
-extern const uint32_t GpioPin_add_ValueChanged_mA5481335EF99F46A6EBC1797CDC9F72E85600F18_MetadataUsageId;
 extern const uint32_t I2cConnectionSettings__ctor_m9F3C9DC8564CBBB3B887A1B1A965D1DEE48EF971_MetadataUsageId;
 extern const uint32_t I2cDevice_Dispose_m09D05003C9BF4BBBFD468576EFA37EF41A15B846_MetadataUsageId;
 extern const uint32_t I2cDevice_FromIdAsync_m5B9AD081A33D59F5C5CF8FC8A73C22AF0AFFB67B_MetadataUsageId;
@@ -331,13 +314,10 @@ struct IBindableIterator_t4EB9DDBBBED9295CB77A2FAD2C1171407B95575B;
 struct IBindableVectorView_t2E5FE29205C7C900DCA5C85A1470B6071F813E9E;
 struct IDeviceInformation_t952FA6D173505A2EB6C7B8B87188CA994B9E7602;
 struct IGpioController_t977213ADC5BCF15DBAF32ECB368A52ECEC034E12;
-struct IGpioPinValueChangedEventArgs_t0EE77A7A8EF5F6F473318CD26B6EE1597941D167;
-struct IGpioPin_t4955A033932D03E92518FC8204CD96C339B147DF;
 struct II2cConnectionSettings_tDCF6272D4B385002CA5D62469AF677125E1F085F;
 struct II2cDevice_t63596282F07741676EB1E852C905E0331BA7C6C6;
 struct IIterator_1_t0B7144F7BED0924647B92F8673CD833E979C02D9;
 struct IIterator_1_t227869F704EB21BEFFC77A20C298E3C5FCFDE567;
-struct ITypedEventHandler_2_t91F1ECD6C7BB5E599B3AAE6BAAD74D341D7A96BE_ComCallableWrapper;
 struct IUriRuntimeClass_tC01591D947FC17E12B1974E663E223A343F2389B;;
 struct IVectorView_1_t16EB58932EA468389C19C204DF879A8D5477BA58;
 struct IWwwFormUrlDecoderEntry_tC4C4D232A843D96221527E27D6363316F965B6B0;
@@ -454,9 +434,9 @@ struct NOVTABLE IGpioController_t977213ADC5BCF15DBAF32ECB368A52ECEC034E12 : Il2C
 {
 	static const Il2CppGuid IID;
 	virtual il2cpp_hresult_t STDCALL IGpioController_U24__Stripped0_get_PinCount_mFB79BF5E3026CA086B685C07A485A721DA7BB5C7() = 0;
-	virtual il2cpp_hresult_t STDCALL IGpioController_OpenPin_m2D4C2718C118244B9A0D611F1E6E39EFA3F98ADC(int32_t ___pinNumber0, IGpioPin_t4955A033932D03E92518FC8204CD96C339B147DF** comReturnValue) = 0;
 	virtual il2cpp_hresult_t STDCALL IGpioController_U24__Stripped1_OpenPin_mA05938B84EDDBF2E9D4A9D45C3F969DD24559C50() = 0;
-	virtual il2cpp_hresult_t STDCALL IGpioController_U24__Stripped2_TryOpenPin_mE832C62E3A07B5250B4C29362250B1382C91FA56() = 0;
+	virtual il2cpp_hresult_t STDCALL IGpioController_U24__Stripped2_OpenPin_m63965EF8ED551A67825B8EA3AC0B787B12E3B919() = 0;
+	virtual il2cpp_hresult_t STDCALL IGpioController_U24__Stripped3_TryOpenPin_mE3B913613DA0FD7F14B8076986672DA7FF1925BB() = 0;
 };
 // Windows.Devices.Gpio.IGpioControllerStatics
 struct NOVTABLE IGpioControllerStatics_t3CE1F2BBFF586BDE901C22ACC06E97B67051D5FB : Il2CppIInspectable
@@ -470,12 +450,6 @@ struct NOVTABLE IGpioControllerStatics2_tA4DD7B74F5D9E5EF972EC1C304DA7A4AAA26E2D
 	static const Il2CppGuid IID;
 	virtual il2cpp_hresult_t STDCALL IGpioControllerStatics2_U24__Stripped0_GetControllersAsync_m9FC8C41D3F5B1B8B53F91EA9CECCF853BE32A8C7() = 0;
 	virtual il2cpp_hresult_t STDCALL IGpioControllerStatics2_U24__Stripped1_GetDefaultAsync_m1091805E39022EE376346C8E7FD42EB407E9604A() = 0;
-};
-// Windows.Devices.Gpio.IGpioPinValueChangedEventArgs
-struct NOVTABLE IGpioPinValueChangedEventArgs_t0EE77A7A8EF5F6F473318CD26B6EE1597941D167 : Il2CppIInspectable
-{
-	static const Il2CppGuid IID;
-	virtual il2cpp_hresult_t STDCALL IGpioPinValueChangedEventArgs_U24__Stripped0_get_Edge_mB248544DB5CF579992ADCB2F6B2183DF32346CEC() = 0;
 };
 // Windows.Devices.I2c.II2cConnectionSettingsFactory
 struct NOVTABLE II2cConnectionSettingsFactory_tE280C3177B60AF95199E437B29AD99D9502911D8 : Il2CppIInspectable
@@ -1667,35 +1641,6 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // INTPTR_T_H
-#ifndef EVENTREGISTRATIONTOKEN_TE1F3FD8339DB10082B4291DE47C45A352DCB08A7_H
-#define EVENTREGISTRATIONTOKEN_TE1F3FD8339DB10082B4291DE47C45A352DCB08A7_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken
-struct  EventRegistrationToken_tE1F3FD8339DB10082B4291DE47C45A352DCB08A7 
-{
-public:
-	// System.UInt64 System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken::m_value
-	uint64_t ___m_value_0;
-
-public:
-	inline static int32_t get_offset_of_m_value_0() { return static_cast<int32_t>(offsetof(EventRegistrationToken_tE1F3FD8339DB10082B4291DE47C45A352DCB08A7, ___m_value_0)); }
-	inline uint64_t get_m_value_0() const { return ___m_value_0; }
-	inline uint64_t* get_address_of_m_value_0() { return &___m_value_0; }
-	inline void set_m_value_0(uint64_t value)
-	{
-		___m_value_0 = value;
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // EVENTREGISTRATIONTOKEN_TE1F3FD8339DB10082B4291DE47C45A352DCB08A7_H
 #ifndef SINGLE_TDDDA9169C4E4E308AC6D7A824F9B28DC82204AE1_H
 #define SINGLE_TDDDA9169C4E4E308AC6D7A824F9B28DC82204AE1_H
 #ifdef __clang__
@@ -2137,44 +2082,6 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // GPIOCONTROLLER_T9EC04AE9960323D7AD5D38705D1A92E5DF62079D_H
-#ifndef GPIOPINVALUECHANGEDEVENTARGS_TB39504B0C43290BD55646E34B001AA46FE63796F_H
-#define GPIOPINVALUECHANGEDEVENTARGS_TB39504B0C43290BD55646E34B001AA46FE63796F_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// Windows.Devices.Gpio.GpioPinValueChangedEventArgs
-struct  GpioPinValueChangedEventArgs_tB39504B0C43290BD55646E34B001AA46FE63796F  : public Il2CppComObject
-{
-public:
-	// Cached pointer to Windows.Devices.Gpio.IGpioPinValueChangedEventArgs
-	IGpioPinValueChangedEventArgs_t0EE77A7A8EF5F6F473318CD26B6EE1597941D167* ____igpioPinValueChangedEventArgs_t0EE77A7A8EF5F6F473318CD26B6EE1597941D167;
-
-public:
-	inline IGpioPinValueChangedEventArgs_t0EE77A7A8EF5F6F473318CD26B6EE1597941D167* get_____igpioPinValueChangedEventArgs_t0EE77A7A8EF5F6F473318CD26B6EE1597941D167()
-	{
-		IGpioPinValueChangedEventArgs_t0EE77A7A8EF5F6F473318CD26B6EE1597941D167* returnValue = ____igpioPinValueChangedEventArgs_t0EE77A7A8EF5F6F473318CD26B6EE1597941D167;
-		if (returnValue == NULL)
-		{
-			const il2cpp_hresult_t hr = identity->QueryInterface(IGpioPinValueChangedEventArgs_t0EE77A7A8EF5F6F473318CD26B6EE1597941D167::IID, reinterpret_cast<void**>(&returnValue));
-			il2cpp_codegen_com_raise_exception_if_failed(hr, false);
-
-			if (il2cpp_codegen_atomic_compare_exchange_pointer<IGpioPinValueChangedEventArgs_t0EE77A7A8EF5F6F473318CD26B6EE1597941D167>((&____igpioPinValueChangedEventArgs_t0EE77A7A8EF5F6F473318CD26B6EE1597941D167), returnValue, NULL) != NULL)
-			{
-				returnValue->Release();
-				returnValue = ____igpioPinValueChangedEventArgs_t0EE77A7A8EF5F6F473318CD26B6EE1597941D167;
-			}
-		}
-		return returnValue;
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // GPIOPINVALUECHANGEDEVENTARGS_TB39504B0C43290BD55646E34B001AA46FE63796F_H
 #ifndef I2CDEVICE_T98FC86BEF8346B93999084F247BB5BDE4D946128_H
 #define I2CDEVICE_T98FC86BEF8346B93999084F247BB5BDE4D946128_H
 #ifdef __clang__
@@ -2305,35 +2212,6 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // DATETIME_T9D0F9E236B6200FF6413DD837230D25E285E7795_H
-#ifndef EVENTREGISTRATIONTOKEN_TB7331C6A2CA7A6A9AD497264E9E787B3B71126D4_H
-#define EVENTREGISTRATIONTOKEN_TB7331C6A2CA7A6A9AD497264E9E787B3B71126D4_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// Windows.Foundation.EventRegistrationToken
-struct  EventRegistrationToken_tB7331C6A2CA7A6A9AD497264E9E787B3B71126D4 
-{
-public:
-	// System.Int64 Windows.Foundation.EventRegistrationToken::Value
-	int64_t ___Value_0;
-
-public:
-	inline static int32_t get_offset_of_Value_0() { return static_cast<int32_t>(offsetof(EventRegistrationToken_tB7331C6A2CA7A6A9AD497264E9E787B3B71126D4, ___Value_0)); }
-	inline int64_t get_Value_0() const { return ___Value_0; }
-	inline int64_t* get_address_of_Value_0() { return &___Value_0; }
-	inline void set_Value_0(int64_t value)
-	{
-		___Value_0 = value;
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // EVENTREGISTRATIONTOKEN_TB7331C6A2CA7A6A9AD497264E9E787B3B71126D4_H
 #ifndef FOUNDATIONCONTRACT_TA5129870FD2EAAE9518C2EA28B32757D4FD977E9_H
 #define FOUNDATIONCONTRACT_TA5129870FD2EAAE9518C2EA28B32757D4FD977E9_H
 #ifdef __clang__
@@ -2928,45 +2806,6 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // RECT_TD277A11EF3F3CC633796B8FF0BC4822826E72BB0_H
-#ifndef SIZE_TBE9F75FCA10276DC3998237A8906733B64FB75A2_H
-#define SIZE_TBE9F75FCA10276DC3998237A8906733B64FB75A2_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// Windows.Foundation.Size
-struct  Size_tBE9F75FCA10276DC3998237A8906733B64FB75A2 
-{
-public:
-	// System.Single Windows.Foundation.Size::_width
-	float ____width_0;
-	// System.Single Windows.Foundation.Size::_height
-	float ____height_1;
-
-public:
-	inline static int32_t get_offset_of__width_0() { return static_cast<int32_t>(offsetof(Size_tBE9F75FCA10276DC3998237A8906733B64FB75A2, ____width_0)); }
-	inline float get__width_0() const { return ____width_0; }
-	inline float* get_address_of__width_0() { return &____width_0; }
-	inline void set__width_0(float value)
-	{
-		____width_0 = value;
-	}
-
-	inline static int32_t get_offset_of__height_1() { return static_cast<int32_t>(offsetof(Size_tBE9F75FCA10276DC3998237A8906733B64FB75A2, ____height_1)); }
-	inline float get__height_1() const { return ____height_1; }
-	inline float* get_address_of__height_1() { return &____height_1; }
-	inline void set__height_1(float value)
-	{
-		____height_1 = value;
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // SIZE_TBE9F75FCA10276DC3998237A8906733B64FB75A2_H
 #ifndef SIZE_T4766FF009097CE547F699B69250246058DA664D9_H
 #define SIZE_T4766FF009097CE547F699B69250246058DA664D9_H
 #ifdef __clang__
@@ -3006,6 +2845,45 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // SIZE_T4766FF009097CE547F699B69250246058DA664D9_H
+#ifndef SIZE_TBE9F75FCA10276DC3998237A8906733B64FB75A2_H
+#define SIZE_TBE9F75FCA10276DC3998237A8906733B64FB75A2_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// Windows.Foundation.Size
+struct  Size_tBE9F75FCA10276DC3998237A8906733B64FB75A2 
+{
+public:
+	// System.Single Windows.Foundation.Size::_width
+	float ____width_0;
+	// System.Single Windows.Foundation.Size::_height
+	float ____height_1;
+
+public:
+	inline static int32_t get_offset_of__width_0() { return static_cast<int32_t>(offsetof(Size_tBE9F75FCA10276DC3998237A8906733B64FB75A2, ____width_0)); }
+	inline float get__width_0() const { return ____width_0; }
+	inline float* get_address_of__width_0() { return &____width_0; }
+	inline void set__width_0(float value)
+	{
+		____width_0 = value;
+	}
+
+	inline static int32_t get_offset_of__height_1() { return static_cast<int32_t>(offsetof(Size_tBE9F75FCA10276DC3998237A8906733B64FB75A2, ____height_1)); }
+	inline float get__height_1() const { return ____height_1; }
+	inline float* get_address_of__height_1() { return &____height_1; }
+	inline void set__height_1(float value)
+	{
+		____height_1 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // SIZE_TBE9F75FCA10276DC3998237A8906733B64FB75A2_H
 #ifndef TIMESPAN_TD18885B289077804D4E82931E68E84181C072755_H
 #define TIMESPAN_TD18885B289077804D4E82931E68E84181C072755_H
 #ifdef __clang__
@@ -3408,169 +3286,6 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // DATETIMEOFFSET_T6C333873402CAD576160B4F8E159EB6834F06B85_H
-#ifndef DELEGATE_T_H
-#define DELEGATE_T_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// System.Delegate
-struct  Delegate_t  : public RuntimeObject
-{
-public:
-	// System.IntPtr System.Delegate::method_ptr
-	Il2CppMethodPointer ___method_ptr_0;
-	// System.IntPtr System.Delegate::invoke_impl
-	intptr_t ___invoke_impl_1;
-	// System.Object System.Delegate::m_target
-	RuntimeObject * ___m_target_2;
-	// System.IntPtr System.Delegate::method
-	intptr_t ___method_3;
-	// System.IntPtr System.Delegate::delegate_trampoline
-	intptr_t ___delegate_trampoline_4;
-	// System.IntPtr System.Delegate::extra_arg
-	intptr_t ___extra_arg_5;
-	// System.IntPtr System.Delegate::method_code
-	intptr_t ___method_code_6;
-	// System.Reflection.MethodInfo System.Delegate::method_info
-	MethodInfo_t * ___method_info_7;
-	// System.Reflection.MethodInfo System.Delegate::original_method_info
-	MethodInfo_t * ___original_method_info_8;
-	// System.DelegateData System.Delegate::data
-	DelegateData_t1BF9F691B56DAE5F8C28C5E084FDE94F15F27BBE * ___data_9;
-	// System.Boolean System.Delegate::method_is_virtual
-	bool ___method_is_virtual_10;
-
-public:
-	inline static int32_t get_offset_of_method_ptr_0() { return static_cast<int32_t>(offsetof(Delegate_t, ___method_ptr_0)); }
-	inline Il2CppMethodPointer get_method_ptr_0() const { return ___method_ptr_0; }
-	inline Il2CppMethodPointer* get_address_of_method_ptr_0() { return &___method_ptr_0; }
-	inline void set_method_ptr_0(Il2CppMethodPointer value)
-	{
-		___method_ptr_0 = value;
-	}
-
-	inline static int32_t get_offset_of_invoke_impl_1() { return static_cast<int32_t>(offsetof(Delegate_t, ___invoke_impl_1)); }
-	inline intptr_t get_invoke_impl_1() const { return ___invoke_impl_1; }
-	inline intptr_t* get_address_of_invoke_impl_1() { return &___invoke_impl_1; }
-	inline void set_invoke_impl_1(intptr_t value)
-	{
-		___invoke_impl_1 = value;
-	}
-
-	inline static int32_t get_offset_of_m_target_2() { return static_cast<int32_t>(offsetof(Delegate_t, ___m_target_2)); }
-	inline RuntimeObject * get_m_target_2() const { return ___m_target_2; }
-	inline RuntimeObject ** get_address_of_m_target_2() { return &___m_target_2; }
-	inline void set_m_target_2(RuntimeObject * value)
-	{
-		___m_target_2 = value;
-		Il2CppCodeGenWriteBarrier((&___m_target_2), value);
-	}
-
-	inline static int32_t get_offset_of_method_3() { return static_cast<int32_t>(offsetof(Delegate_t, ___method_3)); }
-	inline intptr_t get_method_3() const { return ___method_3; }
-	inline intptr_t* get_address_of_method_3() { return &___method_3; }
-	inline void set_method_3(intptr_t value)
-	{
-		___method_3 = value;
-	}
-
-	inline static int32_t get_offset_of_delegate_trampoline_4() { return static_cast<int32_t>(offsetof(Delegate_t, ___delegate_trampoline_4)); }
-	inline intptr_t get_delegate_trampoline_4() const { return ___delegate_trampoline_4; }
-	inline intptr_t* get_address_of_delegate_trampoline_4() { return &___delegate_trampoline_4; }
-	inline void set_delegate_trampoline_4(intptr_t value)
-	{
-		___delegate_trampoline_4 = value;
-	}
-
-	inline static int32_t get_offset_of_extra_arg_5() { return static_cast<int32_t>(offsetof(Delegate_t, ___extra_arg_5)); }
-	inline intptr_t get_extra_arg_5() const { return ___extra_arg_5; }
-	inline intptr_t* get_address_of_extra_arg_5() { return &___extra_arg_5; }
-	inline void set_extra_arg_5(intptr_t value)
-	{
-		___extra_arg_5 = value;
-	}
-
-	inline static int32_t get_offset_of_method_code_6() { return static_cast<int32_t>(offsetof(Delegate_t, ___method_code_6)); }
-	inline intptr_t get_method_code_6() const { return ___method_code_6; }
-	inline intptr_t* get_address_of_method_code_6() { return &___method_code_6; }
-	inline void set_method_code_6(intptr_t value)
-	{
-		___method_code_6 = value;
-	}
-
-	inline static int32_t get_offset_of_method_info_7() { return static_cast<int32_t>(offsetof(Delegate_t, ___method_info_7)); }
-	inline MethodInfo_t * get_method_info_7() const { return ___method_info_7; }
-	inline MethodInfo_t ** get_address_of_method_info_7() { return &___method_info_7; }
-	inline void set_method_info_7(MethodInfo_t * value)
-	{
-		___method_info_7 = value;
-		Il2CppCodeGenWriteBarrier((&___method_info_7), value);
-	}
-
-	inline static int32_t get_offset_of_original_method_info_8() { return static_cast<int32_t>(offsetof(Delegate_t, ___original_method_info_8)); }
-	inline MethodInfo_t * get_original_method_info_8() const { return ___original_method_info_8; }
-	inline MethodInfo_t ** get_address_of_original_method_info_8() { return &___original_method_info_8; }
-	inline void set_original_method_info_8(MethodInfo_t * value)
-	{
-		___original_method_info_8 = value;
-		Il2CppCodeGenWriteBarrier((&___original_method_info_8), value);
-	}
-
-	inline static int32_t get_offset_of_data_9() { return static_cast<int32_t>(offsetof(Delegate_t, ___data_9)); }
-	inline DelegateData_t1BF9F691B56DAE5F8C28C5E084FDE94F15F27BBE * get_data_9() const { return ___data_9; }
-	inline DelegateData_t1BF9F691B56DAE5F8C28C5E084FDE94F15F27BBE ** get_address_of_data_9() { return &___data_9; }
-	inline void set_data_9(DelegateData_t1BF9F691B56DAE5F8C28C5E084FDE94F15F27BBE * value)
-	{
-		___data_9 = value;
-		Il2CppCodeGenWriteBarrier((&___data_9), value);
-	}
-
-	inline static int32_t get_offset_of_method_is_virtual_10() { return static_cast<int32_t>(offsetof(Delegate_t, ___method_is_virtual_10)); }
-	inline bool get_method_is_virtual_10() const { return ___method_is_virtual_10; }
-	inline bool* get_address_of_method_is_virtual_10() { return &___method_is_virtual_10; }
-	inline void set_method_is_virtual_10(bool value)
-	{
-		___method_is_virtual_10 = value;
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-// Native definition for P/Invoke marshalling of System.Delegate
-struct Delegate_t_marshaled_pinvoke
-{
-	intptr_t ___method_ptr_0;
-	intptr_t ___invoke_impl_1;
-	Il2CppIUnknown* ___m_target_2;
-	intptr_t ___method_3;
-	intptr_t ___delegate_trampoline_4;
-	intptr_t ___extra_arg_5;
-	intptr_t ___method_code_6;
-	MethodInfo_t * ___method_info_7;
-	MethodInfo_t * ___original_method_info_8;
-	DelegateData_t1BF9F691B56DAE5F8C28C5E084FDE94F15F27BBE * ___data_9;
-	int32_t ___method_is_virtual_10;
-};
-// Native definition for COM marshalling of System.Delegate
-struct Delegate_t_marshaled_com
-{
-	intptr_t ___method_ptr_0;
-	intptr_t ___invoke_impl_1;
-	Il2CppIUnknown* ___m_target_2;
-	intptr_t ___method_3;
-	intptr_t ___delegate_trampoline_4;
-	intptr_t ___extra_arg_5;
-	intptr_t ___method_code_6;
-	MethodInfo_t * ___method_info_7;
-	MethodInfo_t * ___original_method_info_8;
-	DelegateData_t1BF9F691B56DAE5F8C28C5E084FDE94F15F27BBE * ___data_9;
-	int32_t ___method_is_virtual_10;
-};
-#endif // DELEGATE_T_H
 #ifndef BINDINGFLAGS_TE35C91D046E63A1B92BB9AB909FCF9DA84379ED0_H
 #define BINDINGFLAGS_TE35C91D046E63A1B92BB9AB909FCF9DA84379ED0_H
 #ifdef __clang__
@@ -3772,64 +3487,6 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // URIIDNSCOPE_TE1574B39C7492C761EFE2FC12DDE82DE013AC9D1_H
-#ifndef GPIOPINDRIVEMODE_T03B1FEF1D8384D6EF3074E4D9FE7D96084A81C84_H
-#define GPIOPINDRIVEMODE_T03B1FEF1D8384D6EF3074E4D9FE7D96084A81C84_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// Windows.Devices.Gpio.GpioPinDriveMode
-struct  GpioPinDriveMode_t03B1FEF1D8384D6EF3074E4D9FE7D96084A81C84 
-{
-public:
-	// System.Int32 Windows.Devices.Gpio.GpioPinDriveMode::value__
-	int32_t ___value___2;
-
-public:
-	inline static int32_t get_offset_of_value___2() { return static_cast<int32_t>(offsetof(GpioPinDriveMode_t03B1FEF1D8384D6EF3074E4D9FE7D96084A81C84, ___value___2)); }
-	inline int32_t get_value___2() const { return ___value___2; }
-	inline int32_t* get_address_of_value___2() { return &___value___2; }
-	inline void set_value___2(int32_t value)
-	{
-		___value___2 = value;
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // GPIOPINDRIVEMODE_T03B1FEF1D8384D6EF3074E4D9FE7D96084A81C84_H
-#ifndef GPIOPINVALUE_TE6ED59509C36F91A25DB10ADE803B0F27D667981_H
-#define GPIOPINVALUE_TE6ED59509C36F91A25DB10ADE803B0F27D667981_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// Windows.Devices.Gpio.GpioPinValue
-struct  GpioPinValue_tE6ED59509C36F91A25DB10ADE803B0F27D667981 
-{
-public:
-	// System.Int32 Windows.Devices.Gpio.GpioPinValue::value__
-	int32_t ___value___2;
-
-public:
-	inline static int32_t get_offset_of_value___2() { return static_cast<int32_t>(offsetof(GpioPinValue_tE6ED59509C36F91A25DB10ADE803B0F27D667981, ___value___2)); }
-	inline int32_t get_value___2() const { return ___value___2; }
-	inline int32_t* get_address_of_value___2() { return &___value___2; }
-	inline void set_value___2(int32_t value)
-	{
-		___value___2 = value;
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // GPIOPINVALUE_TE6ED59509C36F91A25DB10ADE803B0F27D667981_H
 #ifndef I2CBUSSPEED_T0B611061EFB1611EA07B926856255286F632D0A8_H
 #define I2CBUSSPEED_T0B611061EFB1611EA07B926856255286F632D0A8_H
 #ifdef __clang__
@@ -4033,46 +3690,6 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // TYPEKIND_TFC0FD272ED78E70CA1173A99B89D31193D93239C_H
-#ifndef MULTICASTDELEGATE_T_H
-#define MULTICASTDELEGATE_T_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// System.MulticastDelegate
-struct  MulticastDelegate_t  : public Delegate_t
-{
-public:
-	// System.Delegate[] System.MulticastDelegate::delegates
-	DelegateU5BU5D_tDFCDEE2A6322F96C0FE49AF47E9ADB8C4B294E86* ___delegates_11;
-
-public:
-	inline static int32_t get_offset_of_delegates_11() { return static_cast<int32_t>(offsetof(MulticastDelegate_t, ___delegates_11)); }
-	inline DelegateU5BU5D_tDFCDEE2A6322F96C0FE49AF47E9ADB8C4B294E86* get_delegates_11() const { return ___delegates_11; }
-	inline DelegateU5BU5D_tDFCDEE2A6322F96C0FE49AF47E9ADB8C4B294E86** get_address_of_delegates_11() { return &___delegates_11; }
-	inline void set_delegates_11(DelegateU5BU5D_tDFCDEE2A6322F96C0FE49AF47E9ADB8C4B294E86* value)
-	{
-		___delegates_11 = value;
-		Il2CppCodeGenWriteBarrier((&___delegates_11), value);
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-// Native definition for P/Invoke marshalling of System.MulticastDelegate
-struct MulticastDelegate_t_marshaled_pinvoke : public Delegate_t_marshaled_pinvoke
-{
-	DelegateU5BU5D_tDFCDEE2A6322F96C0FE49AF47E9ADB8C4B294E86* ___delegates_11;
-};
-// Native definition for COM marshalling of System.MulticastDelegate
-struct MulticastDelegate_t_marshaled_com : public Delegate_t_marshaled_com
-{
-	DelegateU5BU5D_tDFCDEE2A6322F96C0FE49AF47E9ADB8C4B294E86* ___delegates_11;
-};
-#endif // MULTICASTDELEGATE_T_H
 #ifndef TYPE_T_H
 #define TYPE_T_H
 #ifdef __clang__
@@ -4520,22 +4137,6 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // URI_T87E4A94B2901F5EEDD18AA72C3DB1B00E672D68E_H
-// Windows.Devices.Gpio.IGpioPin
-struct NOVTABLE IGpioPin_t4955A033932D03E92518FC8204CD96C339B147DF : Il2CppIInspectable
-{
-	static const Il2CppGuid IID;
-	virtual il2cpp_hresult_t STDCALL IGpioPin_add_ValueChanged_m98CEE3951D4FD6B0AC50EDC728D6380AB3F40C26(ITypedEventHandler_2_t91F1ECD6C7BB5E599B3AAE6BAAD74D341D7A96BE_ComCallableWrapper* ___handler0, EventRegistrationToken_tE1F3FD8339DB10082B4291DE47C45A352DCB08A7 * comReturnValue) = 0;
-	virtual il2cpp_hresult_t STDCALL IGpioPin_remove_ValueChanged_m16479322D25DD816ABA26C5EFD6ADA58A7BBFF9B(EventRegistrationToken_tE1F3FD8339DB10082B4291DE47C45A352DCB08A7  ___token0) = 0;
-	virtual il2cpp_hresult_t STDCALL IGpioPin_U24__Stripped0_get_DebounceTimeout_m542831A12EA27136A6474888C4FDC17F25CF9C7C() = 0;
-	virtual il2cpp_hresult_t STDCALL IGpioPin_U24__Stripped1_put_DebounceTimeout_m1C7F982E1855133F8DF054530D0E4711E7361833() = 0;
-	virtual il2cpp_hresult_t STDCALL IGpioPin_U24__Stripped2_get_PinNumber_m9ED2D3DF6B41A95C4F527925C70ECE8657621299() = 0;
-	virtual il2cpp_hresult_t STDCALL IGpioPin_U24__Stripped3_get_SharingMode_mDD869AA7FB4E3248C27084DBACEDC06B76C0FC84() = 0;
-	virtual il2cpp_hresult_t STDCALL IGpioPin_U24__Stripped4_IsDriveModeSupported_m346A5BA8D4CB9F4CE2927C81C428229215D40AD6() = 0;
-	virtual il2cpp_hresult_t STDCALL IGpioPin_U24__Stripped5_GetDriveMode_mF6E6C8B3D818726E4BFE114E8237B7D80990DA2B() = 0;
-	virtual il2cpp_hresult_t STDCALL IGpioPin_SetDriveMode_mD78AEAE6F74E47457DACC913FE17AA8A3A619D45(int32_t ___value0) = 0;
-	virtual il2cpp_hresult_t STDCALL IGpioPin_Write_mA98C8BB4896F3AD7C74A03B056B2F9450FCAEB06(int32_t ___value0) = 0;
-	virtual il2cpp_hresult_t STDCALL IGpioPin_U24__Stripped6_Read_mBAD09766EE607325E5F187D2A197E7A96DBC7921() = 0;
-};
 // Windows.Devices.I2c.II2cConnectionSettings
 struct NOVTABLE II2cConnectionSettings_tDCF6272D4B385002CA5D62469AF677125E1F085F : Il2CppIInspectable
 {
@@ -4688,63 +4289,6 @@ struct TypeName_t17AF60463A5503D900B87745B0BF9C96F0F82EEC_marshaled_windows_runt
 	int32_t ___Kind_1;
 };
 #endif // TYPENAME_T17AF60463A5503D900B87745B0BF9C96F0F82EEC_H
-#ifndef GPIOPIN_T782D38614B9E65AA121B64278CA7BA467F5B8FD9_H
-#define GPIOPIN_T782D38614B9E65AA121B64278CA7BA467F5B8FD9_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// Windows.Devices.Gpio.GpioPin
-struct  GpioPin_t782D38614B9E65AA121B64278CA7BA467F5B8FD9  : public Il2CppComObject
-{
-public:
-	// Cached pointer to Windows.Devices.Gpio.IGpioPin
-	IGpioPin_t4955A033932D03E92518FC8204CD96C339B147DF* ____igpioPin_t4955A033932D03E92518FC8204CD96C339B147DF;
-	// Cached pointer to Windows.Foundation.IClosable
-	IClosable_t5808AF951019E4388C66F7A88AC569F52F581167* ____iclosable_t5808AF951019E4388C66F7A88AC569F52F581167;
-
-public:
-	inline IGpioPin_t4955A033932D03E92518FC8204CD96C339B147DF* get_____igpioPin_t4955A033932D03E92518FC8204CD96C339B147DF()
-	{
-		IGpioPin_t4955A033932D03E92518FC8204CD96C339B147DF* returnValue = ____igpioPin_t4955A033932D03E92518FC8204CD96C339B147DF;
-		if (returnValue == NULL)
-		{
-			const il2cpp_hresult_t hr = identity->QueryInterface(IGpioPin_t4955A033932D03E92518FC8204CD96C339B147DF::IID, reinterpret_cast<void**>(&returnValue));
-			il2cpp_codegen_com_raise_exception_if_failed(hr, false);
-
-			if (il2cpp_codegen_atomic_compare_exchange_pointer<IGpioPin_t4955A033932D03E92518FC8204CD96C339B147DF>((&____igpioPin_t4955A033932D03E92518FC8204CD96C339B147DF), returnValue, NULL) != NULL)
-			{
-				returnValue->Release();
-				returnValue = ____igpioPin_t4955A033932D03E92518FC8204CD96C339B147DF;
-			}
-		}
-		return returnValue;
-	}
-
-	inline IClosable_t5808AF951019E4388C66F7A88AC569F52F581167* get_____iclosable_t5808AF951019E4388C66F7A88AC569F52F581167()
-	{
-		IClosable_t5808AF951019E4388C66F7A88AC569F52F581167* returnValue = ____iclosable_t5808AF951019E4388C66F7A88AC569F52F581167;
-		if (returnValue == NULL)
-		{
-			const il2cpp_hresult_t hr = identity->QueryInterface(IClosable_t5808AF951019E4388C66F7A88AC569F52F581167::IID, reinterpret_cast<void**>(&returnValue));
-			il2cpp_codegen_com_raise_exception_if_failed(hr, false);
-
-			if (il2cpp_codegen_atomic_compare_exchange_pointer<IClosable_t5808AF951019E4388C66F7A88AC569F52F581167>((&____iclosable_t5808AF951019E4388C66F7A88AC569F52F581167), returnValue, NULL) != NULL)
-			{
-				returnValue->Release();
-				returnValue = ____iclosable_t5808AF951019E4388C66F7A88AC569F52F581167;
-			}
-		}
-		return returnValue;
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // GPIOPIN_T782D38614B9E65AA121B64278CA7BA467F5B8FD9_H
 #ifndef I2CCONNECTIONSETTINGS_TDD980C2F6B9B5A626B91FCA02033271C84B6B1C3_H
 #define I2CCONNECTIONSETTINGS_TDD980C2F6B9B5A626B91FCA02033271C84B6B1C3_H
 #ifdef __clang__
@@ -4827,33 +4371,6 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // I2CCONNECTIONSETTINGS_TDD980C2F6B9B5A626B91FCA02033271C84B6B1C3_H
-#ifndef TYPEDEVENTHANDLER_2_T91F1ECD6C7BB5E599B3AAE6BAAD74D341D7A96BE_H
-#define TYPEDEVENTHANDLER_2_T91F1ECD6C7BB5E599B3AAE6BAAD74D341D7A96BE_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// Windows.Foundation.TypedEventHandler`2<Windows.Devices.Gpio.GpioPin,Windows.Devices.Gpio.GpioPinValueChangedEventArgs>
-struct  TypedEventHandler_2_t91F1ECD6C7BB5E599B3AAE6BAAD74D341D7A96BE  : public MulticastDelegate_t
-{
-public:
-
-public:
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-// COM Callable Wrapper interface definition for Windows.Foundation.TypedEventHandler`2<Windows.Devices.Gpio.GpioPin,Windows.Devices.Gpio.GpioPinValueChangedEventArgs>
-struct ITypedEventHandler_2_t91F1ECD6C7BB5E599B3AAE6BAAD74D341D7A96BE_ComCallableWrapper : Il2CppIUnknown
-{
-	static const Il2CppGuid IID;
-	virtual il2cpp_hresult_t STDCALL Invoke(IGpioPin_t4955A033932D03E92518FC8204CD96C339B147DF* ___sender0, IGpioPinValueChangedEventArgs_t0EE77A7A8EF5F6F473318CD26B6EE1597941D167* ___args1) = 0;
-};
-
-#endif // TYPEDEVENTHANDLER_2_T91F1ECD6C7BB5E599B3AAE6BAAD74D341D7A96BE_H
 // Windows.Devices.Enumeration.DeviceInformation[]
 struct DeviceInformationU5BU5D_t84C4BB7983B9A7A4B9547C4C766ECB79CB12A2D7  : public RuntimeArray
 {
@@ -6049,43 +5566,6 @@ const Il2CppGuid IDeviceInformationStatics2_t82D229778697DAEC7702B1FC613336E2642
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Windows.Devices.Gpio.GpioPin Windows.Devices.Gpio.GpioController::OpenPin(System.Int32)
-extern "C" IL2CPP_METHOD_ATTR GpioPin_t782D38614B9E65AA121B64278CA7BA467F5B8FD9 * GpioController_OpenPin_mE9FA0FA345F5C75BC2FD4371DAA2336B80ECC810 (GpioController_t9EC04AE9960323D7AD5D38705D1A92E5DF62079D * __this, int32_t ___pinNumber0, const RuntimeMethod* method)
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_method (GpioController_OpenPin_mE9FA0FA345F5C75BC2FD4371DAA2336B80ECC810_MetadataUsageId);
-		s_Il2CppMethodInitialized = true;
-	}
-	IGpioController_t977213ADC5BCF15DBAF32ECB368A52ECEC034E12* ____igpioController_t977213ADC5BCF15DBAF32ECB368A52ECEC034E12 = __this->get_____igpioController_t977213ADC5BCF15DBAF32ECB368A52ECEC034E12();
-
-	// Native function invocation
-	IGpioPin_t4955A033932D03E92518FC8204CD96C339B147DF* returnValue = NULL;
-	const il2cpp_hresult_t hr = ____igpioController_t977213ADC5BCF15DBAF32ECB368A52ECEC034E12->IGpioController_OpenPin_m2D4C2718C118244B9A0D611F1E6E39EFA3F98ADC(___pinNumber0, &returnValue);
-
-	il2cpp_codegen_com_raise_exception_if_failed(hr, false);
-
-	// Marshaling of return value back from native representation
-	GpioPin_t782D38614B9E65AA121B64278CA7BA467F5B8FD9 * _returnValue_unmarshaled = NULL;
-	if (returnValue != NULL)
-	{
-		_returnValue_unmarshaled = il2cpp_codegen_com_get_or_create_rcw_for_sealed_class<GpioPin_t782D38614B9E65AA121B64278CA7BA467F5B8FD9>(returnValue, GpioPin_t782D38614B9E65AA121B64278CA7BA467F5B8FD9_il2cpp_TypeInfo_var);
-	}
-	else
-	{
-		_returnValue_unmarshaled = NULL;
-	}
-
-	// Marshaling cleanup of return value native representation
-	if (returnValue != NULL)
-	{
-		(returnValue)->Release();
-		returnValue = NULL;
-	}
-
-	return _returnValue_unmarshaled;
-}
 // Windows.Devices.Gpio.GpioController Windows.Devices.Gpio.GpioController::GetDefault()
 extern "C" IL2CPP_METHOD_ATTR GpioController_t9EC04AE9960323D7AD5D38705D1A92E5DF62079D * GpioController_GetDefault_mB4A541F47D43F3062A9FBCC2F810ECA3A725DEEC (const RuntimeMethod* method)
 {
@@ -6143,169 +5623,6 @@ extern "C" IL2CPP_METHOD_ATTR void GpioController_Finalize_mE3A7732407F8AED2328F
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken Windows.Devices.Gpio.GpioPin::add_ValueChanged(Windows.Foundation.TypedEventHandler`2<Windows.Devices.Gpio.GpioPin,Windows.Devices.Gpio.GpioPinValueChangedEventArgs>)
-extern "C" IL2CPP_METHOD_ATTR EventRegistrationToken_tE1F3FD8339DB10082B4291DE47C45A352DCB08A7  GpioPin_add_ValueChanged_mA5481335EF99F46A6EBC1797CDC9F72E85600F18 (GpioPin_t782D38614B9E65AA121B64278CA7BA467F5B8FD9 * __this, TypedEventHandler_2_t91F1ECD6C7BB5E599B3AAE6BAAD74D341D7A96BE * ___handler0, const RuntimeMethod* method)
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_method (GpioPin_add_ValueChanged_mA5481335EF99F46A6EBC1797CDC9F72E85600F18_MetadataUsageId);
-		s_Il2CppMethodInitialized = true;
-	}
-	IGpioPin_t4955A033932D03E92518FC8204CD96C339B147DF* ____igpioPin_t4955A033932D03E92518FC8204CD96C339B147DF = __this->get_____igpioPin_t4955A033932D03E92518FC8204CD96C339B147DF();
-
-	// Marshaling of parameter '___handler0' to native representation
-	ITypedEventHandler_2_t91F1ECD6C7BB5E599B3AAE6BAAD74D341D7A96BE_ComCallableWrapper* ____handler0_marshaled = NULL;
-	if (___handler0 != NULL)
-	{
-		RuntimeObject* target = ___handler0->get_m_target_2();
-
-		if (target != NULL && ___handler0->get_delegates_11() == NULL && target->klass == __Il2CppComDelegate_t0A30496F74225C39A0CF7FADB94934C0536120FD_il2cpp_TypeInfo_var)
-		{
-			il2cpp_hresult_t hr = static_cast<Il2CppComObject *>(target)->identity->QueryInterface(ITypedEventHandler_2_t91F1ECD6C7BB5E599B3AAE6BAAD74D341D7A96BE_ComCallableWrapper::IID, reinterpret_cast<void**>(&____handler0_marshaled));
-			il2cpp_codegen_com_raise_exception_if_failed(hr, false);
-		}
-		else
-		{
-			____handler0_marshaled = il2cpp_codegen_com_get_or_create_ccw<ITypedEventHandler_2_t91F1ECD6C7BB5E599B3AAE6BAAD74D341D7A96BE_ComCallableWrapper>(___handler0);
-		}
-	}
-	else
-	{
-		____handler0_marshaled = NULL;
-	}
-
-	// Native function invocation
-	EventRegistrationToken_tE1F3FD8339DB10082B4291DE47C45A352DCB08A7  returnValue = {};
-	const il2cpp_hresult_t hr = ____igpioPin_t4955A033932D03E92518FC8204CD96C339B147DF->IGpioPin_add_ValueChanged_m98CEE3951D4FD6B0AC50EDC728D6380AB3F40C26(____handler0_marshaled, &returnValue);
-
-	il2cpp_codegen_com_raise_exception_if_failed(hr, false);
-
-	// Marshaling cleanup of parameter '___handler0' native representation
-	if (____handler0_marshaled != NULL)
-	{
-		(____handler0_marshaled)->Release();
-		____handler0_marshaled = NULL;
-	}
-
-	return returnValue;
-}
-// System.Void Windows.Devices.Gpio.GpioPin::remove_ValueChanged(System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken)
-extern "C" IL2CPP_METHOD_ATTR void GpioPin_remove_ValueChanged_mEECFE8E58A6735B2689C08B310FE3BC90616CBF1 (GpioPin_t782D38614B9E65AA121B64278CA7BA467F5B8FD9 * __this, EventRegistrationToken_tE1F3FD8339DB10082B4291DE47C45A352DCB08A7  ___token0, const RuntimeMethod* method)
-{
-	IGpioPin_t4955A033932D03E92518FC8204CD96C339B147DF* ____igpioPin_t4955A033932D03E92518FC8204CD96C339B147DF = __this->get_____igpioPin_t4955A033932D03E92518FC8204CD96C339B147DF();
-
-	// Native function invocation
-	const il2cpp_hresult_t hr = ____igpioPin_t4955A033932D03E92518FC8204CD96C339B147DF->IGpioPin_remove_ValueChanged_m16479322D25DD816ABA26C5EFD6ADA58A7BBFF9B(___token0);
-
-	il2cpp_codegen_com_raise_exception_if_failed(hr, false);
-
-}
-// System.Void Windows.Devices.Gpio.GpioPin::SetDriveMode(Windows.Devices.Gpio.GpioPinDriveMode)
-extern "C" IL2CPP_METHOD_ATTR void GpioPin_SetDriveMode_mBC5F3A4654A60B814F304B71B20467BF6011F910 (GpioPin_t782D38614B9E65AA121B64278CA7BA467F5B8FD9 * __this, int32_t ___value0, const RuntimeMethod* method)
-{
-	IGpioPin_t4955A033932D03E92518FC8204CD96C339B147DF* ____igpioPin_t4955A033932D03E92518FC8204CD96C339B147DF = __this->get_____igpioPin_t4955A033932D03E92518FC8204CD96C339B147DF();
-
-	// Native function invocation
-	const il2cpp_hresult_t hr = ____igpioPin_t4955A033932D03E92518FC8204CD96C339B147DF->IGpioPin_SetDriveMode_mD78AEAE6F74E47457DACC913FE17AA8A3A619D45(___value0);
-
-	il2cpp_codegen_com_raise_exception_if_failed(hr, false);
-
-}
-// System.Void Windows.Devices.Gpio.GpioPin::Write(Windows.Devices.Gpio.GpioPinValue)
-extern "C" IL2CPP_METHOD_ATTR void GpioPin_Write_m07C44DC62E741C063AD24F848FF13B51CF26FD0A (GpioPin_t782D38614B9E65AA121B64278CA7BA467F5B8FD9 * __this, int32_t ___value0, const RuntimeMethod* method)
-{
-	IGpioPin_t4955A033932D03E92518FC8204CD96C339B147DF* ____igpioPin_t4955A033932D03E92518FC8204CD96C339B147DF = __this->get_____igpioPin_t4955A033932D03E92518FC8204CD96C339B147DF();
-
-	// Native function invocation
-	const il2cpp_hresult_t hr = ____igpioPin_t4955A033932D03E92518FC8204CD96C339B147DF->IGpioPin_Write_mA98C8BB4896F3AD7C74A03B056B2F9450FCAEB06(___value0);
-
-	il2cpp_codegen_com_raise_exception_if_failed(hr, false);
-
-}
-// System.Void Windows.Devices.Gpio.GpioPin::Close()
-extern "C" IL2CPP_METHOD_ATTR void GpioPin_Close_mD05AAE5580521556A35634BF59EDCDA7692FC916 (GpioPin_t782D38614B9E65AA121B64278CA7BA467F5B8FD9 * __this, const RuntimeMethod* method)
-{
-	IClosable_t5808AF951019E4388C66F7A88AC569F52F581167* ____iclosable_t5808AF951019E4388C66F7A88AC569F52F581167 = __this->get_____iclosable_t5808AF951019E4388C66F7A88AC569F52F581167();
-
-	// Native function invocation
-	const il2cpp_hresult_t hr = ____iclosable_t5808AF951019E4388C66F7A88AC569F52F581167->IClosable_Close_m9A054CE065D4C97FAF595A8F92B3CB3463C5BCD6();
-
-	il2cpp_codegen_com_raise_exception_if_failed(hr, false);
-
-}
-// System.Void Windows.Devices.Gpio.GpioPin::Dispose()
-extern "C" IL2CPP_METHOD_ATTR void GpioPin_Dispose_m46B24E4094B8C34880CF02402A0AC7B271C47DD8 (GpioPin_t782D38614B9E65AA121B64278CA7BA467F5B8FD9 * __this, const RuntimeMethod* method)
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_method (GpioPin_Dispose_m46B24E4094B8C34880CF02402A0AC7B271C47DD8_MetadataUsageId);
-		s_Il2CppMethodInitialized = true;
-	}
-	IClosableToIDisposableAdapter_System_IDisposable_Dispose_m9C196BC6A9566BB8E1EA16D8B69229903D26D40D(reinterpret_cast<IClosableToIDisposableAdapter_tBB8968AFA1A3119CA8D31022F22E34A6BDF207A7 *>(__this), NULL);
-}
-// System.Void Windows.Devices.Gpio.GpioPin::Finalize()
-extern "C" IL2CPP_METHOD_ATTR void GpioPin_Finalize_m3D9798A12F3273E93463D19BDB56316380FBFD86 (GpioPin_t782D38614B9E65AA121B64278CA7BA467F5B8FD9 * __this, const RuntimeMethod* method)
-{
-	if (__this->____igpioPin_t4955A033932D03E92518FC8204CD96C339B147DF != NULL)
-	{
-		__this->____igpioPin_t4955A033932D03E92518FC8204CD96C339B147DF->Release();
-	}
-	if (__this->____iclosable_t5808AF951019E4388C66F7A88AC569F52F581167 != NULL)
-	{
-		__this->____iclosable_t5808AF951019E4388C66F7A88AC569F52F581167->Release();
-	}
-
-	__this->____igpioPin_t4955A033932D03E92518FC8204CD96C339B147DF = NULL;
-	__this->____iclosable_t5808AF951019E4388C66F7A88AC569F52F581167 = NULL;
-
-	__Il2CppComObject_Finalize_m98123DBAAA7974D2616F9E90F2574955714CA9A9(__this, NULL);
-}
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-// System.Void Windows.Devices.Gpio.GpioPinValueChangedEventArgs::Finalize()
-extern "C" IL2CPP_METHOD_ATTR void GpioPinValueChangedEventArgs_Finalize_mB731BF2F33B2F1627B08F48F875FE717D75906FB (GpioPinValueChangedEventArgs_tB39504B0C43290BD55646E34B001AA46FE63796F * __this, const RuntimeMethod* method)
-{
-	if (__this->____igpioPinValueChangedEventArgs_t0EE77A7A8EF5F6F473318CD26B6EE1597941D167 != NULL)
-	{
-		__this->____igpioPinValueChangedEventArgs_t0EE77A7A8EF5F6F473318CD26B6EE1597941D167->Release();
-	}
-
-	__this->____igpioPinValueChangedEventArgs_t0EE77A7A8EF5F6F473318CD26B6EE1597941D167 = NULL;
-
-	__Il2CppComObject_Finalize_m98123DBAAA7974D2616F9E90F2574955714CA9A9(__this, NULL);
-}
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
 // Windows.Devices.Gpio.IGpioController
 const Il2CppGuid IGpioController_t977213ADC5BCF15DBAF32ECB368A52ECEC034E12::IID = { 0x284012e3, 0x7461, 0x469c, 0xa8, 0xbc, 0x61, 0xd6, 0x9d, 0x8, 0xa5, 0x3c };
 #ifdef __clang__
@@ -6328,26 +5645,6 @@ const Il2CppGuid IGpioControllerStatics_t3CE1F2BBFF586BDE901C22ACC06E97B67051D5F
 #endif
 // Windows.Devices.Gpio.IGpioControllerStatics2
 const Il2CppGuid IGpioControllerStatics2_tA4DD7B74F5D9E5EF972EC1C304DA7A4AAA26E2D4::IID = { 0x912b7d20, 0x6ca4, 0x4106, 0xa3, 0x73, 0xff, 0xfd, 0x34, 0x6b, 0xe, 0x5b };
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-// Windows.Devices.Gpio.IGpioPin
-const Il2CppGuid IGpioPin_t4955A033932D03E92518FC8204CD96C339B147DF::IID = { 0x11d9b087, 0xafae, 0x4790, 0x9e, 0xe9, 0xe0, 0xea, 0xc9, 0x42, 0xd2, 0x1 };
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-// Windows.Devices.Gpio.IGpioPinValueChangedEventArgs
-const Il2CppGuid IGpioPinValueChangedEventArgs_t0EE77A7A8EF5F6F473318CD26B6EE1597941D167::IID = { 0x3137aae1, 0x703d, 0x4059, 0xbd, 0x24, 0xb5, 0xb2, 0x5d, 0xff, 0xb8, 0x4e };
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
@@ -6749,14 +6046,6 @@ extern "C" IL2CPP_METHOD_ATTR RuntimeObject* II2cDeviceStatics_FromIdAsync_m551B
 
 	return _returnValue_unmarshaled;
 }
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif

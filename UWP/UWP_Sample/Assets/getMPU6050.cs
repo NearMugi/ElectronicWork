@@ -22,6 +22,7 @@ public class getMPU6050 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        _mpu6050.ReadSensorData();
         LastValue = _mpu6050.getLastValue();
 
         txt.text = string.Format("{0}, {1}, {2}", 

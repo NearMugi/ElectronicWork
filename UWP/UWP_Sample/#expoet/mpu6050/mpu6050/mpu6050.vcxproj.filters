@@ -2,7 +2,7 @@
 <Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Filter Include="Assets">
-      <UniqueIdentifier>{fdc54c32-be34-49ba-9a80-c95a9dad731f}</UniqueIdentifier>
+      <UniqueIdentifier>{7a2ee87e-3d19-40d4-a014-20550ee00bec}</UniqueIdentifier>
     </Filter>
     <ApplicationDefinition Include="App.xaml" />
     <ClCompile Include="App.xaml.cpp" />

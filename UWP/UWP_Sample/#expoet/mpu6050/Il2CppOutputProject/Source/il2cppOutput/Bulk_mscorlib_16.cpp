@@ -421,8 +421,6 @@ struct ThreadStaticAttribute_tCE2B939D689C66D29B18B265822F96F79DAAF393;
 struct AbandonedMutexException_tCE41515409705F64C8D2AE1AAB4C1864905803C9;
 // System.Threading.AsyncLocal`1<System.Globalization.CultureInfo>
 struct AsyncLocal_1_tD39651C2EDD14B144FF3D9B9C716F807EB57655A;
-// System.Threading.AutoResetEvent
-struct AutoResetEvent_t2A1182CEEE4E184587D4DEAA4F382B810B21D3B7;
 // System.Threading.CancellationCallbackInfo
 struct CancellationCallbackInfo_t8CDEA0AA9C9D1A2321FE2F88878F4B5E0901CF36;
 // System.Threading.CancellationCallbackInfo[]
@@ -13740,26 +13738,6 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // PREDICATE_1_TF4286C34BB184CE5690FDCEBA7F09FC68D229335_H
-#ifndef AUTORESETEVENT_T2A1182CEEE4E184587D4DEAA4F382B810B21D3B7_H
-#define AUTORESETEVENT_T2A1182CEEE4E184587D4DEAA4F382B810B21D3B7_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// System.Threading.AutoResetEvent
-struct  AutoResetEvent_t2A1182CEEE4E184587D4DEAA4F382B810B21D3B7  : public EventWaitHandle_t7603BF1D3D30FE42DD07A450C8D09E2684DC4D98
-{
-public:
-
-public:
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // AUTORESETEVENT_T2A1182CEEE4E184587D4DEAA4F382B810B21D3B7_H
 #ifndef CONTEXTCALLBACK_T8AE8A965AC6C7ECD396F527F15CDC8E683BE1676_H
 #define CONTEXTCALLBACK_T8AE8A965AC6C7ECD396F527F15CDC8E683BE1676_H
 #ifdef __clang__
@@ -14610,8 +14588,6 @@ extern "C" IL2CPP_METHOD_ATTR void Exception_SetErrorCode_m742C1E687C82E56F44589
 extern "C" IL2CPP_METHOD_ATTR void AbandonedMutexException_SetupException_m3620C49DD4CA315DDAD5F436A7D698865597212A (AbandonedMutexException_tCE41515409705F64C8D2AE1AAB4C1864905803C9 * __this, int32_t ___location0, WaitHandle_tFD46B5B45A6BB296EA3A104C91DF2A7C03C10AC6 * ___handle1, const RuntimeMethod* method);
 // System.Void System.SystemException::.ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
 extern "C" IL2CPP_METHOD_ATTR void SystemException__ctor_mB0550111A1A8D18B697B618F811A5B20C160D949 (SystemException_t5380468142AA850BE4A341D7AF3EAB9C78746782 * __this, SerializationInfo_t1BB80E9C9DEA52DBF464487234B045E2930ADA26 * ___info0, StreamingContext_t2CCDC54E0E8D078AF4A50E3A8B921B828A900034  ___context1, const RuntimeMethod* method);
-// System.Void System.Threading.EventWaitHandle::.ctor(System.Boolean,System.Threading.EventResetMode)
-extern "C" IL2CPP_METHOD_ATTR void EventWaitHandle__ctor_m9EA7029408FF8BBCB1F527C940FAC6C1796DE3C1 (EventWaitHandle_t7603BF1D3D30FE42DD07A450C8D09E2684DC4D98 * __this, bool ___initialState0, int32_t ___mode1, const RuntimeMethod* method);
 // System.Void System.Threading.CancellationCallbackCoreWorkArguments::.ctor(System.Threading.SparselyPopulatedArrayFragment`1<System.Threading.CancellationCallbackInfo>,System.Int32)
 extern "C" IL2CPP_METHOD_ATTR void CancellationCallbackCoreWorkArguments__ctor_mBE862E6F44CE055B535C63E55A6D41774244207E (CancellationCallbackCoreWorkArguments_t6290788CA17D8028FC4BC98AE2EDD437396675DB * __this, SparselyPopulatedArrayFragment_1_tA54224D01E2FDC03AC2867CDDC8C53E17FA933D7 * ___currArrayFragment0, int32_t ___currArrayIndex1, const RuntimeMethod* method);
 // System.Void System.Object::.ctor()
@@ -14976,6 +14952,8 @@ extern "C" IL2CPP_METHOD_ATTR void Exception__ctor_m5FEC89FBFACEEDCEE29CCFD44A85
 extern "C" IL2CPP_METHOD_ATTR void Exception__ctor_m89BADFF36C3B170013878726E07729D51AA9FBE0 (Exception_t * __this, String_t* ___message0, const RuntimeMethod* method);
 // System.Void System.Exception::.ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
 extern "C" IL2CPP_METHOD_ATTR void Exception__ctor_mBFF5996A1B65FCEEE0054A95A652BA3DD6366618 (Exception_t * __this, SerializationInfo_t1BB80E9C9DEA52DBF464487234B045E2930ADA26 * ___info0, StreamingContext_t2CCDC54E0E8D078AF4A50E3A8B921B828A900034  ___context1, const RuntimeMethod* method);
+// System.Void System.Threading.EventWaitHandle::.ctor(System.Boolean,System.Threading.EventResetMode)
+extern "C" IL2CPP_METHOD_ATTR void EventWaitHandle__ctor_m9EA7029408FF8BBCB1F527C940FAC6C1796DE3C1 (EventWaitHandle_t7603BF1D3D30FE42DD07A450C8D09E2684DC4D98 * __this, bool ___initialState0, int32_t ___mode1, const RuntimeMethod* method);
 // System.Void System.Threading.ManualResetEventSlim::ThrowIfDisposed()
 extern "C" IL2CPP_METHOD_ATTR void ManualResetEventSlim_ThrowIfDisposed_m68328548D9387612CD25EC7C8243EA8AC2209CFB (ManualResetEventSlim_t085E880B24016C42F7DE42113674D0A41B4FB445 * __this, const RuntimeMethod* method);
 // System.Boolean System.Threading.ManualResetEventSlim::LazyInitializeEvent()
@@ -28117,23 +28095,6 @@ extern "C" IL2CPP_METHOD_ATTR void AbandonedMutexException__ctor_mBD51FDB952757E
 		SerializationInfo_t1BB80E9C9DEA52DBF464487234B045E2930ADA26 * L_0 = ___info0;
 		StreamingContext_t2CCDC54E0E8D078AF4A50E3A8B921B828A900034  L_1 = ___context1;
 		SystemException__ctor_mB0550111A1A8D18B697B618F811A5B20C160D949(__this, L_0, L_1, /*hidden argument*/NULL);
-		return;
-	}
-}
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-// System.Void System.Threading.AutoResetEvent::.ctor(System.Boolean)
-extern "C" IL2CPP_METHOD_ATTR void AutoResetEvent__ctor_m2A6F4D44E005E07021957D5134037747AE9890BE (AutoResetEvent_t2A1182CEEE4E184587D4DEAA4F382B810B21D3B7 * __this, bool ___initialState0, const RuntimeMethod* method)
-{
-	{
-		bool L_0 = ___initialState0;
-		EventWaitHandle__ctor_m9EA7029408FF8BBCB1F527C940FAC6C1796DE3C1(__this, L_0, 0, /*hidden argument*/NULL);
 		return;
 	}
 }

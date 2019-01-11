@@ -14246,8 +14246,6 @@ extern "C" IL2CPP_METHOD_ATTR String_t* Environment_GetResourceString_m7389941B4
 extern "C" IL2CPP_METHOD_ATTR void ArgumentException__ctor_m9A85EF7FEFEC21DDD525A67E831D77278E5165B7 (ArgumentException_tEDCD16F20A09ECE461C3DA766C16EDA8864057D1 * __this, String_t* ___message0, const RuntimeMethod* method);
 // System.Void System.Guid::.ctor(System.Byte[])
 extern "C" IL2CPP_METHOD_ATTR void Guid__ctor_m93F5E840798B5FB4B96497327B3907829EBA100A (Guid_t * __this, ByteU5BU5D_tD06FDBE8142446525DF1C40351D523A228373821* ___b0, const RuntimeMethod* method);
-// System.Void System.Guid::.ctor(System.Int32,System.Int16,System.Int16,System.Byte,System.Byte,System.Byte,System.Byte,System.Byte,System.Byte,System.Byte,System.Byte)
-extern "C" IL2CPP_METHOD_ATTR void Guid__ctor_m0DAD9558364ABC486DC40268B8A55743FB4E988E (Guid_t * __this, int32_t ___a0, int16_t ___b1, int16_t ___c2, uint8_t ___d3, uint8_t ___e4, uint8_t ___f5, uint8_t ___g6, uint8_t ___h7, uint8_t ___i8, uint8_t ___j9, uint8_t ___k10, const RuntimeMethod* method);
 // System.Void System.Guid/GuidResult::Init(System.Guid/GuidParseThrowStyle)
 extern "C" IL2CPP_METHOD_ATTR void GuidResult_Init_mDBE5F0AE853E2AB4767CD6A5225A229536428716 (GuidResult_t8E78929A7A732656B7BAF6A5482FD037F81DB3F3 * __this, int32_t ___canThrow0, const RuntimeMethod* method);
 // System.Boolean System.Guid::TryParseGuid(System.String,System.Guid/GuidStyles,System.Guid/GuidResult&)
@@ -16064,40 +16062,6 @@ extern "C"  void Guid__ctor_m93F5E840798B5FB4B96497327B3907829EBA100A_AdjustorTh
 {
 	Guid_t * _thisAdjusted = reinterpret_cast<Guid_t *>(__this + 1);
 	Guid__ctor_m93F5E840798B5FB4B96497327B3907829EBA100A(_thisAdjusted, ___b0, method);
-}
-// System.Void System.Guid::.ctor(System.Int32,System.Int16,System.Int16,System.Byte,System.Byte,System.Byte,System.Byte,System.Byte,System.Byte,System.Byte,System.Byte)
-extern "C" IL2CPP_METHOD_ATTR void Guid__ctor_m0DAD9558364ABC486DC40268B8A55743FB4E988E (Guid_t * __this, int32_t ___a0, int16_t ___b1, int16_t ___c2, uint8_t ___d3, uint8_t ___e4, uint8_t ___f5, uint8_t ___g6, uint8_t ___h7, uint8_t ___i8, uint8_t ___j9, uint8_t ___k10, const RuntimeMethod* method)
-{
-	{
-		int32_t L_0 = ___a0;
-		__this->set__a_1(L_0);
-		int16_t L_1 = ___b1;
-		__this->set__b_2(L_1);
-		int16_t L_2 = ___c2;
-		__this->set__c_3(L_2);
-		uint8_t L_3 = ___d3;
-		__this->set__d_4(L_3);
-		uint8_t L_4 = ___e4;
-		__this->set__e_5(L_4);
-		uint8_t L_5 = ___f5;
-		__this->set__f_6(L_5);
-		uint8_t L_6 = ___g6;
-		__this->set__g_7(L_6);
-		uint8_t L_7 = ___h7;
-		__this->set__h_8(L_7);
-		uint8_t L_8 = ___i8;
-		__this->set__i_9(L_8);
-		uint8_t L_9 = ___j9;
-		__this->set__j_10(L_9);
-		uint8_t L_10 = ___k10;
-		__this->set__k_11(L_10);
-		return;
-	}
-}
-extern "C"  void Guid__ctor_m0DAD9558364ABC486DC40268B8A55743FB4E988E_AdjustorThunk (RuntimeObject * __this, int32_t ___a0, int16_t ___b1, int16_t ___c2, uint8_t ___d3, uint8_t ___e4, uint8_t ___f5, uint8_t ___g6, uint8_t ___h7, uint8_t ___i8, uint8_t ___j9, uint8_t ___k10, const RuntimeMethod* method)
-{
-	Guid_t * _thisAdjusted = reinterpret_cast<Guid_t *>(__this + 1);
-	Guid__ctor_m0DAD9558364ABC486DC40268B8A55743FB4E988E(_thisAdjusted, ___a0, ___b1, ___c2, ___d3, ___e4, ___f5, ___g6, ___h7, ___i8, ___j9, ___k10, method);
 }
 // System.Void System.Guid::.ctor(System.String)
 extern "C" IL2CPP_METHOD_ATTR void Guid__ctor_mC668142577A40A77D13B78AADDEFFFC2E2705079 (Guid_t * __this, String_t* ___g0, const RuntimeMethod* method)

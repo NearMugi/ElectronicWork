@@ -19,17 +19,6 @@
 #include "codegen/il2cpp-codegen.h"
 #include "il2cpp-object-internals.h"
 
-template <typename T1>
-struct VirtActionInvoker1
-{
-	typedef void (*Action)(void*, T1, const RuntimeMethod*);
-
-	static inline void Invoke (Il2CppMethodSlot slot, RuntimeObject* obj, T1 p1)
-	{
-		const VirtualInvokeData& invokeData = il2cpp_codegen_get_virtual_invoke_data(slot, obj);
-		((Action)invokeData.methodPtr)(obj, p1, invokeData.method);
-	}
-};
 template <typename R>
 struct VirtFuncInvoker0
 {
@@ -71,6 +60,17 @@ struct VirtActionInvoker0
 	{
 		const VirtualInvokeData& invokeData = il2cpp_codegen_get_virtual_invoke_data(slot, obj);
 		((Action)invokeData.methodPtr)(obj, invokeData.method);
+	}
+};
+template <typename T1>
+struct VirtActionInvoker1
+{
+	typedef void (*Action)(void*, T1, const RuntimeMethod*);
+
+	static inline void Invoke (Il2CppMethodSlot slot, RuntimeObject* obj, T1 p1)
+	{
+		const VirtualInvokeData& invokeData = il2cpp_codegen_get_virtual_invoke_data(slot, obj);
+		((Action)invokeData.methodPtr)(obj, p1, invokeData.method);
 	}
 };
 template <typename R, typename T1, typename T2, typename T3>
@@ -127,17 +127,6 @@ struct GenericVirtActionInvoker1
 		VirtualInvokeData invokeData;
 		il2cpp_codegen_get_generic_virtual_invoke_data(method, obj, &invokeData);
 		((Action)invokeData.methodPtr)(obj, p1, invokeData.method);
-	}
-};
-template <typename R>
-struct InterfaceFuncInvoker0
-{
-	typedef R (*Func)(void*, const RuntimeMethod*);
-
-	static inline R Invoke (Il2CppMethodSlot slot, RuntimeClass* declaringInterface, RuntimeObject* obj)
-	{
-		const VirtualInvokeData& invokeData = il2cpp_codegen_get_interface_invoke_data(slot, obj, declaringInterface);
-		return ((Func)invokeData.methodPtr)(obj, invokeData.method);
 	}
 };
 template <typename T1, typename T2>
@@ -416,22 +405,16 @@ struct ContextCallbackObject_tA6E21305C9B16E0973DE8B607765D7E41632A4B0;
 struct DynamicPropertyCollection_t53C262686576B02C86B55F8CAA16068AF33DC75C;
 // System.Runtime.Remoting.DisposerReplySink
 struct DisposerReplySink_tB82C204D78F2AC7B0C3F08CDF7F331E36188ED13;
-// System.Runtime.Remoting.EnvoyInfo
-struct EnvoyInfo_tB3A3AF8D7FCFFF5C5468B6C3EDFE186015B1CD09;
 // System.Runtime.Remoting.IChannelInfo
 struct IChannelInfo_tBB94344D943AE3690E34FC989F82D79CEE4F0F4D;
 // System.Runtime.Remoting.IEnvoyInfo
 struct IEnvoyInfo_t11D78CB5D6976205E23180E5F0911CEF40672148;
 // System.Runtime.Remoting.IRemotingTypeInfo
 struct IRemotingTypeInfo_t510B5BDF4B8C7290A270755122F69C90EDE1B56C;
-// System.Runtime.Remoting.Identity
-struct Identity_tB4E8BEFF42D505C9B24C9284934E6538F29606B6;
 // System.Runtime.Remoting.Lifetime.ILease
 struct ILease_t341D788D16ADC594871883DAC6ADB6A316E1AF4B;
 // System.Runtime.Remoting.Lifetime.Lease
 struct Lease_t33787DBF803EE2586CBFDC46E3528D17F14AD3A3;
-// System.Runtime.Remoting.Lifetime.Lease/RenewalDelegate
-struct RenewalDelegate_tD6A85E04432395B57C6A3E7663AA82E00CEDF652;
 // System.Runtime.Remoting.Messaging.Header
 struct Header_tBB05146C08BE55AC72B8813E862DA50FDFB2417C;
 // System.Runtime.Remoting.Messaging.HeaderHandler
@@ -452,12 +435,8 @@ struct SoapFieldAttribute_t0D4849AE71639A7044E81BF800B5687F7CD5D35C;
 struct SoapTypeAttribute_t1C7E0B175F9D3211051EC6DF57A195527AEE937A;
 // System.Runtime.Remoting.ObjRef
 struct ObjRef_tA220448511DCA671EFC23F87F1C7FCA6ACC749D2;
-// System.Runtime.Remoting.Proxies.RealProxy
-struct RealProxy_t4B0A745F7C99373132CC67FE86D13421411361EF;
 // System.Runtime.Remoting.RemotingException
 struct RemotingException_tDD6EC24895707C7D437EF6437E3913758E8DF02C;
-// System.Runtime.Remoting.RemotingServices/CACD
-struct CACD_t077B81E970254E4A14C3397B1193DF995DCDB11A;
 // System.Runtime.Remoting.ServerIdentity
 struct ServerIdentity_t93C5C5C4D608C5E714F0C5061B9BFC17B3B567D2;
 // System.Runtime.Remoting.Services.ITrackingHandler
@@ -704,8 +683,6 @@ extern RuntimeClass* DisposerReplySink_tB82C204D78F2AC7B0C3F08CDF7F331E36188ED13
 extern RuntimeClass* DoubleU5BU5D_tF9383437DDA9EAC9F60627E9E6E2045CF7CB182D_il2cpp_TypeInfo_var;
 extern RuntimeClass* Double_t358B8F23BDC52A5DD700E727E204F9F7CDE12409_il2cpp_TypeInfo_var;
 extern RuntimeClass* EndOfStreamException_t1B47BA867EC337F83056C2833A59293754AAC01F_il2cpp_TypeInfo_var;
-extern RuntimeClass* EnvoyInfo_tB3A3AF8D7FCFFF5C5468B6C3EDFE186015B1CD09_il2cpp_TypeInfo_var;
-extern RuntimeClass* EnvoyTerminatorSink_t58C3EE980197493267EB942D964BC8B507F14806_il2cpp_TypeInfo_var;
 extern RuntimeClass* Exception_t_il2cpp_TypeInfo_var;
 extern RuntimeClass* FieldInfoU5BU5D_t9C36FA93372CA01DAF85946064B058CD9CE2E8BE_il2cpp_TypeInfo_var;
 extern RuntimeClass* FieldInfo_t_il2cpp_TypeInfo_var;
@@ -743,8 +720,6 @@ extern RuntimeClass* InternalParseTypeE_t53859E04B4CCCAC15695C4008ED656AAAE5D6A3
 extern RuntimeClass* InternalPrimitiveTypeEU5BU5D_t71A19555C9BF41D0F2AE55D48E4FB4D26A05703C_il2cpp_TypeInfo_var;
 extern RuntimeClass* InternalPrimitiveTypeE_t631DE4C166E141164C150F9C6C93365AB882E801_il2cpp_TypeInfo_var;
 extern RuntimeClass* InternalRemotingServices_t29F59247A12F343EFDCCB57E1F75DC33873532A3_il2cpp_TypeInfo_var;
-extern RuntimeClass* Lease_t33787DBF803EE2586CBFDC46E3528D17F14AD3A3_il2cpp_TypeInfo_var;
-extern RuntimeClass* LifetimeServices_t90BD644562BA5F39A24BE12586EAAC8179AE4A4B_il2cpp_TypeInfo_var;
 extern RuntimeClass* List_1_t5096DCBA1DD98DCE1B85766613AC817FED4F9469_il2cpp_TypeInfo_var;
 extern RuntimeClass* List_1_tE9D3AD6B1DEE5D980D8D2F6C31987453E6E1C1E0_il2cpp_TypeInfo_var;
 extern RuntimeClass* MarshalByRefObject_tC4577953D0A44D0AB8597CFA868E01C858B1C9AF_il2cpp_TypeInfo_var;
@@ -757,7 +732,6 @@ extern RuntimeClass* MemberReference_t12860538665657DB61F1F5CD53253E2DBB073E66_i
 extern RuntimeClass* MessageEnd_tFE21C6E76D9EE7CAB10486486D43D97B5EF258DF_il2cpp_TypeInfo_var;
 extern RuntimeClass* NameCache_t8E2C6F16791BF70942F3599CC096E43EE51FEC7F_il2cpp_TypeInfo_var;
 extern RuntimeClass* NameInfo_t57D1A79A08FB3AD2F94CC065E024AA9C02760D77_il2cpp_TypeInfo_var;
-extern RuntimeClass* ObjRef_tA220448511DCA671EFC23F87F1C7FCA6ACC749D2_il2cpp_TypeInfo_var;
 extern RuntimeClass* ObjectIDGenerator_tD65209D0A1CDA08C9C709A4D1997D8091A93C1A1_il2cpp_TypeInfo_var;
 extern RuntimeClass* ObjectManager_t507FFA4AF40CBF19B13E1AD2057420E865817281_il2cpp_TypeInfo_var;
 extern RuntimeClass* ObjectMap_t4A3376E393D41E3EA28A67569CF7663D01B5B92D_il2cpp_TypeInfo_var;
@@ -772,7 +746,6 @@ extern RuntimeClass* PropertyInfo_t_il2cpp_TypeInfo_var;
 extern RuntimeClass* Queue_tEC6DE7527799C2E4224B469ECD0CDD2B25E8E4F3_il2cpp_TypeInfo_var;
 extern RuntimeClass* ReadObjectInfo_t5D6AE190035FB81EC5AF28F0AFD67136BBE6CA60_il2cpp_TypeInfo_var;
 extern RuntimeClass* RemotingException_tDD6EC24895707C7D437EF6437E3913758E8DF02C_il2cpp_TypeInfo_var;
-extern RuntimeClass* RemotingServices_tC5439C1B728EDB8838F3C744E61C69A0D17FCA51_il2cpp_TypeInfo_var;
 extern RuntimeClass* RtFieldInfo_tF0C3D7BDCAD69A06344DAB6D508A916B5A0F6579_il2cpp_TypeInfo_var;
 extern RuntimeClass* RuntimeArray_il2cpp_TypeInfo_var;
 extern RuntimeClass* RuntimeFieldInfo_t9C8BA644F857EBE60EC6587AE1C1148E420E66F7_il2cpp_TypeInfo_var;
@@ -805,7 +778,6 @@ extern RuntimeClass* TopLevelAssemblyTypeResolver_t04636F94B55405B0EE48DD9BCA570
 extern RuntimeClass* TrackingServices_t2C809B5035163AEE0FBA4ECE826F9EDDB152CF69_il2cpp_TypeInfo_var;
 extern RuntimeClass* TypeCodeU5BU5D_t8C47CEC9ECBC7EB64C0108B34A744FEA93F3FB58_il2cpp_TypeInfo_var;
 extern RuntimeClass* TypeForwardedFromAttribute_tEE8D8DA95C9112F53D8E66EA00F476C923A003E2_il2cpp_TypeInfo_var;
-extern RuntimeClass* TypeInfo_t621BE6C30385097A31E23DE8B512AA8558B588EE_il2cpp_TypeInfo_var;
 extern RuntimeClass* TypeInfo_tC2D7109F695DAC68DEBAC703480BEA39B26DA4C0_il2cpp_TypeInfo_var;
 extern RuntimeClass* TypeInformation_t0D3CF8347F5EA65A6D5B8D6C0D0F97A96E351F17_il2cpp_TypeInfo_var;
 extern RuntimeClass* TypeLoadExceptionHolder_t25D9A474F1B8929534D57CDD46252B59C9378653_il2cpp_TypeInfo_var;
@@ -1173,10 +1145,6 @@ extern const uint32_t SerObjectInfoInit__ctor_mEE97CBC32B6C51C6C3A0355E67C52E61A
 extern const uint32_t SerStack_IncreaseCapacity_m2AEECDEB8075ABA0F4BABB1B418752A8A9FF7771_MetadataUsageId;
 extern const uint32_t SerStack__ctor_m6D02D84B1D92F8155BDA6A0CB6A5DD1F83A7DC4A_MetadataUsageId;
 extern const uint32_t SerializationHeaderRecord_Read_m58839CA8B9F76D166CCBF6B1BE2DD2A240DFDCB0_MetadataUsageId;
-extern const uint32_t ServerIdentity_AttachServerObject_mDAF46A8A96123B31091CEDBAA0070BE01226F7DD_MetadataUsageId;
-extern const uint32_t ServerIdentity_CreateObjRef_m343DA8B87061811E887FBA9F735C8ABAA1E21634_MetadataUsageId;
-extern const uint32_t ServerIdentity_DisposeServerObject_m031BC10453A2816A86D30878C888D8781943AB70_MetadataUsageId;
-extern const uint32_t ServerIdentity_StartTrackingLifetime_m42193F67CABCFAC75C1652D2AE84930FBAEEC43C_MetadataUsageId;
 extern const uint32_t SingleCallIdentity_AsyncObjectProcessMessage_mF0B7490D15A7BD4DB62BB8A84F3A9A9E7F7793B3_MetadataUsageId;
 extern const uint32_t SingleCallIdentity_SyncObjectProcessMessage_m42ED83943CD159458A8438DC787594BDB0B2E657_MetadataUsageId;
 extern const uint32_t SingletonIdentity_AsyncObjectProcessMessage_mD97C5F5851AC790F179CC268EA63DCE0491138BC_MetadataUsageId;
@@ -1253,15 +1221,12 @@ extern const uint32_t __BinaryParser_get_SystemAssemblyInfo_m27E5ABEC05F37B392FA
 extern const uint32_t __BinaryParser_get_prs_mF2EBE7BFA7B34DDCA89B2794F92CEF34E4DEF8CC_MetadataUsageId;
 struct Assembly_t_marshaled_com;
 struct Assembly_t_marshaled_pinvoke;
-struct Context_tE86AB6B3D9759C8E715184808579EFE761683724_marshaled_com;
-struct Context_tE86AB6B3D9759C8E715184808579EFE761683724_marshaled_pinvoke;
 struct CultureData_tF43B080FFA6EB278F4F289BCDA3FB74B6C208ECD_marshaled_com;
 struct CultureData_tF43B080FFA6EB278F4F289BCDA3FB74B6C208ECD_marshaled_pinvoke;
 struct CultureInfo_t345AC6924134F039ED9A11F3E03F8E91B6A3225F_marshaled_com;
 struct CultureInfo_t345AC6924134F039ED9A11F3E03F8E91B6A3225F_marshaled_pinvoke;
 struct Exception_t_marshaled_com;
 struct Exception_t_marshaled_pinvoke;
-struct MarshalByRefObject_tC4577953D0A44D0AB8597CFA868E01C858B1C9AF_marshaled_com;
 
 struct BooleanU5BU5D_t192C7579715690E25BD5EFED47F3E0FC9DCB2040;
 struct ByteU5BU5D_tD06FDBE8142446525DF1C40351D523A228373821;
@@ -2926,36 +2891,6 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // DISPOSERREPLYSINK_TB82C204D78F2AC7B0C3F08CDF7F331E36188ED13_H
-#ifndef ENVOYINFO_TB3A3AF8D7FCFFF5C5468B6C3EDFE186015B1CD09_H
-#define ENVOYINFO_TB3A3AF8D7FCFFF5C5468B6C3EDFE186015B1CD09_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// System.Runtime.Remoting.EnvoyInfo
-struct  EnvoyInfo_tB3A3AF8D7FCFFF5C5468B6C3EDFE186015B1CD09  : public RuntimeObject
-{
-public:
-	// System.Runtime.Remoting.Messaging.IMessageSink System.Runtime.Remoting.EnvoyInfo::envoySinks
-	RuntimeObject* ___envoySinks_0;
-
-public:
-	inline static int32_t get_offset_of_envoySinks_0() { return static_cast<int32_t>(offsetof(EnvoyInfo_tB3A3AF8D7FCFFF5C5468B6C3EDFE186015B1CD09, ___envoySinks_0)); }
-	inline RuntimeObject* get_envoySinks_0() const { return ___envoySinks_0; }
-	inline RuntimeObject** get_address_of_envoySinks_0() { return &___envoySinks_0; }
-	inline void set_envoySinks_0(RuntimeObject* value)
-	{
-		___envoySinks_0 = value;
-		Il2CppCodeGenWriteBarrier((&___envoySinks_0), value);
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // ENVOYINFO_TB3A3AF8D7FCFFF5C5468B6C3EDFE186015B1CD09_H
 #ifndef IDENTITY_TB4E8BEFF42D505C9B24C9284934E6538F29606B6_H
 #define IDENTITY_TB4E8BEFF42D505C9B24C9284934E6538F29606B6_H
 #ifdef __clang__
@@ -3051,43 +2986,6 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // IDENTITY_TB4E8BEFF42D505C9B24C9284934E6538F29606B6_H
-#ifndef ENVOYTERMINATORSINK_T58C3EE980197493267EB942D964BC8B507F14806_H
-#define ENVOYTERMINATORSINK_T58C3EE980197493267EB942D964BC8B507F14806_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// System.Runtime.Remoting.Messaging.EnvoyTerminatorSink
-struct  EnvoyTerminatorSink_t58C3EE980197493267EB942D964BC8B507F14806  : public RuntimeObject
-{
-public:
-
-public:
-};
-
-struct EnvoyTerminatorSink_t58C3EE980197493267EB942D964BC8B507F14806_StaticFields
-{
-public:
-	// System.Runtime.Remoting.Messaging.EnvoyTerminatorSink System.Runtime.Remoting.Messaging.EnvoyTerminatorSink::Instance
-	EnvoyTerminatorSink_t58C3EE980197493267EB942D964BC8B507F14806 * ___Instance_0;
-
-public:
-	inline static int32_t get_offset_of_Instance_0() { return static_cast<int32_t>(offsetof(EnvoyTerminatorSink_t58C3EE980197493267EB942D964BC8B507F14806_StaticFields, ___Instance_0)); }
-	inline EnvoyTerminatorSink_t58C3EE980197493267EB942D964BC8B507F14806 * get_Instance_0() const { return ___Instance_0; }
-	inline EnvoyTerminatorSink_t58C3EE980197493267EB942D964BC8B507F14806 ** get_address_of_Instance_0() { return &___Instance_0; }
-	inline void set_Instance_0(EnvoyTerminatorSink_t58C3EE980197493267EB942D964BC8B507F14806 * value)
-	{
-		___Instance_0 = value;
-		Il2CppCodeGenWriteBarrier((&___Instance_0), value);
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // ENVOYTERMINATORSINK_T58C3EE980197493267EB942D964BC8B507F14806_H
 #ifndef HEADER_TBB05146C08BE55AC72B8813E862DA50FDFB2417C_H
 #define HEADER_TBB05146C08BE55AC72B8813E862DA50FDFB2417C_H
 #ifdef __clang__
@@ -3218,47 +3116,6 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // OBJREF_TA220448511DCA671EFC23F87F1C7FCA6ACC749D2_H
-#ifndef CACD_T077B81E970254E4A14C3397B1193DF995DCDB11A_H
-#define CACD_T077B81E970254E4A14C3397B1193DF995DCDB11A_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// System.Runtime.Remoting.RemotingServices/CACD
-struct  CACD_t077B81E970254E4A14C3397B1193DF995DCDB11A  : public RuntimeObject
-{
-public:
-	// System.Object System.Runtime.Remoting.RemotingServices/CACD::d
-	RuntimeObject * ___d_0;
-	// System.Object System.Runtime.Remoting.RemotingServices/CACD::c
-	RuntimeObject * ___c_1;
-
-public:
-	inline static int32_t get_offset_of_d_0() { return static_cast<int32_t>(offsetof(CACD_t077B81E970254E4A14C3397B1193DF995DCDB11A, ___d_0)); }
-	inline RuntimeObject * get_d_0() const { return ___d_0; }
-	inline RuntimeObject ** get_address_of_d_0() { return &___d_0; }
-	inline void set_d_0(RuntimeObject * value)
-	{
-		___d_0 = value;
-		Il2CppCodeGenWriteBarrier((&___d_0), value);
-	}
-
-	inline static int32_t get_offset_of_c_1() { return static_cast<int32_t>(offsetof(CACD_t077B81E970254E4A14C3397B1193DF995DCDB11A, ___c_1)); }
-	inline RuntimeObject * get_c_1() const { return ___c_1; }
-	inline RuntimeObject ** get_address_of_c_1() { return &___c_1; }
-	inline void set_c_1(RuntimeObject * value)
-	{
-		___c_1 = value;
-		Il2CppCodeGenWriteBarrier((&___c_1), value);
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // CACD_T077B81E970254E4A14C3397B1193DF995DCDB11A_H
 #ifndef TRACKINGSERVICES_T2C809B5035163AEE0FBA4ECE826F9EDDB152CF69_H
 #define TRACKINGSERVICES_T2C809B5035163AEE0FBA4ECE826F9EDDB152CF69_H
 #ifdef __clang__
@@ -6751,136 +6608,6 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // SOAPATTRIBUTE_TFAB893E3F49B2A2431C47FA7E79746BD6AE4C5CE_H
-#ifndef REALPROXY_T4B0A745F7C99373132CC67FE86D13421411361EF_H
-#define REALPROXY_T4B0A745F7C99373132CC67FE86D13421411361EF_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// System.Runtime.Remoting.Proxies.RealProxy
-struct  RealProxy_t4B0A745F7C99373132CC67FE86D13421411361EF  : public RuntimeObject
-{
-public:
-	// System.Type System.Runtime.Remoting.Proxies.RealProxy::class_to_proxy
-	Type_t * ___class_to_proxy_0;
-	// System.Runtime.Remoting.Contexts.Context System.Runtime.Remoting.Proxies.RealProxy::_targetContext
-	Context_tE86AB6B3D9759C8E715184808579EFE761683724 * ____targetContext_1;
-	// System.MarshalByRefObject System.Runtime.Remoting.Proxies.RealProxy::_server
-	MarshalByRefObject_tC4577953D0A44D0AB8597CFA868E01C858B1C9AF * ____server_2;
-	// System.Int32 System.Runtime.Remoting.Proxies.RealProxy::_targetDomainId
-	int32_t ____targetDomainId_3;
-	// System.String System.Runtime.Remoting.Proxies.RealProxy::_targetUri
-	String_t* ____targetUri_4;
-	// System.Runtime.Remoting.Identity System.Runtime.Remoting.Proxies.RealProxy::_objectIdentity
-	Identity_tB4E8BEFF42D505C9B24C9284934E6538F29606B6 * ____objectIdentity_5;
-	// System.Object System.Runtime.Remoting.Proxies.RealProxy::_objTP
-	RuntimeObject * ____objTP_6;
-	// System.Object System.Runtime.Remoting.Proxies.RealProxy::_stubData
-	RuntimeObject * ____stubData_7;
-
-public:
-	inline static int32_t get_offset_of_class_to_proxy_0() { return static_cast<int32_t>(offsetof(RealProxy_t4B0A745F7C99373132CC67FE86D13421411361EF, ___class_to_proxy_0)); }
-	inline Type_t * get_class_to_proxy_0() const { return ___class_to_proxy_0; }
-	inline Type_t ** get_address_of_class_to_proxy_0() { return &___class_to_proxy_0; }
-	inline void set_class_to_proxy_0(Type_t * value)
-	{
-		___class_to_proxy_0 = value;
-		Il2CppCodeGenWriteBarrier((&___class_to_proxy_0), value);
-	}
-
-	inline static int32_t get_offset_of__targetContext_1() { return static_cast<int32_t>(offsetof(RealProxy_t4B0A745F7C99373132CC67FE86D13421411361EF, ____targetContext_1)); }
-	inline Context_tE86AB6B3D9759C8E715184808579EFE761683724 * get__targetContext_1() const { return ____targetContext_1; }
-	inline Context_tE86AB6B3D9759C8E715184808579EFE761683724 ** get_address_of__targetContext_1() { return &____targetContext_1; }
-	inline void set__targetContext_1(Context_tE86AB6B3D9759C8E715184808579EFE761683724 * value)
-	{
-		____targetContext_1 = value;
-		Il2CppCodeGenWriteBarrier((&____targetContext_1), value);
-	}
-
-	inline static int32_t get_offset_of__server_2() { return static_cast<int32_t>(offsetof(RealProxy_t4B0A745F7C99373132CC67FE86D13421411361EF, ____server_2)); }
-	inline MarshalByRefObject_tC4577953D0A44D0AB8597CFA868E01C858B1C9AF * get__server_2() const { return ____server_2; }
-	inline MarshalByRefObject_tC4577953D0A44D0AB8597CFA868E01C858B1C9AF ** get_address_of__server_2() { return &____server_2; }
-	inline void set__server_2(MarshalByRefObject_tC4577953D0A44D0AB8597CFA868E01C858B1C9AF * value)
-	{
-		____server_2 = value;
-		Il2CppCodeGenWriteBarrier((&____server_2), value);
-	}
-
-	inline static int32_t get_offset_of__targetDomainId_3() { return static_cast<int32_t>(offsetof(RealProxy_t4B0A745F7C99373132CC67FE86D13421411361EF, ____targetDomainId_3)); }
-	inline int32_t get__targetDomainId_3() const { return ____targetDomainId_3; }
-	inline int32_t* get_address_of__targetDomainId_3() { return &____targetDomainId_3; }
-	inline void set__targetDomainId_3(int32_t value)
-	{
-		____targetDomainId_3 = value;
-	}
-
-	inline static int32_t get_offset_of__targetUri_4() { return static_cast<int32_t>(offsetof(RealProxy_t4B0A745F7C99373132CC67FE86D13421411361EF, ____targetUri_4)); }
-	inline String_t* get__targetUri_4() const { return ____targetUri_4; }
-	inline String_t** get_address_of__targetUri_4() { return &____targetUri_4; }
-	inline void set__targetUri_4(String_t* value)
-	{
-		____targetUri_4 = value;
-		Il2CppCodeGenWriteBarrier((&____targetUri_4), value);
-	}
-
-	inline static int32_t get_offset_of__objectIdentity_5() { return static_cast<int32_t>(offsetof(RealProxy_t4B0A745F7C99373132CC67FE86D13421411361EF, ____objectIdentity_5)); }
-	inline Identity_tB4E8BEFF42D505C9B24C9284934E6538F29606B6 * get__objectIdentity_5() const { return ____objectIdentity_5; }
-	inline Identity_tB4E8BEFF42D505C9B24C9284934E6538F29606B6 ** get_address_of__objectIdentity_5() { return &____objectIdentity_5; }
-	inline void set__objectIdentity_5(Identity_tB4E8BEFF42D505C9B24C9284934E6538F29606B6 * value)
-	{
-		____objectIdentity_5 = value;
-		Il2CppCodeGenWriteBarrier((&____objectIdentity_5), value);
-	}
-
-	inline static int32_t get_offset_of__objTP_6() { return static_cast<int32_t>(offsetof(RealProxy_t4B0A745F7C99373132CC67FE86D13421411361EF, ____objTP_6)); }
-	inline RuntimeObject * get__objTP_6() const { return ____objTP_6; }
-	inline RuntimeObject ** get_address_of__objTP_6() { return &____objTP_6; }
-	inline void set__objTP_6(RuntimeObject * value)
-	{
-		____objTP_6 = value;
-		Il2CppCodeGenWriteBarrier((&____objTP_6), value);
-	}
-
-	inline static int32_t get_offset_of__stubData_7() { return static_cast<int32_t>(offsetof(RealProxy_t4B0A745F7C99373132CC67FE86D13421411361EF, ____stubData_7)); }
-	inline RuntimeObject * get__stubData_7() const { return ____stubData_7; }
-	inline RuntimeObject ** get_address_of__stubData_7() { return &____stubData_7; }
-	inline void set__stubData_7(RuntimeObject * value)
-	{
-		____stubData_7 = value;
-		Il2CppCodeGenWriteBarrier((&____stubData_7), value);
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-// Native definition for P/Invoke marshalling of System.Runtime.Remoting.Proxies.RealProxy
-struct RealProxy_t4B0A745F7C99373132CC67FE86D13421411361EF_marshaled_pinvoke
-{
-	Type_t * ___class_to_proxy_0;
-	Context_tE86AB6B3D9759C8E715184808579EFE761683724_marshaled_pinvoke* ____targetContext_1;
-	MarshalByRefObject_tC4577953D0A44D0AB8597CFA868E01C858B1C9AF_marshaled_pinvoke ____server_2;
-	int32_t ____targetDomainId_3;
-	char* ____targetUri_4;
-	Identity_tB4E8BEFF42D505C9B24C9284934E6538F29606B6 * ____objectIdentity_5;
-	Il2CppIUnknown* ____objTP_6;
-	Il2CppIUnknown* ____stubData_7;
-};
-// Native definition for COM marshalling of System.Runtime.Remoting.Proxies.RealProxy
-struct RealProxy_t4B0A745F7C99373132CC67FE86D13421411361EF_marshaled_com
-{
-	Type_t * ___class_to_proxy_0;
-	Context_tE86AB6B3D9759C8E715184808579EFE761683724_marshaled_com* ____targetContext_1;
-	MarshalByRefObject_tC4577953D0A44D0AB8597CFA868E01C858B1C9AF_marshaled_com* ____server_2;
-	int32_t ____targetDomainId_3;
-	Il2CppChar* ____targetUri_4;
-	Identity_tB4E8BEFF42D505C9B24C9284934E6538F29606B6 * ____objectIdentity_5;
-	Il2CppIUnknown* ____objTP_6;
-	Il2CppIUnknown* ____stubData_7;
-};
-#endif // REALPROXY_T4B0A745F7C99373132CC67FE86D13421411361EF_H
 #ifndef SERVERIDENTITY_T93C5C5C4D608C5E714F0C5061B9BFC17B3B567D2_H
 #define SERVERIDENTITY_T93C5C5C4D608C5E714F0C5061B9BFC17B3B567D2_H
 #ifdef __clang__
@@ -8290,35 +8017,6 @@ struct Context_tE86AB6B3D9759C8E715184808579EFE761683724_marshaled_com
 	ContextCallbackObject_tA6E21305C9B16E0973DE8B607765D7E41632A4B0 * ___callback_object_14;
 };
 #endif // CONTEXT_TE86AB6B3D9759C8E715184808579EFE761683724_H
-#ifndef LEASESTATE_TF173E85694A0F2693F2A306039AF595E0F37DF02_H
-#define LEASESTATE_TF173E85694A0F2693F2A306039AF595E0F37DF02_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// System.Runtime.Remoting.Lifetime.LeaseState
-struct  LeaseState_tF173E85694A0F2693F2A306039AF595E0F37DF02 
-{
-public:
-	// System.Int32 System.Runtime.Remoting.Lifetime.LeaseState::value__
-	int32_t ___value___2;
-
-public:
-	inline static int32_t get_offset_of_value___2() { return static_cast<int32_t>(offsetof(LeaseState_tF173E85694A0F2693F2A306039AF595E0F37DF02, ___value___2)); }
-	inline int32_t get_value___2() const { return ___value___2; }
-	inline int32_t* get_address_of_value___2() { return &___value___2; }
-	inline void set_value___2(int32_t value)
-	{
-		___value___2 = value;
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // LEASESTATE_TF173E85694A0F2693F2A306039AF595E0F37DF02_H
 #ifndef SOAPFIELDATTRIBUTE_T0D4849AE71639A7044E81BF800B5687F7CD5D35C_H
 #define SOAPFIELDATTRIBUTE_T0D4849AE71639A7044E81BF800B5687F7CD5D35C_H
 #ifdef __clang__
@@ -10026,108 +9724,6 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // RUNTIMEASSEMBLY_T5EE9CD749D82345AE5635B9665665C31A3308EB1_H
-#ifndef LEASE_T33787DBF803EE2586CBFDC46E3528D17F14AD3A3_H
-#define LEASE_T33787DBF803EE2586CBFDC46E3528D17F14AD3A3_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// System.Runtime.Remoting.Lifetime.Lease
-struct  Lease_t33787DBF803EE2586CBFDC46E3528D17F14AD3A3  : public MarshalByRefObject_tC4577953D0A44D0AB8597CFA868E01C858B1C9AF
-{
-public:
-	// System.DateTime System.Runtime.Remoting.Lifetime.Lease::_leaseExpireTime
-	DateTime_t349B7449FBAAFF4192636E2B7A07694DA9236132  ____leaseExpireTime_1;
-	// System.Runtime.Remoting.Lifetime.LeaseState System.Runtime.Remoting.Lifetime.Lease::_currentState
-	int32_t ____currentState_2;
-	// System.TimeSpan System.Runtime.Remoting.Lifetime.Lease::_initialLeaseTime
-	TimeSpan_tA8069278ACE8A74D6DF7D514A9CD4432433F64C4  ____initialLeaseTime_3;
-	// System.TimeSpan System.Runtime.Remoting.Lifetime.Lease::_renewOnCallTime
-	TimeSpan_tA8069278ACE8A74D6DF7D514A9CD4432433F64C4  ____renewOnCallTime_4;
-	// System.TimeSpan System.Runtime.Remoting.Lifetime.Lease::_sponsorshipTimeout
-	TimeSpan_tA8069278ACE8A74D6DF7D514A9CD4432433F64C4  ____sponsorshipTimeout_5;
-	// System.Collections.ArrayList System.Runtime.Remoting.Lifetime.Lease::_sponsors
-	ArrayList_t4131E0C29C7E1B9BC9DFE37BEC41A5EB1481ADF4 * ____sponsors_6;
-	// System.Collections.Queue System.Runtime.Remoting.Lifetime.Lease::_renewingSponsors
-	Queue_tEC6DE7527799C2E4224B469ECD0CDD2B25E8E4F3 * ____renewingSponsors_7;
-	// System.Runtime.Remoting.Lifetime.Lease/RenewalDelegate System.Runtime.Remoting.Lifetime.Lease::_renewalDelegate
-	RenewalDelegate_tD6A85E04432395B57C6A3E7663AA82E00CEDF652 * ____renewalDelegate_8;
-
-public:
-	inline static int32_t get_offset_of__leaseExpireTime_1() { return static_cast<int32_t>(offsetof(Lease_t33787DBF803EE2586CBFDC46E3528D17F14AD3A3, ____leaseExpireTime_1)); }
-	inline DateTime_t349B7449FBAAFF4192636E2B7A07694DA9236132  get__leaseExpireTime_1() const { return ____leaseExpireTime_1; }
-	inline DateTime_t349B7449FBAAFF4192636E2B7A07694DA9236132 * get_address_of__leaseExpireTime_1() { return &____leaseExpireTime_1; }
-	inline void set__leaseExpireTime_1(DateTime_t349B7449FBAAFF4192636E2B7A07694DA9236132  value)
-	{
-		____leaseExpireTime_1 = value;
-	}
-
-	inline static int32_t get_offset_of__currentState_2() { return static_cast<int32_t>(offsetof(Lease_t33787DBF803EE2586CBFDC46E3528D17F14AD3A3, ____currentState_2)); }
-	inline int32_t get__currentState_2() const { return ____currentState_2; }
-	inline int32_t* get_address_of__currentState_2() { return &____currentState_2; }
-	inline void set__currentState_2(int32_t value)
-	{
-		____currentState_2 = value;
-	}
-
-	inline static int32_t get_offset_of__initialLeaseTime_3() { return static_cast<int32_t>(offsetof(Lease_t33787DBF803EE2586CBFDC46E3528D17F14AD3A3, ____initialLeaseTime_3)); }
-	inline TimeSpan_tA8069278ACE8A74D6DF7D514A9CD4432433F64C4  get__initialLeaseTime_3() const { return ____initialLeaseTime_3; }
-	inline TimeSpan_tA8069278ACE8A74D6DF7D514A9CD4432433F64C4 * get_address_of__initialLeaseTime_3() { return &____initialLeaseTime_3; }
-	inline void set__initialLeaseTime_3(TimeSpan_tA8069278ACE8A74D6DF7D514A9CD4432433F64C4  value)
-	{
-		____initialLeaseTime_3 = value;
-	}
-
-	inline static int32_t get_offset_of__renewOnCallTime_4() { return static_cast<int32_t>(offsetof(Lease_t33787DBF803EE2586CBFDC46E3528D17F14AD3A3, ____renewOnCallTime_4)); }
-	inline TimeSpan_tA8069278ACE8A74D6DF7D514A9CD4432433F64C4  get__renewOnCallTime_4() const { return ____renewOnCallTime_4; }
-	inline TimeSpan_tA8069278ACE8A74D6DF7D514A9CD4432433F64C4 * get_address_of__renewOnCallTime_4() { return &____renewOnCallTime_4; }
-	inline void set__renewOnCallTime_4(TimeSpan_tA8069278ACE8A74D6DF7D514A9CD4432433F64C4  value)
-	{
-		____renewOnCallTime_4 = value;
-	}
-
-	inline static int32_t get_offset_of__sponsorshipTimeout_5() { return static_cast<int32_t>(offsetof(Lease_t33787DBF803EE2586CBFDC46E3528D17F14AD3A3, ____sponsorshipTimeout_5)); }
-	inline TimeSpan_tA8069278ACE8A74D6DF7D514A9CD4432433F64C4  get__sponsorshipTimeout_5() const { return ____sponsorshipTimeout_5; }
-	inline TimeSpan_tA8069278ACE8A74D6DF7D514A9CD4432433F64C4 * get_address_of__sponsorshipTimeout_5() { return &____sponsorshipTimeout_5; }
-	inline void set__sponsorshipTimeout_5(TimeSpan_tA8069278ACE8A74D6DF7D514A9CD4432433F64C4  value)
-	{
-		____sponsorshipTimeout_5 = value;
-	}
-
-	inline static int32_t get_offset_of__sponsors_6() { return static_cast<int32_t>(offsetof(Lease_t33787DBF803EE2586CBFDC46E3528D17F14AD3A3, ____sponsors_6)); }
-	inline ArrayList_t4131E0C29C7E1B9BC9DFE37BEC41A5EB1481ADF4 * get__sponsors_6() const { return ____sponsors_6; }
-	inline ArrayList_t4131E0C29C7E1B9BC9DFE37BEC41A5EB1481ADF4 ** get_address_of__sponsors_6() { return &____sponsors_6; }
-	inline void set__sponsors_6(ArrayList_t4131E0C29C7E1B9BC9DFE37BEC41A5EB1481ADF4 * value)
-	{
-		____sponsors_6 = value;
-		Il2CppCodeGenWriteBarrier((&____sponsors_6), value);
-	}
-
-	inline static int32_t get_offset_of__renewingSponsors_7() { return static_cast<int32_t>(offsetof(Lease_t33787DBF803EE2586CBFDC46E3528D17F14AD3A3, ____renewingSponsors_7)); }
-	inline Queue_tEC6DE7527799C2E4224B469ECD0CDD2B25E8E4F3 * get__renewingSponsors_7() const { return ____renewingSponsors_7; }
-	inline Queue_tEC6DE7527799C2E4224B469ECD0CDD2B25E8E4F3 ** get_address_of__renewingSponsors_7() { return &____renewingSponsors_7; }
-	inline void set__renewingSponsors_7(Queue_tEC6DE7527799C2E4224B469ECD0CDD2B25E8E4F3 * value)
-	{
-		____renewingSponsors_7 = value;
-		Il2CppCodeGenWriteBarrier((&____renewingSponsors_7), value);
-	}
-
-	inline static int32_t get_offset_of__renewalDelegate_8() { return static_cast<int32_t>(offsetof(Lease_t33787DBF803EE2586CBFDC46E3528D17F14AD3A3, ____renewalDelegate_8)); }
-	inline RenewalDelegate_tD6A85E04432395B57C6A3E7663AA82E00CEDF652 * get__renewalDelegate_8() const { return ____renewalDelegate_8; }
-	inline RenewalDelegate_tD6A85E04432395B57C6A3E7663AA82E00CEDF652 ** get_address_of__renewalDelegate_8() { return &____renewalDelegate_8; }
-	inline void set__renewalDelegate_8(RenewalDelegate_tD6A85E04432395B57C6A3E7663AA82E00CEDF652 * value)
-	{
-		____renewalDelegate_8 = value;
-		Il2CppCodeGenWriteBarrier((&____renewalDelegate_8), value);
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // LEASE_T33787DBF803EE2586CBFDC46E3528D17F14AD3A3_H
 #ifndef WELLKNOWNSERVICETYPEENTRY_T08DE2F9BF2A5B8E02E5A35F8CCEDBA24240605EE_H
 #define WELLKNOWNSERVICETYPEENTRY_T08DE2F9BF2A5B8E02E5A35F8CCEDBA24240605EE_H
 #ifdef __clang__
@@ -15309,42 +14905,6 @@ extern "C" IL2CPP_METHOD_ATTR void List_1__ctor_mEE468B81D8E7C140F567D10FF7F5894
 // T System.Collections.Generic.List`1<System.Object>::get_Item(System.Int32)
 extern "C" IL2CPP_METHOD_ATTR RuntimeObject * List_1_get_Item_mFDB8AD680C600072736579BBF5F38F7416396588_gshared (List_1_t05CC3C859AB5E6024394EF9A42E3E696628CA02D * __this, int32_t p0, const RuntimeMethod* method);
 
-// System.Void System.Object::.ctor()
-extern "C" IL2CPP_METHOD_ATTR void Object__ctor_m925ECA5E85CA100E3FB86A4F9E15C120E9A184C0 (RuntimeObject * __this, const RuntimeMethod* method);
-// System.Void System.Runtime.Remoting.Identity::.ctor(System.String)
-extern "C" IL2CPP_METHOD_ATTR void Identity__ctor_mFEE38F831AA3F06AB362718481DDAF3590479EE9 (Identity_tB4E8BEFF42D505C9B24C9284934E6538F29606B6 * __this, String_t* ___objectUri0, const RuntimeMethod* method);
-// System.Void System.Runtime.Remoting.Lifetime.Lease::.ctor()
-extern "C" IL2CPP_METHOD_ATTR void Lease__ctor_mBDCE338C031C3C0CC2121D6566BF10BB0F9869A1 (Lease_t33787DBF803EE2586CBFDC46E3528D17F14AD3A3 * __this, const RuntimeMethod* method);
-// System.Void System.Runtime.Remoting.Lifetime.LifetimeServices::TrackLifetime(System.Runtime.Remoting.ServerIdentity)
-extern "C" IL2CPP_METHOD_ATTR void LifetimeServices_TrackLifetime_mB6FA0BB508C87E844CA1E2FDB232F0B6EA435284 (ServerIdentity_t93C5C5C4D608C5E714F0C5061B9BFC17B3B567D2 * ___identity0, const RuntimeMethod* method);
-// System.Void System.Runtime.Remoting.ServerIdentity::DisposeServerObject()
-extern "C" IL2CPP_METHOD_ATTR void ServerIdentity_DisposeServerObject_m031BC10453A2816A86D30878C888D8781943AB70 (ServerIdentity_t93C5C5C4D608C5E714F0C5061B9BFC17B3B567D2 * __this, const RuntimeMethod* method);
-// System.Void System.Runtime.Remoting.ObjRef::UpdateChannelInfo()
-extern "C" IL2CPP_METHOD_ATTR void ObjRef_UpdateChannelInfo_mEB7A54FF066B8232DFDEFBBA8E255F4C0FCCF927 (ObjRef_tA220448511DCA671EFC23F87F1C7FCA6ACC749D2 * __this, const RuntimeMethod* method);
-// System.Boolean System.Type::op_Equality(System.Type,System.Type)
-extern "C" IL2CPP_METHOD_ATTR bool Type_op_Equality_m7040622C9E1037EFC73E1F0EDB1DD241282BE3D8 (Type_t * ___left0, Type_t * ___right1, const RuntimeMethod* method);
-// System.Void System.Runtime.Remoting.ObjRef::.ctor()
-extern "C" IL2CPP_METHOD_ATTR void ObjRef__ctor_m9382E14A7DC2725F9C70ACA691768F843B12CCDA (ObjRef_tA220448511DCA671EFC23F87F1C7FCA6ACC749D2 * __this, const RuntimeMethod* method);
-// System.Void System.Runtime.Remoting.TypeInfo::.ctor(System.Type)
-extern "C" IL2CPP_METHOD_ATTR void TypeInfo__ctor_mC74EC4DBA656D6170C8060154E5F48156C3FDDA5 (TypeInfo_t621BE6C30385097A31E23DE8B512AA8558B588EE * __this, Type_t * ___type0, const RuntimeMethod* method);
-// System.Void System.Runtime.Remoting.EnvoyInfo::.ctor(System.Runtime.Remoting.Messaging.IMessageSink)
-extern "C" IL2CPP_METHOD_ATTR void EnvoyInfo__ctor_m39DB1B1CD9E0783AF5645515B815FD1EEC1B1973 (EnvoyInfo_tB3A3AF8D7FCFFF5C5468B6C3EDFE186015B1CD09 * __this, RuntimeObject* ___sinks0, const RuntimeMethod* method);
-// System.Boolean System.Runtime.Remoting.RemotingServices::IsTransparentProxy(System.Object)
-extern "C" IL2CPP_METHOD_ATTR bool RemotingServices_IsTransparentProxy_mC82CA070EE205CED975BD6162B31F9A7C373531F (RuntimeObject * ___proxy0, const RuntimeMethod* method);
-// System.Runtime.Remoting.Proxies.RealProxy System.Runtime.Remoting.RemotingServices::GetRealProxy(System.Object)
-extern "C" IL2CPP_METHOD_ATTR RealProxy_t4B0A745F7C99373132CC67FE86D13421411361EF * RemotingServices_GetRealProxy_mF634619D46FF8654806937F46E0BC2FDBFACB7DD (RuntimeObject * ___proxy0, const RuntimeMethod* method);
-// System.Runtime.Remoting.Identity System.Runtime.Remoting.Proxies.RealProxy::get_ObjectIdentity()
-extern "C" IL2CPP_METHOD_ATTR Identity_tB4E8BEFF42D505C9B24C9284934E6538F29606B6 * RealProxy_get_ObjectIdentity_m550B81C1A6D5324F3B3C8C0411327A10561BD212 (RealProxy_t4B0A745F7C99373132CC67FE86D13421411361EF * __this, const RuntimeMethod* method);
-// System.Void System.Runtime.Remoting.Proxies.RealProxy::set_ObjectIdentity(System.Runtime.Remoting.Identity)
-extern "C" IL2CPP_METHOD_ATTR void RealProxy_set_ObjectIdentity_m6AEE70959473C6A72D4EB37EBACAB588EA5338E8 (RealProxy_t4B0A745F7C99373132CC67FE86D13421411361EF * __this, Identity_tB4E8BEFF42D505C9B24C9284934E6538F29606B6 * ___value0, const RuntimeMethod* method);
-// System.Boolean System.Type::get_IsContextful()
-extern "C" IL2CPP_METHOD_ATTR bool Type_get_IsContextful_m02EFD5BDDC6E265AE3B40B144D679AEFACEE4C8A (Type_t * __this, const RuntimeMethod* method);
-// System.Runtime.Remoting.Messaging.IMessageSink System.Runtime.Remoting.Contexts.Context::CreateEnvoySink(System.MarshalByRefObject)
-extern "C" IL2CPP_METHOD_ATTR RuntimeObject* Context_CreateEnvoySink_mDAB32FB13E9205D9EE9CD4996779A51C6B46BC09 (Context_tE86AB6B3D9759C8E715184808579EFE761683724 * __this, MarshalByRefObject_tC4577953D0A44D0AB8597CFA868E01C858B1C9AF * ___serverObject0, const RuntimeMethod* method);
-// System.Void System.MarshalByRefObject::set_ObjectIdentity(System.Runtime.Remoting.ServerIdentity)
-extern "C" IL2CPP_METHOD_ATTR void MarshalByRefObject_set_ObjectIdentity_mE1E420865553E02EA38D821EF08642EC35E891B2 (MarshalByRefObject_tC4577953D0A44D0AB8597CFA868E01C858B1C9AF * __this, ServerIdentity_t93C5C5C4D608C5E714F0C5061B9BFC17B3B567D2 * ___value0, const RuntimeMethod* method);
-// System.Void System.Runtime.Remoting.Services.TrackingServices::NotifyDisconnectedObject(System.Object)
-extern "C" IL2CPP_METHOD_ATTR void TrackingServices_NotifyDisconnectedObject_m701D4FC12143B5952C18EC2FC184E7845C35B189 (RuntimeObject * ___obj0, const RuntimeMethod* method);
 // System.Void System.Threading.Monitor::Enter(System.Object,System.Boolean&)
 extern "C" IL2CPP_METHOD_ATTR void Monitor_Enter_mC5B353DD83A0B0155DF6FBCC4DF5A580C25534C5 (RuntimeObject * ___obj0, bool* ___lockTaken1, const RuntimeMethod* method);
 // System.Type System.Type::GetTypeFromHandle(System.RuntimeTypeHandle)
@@ -15359,6 +14919,8 @@ extern "C" IL2CPP_METHOD_ATTR void ServerIdentity__ctor_m8C4EC6337312700EBE1BB14
 extern "C" IL2CPP_NO_INLINE IL2CPP_METHOD_ATTR RuntimeObject * Activator_CreateInstance_m7776DE4D344614DDBCECD20C93421CC7183C88D3 (Type_t * ___type0, bool ___nonPublic1, const RuntimeMethod* method);
 // System.Runtime.Remoting.ServerIdentity System.MarshalByRefObject::get_ObjectIdentity()
 extern "C" IL2CPP_METHOD_ATTR ServerIdentity_t93C5C5C4D608C5E714F0C5061B9BFC17B3B567D2 * MarshalByRefObject_get_ObjectIdentity_m7416B44A5332EFEB874C4E6A8100F22511D3997C (MarshalByRefObject_tC4577953D0A44D0AB8597CFA868E01C858B1C9AF * __this, const RuntimeMethod* method);
+// System.Void System.MarshalByRefObject::set_ObjectIdentity(System.Runtime.Remoting.ServerIdentity)
+extern "C" IL2CPP_METHOD_ATTR void MarshalByRefObject_set_ObjectIdentity_mE1E420865553E02EA38D821EF08642EC35E891B2 (MarshalByRefObject_tC4577953D0A44D0AB8597CFA868E01C858B1C9AF * __this, ServerIdentity_t93C5C5C4D608C5E714F0C5061B9BFC17B3B567D2 * ___value0, const RuntimeMethod* method);
 // System.Runtime.Remoting.Messaging.IMessageSink System.Runtime.Remoting.Contexts.Context::CreateServerObjectSinkChain(System.MarshalByRefObject,System.Boolean)
 extern "C" IL2CPP_METHOD_ATTR RuntimeObject* Context_CreateServerObjectSinkChain_m6923378542152C208060176D6C466905C1AE7B25 (Context_tE86AB6B3D9759C8E715184808579EFE761683724 * __this, MarshalByRefObject_tC4577953D0A44D0AB8597CFA868E01C858B1C9AF * ___obj0, bool ___forceInternalExecute1, const RuntimeMethod* method);
 // System.Void System.Runtime.Remoting.DisposerReplySink::.ctor(System.Runtime.Remoting.Messaging.IMessageSink,System.IDisposable)
@@ -15429,10 +14991,14 @@ extern "C" IL2CPP_METHOD_ATTR String_t* SoapServices_GetNameKey_m8C808052B958BE1
 extern "C" IL2CPP_METHOD_ATTR void Hashtable__ctor_m72506C0A5B2608721EA285A04F004A229B537A68 (Hashtable_t978F65B8006C8F5504B286526AEC6608FF983FC9 * __this, const RuntimeMethod* method);
 // System.String System.String::Replace(System.String,System.String)
 extern "C" IL2CPP_METHOD_ATTR String_t* String_Replace_m970DFB0A280952FA7D3BA20AB7A8FB9F80CF6470 (String_t* __this, String_t* ___oldValue0, String_t* ___newValue1, const RuntimeMethod* method);
+// System.Void System.Object::.ctor()
+extern "C" IL2CPP_METHOD_ATTR void Object__ctor_m925ECA5E85CA100E3FB86A4F9E15C120E9A184C0 (RuntimeObject * __this, const RuntimeMethod* method);
 // System.Boolean System.Type::get_IsInterface()
 extern "C" IL2CPP_METHOD_ATTR bool Type_get_IsInterface_m8BC291C33120399B14CAAC6E205F06884B9F96ED (Type_t * __this, const RuntimeMethod* method);
 // System.Boolean System.Type::op_Inequality(System.Type,System.Type)
 extern "C" IL2CPP_METHOD_ATTR bool Type_op_Inequality_m615014191FB05FD50F63A24EB9A6CCA785E7CEC9 (Type_t * ___left0, Type_t * ___right1, const RuntimeMethod* method);
+// System.Boolean System.Type::op_Equality(System.Type,System.Type)
+extern "C" IL2CPP_METHOD_ATTR bool Type_op_Equality_m7040622C9E1037EFC73E1F0EDB1DD241282BE3D8 (Type_t * ___left0, Type_t * ___right1, const RuntimeMethod* method);
 // System.Int32 System.String::IndexOf(System.Char)
 extern "C" IL2CPP_METHOD_ATTR int32_t String_IndexOf_m2909B8CF585E1BD0C81E11ACA2F48012156FD5BD (String_t* __this, Il2CppChar ___value0, const RuntimeMethod* method);
 // System.Int32 System.String::IndexOf(System.Char,System.Int32)
@@ -16443,335 +16009,6 @@ extern "C" IL2CPP_METHOD_ATTR void ObjectProgress_Init_m8C4DC6DF03B8D34B2DBAE237
 extern "C" IL2CPP_METHOD_ATTR void ObjectProgress__ctor_mEE1C9C450B808BE4A72F9C7ADEC4BBB5F933B187 (ObjectProgress_t1708E3C5BD8A5818B6A8AA3076BB266C17275B56 * __this, const RuntimeMethod* method);
 // System.Void System.Text.UTF8Encoding::.ctor(System.Boolean,System.Boolean)
 extern "C" IL2CPP_METHOD_ATTR void UTF8Encoding__ctor_m026030C6C39449C25EC6FA364AA0A49FB3ADCD9E (UTF8Encoding_t77ED103B749A387EF072C3429F48C91D12CA08DE * __this, bool ___encoderShouldEmitUTF8Identifier0, bool ___throwOnInvalidBytes1, const RuntimeMethod* method);
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-// System.Void System.Runtime.Remoting.RemotingServices/CACD::.ctor()
-extern "C" IL2CPP_METHOD_ATTR void CACD__ctor_mB97157ADE90FFB1C40E799D3FB015157C823D745 (CACD_t077B81E970254E4A14C3397B1193DF995DCDB11A * __this, const RuntimeMethod* method)
-{
-	{
-		Object__ctor_m925ECA5E85CA100E3FB86A4F9E15C120E9A184C0(__this, /*hidden argument*/NULL);
-		return;
-	}
-}
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-// System.Void System.Runtime.Remoting.ServerIdentity::.ctor(System.String,System.Runtime.Remoting.Contexts.Context,System.Type)
-extern "C" IL2CPP_METHOD_ATTR void ServerIdentity__ctor_m8C4EC6337312700EBE1BB141CA1AF376D79B37DC (ServerIdentity_t93C5C5C4D608C5E714F0C5061B9BFC17B3B567D2 * __this, String_t* ___objectUri0, Context_tE86AB6B3D9759C8E715184808579EFE761683724 * ___context1, Type_t * ___objectType2, const RuntimeMethod* method)
-{
-	{
-		String_t* L_0 = ___objectUri0;
-		Identity__ctor_mFEE38F831AA3F06AB362718481DDAF3590479EE9(__this, L_0, /*hidden argument*/NULL);
-		Type_t * L_1 = ___objectType2;
-		__this->set__objectType_7(L_1);
-		Context_tE86AB6B3D9759C8E715184808579EFE761683724 * L_2 = ___context1;
-		__this->set__context_10(L_2);
-		return;
-	}
-}
-// System.Type System.Runtime.Remoting.ServerIdentity::get_ObjectType()
-extern "C" IL2CPP_METHOD_ATTR Type_t * ServerIdentity_get_ObjectType_mB93B782F357A4AFBFE6E8A7C0668F5D0CB7FDAC2 (ServerIdentity_t93C5C5C4D608C5E714F0C5061B9BFC17B3B567D2 * __this, const RuntimeMethod* method)
-{
-	{
-		Type_t * L_0 = __this->get__objectType_7();
-		return L_0;
-	}
-}
-// System.Void System.Runtime.Remoting.ServerIdentity::StartTrackingLifetime(System.Runtime.Remoting.Lifetime.ILease)
-extern "C" IL2CPP_METHOD_ATTR void ServerIdentity_StartTrackingLifetime_m42193F67CABCFAC75C1652D2AE84930FBAEEC43C (ServerIdentity_t93C5C5C4D608C5E714F0C5061B9BFC17B3B567D2 * __this, RuntimeObject* ___lease0, const RuntimeMethod* method)
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_method (ServerIdentity_StartTrackingLifetime_m42193F67CABCFAC75C1652D2AE84930FBAEEC43C_MetadataUsageId);
-		s_Il2CppMethodInitialized = true;
-	}
-	{
-		RuntimeObject* L_0 = ___lease0;
-		if (!L_0)
-		{
-			goto IL_000e;
-		}
-	}
-	{
-		RuntimeObject* L_1 = ___lease0;
-		NullCheck(L_1);
-		int32_t L_2 = InterfaceFuncInvoker0< int32_t >::Invoke(1 /* System.Runtime.Remoting.Lifetime.LeaseState System.Runtime.Remoting.Lifetime.ILease::get_CurrentState() */, ILease_t341D788D16ADC594871883DAC6ADB6A316E1AF4B_il2cpp_TypeInfo_var, L_1);
-		if (L_2)
-		{
-			goto IL_000e;
-		}
-	}
-	{
-		___lease0 = (RuntimeObject*)NULL;
-	}
-
-IL_000e:
-	{
-		RuntimeObject* L_3 = ___lease0;
-		if (!L_3)
-		{
-			goto IL_0032;
-		}
-	}
-	{
-		RuntimeObject* L_4 = ___lease0;
-		if (((Lease_t33787DBF803EE2586CBFDC46E3528D17F14AD3A3 *)IsInstClass((RuntimeObject*)L_4, Lease_t33787DBF803EE2586CBFDC46E3528D17F14AD3A3_il2cpp_TypeInfo_var)))
-		{
-			goto IL_0020;
-		}
-	}
-	{
-		Lease_t33787DBF803EE2586CBFDC46E3528D17F14AD3A3 * L_5 = (Lease_t33787DBF803EE2586CBFDC46E3528D17F14AD3A3 *)il2cpp_codegen_object_new(Lease_t33787DBF803EE2586CBFDC46E3528D17F14AD3A3_il2cpp_TypeInfo_var);
-		Lease__ctor_mBDCE338C031C3C0CC2121D6566BF10BB0F9869A1(L_5, /*hidden argument*/NULL);
-		___lease0 = L_5;
-	}
-
-IL_0020:
-	{
-		RuntimeObject* L_6 = ___lease0;
-		__this->set__lease_11(((Lease_t33787DBF803EE2586CBFDC46E3528D17F14AD3A3 *)CastclassClass((RuntimeObject*)L_6, Lease_t33787DBF803EE2586CBFDC46E3528D17F14AD3A3_il2cpp_TypeInfo_var)));
-		IL2CPP_RUNTIME_CLASS_INIT(LifetimeServices_t90BD644562BA5F39A24BE12586EAAC8179AE4A4B_il2cpp_TypeInfo_var);
-		LifetimeServices_TrackLifetime_mB6FA0BB508C87E844CA1E2FDB232F0B6EA435284(__this, /*hidden argument*/NULL);
-	}
-
-IL_0032:
-	{
-		return;
-	}
-}
-// System.Void System.Runtime.Remoting.ServerIdentity::OnLifetimeExpired()
-extern "C" IL2CPP_METHOD_ATTR void ServerIdentity_OnLifetimeExpired_m8EF922395B5A362AB8C9F9156882CA50E0A24DF3 (ServerIdentity_t93C5C5C4D608C5E714F0C5061B9BFC17B3B567D2 * __this, const RuntimeMethod* method)
-{
-	{
-		ServerIdentity_DisposeServerObject_m031BC10453A2816A86D30878C888D8781943AB70(__this, /*hidden argument*/NULL);
-		return;
-	}
-}
-// System.Runtime.Remoting.ObjRef System.Runtime.Remoting.ServerIdentity::CreateObjRef(System.Type)
-extern "C" IL2CPP_METHOD_ATTR ObjRef_tA220448511DCA671EFC23F87F1C7FCA6ACC749D2 * ServerIdentity_CreateObjRef_m343DA8B87061811E887FBA9F735C8ABAA1E21634 (ServerIdentity_t93C5C5C4D608C5E714F0C5061B9BFC17B3B567D2 * __this, Type_t * ___requestedType0, const RuntimeMethod* method)
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_method (ServerIdentity_CreateObjRef_m343DA8B87061811E887FBA9F735C8ABAA1E21634_MetadataUsageId);
-		s_Il2CppMethodInitialized = true;
-	}
-	{
-		ObjRef_tA220448511DCA671EFC23F87F1C7FCA6ACC749D2 * L_0 = ((Identity_tB4E8BEFF42D505C9B24C9284934E6538F29606B6 *)__this)->get__objRef_5();
-		if (!L_0)
-		{
-			goto IL_001a;
-		}
-	}
-	{
-		ObjRef_tA220448511DCA671EFC23F87F1C7FCA6ACC749D2 * L_1 = ((Identity_tB4E8BEFF42D505C9B24C9284934E6538F29606B6 *)__this)->get__objRef_5();
-		NullCheck(L_1);
-		ObjRef_UpdateChannelInfo_mEB7A54FF066B8232DFDEFBBA8E255F4C0FCCF927(L_1, /*hidden argument*/NULL);
-		ObjRef_tA220448511DCA671EFC23F87F1C7FCA6ACC749D2 * L_2 = ((Identity_tB4E8BEFF42D505C9B24C9284934E6538F29606B6 *)__this)->get__objRef_5();
-		return L_2;
-	}
-
-IL_001a:
-	{
-		Type_t * L_3 = ___requestedType0;
-		IL2CPP_RUNTIME_CLASS_INIT(Type_t_il2cpp_TypeInfo_var);
-		bool L_4 = Type_op_Equality_m7040622C9E1037EFC73E1F0EDB1DD241282BE3D8(L_3, (Type_t *)NULL, /*hidden argument*/NULL);
-		if (!L_4)
-		{
-			goto IL_002b;
-		}
-	}
-	{
-		Type_t * L_5 = __this->get__objectType_7();
-		___requestedType0 = L_5;
-	}
-
-IL_002b:
-	{
-		ObjRef_tA220448511DCA671EFC23F87F1C7FCA6ACC749D2 * L_6 = (ObjRef_tA220448511DCA671EFC23F87F1C7FCA6ACC749D2 *)il2cpp_codegen_object_new(ObjRef_tA220448511DCA671EFC23F87F1C7FCA6ACC749D2_il2cpp_TypeInfo_var);
-		ObjRef__ctor_m9382E14A7DC2725F9C70ACA691768F843B12CCDA(L_6, /*hidden argument*/NULL);
-		((Identity_tB4E8BEFF42D505C9B24C9284934E6538F29606B6 *)__this)->set__objRef_5(L_6);
-		ObjRef_tA220448511DCA671EFC23F87F1C7FCA6ACC749D2 * L_7 = ((Identity_tB4E8BEFF42D505C9B24C9284934E6538F29606B6 *)__this)->get__objRef_5();
-		Type_t * L_8 = ___requestedType0;
-		TypeInfo_t621BE6C30385097A31E23DE8B512AA8558B588EE * L_9 = (TypeInfo_t621BE6C30385097A31E23DE8B512AA8558B588EE *)il2cpp_codegen_object_new(TypeInfo_t621BE6C30385097A31E23DE8B512AA8558B588EE_il2cpp_TypeInfo_var);
-		TypeInfo__ctor_mC74EC4DBA656D6170C8060154E5F48156C3FDDA5(L_9, L_8, /*hidden argument*/NULL);
-		NullCheck(L_7);
-		VirtActionInvoker1< RuntimeObject* >::Invoke(10 /* System.Void System.Runtime.Remoting.ObjRef::set_TypeInfo(System.Runtime.Remoting.IRemotingTypeInfo) */, L_7, L_9);
-		ObjRef_tA220448511DCA671EFC23F87F1C7FCA6ACC749D2 * L_10 = ((Identity_tB4E8BEFF42D505C9B24C9284934E6538F29606B6 *)__this)->get__objRef_5();
-		String_t* L_11 = ((Identity_tB4E8BEFF42D505C9B24C9284934E6538F29606B6 *)__this)->get__objectUri_0();
-		NullCheck(L_10);
-		VirtActionInvoker1< String_t* >::Invoke(12 /* System.Void System.Runtime.Remoting.ObjRef::set_URI(System.String) */, L_10, L_11);
-		RuntimeObject* L_12 = ((Identity_tB4E8BEFF42D505C9B24C9284934E6538F29606B6 *)__this)->get__envoySink_2();
-		if (!L_12)
-		{
-			goto IL_0083;
-		}
-	}
-	{
-		RuntimeObject* L_13 = ((Identity_tB4E8BEFF42D505C9B24C9284934E6538F29606B6 *)__this)->get__envoySink_2();
-		if (((EnvoyTerminatorSink_t58C3EE980197493267EB942D964BC8B507F14806 *)IsInstClass((RuntimeObject*)L_13, EnvoyTerminatorSink_t58C3EE980197493267EB942D964BC8B507F14806_il2cpp_TypeInfo_var)))
-		{
-			goto IL_0083;
-		}
-	}
-	{
-		ObjRef_tA220448511DCA671EFC23F87F1C7FCA6ACC749D2 * L_14 = ((Identity_tB4E8BEFF42D505C9B24C9284934E6538F29606B6 *)__this)->get__objRef_5();
-		RuntimeObject* L_15 = ((Identity_tB4E8BEFF42D505C9B24C9284934E6538F29606B6 *)__this)->get__envoySink_2();
-		EnvoyInfo_tB3A3AF8D7FCFFF5C5468B6C3EDFE186015B1CD09 * L_16 = (EnvoyInfo_tB3A3AF8D7FCFFF5C5468B6C3EDFE186015B1CD09 *)il2cpp_codegen_object_new(EnvoyInfo_tB3A3AF8D7FCFFF5C5468B6C3EDFE186015B1CD09_il2cpp_TypeInfo_var);
-		EnvoyInfo__ctor_m39DB1B1CD9E0783AF5645515B815FD1EEC1B1973(L_16, L_15, /*hidden argument*/NULL);
-		NullCheck(L_14);
-		VirtActionInvoker1< RuntimeObject* >::Invoke(8 /* System.Void System.Runtime.Remoting.ObjRef::set_EnvoyInfo(System.Runtime.Remoting.IEnvoyInfo) */, L_14, L_16);
-	}
-
-IL_0083:
-	{
-		ObjRef_tA220448511DCA671EFC23F87F1C7FCA6ACC749D2 * L_17 = ((Identity_tB4E8BEFF42D505C9B24C9284934E6538F29606B6 *)__this)->get__objRef_5();
-		return L_17;
-	}
-}
-// System.Void System.Runtime.Remoting.ServerIdentity::AttachServerObject(System.MarshalByRefObject,System.Runtime.Remoting.Contexts.Context)
-extern "C" IL2CPP_METHOD_ATTR void ServerIdentity_AttachServerObject_mDAF46A8A96123B31091CEDBAA0070BE01226F7DD (ServerIdentity_t93C5C5C4D608C5E714F0C5061B9BFC17B3B567D2 * __this, MarshalByRefObject_tC4577953D0A44D0AB8597CFA868E01C858B1C9AF * ___serverObject0, Context_tE86AB6B3D9759C8E715184808579EFE761683724 * ___context1, const RuntimeMethod* method)
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_method (ServerIdentity_AttachServerObject_mDAF46A8A96123B31091CEDBAA0070BE01226F7DD_MetadataUsageId);
-		s_Il2CppMethodInitialized = true;
-	}
-	RealProxy_t4B0A745F7C99373132CC67FE86D13421411361EF * V_0 = NULL;
-	{
-		ServerIdentity_DisposeServerObject_m031BC10453A2816A86D30878C888D8781943AB70(__this, /*hidden argument*/NULL);
-		Context_tE86AB6B3D9759C8E715184808579EFE761683724 * L_0 = ___context1;
-		__this->set__context_10(L_0);
-		MarshalByRefObject_tC4577953D0A44D0AB8597CFA868E01C858B1C9AF * L_1 = ___serverObject0;
-		__this->set__serverObject_8(L_1);
-		MarshalByRefObject_tC4577953D0A44D0AB8597CFA868E01C858B1C9AF * L_2 = ___serverObject0;
-		IL2CPP_RUNTIME_CLASS_INIT(RemotingServices_tC5439C1B728EDB8838F3C744E61C69A0D17FCA51_il2cpp_TypeInfo_var);
-		bool L_3 = RemotingServices_IsTransparentProxy_mC82CA070EE205CED975BD6162B31F9A7C373531F(L_2, /*hidden argument*/NULL);
-		if (!L_3)
-		{
-			goto IL_0033;
-		}
-	}
-	{
-		MarshalByRefObject_tC4577953D0A44D0AB8597CFA868E01C858B1C9AF * L_4 = ___serverObject0;
-		IL2CPP_RUNTIME_CLASS_INIT(RemotingServices_tC5439C1B728EDB8838F3C744E61C69A0D17FCA51_il2cpp_TypeInfo_var);
-		RealProxy_t4B0A745F7C99373132CC67FE86D13421411361EF * L_5 = RemotingServices_GetRealProxy_mF634619D46FF8654806937F46E0BC2FDBFACB7DD(L_4, /*hidden argument*/NULL);
-		V_0 = L_5;
-		RealProxy_t4B0A745F7C99373132CC67FE86D13421411361EF * L_6 = V_0;
-		NullCheck(L_6);
-		Identity_tB4E8BEFF42D505C9B24C9284934E6538F29606B6 * L_7 = RealProxy_get_ObjectIdentity_m550B81C1A6D5324F3B3C8C0411327A10561BD212(L_6, /*hidden argument*/NULL);
-		if (L_7)
-		{
-			goto IL_0059;
-		}
-	}
-	{
-		RealProxy_t4B0A745F7C99373132CC67FE86D13421411361EF * L_8 = V_0;
-		NullCheck(L_8);
-		RealProxy_set_ObjectIdentity_m6AEE70959473C6A72D4EB37EBACAB588EA5338E8(L_8, __this, /*hidden argument*/NULL);
-		return;
-	}
-
-IL_0033:
-	{
-		Type_t * L_9 = __this->get__objectType_7();
-		NullCheck(L_9);
-		bool L_10 = Type_get_IsContextful_m02EFD5BDDC6E265AE3B40B144D679AEFACEE4C8A(L_9, /*hidden argument*/NULL);
-		if (!L_10)
-		{
-			goto IL_004d;
-		}
-	}
-	{
-		Context_tE86AB6B3D9759C8E715184808579EFE761683724 * L_11 = ___context1;
-		MarshalByRefObject_tC4577953D0A44D0AB8597CFA868E01C858B1C9AF * L_12 = ___serverObject0;
-		NullCheck(L_11);
-		RuntimeObject* L_13 = Context_CreateEnvoySink_mDAB32FB13E9205D9EE9CD4996779A51C6B46BC09(L_11, L_12, /*hidden argument*/NULL);
-		((Identity_tB4E8BEFF42D505C9B24C9284934E6538F29606B6 *)__this)->set__envoySink_2(L_13);
-	}
-
-IL_004d:
-	{
-		MarshalByRefObject_tC4577953D0A44D0AB8597CFA868E01C858B1C9AF * L_14 = __this->get__serverObject_8();
-		NullCheck(L_14);
-		MarshalByRefObject_set_ObjectIdentity_mE1E420865553E02EA38D821EF08642EC35E891B2(L_14, __this, /*hidden argument*/NULL);
-	}
-
-IL_0059:
-	{
-		return;
-	}
-}
-// System.Runtime.Remoting.Lifetime.Lease System.Runtime.Remoting.ServerIdentity::get_Lease()
-extern "C" IL2CPP_METHOD_ATTR Lease_t33787DBF803EE2586CBFDC46E3528D17F14AD3A3 * ServerIdentity_get_Lease_m070A18792C841F4A2CF9D611F20113F172966F62 (ServerIdentity_t93C5C5C4D608C5E714F0C5061B9BFC17B3B567D2 * __this, const RuntimeMethod* method)
-{
-	{
-		Lease_t33787DBF803EE2586CBFDC46E3528D17F14AD3A3 * L_0 = __this->get__lease_11();
-		return L_0;
-	}
-}
-// System.Runtime.Remoting.Contexts.Context System.Runtime.Remoting.ServerIdentity::get_Context()
-extern "C" IL2CPP_METHOD_ATTR Context_tE86AB6B3D9759C8E715184808579EFE761683724 * ServerIdentity_get_Context_m579EBEF4C5604D4B210C639E6D8DAF100B403015 (ServerIdentity_t93C5C5C4D608C5E714F0C5061B9BFC17B3B567D2 * __this, const RuntimeMethod* method)
-{
-	{
-		Context_tE86AB6B3D9759C8E715184808579EFE761683724 * L_0 = __this->get__context_10();
-		return L_0;
-	}
-}
-// System.Void System.Runtime.Remoting.ServerIdentity::set_Context(System.Runtime.Remoting.Contexts.Context)
-extern "C" IL2CPP_METHOD_ATTR void ServerIdentity_set_Context_mD75C4138160B137D4DE2D1E9BFA94805B02097F3 (ServerIdentity_t93C5C5C4D608C5E714F0C5061B9BFC17B3B567D2 * __this, Context_tE86AB6B3D9759C8E715184808579EFE761683724 * ___value0, const RuntimeMethod* method)
-{
-	{
-		Context_tE86AB6B3D9759C8E715184808579EFE761683724 * L_0 = ___value0;
-		__this->set__context_10(L_0);
-		return;
-	}
-}
-// System.Void System.Runtime.Remoting.ServerIdentity::DisposeServerObject()
-extern "C" IL2CPP_METHOD_ATTR void ServerIdentity_DisposeServerObject_m031BC10453A2816A86D30878C888D8781943AB70 (ServerIdentity_t93C5C5C4D608C5E714F0C5061B9BFC17B3B567D2 * __this, const RuntimeMethod* method)
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_method (ServerIdentity_DisposeServerObject_m031BC10453A2816A86D30878C888D8781943AB70_MetadataUsageId);
-		s_Il2CppMethodInitialized = true;
-	}
-	{
-		MarshalByRefObject_tC4577953D0A44D0AB8597CFA868E01C858B1C9AF * L_0 = __this->get__serverObject_8();
-		if (!L_0)
-		{
-			goto IL_002d;
-		}
-	}
-	{
-		MarshalByRefObject_tC4577953D0A44D0AB8597CFA868E01C858B1C9AF * L_1 = __this->get__serverObject_8();
-		MarshalByRefObject_tC4577953D0A44D0AB8597CFA868E01C858B1C9AF * L_2 = __this->get__serverObject_8();
-		NullCheck(L_2);
-		MarshalByRefObject_set_ObjectIdentity_mE1E420865553E02EA38D821EF08642EC35E891B2(L_2, (ServerIdentity_t93C5C5C4D608C5E714F0C5061B9BFC17B3B567D2 *)NULL, /*hidden argument*/NULL);
-		__this->set__serverObject_8((MarshalByRefObject_tC4577953D0A44D0AB8597CFA868E01C858B1C9AF *)NULL);
-		__this->set__serverSink_9((RuntimeObject*)NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(TrackingServices_t2C809B5035163AEE0FBA4ECE826F9EDDB152CF69_il2cpp_TypeInfo_var);
-		TrackingServices_NotifyDisconnectedObject_m701D4FC12143B5952C18EC2FC184E7845C35B189(L_1, /*hidden argument*/NULL);
-	}
-
-IL_002d:
-	{
-		return;
-	}
-}
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
