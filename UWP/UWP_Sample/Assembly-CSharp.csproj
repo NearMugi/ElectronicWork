@@ -65,17 +65,11 @@
     <Compile Include="Assets\getMPU6050.cs" />
     <Compile Include="Assets\Rotate.cs" />
     <Compile Include="Assets\Rotate1.cs" />
-    <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>D:/#WorkSpace/#PersonalDevelop/ElectronicWork/UWP/UWP_Sample/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
       <HintPath>D:/#WorkSpace/#PersonalDevelop/ElectronicWork/UWP/UWP_Sample/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
       <HintPath>D:/#WorkSpace/#PersonalDevelop/ElectronicWork/UWP/UWP_Sample/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.TextMeshPro">
-      <HintPath>D:/#WorkSpace/#PersonalDevelop/ElectronicWork/UWP/UWP_Sample/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.DataPrivacy">
       <HintPath>D:/#WorkSpace/#PersonalDevelop/ElectronicWork/UWP/UWP_Sample/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>

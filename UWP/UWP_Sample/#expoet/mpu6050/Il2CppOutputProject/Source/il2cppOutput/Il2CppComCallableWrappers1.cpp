@@ -37,8 +37,6 @@ struct InterfaceFuncInvoker1
 	}
 };
 
-// IdleChanger
-struct IdleChanger_t992E24315C2288BEF7D8E9F574744987688B402E;
 // Mono.Globalization.Unicode.Contraction
 struct Contraction_t67167B4BAFC949FA578DA1DA9895D0F89B8ACEF3;
 // Mono.Globalization.Unicode.Level2Map
@@ -934,57 +932,6 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // CODETABLE_TA164DCD93E031DA92DCA7F91EE00046E35B26B1F_H
-#ifndef U3CRANDOMCHANGEU3ED__9_T07D9153BFDEDAD7885BDA4A85DB06A2E3A6F485E_H
-#define U3CRANDOMCHANGEU3ED__9_T07D9153BFDEDAD7885BDA4A85DB06A2E3A6F485E_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// IdleChanger/<RandomChange>d__9
-struct  U3CRandomChangeU3Ed__9_t07D9153BFDEDAD7885BDA4A85DB06A2E3A6F485E  : public RuntimeObject
-{
-public:
-	// System.Int32 IdleChanger/<RandomChange>d__9::<>1__state
-	int32_t ___U3CU3E1__state_0;
-	// System.Object IdleChanger/<RandomChange>d__9::<>2__current
-	RuntimeObject * ___U3CU3E2__current_1;
-	// IdleChanger IdleChanger/<RandomChange>d__9::<>4__this
-	IdleChanger_t992E24315C2288BEF7D8E9F574744987688B402E * ___U3CU3E4__this_2;
-
-public:
-	inline static int32_t get_offset_of_U3CU3E1__state_0() { return static_cast<int32_t>(offsetof(U3CRandomChangeU3Ed__9_t07D9153BFDEDAD7885BDA4A85DB06A2E3A6F485E, ___U3CU3E1__state_0)); }
-	inline int32_t get_U3CU3E1__state_0() const { return ___U3CU3E1__state_0; }
-	inline int32_t* get_address_of_U3CU3E1__state_0() { return &___U3CU3E1__state_0; }
-	inline void set_U3CU3E1__state_0(int32_t value)
-	{
-		___U3CU3E1__state_0 = value;
-	}
-
-	inline static int32_t get_offset_of_U3CU3E2__current_1() { return static_cast<int32_t>(offsetof(U3CRandomChangeU3Ed__9_t07D9153BFDEDAD7885BDA4A85DB06A2E3A6F485E, ___U3CU3E2__current_1)); }
-	inline RuntimeObject * get_U3CU3E2__current_1() const { return ___U3CU3E2__current_1; }
-	inline RuntimeObject ** get_address_of_U3CU3E2__current_1() { return &___U3CU3E2__current_1; }
-	inline void set_U3CU3E2__current_1(RuntimeObject * value)
-	{
-		___U3CU3E2__current_1 = value;
-		Il2CppCodeGenWriteBarrier((&___U3CU3E2__current_1), value);
-	}
-
-	inline static int32_t get_offset_of_U3CU3E4__this_2() { return static_cast<int32_t>(offsetof(U3CRandomChangeU3Ed__9_t07D9153BFDEDAD7885BDA4A85DB06A2E3A6F485E, ___U3CU3E4__this_2)); }
-	inline IdleChanger_t992E24315C2288BEF7D8E9F574744987688B402E * get_U3CU3E4__this_2() const { return ___U3CU3E4__this_2; }
-	inline IdleChanger_t992E24315C2288BEF7D8E9F574744987688B402E ** get_address_of_U3CU3E4__this_2() { return &___U3CU3E4__this_2; }
-	inline void set_U3CU3E4__this_2(IdleChanger_t992E24315C2288BEF7D8E9F574744987688B402E * value)
-	{
-		___U3CU3E4__this_2 = value;
-		Il2CppCodeGenWriteBarrier((&___U3CU3E4__this_2), value);
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // U3CRANDOMCHANGEU3ED__9_T07D9153BFDEDAD7885BDA4A85DB06A2E3A6F485E_H
 #ifndef CONTRACTION_T67167B4BAFC949FA578DA1DA9895D0F89B8ACEF3_H
 #define CONTRACTION_T67167B4BAFC949FA578DA1DA9895D0F89B8ACEF3_H
 #ifdef __clang__
@@ -1669,14 +1616,16 @@ struct  MPU6050_tB510E16AC7A8543789ABECF11C4A1EC40B398EF9  : public RuntimeObjec
 public:
 	// mpu6050.MpuSensorValue mpu6050.MPU6050::<LastValues>k__BackingField
 	MpuSensorValue_t7A67A2F92DE2F1C8BE635E8F03892624EA926C6D * ___U3CLastValuesU3Ek__BackingField_0;
+	// System.String mpu6050.MPU6050::Msg
+	String_t* ___Msg_1;
 	// System.Byte[] mpu6050.MPU6050::SensorData
-	ByteU5BU5D_tD06FDBE8142446525DF1C40351D523A228373821* ___SensorData_16;
+	ByteU5BU5D_tD06FDBE8142446525DF1C40351D523A228373821* ___SensorData_17;
 	// Windows.Devices.I2c.I2cDevice mpu6050.MPU6050::_mpu6050Device
-	I2cDevice_t98FC86BEF8346B93999084F247BB5BDE4D946128 * ____mpu6050Device_17;
+	I2cDevice_t98FC86BEF8346B93999084F247BB5BDE4D946128 * ____mpu6050Device_18;
 	// Windows.Devices.Gpio.GpioController mpu6050.MPU6050::IoController
-	GpioController_t9EC04AE9960323D7AD5D38705D1A92E5DF62079D * ___IoController_18;
+	GpioController_t9EC04AE9960323D7AD5D38705D1A92E5DF62079D * ___IoController_19;
 	// System.Boolean mpu6050.MPU6050::disposedValue
-	bool ___disposedValue_19;
+	bool ___disposedValue_20;
 
 public:
 	inline static int32_t get_offset_of_U3CLastValuesU3Ek__BackingField_0() { return static_cast<int32_t>(offsetof(MPU6050_tB510E16AC7A8543789ABECF11C4A1EC40B398EF9, ___U3CLastValuesU3Ek__BackingField_0)); }
@@ -1688,39 +1637,48 @@ public:
 		Il2CppCodeGenWriteBarrier((&___U3CLastValuesU3Ek__BackingField_0), value);
 	}
 
-	inline static int32_t get_offset_of_SensorData_16() { return static_cast<int32_t>(offsetof(MPU6050_tB510E16AC7A8543789ABECF11C4A1EC40B398EF9, ___SensorData_16)); }
-	inline ByteU5BU5D_tD06FDBE8142446525DF1C40351D523A228373821* get_SensorData_16() const { return ___SensorData_16; }
-	inline ByteU5BU5D_tD06FDBE8142446525DF1C40351D523A228373821** get_address_of_SensorData_16() { return &___SensorData_16; }
-	inline void set_SensorData_16(ByteU5BU5D_tD06FDBE8142446525DF1C40351D523A228373821* value)
+	inline static int32_t get_offset_of_Msg_1() { return static_cast<int32_t>(offsetof(MPU6050_tB510E16AC7A8543789ABECF11C4A1EC40B398EF9, ___Msg_1)); }
+	inline String_t* get_Msg_1() const { return ___Msg_1; }
+	inline String_t** get_address_of_Msg_1() { return &___Msg_1; }
+	inline void set_Msg_1(String_t* value)
 	{
-		___SensorData_16 = value;
-		Il2CppCodeGenWriteBarrier((&___SensorData_16), value);
+		___Msg_1 = value;
+		Il2CppCodeGenWriteBarrier((&___Msg_1), value);
 	}
 
-	inline static int32_t get_offset_of__mpu6050Device_17() { return static_cast<int32_t>(offsetof(MPU6050_tB510E16AC7A8543789ABECF11C4A1EC40B398EF9, ____mpu6050Device_17)); }
-	inline I2cDevice_t98FC86BEF8346B93999084F247BB5BDE4D946128 * get__mpu6050Device_17() const { return ____mpu6050Device_17; }
-	inline I2cDevice_t98FC86BEF8346B93999084F247BB5BDE4D946128 ** get_address_of__mpu6050Device_17() { return &____mpu6050Device_17; }
-	inline void set__mpu6050Device_17(I2cDevice_t98FC86BEF8346B93999084F247BB5BDE4D946128 * value)
+	inline static int32_t get_offset_of_SensorData_17() { return static_cast<int32_t>(offsetof(MPU6050_tB510E16AC7A8543789ABECF11C4A1EC40B398EF9, ___SensorData_17)); }
+	inline ByteU5BU5D_tD06FDBE8142446525DF1C40351D523A228373821* get_SensorData_17() const { return ___SensorData_17; }
+	inline ByteU5BU5D_tD06FDBE8142446525DF1C40351D523A228373821** get_address_of_SensorData_17() { return &___SensorData_17; }
+	inline void set_SensorData_17(ByteU5BU5D_tD06FDBE8142446525DF1C40351D523A228373821* value)
 	{
-		____mpu6050Device_17 = value;
-		Il2CppCodeGenWriteBarrier((&____mpu6050Device_17), value);
+		___SensorData_17 = value;
+		Il2CppCodeGenWriteBarrier((&___SensorData_17), value);
 	}
 
-	inline static int32_t get_offset_of_IoController_18() { return static_cast<int32_t>(offsetof(MPU6050_tB510E16AC7A8543789ABECF11C4A1EC40B398EF9, ___IoController_18)); }
-	inline GpioController_t9EC04AE9960323D7AD5D38705D1A92E5DF62079D * get_IoController_18() const { return ___IoController_18; }
-	inline GpioController_t9EC04AE9960323D7AD5D38705D1A92E5DF62079D ** get_address_of_IoController_18() { return &___IoController_18; }
-	inline void set_IoController_18(GpioController_t9EC04AE9960323D7AD5D38705D1A92E5DF62079D * value)
+	inline static int32_t get_offset_of__mpu6050Device_18() { return static_cast<int32_t>(offsetof(MPU6050_tB510E16AC7A8543789ABECF11C4A1EC40B398EF9, ____mpu6050Device_18)); }
+	inline I2cDevice_t98FC86BEF8346B93999084F247BB5BDE4D946128 * get__mpu6050Device_18() const { return ____mpu6050Device_18; }
+	inline I2cDevice_t98FC86BEF8346B93999084F247BB5BDE4D946128 ** get_address_of__mpu6050Device_18() { return &____mpu6050Device_18; }
+	inline void set__mpu6050Device_18(I2cDevice_t98FC86BEF8346B93999084F247BB5BDE4D946128 * value)
 	{
-		___IoController_18 = value;
-		Il2CppCodeGenWriteBarrier((&___IoController_18), value);
+		____mpu6050Device_18 = value;
+		Il2CppCodeGenWriteBarrier((&____mpu6050Device_18), value);
 	}
 
-	inline static int32_t get_offset_of_disposedValue_19() { return static_cast<int32_t>(offsetof(MPU6050_tB510E16AC7A8543789ABECF11C4A1EC40B398EF9, ___disposedValue_19)); }
-	inline bool get_disposedValue_19() const { return ___disposedValue_19; }
-	inline bool* get_address_of_disposedValue_19() { return &___disposedValue_19; }
-	inline void set_disposedValue_19(bool value)
+	inline static int32_t get_offset_of_IoController_19() { return static_cast<int32_t>(offsetof(MPU6050_tB510E16AC7A8543789ABECF11C4A1EC40B398EF9, ___IoController_19)); }
+	inline GpioController_t9EC04AE9960323D7AD5D38705D1A92E5DF62079D * get_IoController_19() const { return ___IoController_19; }
+	inline GpioController_t9EC04AE9960323D7AD5D38705D1A92E5DF62079D ** get_address_of_IoController_19() { return &___IoController_19; }
+	inline void set_IoController_19(GpioController_t9EC04AE9960323D7AD5D38705D1A92E5DF62079D * value)
 	{
-		___disposedValue_19 = value;
+		___IoController_19 = value;
+		Il2CppCodeGenWriteBarrier((&___IoController_19), value);
+	}
+
+	inline static int32_t get_offset_of_disposedValue_20() { return static_cast<int32_t>(offsetof(MPU6050_tB510E16AC7A8543789ABECF11C4A1EC40B398EF9, ___disposedValue_20)); }
+	inline bool get_disposedValue_20() const { return ___disposedValue_20; }
+	inline bool* get_address_of_disposedValue_20() { return &___disposedValue_20; }
+	inline void set_disposedValue_20(bool value)
+	{
+		___disposedValue_20 = value;
 	}
 };
 
@@ -15723,101 +15681,6 @@ extern "C" Il2CppIUnknown* CreateComCallableWrapperFor_CodeTable_tA164DCD93E031D
 	}
 
 	return static_cast<Il2CppIManagedObjectHolder*>(new(memory) CodeTable_tA164DCD93E031DA92DCA7F91EE00046E35B26B1F_ComCallableWrapper(obj));
-}
-
-// COM Callable Wrapper for IdleChanger/<RandomChange>d__9
-struct U3CRandomChangeU3Ed__9_t07D9153BFDEDAD7885BDA4A85DB06A2E3A6F485E_ComCallableWrapper IL2CPP_FINAL : il2cpp::vm::CachedCCWBase<U3CRandomChangeU3Ed__9_t07D9153BFDEDAD7885BDA4A85DB06A2E3A6F485E_ComCallableWrapper>, IClosable_t5808AF951019E4388C66F7A88AC569F52F581167
-{
-	inline U3CRandomChangeU3Ed__9_t07D9153BFDEDAD7885BDA4A85DB06A2E3A6F485E_ComCallableWrapper(RuntimeObject* obj) : il2cpp::vm::CachedCCWBase<U3CRandomChangeU3Ed__9_t07D9153BFDEDAD7885BDA4A85DB06A2E3A6F485E_ComCallableWrapper>(obj) {}
-
-	virtual il2cpp_hresult_t STDCALL QueryInterface(const Il2CppGuid& iid, void** object) IL2CPP_OVERRIDE
-	{
-		if (::memcmp(&iid, &Il2CppIUnknown::IID, sizeof(Il2CppGuid)) == 0
-		 || ::memcmp(&iid, &Il2CppIInspectable::IID, sizeof(Il2CppGuid)) == 0
-		 || ::memcmp(&iid, &Il2CppIAgileObject::IID, sizeof(Il2CppGuid)) == 0)
-		{
-			*object = GetIdentity();
-			AddRefImpl();
-			return IL2CPP_S_OK;
-		}
-
-		if (::memcmp(&iid, &Il2CppIManagedObjectHolder::IID, sizeof(Il2CppGuid)) == 0)
-		{
-			*object = static_cast<Il2CppIManagedObjectHolder*>(this);
-			AddRefImpl();
-			return IL2CPP_S_OK;
-		}
-
-		if (::memcmp(&iid, &IClosable_t5808AF951019E4388C66F7A88AC569F52F581167::IID, sizeof(Il2CppGuid)) == 0)
-		{
-			*object = static_cast<IClosable_t5808AF951019E4388C66F7A88AC569F52F581167*>(this);
-			AddRefImpl();
-			return IL2CPP_S_OK;
-		}
-
-		if (::memcmp(&iid, &Il2CppIMarshal::IID, sizeof(Il2CppGuid)) == 0)
-		{
-			*object = static_cast<Il2CppIMarshal*>(this);
-			AddRefImpl();
-			return IL2CPP_S_OK;
-		}
-
-		if (::memcmp(&iid, &Il2CppIWeakReferenceSource::IID, sizeof(Il2CppGuid)) == 0)
-		{
-			*object = static_cast<Il2CppIWeakReferenceSource*>(this);
-			AddRefImpl();
-			return IL2CPP_S_OK;
-		}
-
-		*object = NULL;
-		return IL2CPP_E_NOINTERFACE;
-	}
-
-	virtual uint32_t STDCALL AddRef() IL2CPP_OVERRIDE
-	{
-		return AddRefImpl();
-	}
-
-	virtual uint32_t STDCALL Release() IL2CPP_OVERRIDE
-	{
-		return ReleaseImpl();
-	}
-
-	virtual il2cpp_hresult_t STDCALL GetIids(uint32_t* iidCount, Il2CppGuid** iids) IL2CPP_OVERRIDE
-	{
-		Il2CppGuid* interfaceIds = il2cpp_codegen_marshal_allocate_array<Il2CppGuid>(1);
-		interfaceIds[0] = IClosable_t5808AF951019E4388C66F7A88AC569F52F581167::IID;
-
-		*iidCount = 1;
-		*iids = interfaceIds;
-		return IL2CPP_S_OK;
-	}
-
-	virtual il2cpp_hresult_t STDCALL GetRuntimeClassName(Il2CppHString* className) IL2CPP_OVERRIDE
-	{
-		return ComObjectBase::GetRuntimeClassName(className);
-	}
-
-	virtual il2cpp_hresult_t STDCALL GetTrustLevel(int32_t* trustLevel) IL2CPP_OVERRIDE
-	{
-		return ComObjectBase::GetTrustLevel(trustLevel);
-	}
-
-	virtual il2cpp_hresult_t STDCALL IClosable_Close_m9A054CE065D4C97FAF595A8F92B3CB3463C5BCD6() IL2CPP_OVERRIDE
-	{
-		return IClosable_Close_m9A054CE065D4C97FAF595A8F92B3CB3463C5BCD6_ComCallableWrapperProjectedMethod(GetManagedObjectInline());
-	}
-};
-
-extern "C" Il2CppIUnknown* CreateComCallableWrapperFor_U3CRandomChangeU3Ed__9_t07D9153BFDEDAD7885BDA4A85DB06A2E3A6F485E(RuntimeObject* obj)
-{
-	void* memory = il2cpp::utils::Memory::Malloc(sizeof(U3CRandomChangeU3Ed__9_t07D9153BFDEDAD7885BDA4A85DB06A2E3A6F485E_ComCallableWrapper));
-	if (memory == NULL)
-	{
-		il2cpp_codegen_raise_out_of_memory_exception();
-	}
-
-	return static_cast<Il2CppIManagedObjectHolder*>(new(memory) U3CRandomChangeU3Ed__9_t07D9153BFDEDAD7885BDA4A85DB06A2E3A6F485E_ComCallableWrapper(obj));
 }
 
 // COM Callable Wrapper for mpu6050.MPU6050

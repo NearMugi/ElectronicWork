@@ -5,13 +5,13 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-#if ENABLE_WINMD_SUPPORT
+#if WINDOWS_UWP
 using Windows.Devices.Enumeration;
 using Windows.Devices.I2c;
 using Windows.Devices.Gpio;
 #endif
 
-//„Åì„Çå„ÇíÂèÇËÄÉ„Å´„Åó„Å¶„ÅÑ„Çã„ÄÇ
+//Ç±ÇÍÇéQçlÇ…ÇµÇƒÇ¢ÇÈÅB
 //https://garchiving.com/how-to-use-mpu6050-in-arduino/
 //https://courses.cs.washington.edu/courses/cse474/17wi/labs/l4/MPU6050BasicExample.ino
 namespace mpu6050
@@ -34,19 +34,25 @@ namespace mpu6050
     public partial class MPU6050 : IDisposable
     {
         MpuSensorValue LastValues { get; set; }
+        String Msg;
 
         public MpuSensorValue getLastValue()
         {
             return LastValues;
         }
-#if ENABLE_WINMD_SUPPORT
+        public String getMsg()
+        {
+            return Msg;
+        }
+
+#if WINDOWS_UWP
         private const float  gyrosensitivity  = 131;   // = 131 LSB/degrees/sec
         private const float  accelsensitivity = 16384;  // = 16384 LSB/g
 
-        public const byte ADDRESS = 0x68;   //„Éá„Éê„Ç§„Çπ„Ç¢„Éâ„É¨„Çπ
-        private const byte PWR_MGMT_1 = 0x6B;   //ÂÜÖÈÉ®„ÇØ„É≠„ÉÉ„ÇØ
+        public const byte ADDRESS = 0x68;   //ÉfÉoÉCÉXÉAÉhÉåÉX
+        private const byte PWR_MGMT_1 = 0x6B;   //ì‡ïîÉNÉçÉbÉN
         private const byte SMPLRT_DIV = 0x19;
-        private const byte CONFIG = 0x1A;   //„É≠„Éº„Éë„Çπ„Éï„Ç£„É´„Çø
+        private const byte CONFIG = 0x1A;   //ÉçÅ[ÉpÉXÉtÉBÉãÉ^
         private const byte GYRO_CONFIG = 0x1B;  //gyro config
         private const byte ACCEL_CONFIG = 0x1C; //acceleration config
         private const byte FIFO_EN = 0x23;
@@ -57,7 +63,7 @@ namespace mpu6050
         private const byte FIFO_R_W = 0x74;
 
 
-        //I2c„ÅßÂèñÂæó„Åô„Çã„Éá„Éº„Çø
+        //I2cÇ≈éÊìæÇ∑ÇÈÉfÅ[É^
         private const int SensorBytes = 12;
         private byte[] SensorData = new byte[SensorBytes];
 
@@ -103,8 +109,8 @@ namespace mpu6050
             try
             {
                 LastValues = new MpuSensorValue();
-#if ENABLE_WINMD_SUPPORT
-
+#if WINDOWS_UWP
+                Msg = "[Start InitHardware]";
                 IoController = GpioController.GetDefault();
                 string aqs = I2cDevice.GetDeviceSelector();
                 DeviceInformationCollection collection = await DeviceInformation.FindAllAsync(aqs);
@@ -118,7 +124,7 @@ namespace mpu6050
 
                 WriteByte(PWR_MGMT_1, 0x80);// reset the device
                 await Task.Delay(100);
-                WriteByte(PWR_MGMT_1, 0x00); //ÂÜÖÈÉ®„ÇØ„É≠„ÉÉ„ÇØ„ÇíË®≠ÂÆö (ÂÖÉ„ÅØ0x02)
+                WriteByte(PWR_MGMT_1, 0x00); //ì‡ïîÉNÉçÉbÉNÇê›íË (å≥ÇÕ0x02)
                 //WriteByte(USER_CTRL, 0x04); //reset fifo
 
                 //WriteByte(PWR_MGMT_1, 1); // clock source = gyro x
@@ -139,7 +145,8 @@ namespace mpu6050
         }
         public void ReadSensorData()
         {
-#if ENABLE_WINMD_SUPPORT
+#if WINDOWS_UWP
+            Msg = "[Start ReadSensorData]";
             if (_mpu6050Device == null) {
                 return;
             }
@@ -168,6 +175,7 @@ namespace mpu6050
                     LastValues.GyroX = (float)xg / gyrosensitivity;
                     LastValues.GyroY = (float)yg / gyrosensitivity;
                     LastValues.GyroZ = (float)zg / gyrosensitivity;
+                    Msg = "[Update LastValues]";
                 }
             }
 #endif
@@ -180,7 +188,7 @@ namespace mpu6050
         {
             if (!disposedValue)
             {
-#if ENABLE_WINMD_SUPPORT
+#if WINDOWS_UWP
                 if (_mpu6050Device != null)
                 {
                     _mpu6050Device.Dispose();

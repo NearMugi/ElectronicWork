@@ -25,10 +25,16 @@ public class getMPU6050 : MonoBehaviour
         _mpu6050.ReadSensorData();
         LastValue = _mpu6050.getLastValue();
 
+#if false
         txt.text = string.Format("{0}, {1}, {2}", 
             LastValue.AccelerationX.ToString("0.00"), 
             LastValue.AccelerationY.ToString("0.00"), 
             LastValue.AccelerationZ.ToString("0.00")
             );
+#endif
+        txt.text = string.Empty;
+        txt.text += _mpu6050.getMsg();
+        txt.text += LastValue.AccelerationX.ToString("0.00");
+
     }
 }
