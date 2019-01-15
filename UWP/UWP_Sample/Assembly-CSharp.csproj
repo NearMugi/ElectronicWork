@@ -60,6 +60,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\#UWP\Kalman.cs" />
     <Compile Include="Assets\#UWP\mpu6050.cs" />
     <Compile Include="Assets\fps.cs" />
     <Compile Include="Assets\getMPU6050.cs" />

@@ -27194,6 +27194,16 @@ extern "C" IL2CPP_METHOD_ATTR RuntimeObject * MarshalByRefObject_InitializeLifet
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
+// System.Double System.Math::Atan(System.Double)
+extern "C" IL2CPP_METHOD_ATTR double Math_Atan_m95D036588EE2D13FA24FC14AEEF873AABA7B5463 (double ___d0, const RuntimeMethod* method)
+{
+	return atan(___d0);
+}
+// System.Double System.Math::Atan2(System.Double,System.Double)
+extern "C" IL2CPP_METHOD_ATTR double Math_Atan2_m848DC92AACB9FFBDC3D69311677367B3F51086D1 (double ___y0, double ___x1, const RuntimeMethod* method)
+{
+	return atan2(___y0, ___x1);
+}
 // System.Double System.Math::Ceiling(System.Double)
 extern "C" IL2CPP_METHOD_ATTR double Math_Ceiling_m379E37FEB7C1DC30F53CBFA8896E0DD0804C44C7 (double ___a0, const RuntimeMethod* method)
 {
@@ -27296,6 +27306,11 @@ IL_0018:
 extern "C" IL2CPP_METHOD_ATTR float Math_Abs_mF0B5B265075406BE063F1D0E561DC17779EC5174 (float ___value0, const RuntimeMethod* method)
 {
 	return fabsf(___value0);
+}
+// System.Double System.Math::Abs(System.Double)
+extern "C" IL2CPP_METHOD_ATTR double Math_Abs_m7994C39FCBDC03DD2858BD906A2535BE997AE2B1 (double ___value0, const RuntimeMethod* method)
+{
+	return fabs(___value0);
 }
 // System.Int32 System.Math::Max(System.Int32,System.Int32)
 extern "C" IL2CPP_METHOD_ATTR int32_t Math_Max_mA99E48BB021F2E4B62D4EA9F52EA6928EED618A2 (int32_t ___val10, int32_t ___val21, const RuntimeMethod* method)

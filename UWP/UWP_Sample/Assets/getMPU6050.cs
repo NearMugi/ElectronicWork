@@ -10,20 +10,20 @@ public class getMPU6050 : MonoBehaviour
     Text txt;
 
     mpu6050.MPU6050 _mpu6050 = new mpu6050.MPU6050();
-    mpu6050.MpuSensorValue LastValue;
+    mpu6050.MpuSensorValue _v;
 
     // Start is called before the first frame update
     void Start()
     {
         _mpu6050.InitHardware();
-        LastValue = new mpu6050.MpuSensorValue();
+        _v = new mpu6050.MpuSensorValue();
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        _mpu6050.ReadSensorData();
-        LastValue = _mpu6050.getLastValue();
+        _mpu6050.update();
+        _v = _mpu6050.getValue();
 
 #if false
         txt.text = string.Format("{0}, {1}, {2}", 
@@ -34,7 +34,9 @@ public class getMPU6050 : MonoBehaviour
 #endif
         txt.text = string.Empty;
         txt.text += _mpu6050.getMsg();
-        txt.text += LastValue.AccelerationX.ToString("0.00");
+        txt.text += _v.degX.ToString("0.00");
+        txt.text += ", ";
+        txt.text += _v.degY.ToString("0.00");
 
     }
 }
