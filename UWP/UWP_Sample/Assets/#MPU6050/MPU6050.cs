@@ -270,7 +270,7 @@ namespace MPU6050
 
         void readMemoryBlock(ref byte data, uint dataSize, byte bank, byte address)
         {
-            setMemoryBank(bank);
+            setMemoryBank(bank,false,false);
             setMemoryStartAddress(address);
             byte chunkSize;
             for (uint i = 0; i < dataSize;)
@@ -279,10 +279,10 @@ namespace MPU6050
                 chunkSize = MPU6050_DMP_MEMORY_CHUNK_SIZE;
 
                 // make sure we don't go past the data size
-                if (i + chunkSize > dataSize) chunkSize = dataSize - i;
+                if (i + chunkSize > dataSize) chunkSize = (byte)(dataSize - i);
 
                 // make sure this chunk doesn't go past the bank boundary (256 bytes)
-                if (chunkSize > 256 - address) chunkSize = 256 - address;
+                if (chunkSize > 256 - address) chunkSize = (byte)(256 - address);
 
                 // read the chunk of data as specified
                 readBytes(devAddr, MPU6050_RA_MEM_R_W, chunkSize, data + i);
@@ -297,7 +297,7 @@ namespace MPU6050
                 if (i < dataSize)
                 {
                     if (address == 0) bank++;
-                    setMemoryBank(bank);
+                    setMemoryBank(bank, false, false);
                     setMemoryStartAddress(address);
                 }
             }
@@ -305,42 +305,63 @@ namespace MPU6050
 
 //        bool writeMemoryBlock(const byte* data, uint dataSize, byte bank, byte address, bool verify, bool useProgMem) {        
         bool writeMemoryBlock(ref byte data, uint dataSize, byte bank, byte address, bool verify, bool useProgMem) {
-            setMemoryBank(bank);
-        setMemoryStartAddress(address);
-        byte chunkSize;
-        byte verifyBuffer = 0; //byte*
-        byte progBuffer = 0; //byte*
-        uint i;
-        byte j;
-            //if (verify) verifyBuffer = (byte*)malloc(MPU6050_DMP_MEMORY_CHUNK_SIZE);
-            //if (useProgMem) progBuffer = (byte*)malloc(MPU6050_DMP_MEMORY_CHUNK_SIZE);
+            setMemoryBank(bank, false, false);
+            setMemoryStartAddress(address);
+            byte chunkSize;
+            byte[] verifyBuffer; //byte*
+            byte[] progBuffer; //byte*
+            uint i;
+            byte j;
 
-            for (i = 0; i<dataSize;) {
+            if (verify)
+            {
+                verifyBuffer = new byte[MPU6050_DMP_MEMORY_CHUNK_SIZE];
+            } else
+            {
+                verifyBuffer = new byte[] { 0 };
+            }
+
+
+            if (useProgMem)
+            {
+                progBuffer = new byte[MPU6050_DMP_MEMORY_CHUNK_SIZE];
+            } else
+            {
+                progBuffer = new byte[] { 0 };
+            }
+
+            for (i = 0; i < dataSize;)
+            {
                 // determine correct chunk size according to bank position and data size
                 chunkSize = MPU6050_DMP_MEMORY_CHUNK_SIZE;
 
                 // make sure we don't go past the data size
-                if (i + chunkSize > dataSize) chunkSize = dataSize - i;
+                if (i + chunkSize > dataSize) chunkSize = (byte)(dataSize - i);
 
                 // make sure this chunk doesn't go past the bank boundary (256 bytes)
-                if (chunkSize > 256 - address) chunkSize = 256 - address;
-        
-                if (useProgMem) {
+                if (chunkSize > 256 - address) chunkSize = (byte)(256 - address);
+
+                if (useProgMem)
+                {
                     // write the chunk of data as specified
-                    for (j = 0; j<chunkSize; j++) progBuffer[j] = pgm_read_byte(data + i + j);
-    } else {
+                    for (j = 0; j < chunkSize; j++) progBuffer[j] = pgm_read_byte(data + i + j); //pgm_read_byte(data + i + j)
+                }
+                else
+                {
                     // write the chunk of data as specified
-                    progBuffer = (byte*) data + i;
+                    progBuffer = (byte*)data + i;
                 }
 
-writeBytes(devAddr, MPU6050_RA_MEM_R_W, chunkSize, ref progBuffer);
+                writeBytes(devAddr, MPU6050_RA_MEM_R_W, chunkSize, ref progBuffer);
 
                 // verify data if needed
-                if (verify && verifyBuffer) {
-                    setMemoryBank(bank);
-setMemoryStartAddress(address);
-readBytes(devAddr, MPU6050_RA_MEM_R_W, chunkSize, ref verifyBuffer);
-                    if (memcmp(progBuffer, verifyBuffer, chunkSize) != 0) {
+                if (verify && verifyBuffer)
+                {
+                    setMemoryBank(bank, false, false);
+                    setMemoryStartAddress(address);
+                    readBytes(devAddr, MPU6050_RA_MEM_R_W, chunkSize, ref verifyBuffer);
+                    if (memcmp(progBuffer, verifyBuffer, chunkSize) != 0)
+                    {
                         free(verifyBuffer);
                         if (useProgMem) free(progBuffer);
                         return false; // uh oh.
@@ -354,10 +375,11 @@ readBytes(devAddr, MPU6050_RA_MEM_R_W, chunkSize, ref verifyBuffer);
                 address += chunkSize;
 
                 // if we aren't done, update bank (if necessary) and address
-                if (i<dataSize) {
+                if (i < dataSize)
+                {
                     if (address == 0) bank++;
-                    setMemoryBank(bank);
-setMemoryStartAddress(address);
+                    setMemoryBank(bank, false, false);
+                    setMemoryStartAddress(address);
                 }
             }
             if (verify) free(verifyBuffer);
@@ -403,13 +425,6 @@ setMemoryStartAddress(address);
                 // write data or perform special action
                 if (length > 0)
                 {
-                    // regular block of data to write
-                    /*Serial.print("Writing config block to bank ");
-                    Serial.print(bank);
-                    Serial.print(", offset ");
-                    Serial.print(offset);
-                    Serial.print(", length=");
-                    Serial.println(length);*/
                     if (useProgMem)
                     {
                         if (sizeof(progBuffer) < length) progBuffer = (byte*)realloc(progBuffer, length);
@@ -424,11 +439,6 @@ setMemoryStartAddress(address);
                 }
                 else
                 {
-                    // special instruction
-                    // NOTE: this kind of behavior (what and when to do certain things)
-                    // is totally undocumented. This code is in here based on observed
-                    // behavior only, and exactly why (or even whether) it has to be here
-                    // is anybody's guess for now.
                     if (useProgMem)
                     {
                         special = pgm_read_byte(data + i++);
@@ -437,16 +447,8 @@ setMemoryStartAddress(address);
                     {
                         special = data[i++];
                     }
-                    /*Serial.print("Special command code ");
-                    Serial.print(special, HEX);
-                    Serial.println(" found...");*/
                     if (special == 0x01)
                     {
-                        // enable DMP-related interrupts
-
-                        //setIntZeroMotionEnabled(true);
-                        //setIntFIFOBufferOverflowEnabled(true);
-                        //setIntDMPEnabled(true);
                         writeByte(devAddr, MPU6050_RA_INT_ENABLE, 0x32);  // single operation
 
                         success = true;

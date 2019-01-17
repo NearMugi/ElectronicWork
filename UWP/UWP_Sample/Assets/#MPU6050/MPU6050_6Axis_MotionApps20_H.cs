@@ -320,7 +320,7 @@ namespace MPU6050
                 //DEBUG_PRINT(F("Writing DMP configuration to MPU memory banks ("));
                 //DEBUG_PRINT(MPU6050_DMP_CONFIG_SIZE);
                 //DEBUG_PRINTLN(F(" bytes in config def)"));
-                if (writeProgDMPConfigurationSet(dmpConfig, MPU6050_DMP_CONFIG_SIZE))
+                if (writeProgDMPConfigurationSet(ref dmpConfig, MPU6050_DMP_CONFIG_SIZE))
                 {
                     //DEBUG_PRINTLN(F("Success! DMP configuration written and verified."));
 
@@ -366,11 +366,11 @@ namespace MPU6050
                     byte j;
                     uint pos = 0;
                     for (j = 0; j < 4 || j < dmpUpdate[2] + 3; j++, pos++) dmpUpdate[j] = pgm_read_byte(&dmpUpdates[pos]);
-                    writeMemoryBlock(dmpUpdate + 3, dmpUpdate[2], dmpUpdate[0], dmpUpdate[1]);
+                    writeMemoryBlock(dmpUpdate + 3, dmpUpdate[2], dmpUpdate[0], dmpUpdate[1], true, false);
 
                     //DEBUG_PRINTLN(F("Writing final memory update 2/7 (function unknown)..."));
                     for (j = 0; j < 4 || j < dmpUpdate[2] + 3; j++, pos++) dmpUpdate[j] = pgm_read_byte(&dmpUpdates[pos]);
-                    writeMemoryBlock(dmpUpdate + 3, dmpUpdate[2], dmpUpdate[0], dmpUpdate[1]);
+                    writeMemoryBlock(dmpUpdate + 3, dmpUpdate[2], dmpUpdate[0], dmpUpdate[1], true, false);
 
                     //DEBUG_PRINTLN(F("Resetting FIFO..."));
                     resetFIFO();
@@ -409,15 +409,15 @@ namespace MPU6050
 
                     //DEBUG_PRINTLN(F("Writing final memory update 3/7 (function unknown)..."));
                     for (j = 0; j < 4 || j < dmpUpdate[2] + 3; j++, pos++) dmpUpdate[j] = pgm_read_byte(&dmpUpdates[pos]);
-                    writeMemoryBlock(dmpUpdate + 3, dmpUpdate[2], dmpUpdate[0], dmpUpdate[1]);
+                    writeMemoryBlock(dmpUpdate + 3, dmpUpdate[2], dmpUpdate[0], dmpUpdate[1], true, false);
 
                     //DEBUG_PRINTLN(F("Writing final memory update 4/7 (function unknown)..."));
                     for (j = 0; j < 4 || j < dmpUpdate[2] + 3; j++, pos++) dmpUpdate[j] = pgm_read_byte(&dmpUpdates[pos]);
-                    writeMemoryBlock(dmpUpdate + 3, dmpUpdate[2], dmpUpdate[0], dmpUpdate[1]);
+                    writeMemoryBlock(dmpUpdate + 3, dmpUpdate[2], dmpUpdate[0], dmpUpdate[1], true, false);
 
                     //DEBUG_PRINTLN(F("Writing final memory update 5/7 (function unknown)..."));
                     for (j = 0; j < 4 || j < dmpUpdate[2] + 3; j++, pos++) dmpUpdate[j] = pgm_read_byte(&dmpUpdates[pos]);
-                    writeMemoryBlock(dmpUpdate + 3, dmpUpdate[2], dmpUpdate[0], dmpUpdate[1]);
+                    writeMemoryBlock(dmpUpdate + 3, dmpUpdate[2], dmpUpdate[0], dmpUpdate[1], true, false);
 
                     //DEBUG_PRINTLN(F("Waiting for FIFO count > 2..."));
                     while ((fifoCount = getFIFOCount()) < 3) ;
@@ -434,7 +434,7 @@ namespace MPU6050
 
                     //DEBUG_PRINTLN(F("Reading final memory update 6/7 (function unknown)..."));
                     for (j = 0; j < 4 || j < dmpUpdate[2] + 3; j++, pos++) dmpUpdate[j] = pgm_read_byte(&dmpUpdates[pos]);
-                    readMemoryBlock(dmpUpdate + 3, dmpUpdate[2], dmpUpdate[0], dmpUpdate[1]);
+                    readMemoryBlock(dmpUpdate + 3, dmpUpdate[2], dmpUpdate[0], dmpUpdate[1], true, false);
 
                     //DEBUG_PRINTLN(F("Waiting for FIFO count > 2..."));
                     while ((fifoCount = getFIFOCount()) < 3) ;
@@ -452,7 +452,7 @@ namespace MPU6050
 
                     //DEBUG_PRINTLN(F("Writing final memory update 7/7 (function unknown)..."));
                     for (j = 0; j < 4 || j < dmpUpdate[2] + 3; j++, pos++) dmpUpdate[j] = pgm_read_byte(&dmpUpdates[pos]);
-                    writeMemoryBlock(dmpUpdate + 3, dmpUpdate[2], dmpUpdate[0], dmpUpdate[1]);
+                    writeMemoryBlock(dmpUpdate + 3, dmpUpdate[2], dmpUpdate[0], dmpUpdate[1], true, false);
 
                     //DEBUG_PRINTLN(F("DMP is good to go! Finally."));
 
