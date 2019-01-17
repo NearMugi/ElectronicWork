@@ -130,32 +130,36 @@ namespace MPU6050
         {
             byte _b = 0x00;
             if(enabled) _b = 0x01;
-            writeBit(devAddr, MPU6050_RA_USER_CTRL, MPU6050_USERCTRL_FIFO_EN_BIT, enabled);
+            writeBit(devAddr, MPU6050_RA_USER_CTRL, MPU6050_USERCTRL_FIFO_EN_BIT, _b);
         }
 
         void setI2CMasterModeEnabled(bool enabled)
         {
-            writeBit(devAddr, MPU6050_RA_USER_CTRL, MPU6050_USERCTRL_I2C_MST_EN_BIT, enabled);
+            byte _b = 0x00;
+            if (enabled) _b = 0x01;
+            writeBit(devAddr, MPU6050_RA_USER_CTRL, MPU6050_USERCTRL_I2C_MST_EN_BIT, _b);
         }
 
         void resetFIFO()
         {
-            writeBit(devAddr, MPU6050_RA_USER_CTRL, MPU6050_USERCTRL_FIFO_RESET_BIT, true);
+            writeBit(devAddr, MPU6050_RA_USER_CTRL, MPU6050_USERCTRL_FIFO_RESET_BIT, 0x01);
         }
 
         void resetI2CMaster()
         {
-            writeBit(devAddr, MPU6050_RA_USER_CTRL, MPU6050_USERCTRL_I2C_MST_RESET_BIT, true);
+            writeBit(devAddr, MPU6050_RA_USER_CTRL, MPU6050_USERCTRL_I2C_MST_RESET_BIT, 0x01);
         }
 
         void reset()
         {
-            writeBit(devAddr, MPU6050_RA_PWR_MGMT_1, MPU6050_PWR1_DEVICE_RESET_BIT, true);
+            writeBit(devAddr, MPU6050_RA_PWR_MGMT_1, MPU6050_PWR1_DEVICE_RESET_BIT, 0x01);
         }
 
         void setSleepEnabled(bool enabled)
         {
-            writeBit(devAddr, MPU6050_RA_PWR_MGMT_1, MPU6050_PWR1_SLEEP_BIT, enabled);
+            byte _b = 0x00;
+            if (enabled) _b = 0x01;
+            writeBit(devAddr, MPU6050_RA_PWR_MGMT_1, MPU6050_PWR1_SLEEP_BIT, _b);
         }
 
         void setClockSource(byte source)
@@ -169,15 +173,15 @@ namespace MPU6050
             return (((uint)buffer[0]) << 8) | buffer[1];
         }
 
-        void getFIFOBytes(byte* data, byte length)
+        void getFIFOBytes(ref byte data, byte length)
         {
             if (length > 0)
             {
-                readBytes(devAddr, MPU6050_RA_FIFO_R_W, length, data);
+                readBytes(devAddr, MPU6050_RA_FIFO_R_W, length, ref data);
             }
             else
             {
-                *data = 0;
+                data = 0;
             }
         }
 
@@ -189,7 +193,9 @@ namespace MPU6050
 
         void setOTPBankValid(bool enabled)
         {
-            writeBit(devAddr, MPU6050_RA_XG_OFFS_TC, MPU6050_TC_OTP_BNK_VLD_BIT, enabled);
+            byte _b = 0x00;
+            if (enabled) _b = 0x01;
+            writeBit(devAddr, MPU6050_RA_XG_OFFS_TC, MPU6050_TC_OTP_BNK_VLD_BIT, _b);
         }
 
         int getXGyroOffsetTC()
@@ -200,7 +206,7 @@ namespace MPU6050
 
         void setXGyroOffsetTC(int offset)
         {
-            writeBits(devAddr, MPU6050_RA_XG_OFFS_TC, MPU6050_TC_OFFSET_BIT, MPU6050_TC_OFFSET_LENGTH, offset);
+            writeBits(devAddr, MPU6050_RA_XG_OFFS_TC, MPU6050_TC_OFFSET_BIT, MPU6050_TC_OFFSET_LENGTH, (byte)offset);
         }
 
         int getYGyroOffsetTC()
@@ -211,7 +217,7 @@ namespace MPU6050
 
         void setYGyroOffsetTC(int offset)
         {
-            writeBits(devAddr, MPU6050_RA_YG_OFFS_TC, MPU6050_TC_OFFSET_BIT, MPU6050_TC_OFFSET_LENGTH, offset);
+            writeBits(devAddr, MPU6050_RA_YG_OFFS_TC, MPU6050_TC_OFFSET_BIT, MPU6050_TC_OFFSET_LENGTH, (byte)offset);
         }
 
         int getZGyroOffsetTC()
@@ -222,7 +228,7 @@ namespace MPU6050
 
         void setZGyroOffsetTC(int offset)
         {
-            writeBits(devAddr, MPU6050_RA_ZG_OFFS_TC, MPU6050_TC_OFFSET_BIT, MPU6050_TC_OFFSET_LENGTH, offset);
+            writeBits(devAddr, MPU6050_RA_ZG_OFFS_TC, MPU6050_TC_OFFSET_BIT, MPU6050_TC_OFFSET_LENGTH, (byte)offset);
         }
 
         void setXGyroOffset(int offset)
@@ -242,12 +248,14 @@ namespace MPU6050
 
         void setDMPEnabled(bool enabled)
         {
-            writeBit(devAddr, MPU6050_RA_USER_CTRL, MPU6050_USERCTRL_DMP_EN_BIT, enabled);
+            byte _b = 0x00;
+            if (enabled) _b = 0x01;
+            writeBit(devAddr, MPU6050_RA_USER_CTRL, MPU6050_USERCTRL_DMP_EN_BIT, _b);
         }
 
         void resetDMP()
         {
-            writeBit(devAddr, MPU6050_RA_USER_CTRL, MPU6050_USERCTRL_DMP_RESET_BIT, true);
+            writeBit(devAddr, MPU6050_RA_USER_CTRL, MPU6050_USERCTRL_DMP_RESET_BIT, 0x01);
         }
 
         void setMemoryBank(byte bank, bool prefetchEnabled, bool userBank)
@@ -300,7 +308,6 @@ namespace MPU6050
 
 //        bool writeMemoryBlock(const byte* data, uint dataSize, byte bank, byte address, bool verify, bool useProgMem) {        
         bool writeMemoryBlock(ref byte data, uint dataSize, byte bank, byte address, bool verify, bool useProgMem) {
-#if false
             setMemoryBank(bank);
         setMemoryStartAddress(address);
         byte chunkSize;
@@ -358,7 +365,6 @@ setMemoryStartAddress(address);
             }
             if (verify) free(verifyBuffer);
             if (useProgMem) free(progBuffer);
-#endif
             return true;
         }
 
