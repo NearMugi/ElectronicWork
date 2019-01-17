@@ -253,7 +253,9 @@ namespace MPU6050
             // reset device
             //DEBUG_PRINTLN(F("\n\nResetting MPU6050..."));
             reset();
-            delay(30); // wait after reset
+
+            //待ち
+            //delay(30); // wait after reset
 
             // enable sleep mode and wake cycle
             /*Serial.println(F("Enabling sleep mode..."));
@@ -302,7 +304,9 @@ namespace MPU6050
             setSlaveAddress(0, 0x68);
             //DEBUG_PRINTLN(F("Resetting I2C Master control..."));
             resetI2CMaster();
-            delay(20);
+
+            //待ち
+            //delay(20);
 
             // load DMP code into memory banks
             //DEBUG_PRINT(F("Writing DMP code to MPU memory banks ("));
@@ -358,7 +362,8 @@ namespace MPU6050
                     //setZGyroOffset(0);
 
                     //DEBUG_PRINTLN(F("Writing final memory update 1/7 (function unknown)..."));
-                    byte dmpUpdate[16], j;
+                    byte[] dmpUpdate = new byte[16];
+                    byte j;
                     uint pos = 0;
                     for (j = 0; j < 4 || j < dmpUpdate[2] + 3; j++, pos++) dmpUpdate[j] = pgm_read_byte(&dmpUpdates[pos]);
                     writeMemoryBlock(dmpUpdate + 3, dmpUpdate[2], dmpUpdate[0], dmpUpdate[1]);
@@ -372,11 +377,11 @@ namespace MPU6050
 
                     //DEBUG_PRINTLN(F("Reading FIFO count..."));
                     uint fifoCount = getFIFOCount();
-                    byte fifoBuffer[128];
+                    byte[] fifoBuffer = new byte[128];
 
                     //DEBUG_PRINT(F("Current FIFO count="));
                     //DEBUG_PRINTLN(fifoCount);
-                    getFIFOBytes(fifoBuffer, fifoCount);
+                    getFIFOBytes(ref fifoBuffer, fifoCount);
 
                     //DEBUG_PRINTLN(F("Setting motion detection threshold to 2..."));
                     setMotionDetectionThreshold(2);

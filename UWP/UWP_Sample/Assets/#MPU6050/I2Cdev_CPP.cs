@@ -91,10 +91,13 @@ namespace MPU6050
 
         int readByte(byte devAddr, byte regAddr, ref byte data)
         {
-            return readBytes(devAddr, regAddr, 1, ref data);
+            byte[] _b = new byte[1];
+            int count = readBytes(devAddr, regAddr, 1, ref _b);
+            data = _b[0];
+            return count;
         }
 
-        int readBytes(byte devAddr, byte regAddr, byte length, ref byte data)
+        int readBytes(byte devAddr, byte regAddr, byte length, ref byte[] data)
         {
 
             int count = 0;
@@ -143,7 +146,12 @@ namespace MPU6050
 
         bool writeByte(byte devAddr, byte regAddr, byte data)
         {
-            return writeBytes(devAddr, regAddr, 1, ref data);
+            bool status = false;
+            byte[] _b = new byte[1];
+            status = writeBytes(devAddr, regAddr, 1, ref _b);
+            data = _b[0];
+            return status;
+
         }
 
         bool writeWord(byte devAddr, byte regAddr, int data)
@@ -151,7 +159,7 @@ namespace MPU6050
             return writeWords(devAddr, regAddr, 1, ref data);
         }
 
-        bool writeBytes(byte devAddr, byte regAddr, byte length, ref byte data)
+        bool writeBytes(byte devAddr, byte regAddr, byte length, ref byte[] data)
         {
             byte status = 0;
 

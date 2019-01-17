@@ -122,7 +122,7 @@ namespace MPU6050
         
         byte getIntStatus()
         {
-            readByte(devAddr, MPU6050_RA_INT_STATUS, ref buffer);
+            readByte(devAddr, MPU6050_RA_INT_STATUS, ref buffer[0]);
             return buffer[0];
         }
 
@@ -169,25 +169,22 @@ namespace MPU6050
 
         uint getFIFOCount()
         {
-            readBytes(devAddr, MPU6050_RA_FIFO_COUNTH, 2, buffer);
+            readBytes(devAddr, MPU6050_RA_FIFO_COUNTH, 2, ref buffer);
             return (((uint)buffer[0]) << 8) | buffer[1];
         }
 
-        void getFIFOBytes(ref byte data, byte length)
+        void getFIFOBytes(ref byte[] data, uint length)
         {
+            data = new byte[data.Length];
             if (length > 0)
             {
-                readBytes(devAddr, MPU6050_RA_FIFO_R_W, length, ref data);
-            }
-            else
-            {
-                data = 0;
+                readBytes(devAddr, MPU6050_RA_FIFO_R_W, (byte)length, ref data);            
             }
         }
 
         byte getDeviceID()
         {
-            readBits(devAddr, MPU6050_RA_WHO_AM_I, MPU6050_WHO_AM_I_BIT, MPU6050_WHO_AM_I_LENGTH, buffer);
+            readBits(devAddr, MPU6050_RA_WHO_AM_I, MPU6050_WHO_AM_I_BIT, MPU6050_WHO_AM_I_LENGTH, ref buffer[0]);
             return buffer[0];
         }
 
@@ -200,7 +197,7 @@ namespace MPU6050
 
         int getXGyroOffsetTC()
         {
-            readBits(devAddr, MPU6050_RA_XG_OFFS_TC, MPU6050_TC_OFFSET_BIT, MPU6050_TC_OFFSET_LENGTH, buffer);
+            readBits(devAddr, MPU6050_RA_XG_OFFS_TC, MPU6050_TC_OFFSET_BIT, MPU6050_TC_OFFSET_LENGTH, ref buffer[0]);
             return buffer[0];
         }
 
@@ -211,7 +208,7 @@ namespace MPU6050
 
         int getYGyroOffsetTC()
         {
-            readBits(devAddr, MPU6050_RA_YG_OFFS_TC, MPU6050_TC_OFFSET_BIT, MPU6050_TC_OFFSET_LENGTH, buffer);
+            readBits(devAddr, MPU6050_RA_YG_OFFS_TC, MPU6050_TC_OFFSET_BIT, MPU6050_TC_OFFSET_LENGTH, ref buffer[0]);
             return buffer[0];
         }
 
@@ -222,7 +219,7 @@ namespace MPU6050
 
         int getZGyroOffsetTC()
         {
-            readBits(devAddr, MPU6050_RA_ZG_OFFS_TC, MPU6050_TC_OFFSET_BIT, MPU6050_TC_OFFSET_LENGTH, buffer);
+            readBits(devAddr, MPU6050_RA_ZG_OFFS_TC, MPU6050_TC_OFFSET_BIT, MPU6050_TC_OFFSET_LENGTH, ref buffer[0]);
             return buffer[0];
         }
 
