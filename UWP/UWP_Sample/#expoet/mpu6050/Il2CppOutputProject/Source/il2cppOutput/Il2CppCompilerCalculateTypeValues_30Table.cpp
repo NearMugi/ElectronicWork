@@ -54,6 +54,8 @@ struct Task_1_t663F0DD1A0E90D28D3CEF0BC8BA9BE4CFB6E333A;
 struct Task_1_tD3B099F9273247ADC3D43275EE7A9830B000533B;
 // System.Void
 struct Void_t22962CB4C05B1D89B55A6E1139F0E87A90987017;
+// UnityEngine.GameObject
+struct GameObject_tBD1244AD56B4E59AAD76E5E7C9282EC5CE434F0F;
 // UnityEngine.Transform
 struct Transform_tBB9E78A2766C3C83599A8F66EDE7D1FCAFC66EDA;
 // UnityEngine.UI.Text
@@ -3435,10 +3437,14 @@ struct  getMPU6050_tCBCCA9F5E14FCC3066C980E690F214D4C0319676  : public MonoBehav
 public:
 	// UnityEngine.UI.Text getMPU6050::txt
 	Text_tE9317B57477F4B50AA4C16F460DE6F82DAD6D030 * ___txt_4;
+	// UnityEngine.GameObject getMPU6050::plane
+	GameObject_tBD1244AD56B4E59AAD76E5E7C9282EC5CE434F0F * ___plane_5;
+	// UnityEngine.Transform getMPU6050::transform
+	Transform_tBB9E78A2766C3C83599A8F66EDE7D1FCAFC66EDA * ___transform_6;
 	// mpu6050.MPU6050 getMPU6050::_mpu6050
-	MPU6050_tB510E16AC7A8543789ABECF11C4A1EC40B398EF9 * ____mpu6050_5;
+	MPU6050_tB510E16AC7A8543789ABECF11C4A1EC40B398EF9 * ____mpu6050_7;
 	// mpu6050.MpuSensorValue getMPU6050::_v
-	MpuSensorValue_t7A67A2F92DE2F1C8BE635E8F03892624EA926C6D * ____v_6;
+	MpuSensorValue_t7A67A2F92DE2F1C8BE635E8F03892624EA926C6D * ____v_8;
 
 public:
 	inline static int32_t get_offset_of_txt_4() { return static_cast<int32_t>(offsetof(getMPU6050_tCBCCA9F5E14FCC3066C980E690F214D4C0319676, ___txt_4)); }
@@ -3450,22 +3456,40 @@ public:
 		Il2CppCodeGenWriteBarrier((&___txt_4), value);
 	}
 
-	inline static int32_t get_offset_of__mpu6050_5() { return static_cast<int32_t>(offsetof(getMPU6050_tCBCCA9F5E14FCC3066C980E690F214D4C0319676, ____mpu6050_5)); }
-	inline MPU6050_tB510E16AC7A8543789ABECF11C4A1EC40B398EF9 * get__mpu6050_5() const { return ____mpu6050_5; }
-	inline MPU6050_tB510E16AC7A8543789ABECF11C4A1EC40B398EF9 ** get_address_of__mpu6050_5() { return &____mpu6050_5; }
-	inline void set__mpu6050_5(MPU6050_tB510E16AC7A8543789ABECF11C4A1EC40B398EF9 * value)
+	inline static int32_t get_offset_of_plane_5() { return static_cast<int32_t>(offsetof(getMPU6050_tCBCCA9F5E14FCC3066C980E690F214D4C0319676, ___plane_5)); }
+	inline GameObject_tBD1244AD56B4E59AAD76E5E7C9282EC5CE434F0F * get_plane_5() const { return ___plane_5; }
+	inline GameObject_tBD1244AD56B4E59AAD76E5E7C9282EC5CE434F0F ** get_address_of_plane_5() { return &___plane_5; }
+	inline void set_plane_5(GameObject_tBD1244AD56B4E59AAD76E5E7C9282EC5CE434F0F * value)
 	{
-		____mpu6050_5 = value;
-		Il2CppCodeGenWriteBarrier((&____mpu6050_5), value);
+		___plane_5 = value;
+		Il2CppCodeGenWriteBarrier((&___plane_5), value);
 	}
 
-	inline static int32_t get_offset_of__v_6() { return static_cast<int32_t>(offsetof(getMPU6050_tCBCCA9F5E14FCC3066C980E690F214D4C0319676, ____v_6)); }
-	inline MpuSensorValue_t7A67A2F92DE2F1C8BE635E8F03892624EA926C6D * get__v_6() const { return ____v_6; }
-	inline MpuSensorValue_t7A67A2F92DE2F1C8BE635E8F03892624EA926C6D ** get_address_of__v_6() { return &____v_6; }
-	inline void set__v_6(MpuSensorValue_t7A67A2F92DE2F1C8BE635E8F03892624EA926C6D * value)
+	inline static int32_t get_offset_of_transform_6() { return static_cast<int32_t>(offsetof(getMPU6050_tCBCCA9F5E14FCC3066C980E690F214D4C0319676, ___transform_6)); }
+	inline Transform_tBB9E78A2766C3C83599A8F66EDE7D1FCAFC66EDA * get_transform_6() const { return ___transform_6; }
+	inline Transform_tBB9E78A2766C3C83599A8F66EDE7D1FCAFC66EDA ** get_address_of_transform_6() { return &___transform_6; }
+	inline void set_transform_6(Transform_tBB9E78A2766C3C83599A8F66EDE7D1FCAFC66EDA * value)
 	{
-		____v_6 = value;
-		Il2CppCodeGenWriteBarrier((&____v_6), value);
+		___transform_6 = value;
+		Il2CppCodeGenWriteBarrier((&___transform_6), value);
+	}
+
+	inline static int32_t get_offset_of__mpu6050_7() { return static_cast<int32_t>(offsetof(getMPU6050_tCBCCA9F5E14FCC3066C980E690F214D4C0319676, ____mpu6050_7)); }
+	inline MPU6050_tB510E16AC7A8543789ABECF11C4A1EC40B398EF9 * get__mpu6050_7() const { return ____mpu6050_7; }
+	inline MPU6050_tB510E16AC7A8543789ABECF11C4A1EC40B398EF9 ** get_address_of__mpu6050_7() { return &____mpu6050_7; }
+	inline void set__mpu6050_7(MPU6050_tB510E16AC7A8543789ABECF11C4A1EC40B398EF9 * value)
+	{
+		____mpu6050_7 = value;
+		Il2CppCodeGenWriteBarrier((&____mpu6050_7), value);
+	}
+
+	inline static int32_t get_offset_of__v_8() { return static_cast<int32_t>(offsetof(getMPU6050_tCBCCA9F5E14FCC3066C980E690F214D4C0319676, ____v_8)); }
+	inline MpuSensorValue_t7A67A2F92DE2F1C8BE635E8F03892624EA926C6D * get__v_8() const { return ____v_8; }
+	inline MpuSensorValue_t7A67A2F92DE2F1C8BE635E8F03892624EA926C6D ** get_address_of__v_8() { return &____v_8; }
+	inline void set__v_8(MpuSensorValue_t7A67A2F92DE2F1C8BE635E8F03892624EA926C6D * value)
+	{
+		____v_8 = value;
+		Il2CppCodeGenWriteBarrier((&____v_8), value);
 	}
 };
 
@@ -3723,11 +3747,13 @@ extern const int32_t g_FieldOffsetTable3047[6] =
 	fps_t1EBD7C643A92A614792189871C4754CE3AB0DE3A::get_offset_of__fps_9(),
 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3048 = { sizeof (getMPU6050_tCBCCA9F5E14FCC3066C980E690F214D4C0319676), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable3048[3] = 
+extern const int32_t g_FieldOffsetTable3048[5] = 
 {
 	getMPU6050_tCBCCA9F5E14FCC3066C980E690F214D4C0319676::get_offset_of_txt_4(),
-	getMPU6050_tCBCCA9F5E14FCC3066C980E690F214D4C0319676::get_offset_of__mpu6050_5(),
-	getMPU6050_tCBCCA9F5E14FCC3066C980E690F214D4C0319676::get_offset_of__v_6(),
+	getMPU6050_tCBCCA9F5E14FCC3066C980E690F214D4C0319676::get_offset_of_plane_5(),
+	getMPU6050_tCBCCA9F5E14FCC3066C980E690F214D4C0319676::get_offset_of_transform_6(),
+	getMPU6050_tCBCCA9F5E14FCC3066C980E690F214D4C0319676::get_offset_of__mpu6050_7(),
+	getMPU6050_tCBCCA9F5E14FCC3066C980E690F214D4C0319676::get_offset_of__v_8(),
 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3049 = { sizeof (Rotate_t763544D6383D5853BC2A73F921EB5C3A7A2F836C), -1, 0, 0 };
 extern const int32_t g_FieldOffsetTable3049[1] = 

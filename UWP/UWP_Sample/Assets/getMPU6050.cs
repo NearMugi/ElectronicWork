@@ -8,6 +8,9 @@ public class getMPU6050 : MonoBehaviour
 {
     [SerializeField]
     Text txt;
+    [SerializeField]
+    GameObject plane;
+    Transform transform;
 
     mpu6050.MPU6050 _mpu6050 = new mpu6050.MPU6050();
     mpu6050.MpuSensorValue _v;
@@ -17,6 +20,8 @@ public class getMPU6050 : MonoBehaviour
     {
         _mpu6050.InitHardware();
         _v = new mpu6050.MpuSensorValue();
+
+        transform = plane.GetComponent<Transform>();
     }
 
     // Update is called once per frame
@@ -37,6 +42,8 @@ public class getMPU6050 : MonoBehaviour
         txt.text += _v.degX.ToString("0.00");
         txt.text += ", ";
         txt.text += _v.degY.ToString("0.00");
+
+        transform.localEulerAngles = new Vector3(_v.degX, 0.0f, _v.degY);
 
     }
 }
