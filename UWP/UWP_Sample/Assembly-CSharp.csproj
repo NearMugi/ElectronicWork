@@ -65,10 +65,8 @@
     <Compile Include="Assets\#MPU6050\MPU6050.cs" />
     <Compile Include="Assets\#MPU6050\MPU6050_6Axis_MotionApps20_H.cs" />
     <Compile Include="Assets\#MPU6050\MPU6050_H.cs" />
-    <Compile Include="Assets\#UWP\Kalman.cs" />
-    <Compile Include="Assets\#UWP\mpu6050.cs" />
+    <Compile Include="Assets\#MPU6050\mpur6050_main.cs" />
     <Compile Include="Assets\fps.cs" />
-    <Compile Include="Assets\getMPU6050.cs" />
     <Compile Include="Assets\Rotate.cs" />
     <Compile Include="Assets\Rotate1.cs" />
     <Reference Include="Unity.PackageManagerUI.Editor">

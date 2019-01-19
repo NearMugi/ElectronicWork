@@ -106,9 +106,9 @@ namespace MPU6050
 
         public class VectorInt16
         {
-            int x;
-            int y;
-            int z;
+            public int x;
+            public int y;
+            public int z;
 
             public VectorInt16()
             {
@@ -144,7 +144,7 @@ namespace MPU6050
                 return r;
             }
 
-            public void rotate(Quaternion* q)
+            public void rotate(ref Quaternion q)
             {
                 // http://www.cprogramming.com/tutorial/3d/quaternions.html
                 // http://www.euclideanspace.com/maths/algebra/realNormedAlgebra/quaternions/transforms/index.htm
@@ -159,30 +159,30 @@ namespace MPU6050
                 Quaternion p = new Quaternion(0, x, y, z);
 
                 // quaternion multiplication: q * p, stored back in p
-                p = q->getProduct(p);
+                p = q.getProduct(p);
 
                 // quaternion multiplication: p * conj(q), stored back in p
-                p = p.getProduct(q->getConjugate());
+                p = p.getProduct(q.getConjugate());
 
                 // p quaternion is now [0, x', y', z']
-                x = p.x;
-                y = p.y;
-                z = p.z;
+                x = (int)p.x;
+                y = (int)p.y;
+                z = (int)p.z;
             }
 
-            public VectorInt16 getRotated(Quaternion* q)
+            public VectorInt16 getRotated(ref Quaternion q)
             {
                 VectorInt16 r = new VectorInt16(x, y, z);
-                r.rotate(q);
+                r.rotate(ref q);
                 return r;
             }
         };
 
         public class VectorFloat
         {
-            float x;
-            float y;
-            float z;
+            public float x;
+            public float y;
+            public float z;
 
             public VectorFloat()
             {
@@ -218,15 +218,15 @@ namespace MPU6050
                 return r;
             }
 
-            public void rotate(Quaternion* q)
+            public void rotate(Quaternion q)
             {
                 Quaternion p = new Quaternion(0, x, y, z);
 
                 // quaternion multiplication: q * p, stored back in p
-                p = q->getProduct(p);
+                p = q.getProduct(p);
 
                 // quaternion multiplication: p * conj(q), stored back in p
-                p = p.getProduct(q->getConjugate());
+                p = p.getProduct(q.getConjugate());
 
                 // p quaternion is now [0, x', y', z']
                 x = p.x;
@@ -234,7 +234,7 @@ namespace MPU6050
                 z = p.z;
             }
 
-            public VectorFloat getRotated(Quaternion* q)
+            public VectorFloat getRotated(ref Quaternion q)
             {
                 VectorFloat r = new VectorFloat(x, y, z);
                 r.rotate(q);

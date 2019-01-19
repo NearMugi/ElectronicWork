@@ -6,7 +6,7 @@
 // Updates should (hopefully) always be available at https://github.com/jrowberg/i2cdevlib
 //
 // Changelog:
-//     ... - ongoing debug release
+//     ... - ongoing //Debug release
 
 /* ============================================
 I2Cdev device library code is placed under the MIT license
@@ -35,10 +35,17 @@ THE SOFTWARE.
 // MotionApps 2.0 DMP implementation, built using the MPU-6050EVB evaluation board
 #define MPU6050_INCLUDE_DMP_MOTIONAPPS20
 
+using System;
+using System.Threading.Tasks;
+using UnityEngine;
+
 namespace MPU6050
 {
     public partial class MPU6050
     {
+
+        public byte devStatus;
+
         const uint MPU6050_DMP_CODE_SIZE = 1929;    // dmpMemory[]
         const uint MPU6050_DMP_CONFIG_SIZE = 192;     // dmpConfig[]
         const uint MPU6050_DMP_UPDATES_SIZE = 47;      // dmpUpdates[]
@@ -226,8 +233,8 @@ namespace MPU6050
             0x07,   0x41,   0x05,   0xF1, 0x20, 0x28, 0x30, 0x38, // CFG_8 inv_send_quaternion
             0x07,   0x7E,   0x01,   0x30,                     // CFG_16 inv_set_footer
             0x07,   0x46,   0x01,   0x9A,                     // CFG_GYRO_SOURCE inv_send_gyro
-            0x07,   0x47,   0x04,   0xF1, 0x28, 0x30, 0x38,   // CFG_9 inv_send_gyro -> inv_construct3_fifo
-            0x07,   0x6C,   0x04,   0xF1, 0x28, 0x30, 0x38,   // CFG_12 inv_send_accel -> inv_construct3_fifo
+            0x07,   0x47,   0x04,   0xF1, 0x28, 0x30, 0x38,   // CFG_9 inv_send_gyro . inv_construct3_fifo
+            0x07,   0x6C,   0x04,   0xF1, 0x28, 0x30, 0x38,   // CFG_12 inv_send_accel . inv_construct3_fifo
             0x02,   0x16,   0x02,   0x00, 0x01                // D_0_22 inv_set_fifo_rate
 
             // This very last 0x01 WAS a 0x09, which drops the FIFO rate down to 20 Hz. 0x07 is 25 Hz,
@@ -248,13 +255,18 @@ namespace MPU6050
             0x00,   0x60,   0x04,   0x00, 0x40, 0x00, 0x00
         };
 
-        byte dmpInitialize()
+        public async void dmpInitialize()
         {
+            devStatus = 3;
+            if (isInitErr) return;
+
+            devStatus = 0;
             // reset device
-            //DEBUG_PRINTLN(F("\n\nResetting MPU6050..."));
+            //Debug.Log("Resetting MPU6050...");
             reset();
 
             //待ち
+            await Task.Delay(30);
             //delay(30); // wait after reset
 
             // enable sleep mode and wake cycle
@@ -264,277 +276,256 @@ namespace MPU6050
             setWakeCycleEnabled(true);*/
 
             // disable sleep mode
-            //DEBUG_PRINTLN(F("Disabling sleep mode..."));
+            ////Debug_PRINTLN(F("Disabling sleep mode..."));
             setSleepEnabled(false);
 
             // get MPU hardware revision
-            //DEBUG_PRINTLN(F("Selecting user bank 16..."));
+            ////Debug_PRINTLN(F("Selecting user bank 16..."));
             setMemoryBank(0x10, true, true);
-            //DEBUG_PRINTLN(F("Selecting memory byte 6..."));
+            ////Debug_PRINTLN(F("Selecting memory byte 6..."));
             setMemoryStartAddress(0x06);
-            //DEBUG_PRINTLN(F("Checking hardware revision..."));
-            //DEBUG_PRINT(F("Revision @ user[16][6] = "));
-            //DEBUG_PRINTLNF(readMemoryByte(), HEX);
-            //DEBUG_PRINTLN(F("Resetting memory bank selection to 0..."));
+            ////Debug_PRINTLN(F("Checking hardware revision..."));
+            ////Debug_PRINT(F("Revision @ user[16][6] = "));
+            ////Debug_PRINTLNF(readMemoryByte(), HEX);
+            ////Debug_PRINTLN(F("Resetting memory bank selection to 0..."));
             setMemoryBank(0, false, false);
 
             // check OTP bank valid
-            //DEBUG_PRINTLN(F("Reading OTP bank valid flag..."));
-            //DEBUG_PRINT(F("OTP bank is "));
-            //DEBUG_PRINTLN(getOTPBankValid() ? F("valid!") : F("invalid!"));
+            ////Debug_PRINTLN(F("Reading OTP bank valid flag..."));
+            ////Debug_PRINT(F("OTP bank is "));
+            ////Debug_PRINTLN(getOTPBankValid() ? F("valid!") : F("invalid!"));
 
             // get X/Y/Z gyro offsets
-            //DEBUG_PRINTLN(F("Reading gyro offset TC values..."));
+            ////Debug_PRINTLN(F("Reading gyro offset TC values..."));
             int xgOffsetTC = getXGyroOffsetTC();
             int ygOffsetTC = getYGyroOffsetTC();
             int zgOffsetTC = getZGyroOffsetTC();
-            //DEBUG_PRINT(F("X gyro offset = "));
-            //DEBUG_PRINTLN(xgOffsetTC);
-            //DEBUG_PRINT(F("Y gyro offset = "));
-            //DEBUG_PRINTLN(ygOffsetTC);
-            //DEBUG_PRINT(F("Z gyro offset = "));
-            //DEBUG_PRINTLN(zgOffsetTC);
+            ////Debug_PRINT(F("X gyro offset = "));
+            ////Debug_PRINTLN(xgOffsetTC);
+            ////Debug_PRINT(F("Y gyro offset = "));
+            ////Debug_PRINTLN(ygOffsetTC);
+            ////Debug_PRINT(F("Z gyro offset = "));
+            ////Debug_PRINTLN(zgOffsetTC);
 
             // setup weird slave stuff (?)
-            //DEBUG_PRINTLN(F("Setting slave 0 address to 0x7F..."));
+            ////Debug_PRINTLN(F("Setting slave 0 address to 0x7F..."));
             setSlaveAddress(0, 0x7F);
-            //DEBUG_PRINTLN(F("Disabling I2C Master mode..."));
+            ////Debug_PRINTLN(F("Disabling I2C Master mode..."));
             setI2CMasterModeEnabled(false);
-            //DEBUG_PRINTLN(F("Setting slave 0 address to 0x68 (self)..."));
+            ////Debug_PRINTLN(F("Setting slave 0 address to 0x68 (self)..."));
             setSlaveAddress(0, 0x68);
-            //DEBUG_PRINTLN(F("Resetting I2C Master control..."));
+            ////Debug_PRINTLN(F("Resetting I2C Master control..."));
             resetI2CMaster();
 
             //待ち
+            await Task.Delay(20);
             //delay(20);
 
+
+#if WINDOWS_UWP
+            devStatus = 4;
+            return;
+#endif
+
             // load DMP code into memory banks
-            //DEBUG_PRINT(F("Writing DMP code to MPU memory banks ("));
-            //DEBUG_PRINT(MPU6050_DMP_CODE_SIZE);
-            //DEBUG_PRINTLN(F(" bytes)"));
-            if (writeProgMemoryBlock(dmpMemory, MPU6050_DMP_CODE_SIZE))
+            ////Debug_PRINT(F("Writing DMP code to MPU memory banks ("));
+            ////Debug_PRINT(MPU6050_DMP_CODE_SIZE);
+            ////Debug_PRINTLN(F(" bytes)"));
+            if (writeProgMemoryBlock(dmpMemory, MPU6050_DMP_CODE_SIZE,0,0,true))
             {
-                //DEBUG_PRINTLN(F("Success! DMP code written and verified."));
+                ////Debug_PRINTLN(F("Success! DMP code written and verified."));
 
                 // write DMP configuration
-                //DEBUG_PRINT(F("Writing DMP configuration to MPU memory banks ("));
-                //DEBUG_PRINT(MPU6050_DMP_CONFIG_SIZE);
-                //DEBUG_PRINTLN(F(" bytes in config def)"));
+                ////Debug_PRINT(F("Writing DMP configuration to MPU memory banks ("));
+                ////Debug_PRINT(MPU6050_DMP_CONFIG_SIZE);
+                ////Debug_PRINTLN(F(" bytes in config def)"));
                 if (writeProgDMPConfigurationSet(ref dmpConfig, MPU6050_DMP_CONFIG_SIZE))
                 {
-                    //DEBUG_PRINTLN(F("Success! DMP configuration written and verified."));
+                    ////Debug_PRINTLN(F("Success! DMP configuration written and verified."));
 
-                    //DEBUG_PRINTLN(F("Setting clock source to Z Gyro..."));
+                    ////Debug_PRINTLN(F("Setting clock source to Z Gyro..."));
                     setClockSource(MPU6050_CLOCK_PLL_ZGYRO);
 
-                    //DEBUG_PRINTLN(F("Setting DMP and FIFO_OFLOW interrupts enabled..."));
+                    ////Debug_PRINTLN(F("Setting DMP and FIFO_OFLOW interrupts enabled..."));
                     setIntEnabled(0x12);
 
-                    //DEBUG_PRINTLN(F("Setting sample rate to 200Hz..."));
+                    ////Debug_PRINTLN(F("Setting sample rate to 200Hz..."));
                     setRate(4); // 1khz / (1 + 4) = 200 Hz
 
-                    //DEBUG_PRINTLN(F("Setting external frame sync to TEMP_OUT_L[0]..."));
+                    ////Debug_PRINTLN(F("Setting external frame sync to TEMP_OUT_L[0]..."));
                     setExternalFrameSync(MPU6050_EXT_SYNC_TEMP_OUT_L);
 
-                    //DEBUG_PRINTLN(F("Setting DLPF bandwidth to 42Hz..."));
+                    ////Debug_PRINTLN(F("Setting DLPF bandwidth to 42Hz..."));
                     setDLPFMode(MPU6050_DLPF_BW_42);
 
-                    //DEBUG_PRINTLN(F("Setting gyro sensitivity to +/- 2000 deg/sec..."));
+                    ////Debug_PRINTLN(F("Setting gyro sensitivity to +/- 2000 deg/sec..."));
                     setFullScaleGyroRange(MPU6050_GYRO_FS_2000);
 
-                    //DEBUG_PRINTLN(F("Setting DMP programm start address"));
+                    ////Debug_PRINTLN(F("Setting DMP programm start address"));
                     //write start address MSB into register
                     setDMPConfig1(0x03);
                     //write start address LSB into register
                     setDMPConfig2(0x00);
 
-                    //DEBUG_PRINTLN(F("Clearing OTP Bank flag..."));
+                    ////Debug_PRINTLN(F("Clearing OTP Bank flag..."));
                     setOTPBankValid(false);
 
-                    //DEBUG_PRINTLN(F("Setting X/Y/Z gyro offset TCs to previous values..."));
+                    ////Debug_PRINTLN(F("Setting X/Y/Z gyro offset TCs to previous values..."));
                     setXGyroOffsetTC(xgOffsetTC);
                     setYGyroOffsetTC(ygOffsetTC);
                     setZGyroOffsetTC(zgOffsetTC);
 
-                    ////DEBUG_PRINTLN(F("Setting X/Y/Z gyro user offsets to zero..."));
+                    //////Debug_PRINTLN(F("Setting X/Y/Z gyro user offsets to zero..."));
                     //setXGyroOffset(0);
                     //setYGyroOffset(0);
                     //setZGyroOffset(0);
 
-                    //DEBUG_PRINTLN(F("Writing final memory update 1/7 (function unknown)..."));
+                    ////Debug_PRINTLN(F("Writing final memory update 1/7 (function unknown)..."));
                     byte[] dmpUpdate = new byte[16];
                     byte j;
                     uint pos = 0;
-                    for (j = 0; j < 4 || j < dmpUpdate[2] + 3; j++, pos++) dmpUpdate[j] = pgm_read_byte(&dmpUpdates[pos]);
-                    writeMemoryBlock(dmpUpdate + 3, dmpUpdate[2], dmpUpdate[0], dmpUpdate[1], true, false);
+                    for (j = 0; j < 4 || j < dmpUpdate[2] + 3; j++, pos++) dmpUpdate[j] = dmpUpdates[pos]; //pgm_read_byte(&dmpUpdates[pos]);
+                    writeMemoryBlock(dmpUpdate, 3, dmpUpdate[2], dmpUpdate[0], dmpUpdate[1], true, false);
 
-                    //DEBUG_PRINTLN(F("Writing final memory update 2/7 (function unknown)..."));
-                    for (j = 0; j < 4 || j < dmpUpdate[2] + 3; j++, pos++) dmpUpdate[j] = pgm_read_byte(&dmpUpdates[pos]);
-                    writeMemoryBlock(dmpUpdate + 3, dmpUpdate[2], dmpUpdate[0], dmpUpdate[1], true, false);
+                    ////Debug_PRINTLN(F("Writing final memory update 2/7 (function unknown)..."));
+                    for (j = 0; j < 4 || j < dmpUpdate[2] + 3; j++, pos++) dmpUpdate[j] = dmpUpdates[pos]; //pgm_read_byte(&dmpUpdates[pos]);
+                    writeMemoryBlock(dmpUpdate, 3, dmpUpdate[2], dmpUpdate[0], dmpUpdate[1], true, false);
 
-                    //DEBUG_PRINTLN(F("Resetting FIFO..."));
+                    ////Debug_PRINTLN(F("Resetting FIFO..."));
                     resetFIFO();
 
-                    //DEBUG_PRINTLN(F("Reading FIFO count..."));
+                    ////Debug_PRINTLN(F("Reading FIFO count..."));
                     uint fifoCount = getFIFOCount();
                     byte[] fifoBuffer = new byte[128];
 
-                    //DEBUG_PRINT(F("Current FIFO count="));
-                    //DEBUG_PRINTLN(fifoCount);
+                    ////Debug_PRINT(F("Current FIFO count="));
+                    ////Debug_PRINTLN(fifoCount);
                     getFIFOBytes(ref fifoBuffer, fifoCount);
 
-                    //DEBUG_PRINTLN(F("Setting motion detection threshold to 2..."));
+                    ////Debug_PRINTLN(F("Setting motion detection threshold to 2..."));
                     setMotionDetectionThreshold(2);
 
-                    //DEBUG_PRINTLN(F("Setting zero-motion detection threshold to 156..."));
+                    ////Debug_PRINTLN(F("Setting zero-motion detection threshold to 156..."));
                     setZeroMotionDetectionThreshold(156);
 
-                    //DEBUG_PRINTLN(F("Setting motion detection duration to 80..."));
+                    ////Debug_PRINTLN(F("Setting motion detection duration to 80..."));
                     setMotionDetectionDuration(80);
 
-                    //DEBUG_PRINTLN(F("Setting zero-motion detection duration to 0..."));
+                    ////Debug_PRINTLN(F("Setting zero-motion detection duration to 0..."));
                     setZeroMotionDetectionDuration(0);
 
-                    //DEBUG_PRINTLN(F("Resetting FIFO..."));
+                    ////Debug_PRINTLN(F("Resetting FIFO..."));
                     resetFIFO();
 
-                    //DEBUG_PRINTLN(F("Enabling FIFO..."));
+                    ////Debug_PRINTLN(F("Enabling FIFO..."));
                     setFIFOEnabled(true);
 
-                    //DEBUG_PRINTLN(F("Enabling DMP..."));
+                    ////Debug_PRINTLN(F("Enabling DMP..."));
                     setDMPEnabled(true);
 
-                    //DEBUG_PRINTLN(F("Resetting DMP..."));
+                    ////Debug_PRINTLN(F("Resetting DMP..."));
                     resetDMP();
 
-                    //DEBUG_PRINTLN(F("Writing final memory update 3/7 (function unknown)..."));
-                    for (j = 0; j < 4 || j < dmpUpdate[2] + 3; j++, pos++) dmpUpdate[j] = pgm_read_byte(&dmpUpdates[pos]);
-                    writeMemoryBlock(dmpUpdate + 3, dmpUpdate[2], dmpUpdate[0], dmpUpdate[1], true, false);
+                    ////Debug_PRINTLN(F("Writing final memory update 3/7 (function unknown)..."));
+                    for (j = 0; j < 4 || j < dmpUpdate[2] + 3; j++, pos++) dmpUpdate[j] = dmpUpdates[pos]; //pgm_read_byte(&dmpUpdates[pos]);
+                    writeMemoryBlock(dmpUpdate, 3, dmpUpdate[2], dmpUpdate[0], dmpUpdate[1], true, false);
 
-                    //DEBUG_PRINTLN(F("Writing final memory update 4/7 (function unknown)..."));
-                    for (j = 0; j < 4 || j < dmpUpdate[2] + 3; j++, pos++) dmpUpdate[j] = pgm_read_byte(&dmpUpdates[pos]);
-                    writeMemoryBlock(dmpUpdate + 3, dmpUpdate[2], dmpUpdate[0], dmpUpdate[1], true, false);
+                    ////Debug_PRINTLN(F("Writing final memory update 4/7 (function unknown)..."));
+                    for (j = 0; j < 4 || j < dmpUpdate[2] + 3; j++, pos++) dmpUpdate[j] = dmpUpdates[pos]; //pgm_read_byte(&dmpUpdates[pos]);
+                    writeMemoryBlock(dmpUpdate, 3, dmpUpdate[2], dmpUpdate[0], dmpUpdate[1], true, false);
 
-                    //DEBUG_PRINTLN(F("Writing final memory update 5/7 (function unknown)..."));
-                    for (j = 0; j < 4 || j < dmpUpdate[2] + 3; j++, pos++) dmpUpdate[j] = pgm_read_byte(&dmpUpdates[pos]);
-                    writeMemoryBlock(dmpUpdate + 3, dmpUpdate[2], dmpUpdate[0], dmpUpdate[1], true, false);
+                    ////Debug_PRINTLN(F("Writing final memory update 5/7 (function unknown)..."));
+                    for (j = 0; j < 4 || j < dmpUpdate[2] + 3; j++, pos++) dmpUpdate[j] = dmpUpdates[pos]; //pgm_read_byte(&dmpUpdates[pos]);
+                    writeMemoryBlock(dmpUpdate, 3, dmpUpdate[2], dmpUpdate[0], dmpUpdate[1], true, false);
 
-                    //DEBUG_PRINTLN(F("Waiting for FIFO count > 2..."));
+                    ////Debug_PRINTLN(F("Waiting for FIFO count > 2..."));
                     while ((fifoCount = getFIFOCount()) < 3) ;
 
-                    //DEBUG_PRINT(F("Current FIFO count="));
-                    //DEBUG_PRINTLN(fifoCount);
-                    //DEBUG_PRINTLN(F("Reading FIFO data..."));
-                    getFIFOBytes(fifoBuffer, fifoCount);
+                    ////Debug_PRINT(F("Current FIFO count="));
+                    ////Debug_PRINTLN(fifoCount);
+                    ////Debug_PRINTLN(F("Reading FIFO data..."));
+                    getFIFOBytes(ref fifoBuffer, fifoCount);
 
-                    //DEBUG_PRINTLN(F("Reading interrupt status..."));
+                    ////Debug_PRINTLN(F("Reading interrupt status..."));
 
-                    //DEBUG_PRINT(F("Current interrupt status="));
-                    //DEBUG_PRINTLNF(getIntStatus(), HEX);
+                    ////Debug_PRINT(F("Current interrupt status="));
+                    ////Debug_PRINTLNF(getIntStatus(), HEX);
 
-                    //DEBUG_PRINTLN(F("Reading final memory update 6/7 (function unknown)..."));
-                    for (j = 0; j < 4 || j < dmpUpdate[2] + 3; j++, pos++) dmpUpdate[j] = pgm_read_byte(&dmpUpdates[pos]);
-                    readMemoryBlock(dmpUpdate + 3, dmpUpdate[2], dmpUpdate[0], dmpUpdate[1], true, false);
+                    ////Debug_PRINTLN(F("Reading final memory update 6/7 (function unknown)..."));
+                    for (j = 0; j < 4 || j < dmpUpdate[2] + 3; j++, pos++) dmpUpdate[j] = dmpUpdates[pos]; //pgm_read_byte(&dmpUpdates[pos]);
+                    readMemoryBlock(dmpUpdate, 3, dmpUpdate[2], dmpUpdate[0], dmpUpdate[1]);
 
-                    //DEBUG_PRINTLN(F("Waiting for FIFO count > 2..."));
+                    ////Debug_PRINTLN(F("Waiting for FIFO count > 2..."));
                     while ((fifoCount = getFIFOCount()) < 3) ;
 
-                    //DEBUG_PRINT(F("Current FIFO count="));
-                    //DEBUG_PRINTLN(fifoCount);
+                    ////Debug_PRINT(F("Current FIFO count="));
+                    ////Debug_PRINTLN(fifoCount);
 
-                    //DEBUG_PRINTLN(F("Reading FIFO data..."));
-                    getFIFOBytes(fifoBuffer, fifoCount);
+                    ////Debug_PRINTLN(F("Reading FIFO data..."));
+                    getFIFOBytes(ref fifoBuffer, fifoCount);
 
-                    //DEBUG_PRINTLN(F("Reading interrupt status..."));
+                    ////Debug_PRINTLN(F("Reading interrupt status..."));
 
-                    //DEBUG_PRINT(F("Current interrupt status="));
-                    //DEBUG_PRINTLNF(getIntStatus(), HEX);
+                    ////Debug_PRINT(F("Current interrupt status="));
+                    ////Debug_PRINTLNF(getIntStatus(), HEX);
 
-                    //DEBUG_PRINTLN(F("Writing final memory update 7/7 (function unknown)..."));
-                    for (j = 0; j < 4 || j < dmpUpdate[2] + 3; j++, pos++) dmpUpdate[j] = pgm_read_byte(&dmpUpdates[pos]);
-                    writeMemoryBlock(dmpUpdate + 3, dmpUpdate[2], dmpUpdate[0], dmpUpdate[1], true, false);
+                    ////Debug_PRINTLN(F("Writing final memory update 7/7 (function unknown)..."));
+                    for (j = 0; j < 4 || j < dmpUpdate[2] + 3; j++, pos++) dmpUpdate[j] = dmpUpdates[pos]; //pgm_read_byte(&dmpUpdates[pos]);
+                    writeMemoryBlock(dmpUpdate, 3, dmpUpdate[2], dmpUpdate[0], dmpUpdate[1], true, false);
 
-                    //DEBUG_PRINTLN(F("DMP is good to go! Finally."));
+                    ////Debug_PRINTLN(F("DMP is good to go! Finally."));
 
-                    //DEBUG_PRINTLN(F("Disabling DMP (you turn it on later)..."));
+                    ////Debug_PRINTLN(F("Disabling DMP (you turn it on later)..."));
                     setDMPEnabled(false);
 
-                    //DEBUG_PRINTLN(F("Setting up internal 42-byte (default) DMP packet buffer..."));
+                    //Debug.Log("Setting up internal 42-byte (default) DMP packet buffer...");
                     dmpPacketSize = 42;
                     /*if ((dmpPacketBuffer = (byte *)malloc(42)) == 0) {
                         return 3; // TODO: proper error code for no memory
                     }*/
 
-                    //DEBUG_PRINTLN(F("Resetting FIFO and clearing INT status one last time..."));
+                    //Debug.Log("Resetting FIFO and clearing INT status one last time...");
                     resetFIFO();
                     getIntStatus();
                 }
                 else
                 {
-                    //DEBUG_PRINTLN(F("ERROR! DMP configuration verification failed."));
-                    return 2; // configuration block loading failed
+                    ////Debug_PRINTLN(F("ERROR! DMP configuration verification failed."));
+                    devStatus = 2;
+                    isInitErr = true;
+                    return; // configuration block loading failed
                 }
             }
             else
             {
-                //DEBUG_PRINTLN(F("ERROR! DMP code verification failed."));
-                return 1; // main binary block loading failed
+                ////Debug_PRINTLN(F("ERROR! DMP code verification failed."));
+                devStatus = 1;
+                isInitErr = true;
+                return; // main binary block loading failed
             }
-            return 0; // success
+            mpu6050Msg = "Success dmpInitialize\n";
+            return; // success
         }
 
         bool dmpPacketAvailable()
         {
             return getFIFOCount() >= dmpGetFIFOPacketSize();
         }
-
-        //使用する
-        byte dmpGetAccel(int* data, const byte* packet)
+        
+        public byte dmpGetAccel(ref VectorInt16 v, ref byte[] packet)
         {
             // TODO: accommodate different arrangements of sent data (ONLY default supported now)
-            if (packet == 0) packet = dmpPacketBuffer;
-            data[0] = (((uint32_t) packet[28] << 24) | ((uint32_t) packet[29] << 16) | ((uint32_t) packet[30] << 8) | packet[31]);
-            data[1] = (((uint32_t) packet[32] << 24) | ((uint32_t) packet[33] << 16) | ((uint32_t) packet[34] << 8) | packet[35]);
-            data[2] = (((uint32_t) packet[36] << 24) | ((uint32_t) packet[37] << 16) | ((uint32_t) packet[38] << 8) | packet[39]);
+            if (packet.Length == 0) packet = dmpPacketBuffer;
+            v.x = (packet[28] << 8) | packet[29];
+            v.y = (packet[32] << 8) | packet[33];
+            v.z = (packet[36] << 8) | packet[37];
             return 0;
         }
 
-
-        byte dmpGetAccel(int* data, const byte* packet)
-            {
-                // TODO: accommodate different arrangements of sent data (ONLY default supported now)
-                if (packet == 0) packet = dmpPacketBuffer;
-                data[0] = (packet[28] << 8) | packet[29];
-                data[1] = (packet[32] << 8) | packet[33];
-                data[2] = (packet[36] << 8) | packet[37];
-                return 0;
-            }
-
-        byte dmpGetAccel(VectorInt16* v, const byte* packet)
+        byte dmpGetQuaternion_int(ref int[] data, ref byte[] packet)
         {
             // TODO: accommodate different arrangements of sent data (ONLY default supported now)
-            if (packet == 0) packet = dmpPacketBuffer;
-            v->x = (packet[28] << 8) | packet[29];
-            v->y = (packet[32] << 8) | packet[33];
-            v->z = (packet[36] << 8) | packet[37];
-            return 0;
-        }
-
-        byte dmpGetQuaternion(int32_t* data, const byte* packet)
-        {
-            // TODO: accommodate different arrangements of sent data (ONLY default supported now)
-            if (packet == 0) packet = dmpPacketBuffer;
-            data[0] = (((uint32_t)packet[0] << 24) | ((uint32_t)packet[1] << 16) | ((uint32_t)packet[2] << 8) | packet[3]);
-            data[1] = (((uint32_t)packet[4] << 24) | ((uint32_t)packet[5] << 16) | ((uint32_t)packet[6] << 8) | packet[7]);
-            data[2] = (((uint32_t)packet[8] << 24) | ((uint32_t)packet[9] << 16) | ((uint32_t)packet[10] << 8) | packet[11]);
-            data[3] = (((uint32_t)packet[12] << 24) | ((uint32_t)packet[13] << 16) | ((uint32_t)packet[14] << 8) | packet[15]);
-            return 0;
-        }
-
-        byte dmpGetQuaternion(int* data, const byte* packet)
-        {
-            // TODO: accommodate different arrangements of sent data (ONLY default supported now)
-            if (packet == 0) packet = dmpPacketBuffer;
+            if (packet.Length == 0) packet = dmpPacketBuffer;
             data[0] = ((packet[0] << 8) | packet[1]);
             data[1] = ((packet[4] << 8) | packet[5]);
             data[2] = ((packet[8] << 8) | packet[9]);
@@ -542,122 +533,62 @@ namespace MPU6050
             return 0;
         }
 
-        byte dmpGetQuaternion(Quaternion* q, const byte* packet)
+        public byte dmpGetQuaternion(ref Quaternion q, ref byte[] packet)
         {
             // TODO: accommodate different arrangements of sent data (ONLY default supported now)
-            int qI[4];
-            byte status = dmpGetQuaternion(qI, packet);
+            int[] qI = new int[4];
+            byte status = dmpGetQuaternion_int(ref qI, ref packet);
             if (status == 0)
             {
-                q->w = (float)qI[0] / 16384.0f;
-                q->x = (float)qI[1] / 16384.0f;
-                q->y = (float)qI[2] / 16384.0f;
-                q->z = (float)qI[3] / 16384.0f;
+                q.w = (float)qI[0] / 16384.0f;
+                q.x = (float)qI[1] / 16384.0f;
+                q.y = (float)qI[2] / 16384.0f;
+                q.z = (float)qI[3] / 16384.0f;
                 return 0;
             }
             return status; // int16 return value, indicates error if this line is reached
         }
 
-        byte dmpGetGyro(int32_t* data, const byte* packet)
-        {
-            // TODO: accommodate different arrangements of sent data (ONLY default supported now)
-            if (packet == 0) packet = dmpPacketBuffer;
-            data[0] = (((uint32_t)packet[16] << 24) | ((uint32_t)packet[17] << 16) | ((uint32_t)packet[18] << 8) | packet[19]);
-            data[1] = (((uint32_t)packet[20] << 24) | ((uint32_t)packet[21] << 16) | ((uint32_t)packet[22] << 8) | packet[23]);
-            data[2] = (((uint32_t)packet[24] << 24) | ((uint32_t)packet[25] << 16) | ((uint32_t)packet[26] << 8) | packet[27]);
-            return 0;
-        }
-
-        byte dmpGetGyro(int* data, const byte* packet)
-        {
-            // TODO: accommodate different arrangements of sent data (ONLY default supported now)
-            if (packet == 0) packet = dmpPacketBuffer;
-            data[0] = (packet[16] << 8) | packet[17];
-            data[1] = (packet[20] << 8) | packet[21];
-            data[2] = (packet[24] << 8) | packet[25];
-            return 0;
-        }
-
-        byte dmpGetGyro(VectorInt16* v, const byte* packet)
-        {
-            // TODO: accommodate different arrangements of sent data (ONLY default supported now)
-            if (packet == 0) packet = dmpPacketBuffer;
-            v->x = (packet[16] << 8) | packet[17];
-            v->y = (packet[20] << 8) | packet[21];
-            v->z = (packet[24] << 8) | packet[25];
-            return 0;
-        }
-
-        byte dmpGetLinearAccel(VectorInt16* v, VectorInt16* vRaw, VectorFloat* gravity)
+        public byte dmpGetLinearAccel(ref VectorInt16 v, ref VectorInt16 vRaw, ref VectorFloat gravity)
         {
             // get rid of the gravity component (+1g = +8192 in standard DMP FIFO packet, sensitivity is 2g)
-            v->x = vRaw->x - gravity->x * 8192;
-            v->y = vRaw->y - gravity->y * 8192;
-            v->z = vRaw->z - gravity->z * 8192;
+            v.x = (int)(vRaw.x - gravity.x * 8192);
+            v.y = (int)(vRaw.y - gravity.y * 8192);
+            v.z = (int)(vRaw.z - gravity.z * 8192);
             return 0;
         }
 
-        byte dmpGetLinearAccelInWorld(VectorInt16* v, VectorInt16* vReal, Quaternion* q)
+        public byte dmpGetLinearAccelInWorld(ref VectorInt16 v, ref VectorInt16 vReal, ref Quaternion q)
         {
             // rotate measured 3D acceleration vector into original state
             // frame of reference based on orientation quaternion
-            memcpy(v, vReal, sizeof(VectorInt16));
-            v->rotate(q);
+            v.x = vReal.x; //memcpy(v, vReal, sizeof(VectorInt16));
+            v.y = vReal.y;
+            v.z = vReal.z;
+            v.rotate(ref q);
             return 0;
         }
 
-        //使用する
-        byte dmpGetGravity(VectorFloat* v, Quaternion* q)
+        public byte dmpGetGravity(ref VectorFloat v, ref Quaternion q)
         {
-            v->x = 2 * (q->x * q->z - q->w * q->y);
-            v->y = 2 * (q->w * q->x + q->y * q->z);
-            v->z = q->w * q->w - q->x * q->x - q->y * q->y + q->z * q->z;
+            v.x = 2 * (q.x * q.z - q.w * q.y);
+            v.y = 2 * (q.w * q.x + q.y * q.z);
+            v.z = q.w * q.w - q.x * q.x - q.y * q.y + q.z * q.z;
             return 0;
         }
-
-        byte dmpGetEuler(float* data, Quaternion* q)
-        {
-            data[0] = atan2(2 * q->x * q->y - 2 * q->w * q->z, 2 * q->w * q->w + 2 * q->x * q->x - 1);   // psi
-            data[1] = -asin(2 * q->x * q->z + 2 * q->w * q->y);                              // theta
-            data[2] = atan2(2 * q->y * q->z - 2 * q->w * q->x, 2 * q->w * q->w + 2 * q->z * q->z - 1);   // phi
-            return 0;
-        }
-        byte dmpGetYawPitchRoll(float* data, Quaternion* q, VectorFloat* gravity)
+        
+        public byte dmpGetYawPitchRoll(ref float[] data, Quaternion q, VectorFloat gravity)
         {
             // yaw: (about Z axis)
-            data[0] = atan2(2 * q->x * q->y - 2 * q->w * q->z, 2 * q->w * q->w + 2 * q->x * q->x - 1);
+            data[0] = (float)Math.Atan2(2 * q.x * q.y - 2 * q.w * q.z, 2 * q.w * q.w + 2 * q.x * q.x - 1);
             // pitch: (nose up/down, about Y axis)
-            data[1] = atan(gravity->x / sqrt(gravity->y * gravity->y + gravity->z * gravity->z));
+            data[1] = (float)Math.Atan(gravity.x / Math.Sqrt(gravity.y * gravity.y + gravity.z * gravity.z));
             // roll: (tilt left/right, about X axis)
-            data[2] = atan(gravity->y / sqrt(gravity->x * gravity->x + gravity->z * gravity->z));
-            return 0;
-        }
-    
-        byte dmpProcessFIFOPacket(const unsigned char* dmpData)
-        {
+            data[2] = (float)Math.Atan(gravity.y / Math.Sqrt(gravity.x * gravity.x + gravity.z * gravity.z));
             return 0;
         }
 
-        byte dmpReadAndProcessFIFOPacket(byte numPackets, byte* processed)
-        {
-            byte status;
-            byte[] buf = new byte[dmpPacketSize];
-            for (byte i = 0; i < numPackets; i++)
-            {
-                // read packet from FIFO
-                getFIFOBytes(buf, dmpPacketSize);
-
-                // process packet
-                if ((status = dmpProcessFIFOPacket(buf)) > 0) return status;
-
-                // increment external process count variable, if supplied
-                if (processed != 0) (*processed)++;
-            }
-            return 0;
-        }
-    
-        //使用する
-        byte dmpGetFIFOPacketSize()
+        public uint dmpGetFIFOPacketSize()
         {
             return dmpPacketSize;
         }

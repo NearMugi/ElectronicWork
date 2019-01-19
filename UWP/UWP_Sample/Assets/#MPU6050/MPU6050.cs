@@ -6,7 +6,7 @@
 // Updates should (hopefully) always be available at https://github.com/jrowberg/i2cdevlib
 //
 // Changelog:
-//     ... - ongoing debug release
+//     ... - ongoing //Debug release
 
 // NOTE: THIS IS ONLY A PARIAL RELEASE. THIS DEVICE CLASS IS CURRENTLY UNDERGOING ACTIVE
 // DEVELOPMENT AND IS STILL MISSING SOME IMPORTANT FEATURES. PLEASE KEEP THIS IN MIND IF
@@ -36,27 +36,89 @@ THE SOFTWARE.
 ===============================================
 */
 
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using UnityEngine;
+using UnityEngine.UI;
+
+#if WINDOWS_UWP
+using Windows.Devices.Enumeration;
+using Windows.Devices.I2c;
+using Windows.Devices.Gpio;
+#endif
 
 namespace MPU6050
 {
 
 
-    public partial class MPU6050
+    public partial class MPU6050 : IDisposable
     {
+        public String mpu6050Msg = "";
+        public bool isInitErr;
+
+#if WINDOWS_UWP
+        I2cDevice _mpu6050Device = null;
+        private GpioController IoController;
+#endif
+
         public MPU6050() {
             devAddr = MPU6050_DEFAULT_ADDRESS;
+            mpu6050Msg = "\n";
+            isInitErr = false;
         }
 
         public MPU6050(byte address) {
             devAddr = address;
+            mpu6050Msg = "\n";
+            isInitErr = false;
         }
 
-        void initialize()
+        public void ischkInitErr()
         {
+            if (isInitErr) devStatus = 5;
+        }
+
+        public async void InitHardware()
+        {
+            try
+            {
+#if WINDOWS_UWP
+                mpu6050Msg = "[Start InitHardware]\n";
+                
+                IoController = GpioController.GetDefault();
+
+                string aqs = I2cDevice.GetDeviceSelector();
+                DeviceInformationCollection collection = await DeviceInformation.FindAllAsync(aqs);
+
+                I2cConnectionSettings settings = new I2cConnectionSettings(devAddr);
+                settings.BusSpeed = I2cBusSpeed.FastMode; // 400kHz clock
+                settings.SharingMode = I2cSharingMode.Exclusive;
+                _mpu6050Device = await I2cDevice.FromIdAsync(collection[0].Id, settings);
+
+                await Task.Delay(3); // wait power up sequence
+                
+#endif
+            }
+            catch (Exception ex)
+            {
+                string error = ex.ToString();
+                mpu6050Msg = error;
+                isInitErr = true;
+            }
+        }
+
+        public void initialize()
+        {
+            if (isInitErr) return;
+
             setClockSource(MPU6050_CLOCK_PLL_XGYRO);
             setFullScaleGyroRange(MPU6050_GYRO_FS_250);
             setFullScaleAccelRange(MPU6050_ACCEL_FS_2);
             setSleepEnabled(false); // thanks to Jack Elston for pointing this one out!
+            mpu6050Msg = "End Initialize\n";
         }
 
         bool testConnection()
@@ -120,7 +182,7 @@ namespace MPU6050
             writeByte(devAddr, MPU6050_RA_INT_ENABLE, enabled);
         }
         
-        byte getIntStatus()
+        public byte getIntStatus()
         {
             readByte(devAddr, MPU6050_RA_INT_STATUS, ref buffer[0]);
             return buffer[0];
@@ -140,7 +202,7 @@ namespace MPU6050
             writeBit(devAddr, MPU6050_RA_USER_CTRL, MPU6050_USERCTRL_I2C_MST_EN_BIT, _b);
         }
 
-        void resetFIFO()
+        public void resetFIFO()
         {
             writeBit(devAddr, MPU6050_RA_USER_CTRL, MPU6050_USERCTRL_FIFO_RESET_BIT, 0x01);
         }
@@ -167,13 +229,13 @@ namespace MPU6050
             writeBits(devAddr, MPU6050_RA_PWR_MGMT_1, MPU6050_PWR1_CLKSEL_BIT, MPU6050_PWR1_CLKSEL_LENGTH, source);
         }
 
-        uint getFIFOCount()
+        public uint getFIFOCount()
         {
             readBytes(devAddr, MPU6050_RA_FIFO_COUNTH, 2, ref buffer);
             return (((uint)buffer[0]) << 8) | buffer[1];
         }
 
-        void getFIFOBytes(ref byte[] data, uint length)
+        public void getFIFOBytes(ref byte[] data, uint length)
         {
             data = new byte[data.Length];
             if (length > 0)
@@ -193,6 +255,13 @@ namespace MPU6050
             byte _b = 0x00;
             if (enabled) _b = 0x01;
             writeBit(devAddr, MPU6050_RA_XG_OFFS_TC, MPU6050_TC_OTP_BNK_VLD_BIT, _b);
+        }
+
+
+        public void setZAccelOffset(int offset)
+        {
+            if (isInitErr) return;
+            writeWord(devAddr, MPU6050_RA_ZA_OFFS_H, offset);
         }
 
         int getXGyroOffsetTC()
@@ -228,22 +297,25 @@ namespace MPU6050
             writeBits(devAddr, MPU6050_RA_ZG_OFFS_TC, MPU6050_TC_OFFSET_BIT, MPU6050_TC_OFFSET_LENGTH, (byte)offset);
         }
 
-        void setXGyroOffset(int offset)
+        public void setXGyroOffset(int offset)
         {
+            if (isInitErr) return;
             writeWord(devAddr, MPU6050_RA_XG_OFFS_USRH, offset);
         }
 
-        void setYGyroOffset(int offset)
+        public void setYGyroOffset(int offset)
         {
+            if (isInitErr) return;
             writeWord(devAddr, MPU6050_RA_YG_OFFS_USRH, offset);
         }
 
-        void setZGyroOffset(int offset)
+        public void setZGyroOffset(int offset)
         {
+            if (isInitErr) return;
             writeWord(devAddr, MPU6050_RA_ZG_OFFS_USRH, offset);
         }
 
-        void setDMPEnabled(bool enabled)
+        public void setDMPEnabled(bool enabled)
         {
             byte _b = 0x00;
             if (enabled) _b = 0x01;
@@ -268,7 +340,7 @@ namespace MPU6050
             writeByte(devAddr, MPU6050_RA_MEM_START_ADDR, address);
         }
 
-        void readMemoryBlock(ref byte data, uint dataSize, byte bank, byte address)
+        void readMemoryBlock(byte[] data, int ofs, uint dataSize, byte bank, byte address)
         {
             setMemoryBank(bank,false,false);
             setMemoryStartAddress(address);
@@ -285,7 +357,12 @@ namespace MPU6050
                 if (chunkSize > 256 - address) chunkSize = (byte)(256 - address);
 
                 // read the chunk of data as specified
-                readBytes(devAddr, MPU6050_RA_MEM_R_W, chunkSize, data + i);
+                byte[] _tmp = new byte[chunkSize];
+                readBytes(devAddr, MPU6050_RA_MEM_R_W, chunkSize, ref _tmp);
+                for(int j = 0; j < chunkSize; j++)
+                {
+                    data[ofs + j] = _tmp[j];
+                }
 
                 // increase byte index by [chunkSize]
                 i += chunkSize;
@@ -303,8 +380,23 @@ namespace MPU6050
             }
         }
 
+        int memcmp(byte[] _a, byte[] _b, int size)
+        {
+            int ret = 0;
+            bool isSame = true;
+
+            for(int i = 0; i< size; i++)
+            {
+                if (_a[i] != _b[i]) isSame = false;
+            }
+            
+            if (!isSame) ret = -1;
+
+            return ret;
+        }
+
 //        bool writeMemoryBlock(const byte* data, uint dataSize, byte bank, byte address, bool verify, bool useProgMem) {        
-        bool writeMemoryBlock(ref byte data, uint dataSize, byte bank, byte address, bool verify, bool useProgMem) {
+        bool writeMemoryBlock(byte[] data, int ofs, uint dataSize, byte bank, byte address, bool verify, bool useProgMem) {
             setMemoryBank(bank, false, false);
             setMemoryStartAddress(address);
             byte chunkSize;
@@ -344,26 +436,26 @@ namespace MPU6050
                 if (useProgMem)
                 {
                     // write the chunk of data as specified
-                    for (j = 0; j < chunkSize; j++) progBuffer[j] = pgm_read_byte(data + i + j); //pgm_read_byte(data + i + j)
+                    for (j = 0; j < chunkSize; j++) progBuffer[j] = data[ofs + i + j]; //pgm_read_byte(data + i + j)
                 }
                 else
                 {
                     // write the chunk of data as specified
-                    progBuffer = (byte*)data + i;
+                    progBuffer[0] = data[ofs + i];
                 }
 
-                writeBytes(devAddr, MPU6050_RA_MEM_R_W, chunkSize, ref progBuffer);
+                writeBytes(devAddr, MPU6050_RA_MEM_R_W, chunkSize, progBuffer);
 
                 // verify data if needed
-                if (verify && verifyBuffer)
+                if (verify) //verify && verifyBuffer
                 {
                     setMemoryBank(bank, false, false);
                     setMemoryStartAddress(address);
                     readBytes(devAddr, MPU6050_RA_MEM_R_W, chunkSize, ref verifyBuffer);
                     if (memcmp(progBuffer, verifyBuffer, chunkSize) != 0)
                     {
-                        free(verifyBuffer);
-                        if (useProgMem) free(progBuffer);
+                        //free(verifyBuffer);
+                        //if (useProgMem) free(progBuffer);
                         return false; // uh oh.
                     }
                 }
@@ -382,26 +474,31 @@ namespace MPU6050
                     setMemoryStartAddress(address);
                 }
             }
-            if (verify) free(verifyBuffer);
-            if (useProgMem) free(progBuffer);
+            //if (verify) free(verifyBuffer);
+            //if (useProgMem) free(progBuffer);
             return true;
         }
 
         //bool writeProgMemoryBlock(const byte* data, uint dataSize, byte bank, byte address, bool verify)
-        bool writeProgMemoryBlock(ref byte data, uint dataSize, byte bank, byte address, bool verify)
+        bool writeProgMemoryBlock(byte[] data, uint dataSize, byte bank, byte address, bool verify)
         {
-            return writeMemoryBlock(data, dataSize, bank, address, verify, true);
+            return writeMemoryBlock(data, 0, dataSize, bank, address, verify, true);
         }
 
         //        bool writeDMPConfigurationSet(const byte* data, uint dataSize, bool useProgMem)
-        bool writeDMPConfigurationSet(ref byte data, uint dataSize, bool useProgMem)
+        bool writeDMPConfigurationSet(ref byte[] data, uint dataSize, bool useProgMem)
         {
-            byte* progBuffer = 0;
-            byte success, special;
+            byte[] progBuffer;
+            bool success;
+            byte special;
             uint i, j;
+
             if (useProgMem)
             {
-                progBuffer = (byte*)malloc(8); // assume 8-byte blocks, realloc later if necessary
+                progBuffer = new byte[8]; // assume 8-byte blocks, realloc later if necessary
+            } else
+            {
+                progBuffer = new byte[] { 0 };
             }
 
             // config set data is a long string of blocks with the following structure:
@@ -409,11 +506,12 @@ namespace MPU6050
             byte bank, offset, length;
             for (i = 0; i < dataSize;)
             {
+                //違いが分からない・・・
                 if (useProgMem)
                 {
-                    bank = pgm_read_byte(data + i++);
-                    offset = pgm_read_byte(data + i++);
-                    length = pgm_read_byte(data + i++);
+                    bank = data[i++]; //pgm_read_byte(data + i++);
+                    offset = data[i++]; //pgm_read_byte(data + i++);
+                    length = data[i++]; //pgm_read_byte(data + i++);
                 }
                 else
                 {
@@ -425,23 +523,32 @@ namespace MPU6050
                 // write data or perform special action
                 if (length > 0)
                 {
+                    //何をしているのかさっぱり・・・
                     if (useProgMem)
                     {
-                        if (sizeof(progBuffer) < length) progBuffer = (byte*)realloc(progBuffer, length);
-                        for (j = 0; j < length; j++) progBuffer[j] = pgm_read_byte(data + i + j);
+                        if (progBuffer.Length < length)
+                        {
+                            //progBuffer = (byte*)realloc(progBuffer, length);
+                            for(int k = 0; k < length; k++)
+                            {
+                                progBuffer[k] = progBuffer[k];
+                            }
+                        }
+                        for (j = 0; j < length; j++) progBuffer[j] = data[i + j]; // pgm_read_byte(data + i + j);
                     }
                     else
                     {
-                        progBuffer = (byte*)data + i;
+                        progBuffer[0] = data[i];
                     }
-                    success = writeMemoryBlock(progBuffer, length, bank, offset, true);
+                    success = writeMemoryBlock(progBuffer, 0, length, bank, offset, true, false);
                     i += length;
                 }
                 else
                 {
+                    //違いが分からない・・・
                     if (useProgMem)
                     {
-                        special = pgm_read_byte(data + i++);
+                        special = data[i++];  //pgm_read_byte(data + i++);
                     }
                     else
                     {
@@ -462,18 +569,18 @@ namespace MPU6050
 
                 if (!success)
                 {
-                    if (useProgMem) free(progBuffer);
+                    //if (useProgMem) free(progBuffer);
                     return false; // uh oh
                 }
             }
-            if (useProgMem) free(progBuffer);
+            //if (useProgMem) free(progBuffer);
             return true;
         }
 
         //        bool writeProgDMPConfigurationSet(const byte* data, uint dataSize)
-        bool writeProgDMPConfigurationSet(ref byte data, uint dataSize)
+        bool writeProgDMPConfigurationSet(ref byte[] data, uint dataSize)
         {
-            return writeDMPConfigurationSet(data, dataSize, true);
+            return writeDMPConfigurationSet(ref data, dataSize, true);
         }
         
         void setDMPConfig1(byte config)
@@ -485,6 +592,44 @@ namespace MPU6050
         {
             writeByte(devAddr, MPU6050_RA_DMP_CFG_2, config);
         }
+
+
+
+
+        #region IDisposable Support
+        private bool disposedValue = false; // To detect redundant calls
+
+        protected virtual void Dispose(bool disposing)
+        {
+            if (!disposedValue)
+            {
+#if WINDOWS_UWP
+                if (_mpu6050Device != null)
+                {
+                    _mpu6050Device.Dispose();
+                    _mpu6050Device = null;
+                }
+#endif
+                disposedValue = true;
+
+            }
+        }
+
+        ~MPU6050()
+        {
+            // Do not change this code. Put cleanup code in Dispose(bool disposing) above.
+            Dispose(false);
+        }
+
+        // This code added to correctly implement the disposable pattern.
+        public void Dispose()
+        {
+            // Do not change this code. Put cleanup code in Dispose(bool disposing) above.
+            Dispose(true);
+            GC.SuppressFinalize(this);
+        }
+        #endregion
+
     }
 }
 

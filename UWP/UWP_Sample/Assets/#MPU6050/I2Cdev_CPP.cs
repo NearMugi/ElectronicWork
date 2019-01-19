@@ -60,6 +60,7 @@ namespace MPU6050
 {
     public partial class MPU6050
     {
+
         int timeout = 1000; //(ms) I2CDEV_DEFAULT_READ_TIMEOUT;
 
         int readBit(byte devAddr, byte regAddr, byte bitNum, ref byte data)
@@ -99,14 +100,19 @@ namespace MPU6050
 
         int readBytes(byte devAddr, byte regAddr, byte length, ref byte[] data)
         {
+            
+            byte[] values = new byte[length];
+            byte[] buffer = new byte[1];
+            buffer[0] = regAddr;
+#if WINDOWS_UWP
+            _mpu6050Device.WriteRead(buffer, values);
+#endif
+            for(int i = 0; i < length; i++)
+            {
+                data[i] = values[i];
+            }
+            return length;
 
-            int count = 0;
-
-
-            //I2Cからデータを取得する処理を追加
-
-
-            return count;
         }
 
 
@@ -146,35 +152,30 @@ namespace MPU6050
 
         bool writeByte(byte devAddr, byte regAddr, byte data)
         {
-            bool status = false;
-            byte[] _b = new byte[1];
-            status = writeBytes(devAddr, regAddr, 1, ref _b);
-            data = _b[0];
-            return status;
+            byte[] buffer = new byte[2];
+            buffer[0] = regAddr;
+            buffer[1] = data;
+#if WINDOWS_UWP
+            _mpu6050Device.Write(buffer);
+#endif
+            return true;
 
         }
 
         bool writeWord(byte devAddr, byte regAddr, int data)
         {
-            return writeWords(devAddr, regAddr, 1, ref data);
+            writeByte(devAddr, regAddr, (byte)(data >> 8));
+            writeByte(devAddr, regAddr, (byte)(data & 0x00FF));
+            return true;
         }
 
-        bool writeBytes(byte devAddr, byte regAddr, byte length, ref byte[] data)
+        bool writeBytes(byte devAddr, byte regAddr, byte length, byte[] data)
         {
-            byte status = 0;
-
-            //I2Cでデータを送る処理を追加
-
-            return status == 0;
-        }
-
-        bool writeWords(byte devAddr, byte regAddr, byte length, ref int data)
-        {
-            byte status = 0;
-            
-            //I2Cでデータを送る処理を追加
-
-            return status == 0;
+            for(int i = 0; i < length; i++)
+            {
+                writeByte(devAddr, regAddr, data[i]);
+            }
+            return true;
         }
     }
 }

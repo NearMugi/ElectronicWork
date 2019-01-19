@@ -512,11 +512,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 552768812}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35f3493ca1cd2de4e86fed68b79edf64, type: 3}
+  m_Script: {fileID: 11500000, guid: e8237b9420d0db94ea02729463a7308d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  txt: {fileID: 1198056275}
-  plane: {fileID: 13511111}
+  txt_Debug: {fileID: 1198056275}
+  eulerAngle:
+  - 0
+  - 0
+  - 0
 --- !u!1 &1198056274
 GameObject:
   m_ObjectHideFlags: 0
@@ -564,7 +567,7 @@ MonoBehaviour:
     m_MaxSize: 127
     m_Alignment: 4
     m_AlignByGeometry: 0
-    m_RichText: 0
+    m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1

@@ -381,7 +381,7 @@ namespace MPU6050
         const int MPU6050_DMP_MEMORY_BANK_SIZE = 256;
         const byte MPU6050_DMP_MEMORY_CHUNK_SIZE = 16;
         
-        //uint* dmpPacketBuffer;
+        byte[] dmpPacketBuffer = new byte[64];
         uint dmpPacketSize;
         
         byte devAddr;
