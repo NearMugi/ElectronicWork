@@ -906,8 +906,8 @@ extern const RuntimeMethod* AsyncTaskMethodBuilder_Start_TisRuntimeObject_mCA3A6
 extern const RuntimeMethod* AsyncTaskMethodBuilder_Start_TisU3CInnerWriteU3Ed__67_tCEBE4678B01EBC181A242F16C978B7A71367AF43_m04E42D96056940C94B4AC023C0851B1EF14F14F9_RuntimeMethod_var;
 extern const RuntimeMethod* AsyncTaskMethodBuilder_Start_TisU3CProcessOperationU3Ed__24_t969904EA513B205F08A3ED1624FE3890853645AA_mE4E7D5465A93C56B5F17EB43FD2AF11AF3597A69_RuntimeMethod_var;
 extern const RuntimeMethod* AsyncVoidMethodBuilder_Start_TisRuntimeObject_m0853517F037A559FE0FBD5B4CF52B7FA39AF2748_RuntimeMethod_var;
-extern const RuntimeMethod* AsyncVoidMethodBuilder_Start_TisU3CInitHardwareU3Ed__20_t5C6E3DCE55B4734BD1D628EB615B97D4AEC70867_m16CEC524811D728461CEF5C68315737110C108D2_RuntimeMethod_var;
-extern const RuntimeMethod* AsyncVoidMethodBuilder_Start_TisU3CdmpInitializeU3Ed__79_tFBD26E8F7170B6A80E5E08309C8B6C9F0482EFC0_mA9AA586F9663CA2B94C1C05B7E45A916077586E1_RuntimeMethod_var;
+extern const RuntimeMethod* AsyncVoidMethodBuilder_Start_TisU3CInitHardwareU3Ed__21_t0346A49D0C7D783B33AF5C2792D653565E4895AD_m34C1C0A73EAB71B2CF4D76413D7084C2D990CFAE_RuntimeMethod_var;
+extern const RuntimeMethod* AsyncVoidMethodBuilder_Start_TisU3CdmpInitializeU3Ed__81_t3ACD0B2B73A32CB800A14201BD5D8C31BF2D2ADB_m1745F2D03F7DE629E5A02E75937C29441B1B229B_RuntimeMethod_var;
 extern const RuntimeMethod* BaseInvokableCall_ThrowOnInvalidArg_TisBoolean_tB53F6830F670160873277339AA58F15CAED4399C_mCF3D0CC4E26D74FA04C637D7F91E17432EF93CB6_RuntimeMethod_var;
 extern const RuntimeMethod* BaseInvokableCall_ThrowOnInvalidArg_TisInt32_t585191389E07734F19F3156FF88FB3EF4800D102_m542C3D16A153CF260BC7BB3ED47824E1F6757995_RuntimeMethod_var;
 extern const RuntimeMethod* BaseInvokableCall_ThrowOnInvalidArg_TisRuntimeObject_m6619B9B55C395AA6ED186844492F95CA172E4162_RuntimeMethod_var;
@@ -1253,12 +1253,12 @@ extern const uint32_t AsyncTaskMethodBuilder_Start_TisRuntimeObject_mCA3A6BDBDD1
 extern const uint32_t AsyncTaskMethodBuilder_Start_TisU3CInnerWriteU3Ed__67_tCEBE4678B01EBC181A242F16C978B7A71367AF43_m04E42D96056940C94B4AC023C0851B1EF14F14F9_MetadataUsageId;
 extern const uint32_t AsyncTaskMethodBuilder_Start_TisU3CProcessOperationU3Ed__24_t969904EA513B205F08A3ED1624FE3890853645AA_mE4E7D5465A93C56B5F17EB43FD2AF11AF3597A69_MetadataUsageId;
 extern const uint32_t AsyncVoidMethodBuilder_AwaitUnsafeOnCompleted_TisRuntimeObject_TisRuntimeObject_m9F5910EF685A7EA3E00A5974D7A3ED407088D5F9_MetadataUsageId;
-extern const uint32_t AsyncVoidMethodBuilder_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t8CDB78D2A4D48E80C35A8FF6FC04A82B9FC35977_TisU3CInitHardwareU3Ed__20_t5C6E3DCE55B4734BD1D628EB615B97D4AEC70867_m36A2D4F6E4ADFE9D8B99986473F097A756E30FF5_MetadataUsageId;
-extern const uint32_t AsyncVoidMethodBuilder_AwaitUnsafeOnCompleted_TisTaskAwaiter_t0CDE8DBB564F0A0EA55FA6B3D43EEF96BC26252F_TisU3CInitHardwareU3Ed__20_t5C6E3DCE55B4734BD1D628EB615B97D4AEC70867_m60EAA61D42605B5B0679C5533B608193E6BFE28F_MetadataUsageId;
-extern const uint32_t AsyncVoidMethodBuilder_AwaitUnsafeOnCompleted_TisTaskAwaiter_t0CDE8DBB564F0A0EA55FA6B3D43EEF96BC26252F_TisU3CdmpInitializeU3Ed__79_tFBD26E8F7170B6A80E5E08309C8B6C9F0482EFC0_mA031644BFECE1A26E511652932AB9ED0B1BEF1BF_MetadataUsageId;
+extern const uint32_t AsyncVoidMethodBuilder_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t8CDB78D2A4D48E80C35A8FF6FC04A82B9FC35977_TisU3CInitHardwareU3Ed__21_t0346A49D0C7D783B33AF5C2792D653565E4895AD_m3A394EBF2DA4430CB70B11B52E918676246E73DB_MetadataUsageId;
+extern const uint32_t AsyncVoidMethodBuilder_AwaitUnsafeOnCompleted_TisTaskAwaiter_t0CDE8DBB564F0A0EA55FA6B3D43EEF96BC26252F_TisU3CInitHardwareU3Ed__21_t0346A49D0C7D783B33AF5C2792D653565E4895AD_mE05252DAEBD30F827BE112F78E6B4F0554B83FE7_MetadataUsageId;
+extern const uint32_t AsyncVoidMethodBuilder_AwaitUnsafeOnCompleted_TisTaskAwaiter_t0CDE8DBB564F0A0EA55FA6B3D43EEF96BC26252F_TisU3CdmpInitializeU3Ed__81_t3ACD0B2B73A32CB800A14201BD5D8C31BF2D2ADB_mCA8B27C9D1B475811B15E19797E38268AE0CB2C2_MetadataUsageId;
 extern const uint32_t AsyncVoidMethodBuilder_Start_TisRuntimeObject_m0853517F037A559FE0FBD5B4CF52B7FA39AF2748_MetadataUsageId;
-extern const uint32_t AsyncVoidMethodBuilder_Start_TisU3CInitHardwareU3Ed__20_t5C6E3DCE55B4734BD1D628EB615B97D4AEC70867_m16CEC524811D728461CEF5C68315737110C108D2_MetadataUsageId;
-extern const uint32_t AsyncVoidMethodBuilder_Start_TisU3CdmpInitializeU3Ed__79_tFBD26E8F7170B6A80E5E08309C8B6C9F0482EFC0_mA9AA586F9663CA2B94C1C05B7E45A916077586E1_MetadataUsageId;
+extern const uint32_t AsyncVoidMethodBuilder_Start_TisU3CInitHardwareU3Ed__21_t0346A49D0C7D783B33AF5C2792D653565E4895AD_m34C1C0A73EAB71B2CF4D76413D7084C2D990CFAE_MetadataUsageId;
+extern const uint32_t AsyncVoidMethodBuilder_Start_TisU3CdmpInitializeU3Ed__81_t3ACD0B2B73A32CB800A14201BD5D8C31BF2D2ADB_m1745F2D03F7DE629E5A02E75937C29441B1B229B_MetadataUsageId;
 extern const uint32_t BaseInvokableCall_ThrowOnInvalidArg_TisBoolean_tB53F6830F670160873277339AA58F15CAED4399C_mCF3D0CC4E26D74FA04C637D7F91E17432EF93CB6_MetadataUsageId;
 extern const uint32_t BaseInvokableCall_ThrowOnInvalidArg_TisInt32_t585191389E07734F19F3156FF88FB3EF4800D102_m542C3D16A153CF260BC7BB3ED47824E1F6757995_MetadataUsageId;
 extern const uint32_t BaseInvokableCall_ThrowOnInvalidArg_TisRuntimeObject_m6619B9B55C395AA6ED186844492F95CA172E4162_MetadataUsageId;
@@ -10245,33 +10245,33 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // TYPEKIND_TFC0FD272ED78E70CA1173A99B89D31193D93239C_H
-#ifndef U3CINITHARDWAREU3ED__20_T5C6E3DCE55B4734BD1D628EB615B97D4AEC70867_H
-#define U3CINITHARDWAREU3ED__20_T5C6E3DCE55B4734BD1D628EB615B97D4AEC70867_H
+#ifndef U3CINITHARDWAREU3ED__21_T0346A49D0C7D783B33AF5C2792D653565E4895AD_H
+#define U3CINITHARDWAREU3ED__21_T0346A49D0C7D783B33AF5C2792D653565E4895AD_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 
-// MPU6050.MPU6050/<InitHardware>d__20
-struct  U3CInitHardwareU3Ed__20_t5C6E3DCE55B4734BD1D628EB615B97D4AEC70867 
+// MPU6050.MPU6050/<InitHardware>d__21
+struct  U3CInitHardwareU3Ed__21_t0346A49D0C7D783B33AF5C2792D653565E4895AD 
 {
 public:
-	// System.Int32 MPU6050.MPU6050/<InitHardware>d__20::<>1__state
+	// System.Int32 MPU6050.MPU6050/<InitHardware>d__21::<>1__state
 	int32_t ___U3CU3E1__state_0;
-	// System.Runtime.CompilerServices.AsyncVoidMethodBuilder MPU6050.MPU6050/<InitHardware>d__20::<>t__builder
+	// System.Runtime.CompilerServices.AsyncVoidMethodBuilder MPU6050.MPU6050/<InitHardware>d__21::<>t__builder
 	AsyncVoidMethodBuilder_t44E3C9B52B019BB5BDCC0E1BB83188B536161CFF  ___U3CU3Et__builder_1;
-	// MPU6050.MPU6050 MPU6050.MPU6050/<InitHardware>d__20::<>4__this
+	// MPU6050.MPU6050 MPU6050.MPU6050/<InitHardware>d__21::<>4__this
 	MPU6050_t0C410A8414574468B440DEB07CCAD8108B188A92 * ___U3CU3E4__this_2;
-	// System.Runtime.CompilerServices.TaskAwaiter`1<Windows.Devices.Enumeration.DeviceInformationCollection> MPU6050.MPU6050/<InitHardware>d__20::<>u__1
+	// System.Runtime.CompilerServices.TaskAwaiter`1<Windows.Devices.Enumeration.DeviceInformationCollection> MPU6050.MPU6050/<InitHardware>d__21::<>u__1
 	TaskAwaiter_1_t325C97E6C136F306CC070DB48ECEBD92997F3E53  ___U3CU3Eu__1_3;
-	// System.Runtime.CompilerServices.TaskAwaiter`1<Windows.Devices.I2c.I2cDevice> MPU6050.MPU6050/<InitHardware>d__20::<>u__2
+	// System.Runtime.CompilerServices.TaskAwaiter`1<Windows.Devices.I2c.I2cDevice> MPU6050.MPU6050/<InitHardware>d__21::<>u__2
 	TaskAwaiter_1_t9D92A8E4110B8CF1C04031A3019CBD634FBAF3E2  ___U3CU3Eu__2_4;
-	// System.Runtime.CompilerServices.TaskAwaiter MPU6050.MPU6050/<InitHardware>d__20::<>u__3
+	// System.Runtime.CompilerServices.TaskAwaiter MPU6050.MPU6050/<InitHardware>d__21::<>u__3
 	TaskAwaiter_t0CDE8DBB564F0A0EA55FA6B3D43EEF96BC26252F  ___U3CU3Eu__3_5;
 
 public:
-	inline static int32_t get_offset_of_U3CU3E1__state_0() { return static_cast<int32_t>(offsetof(U3CInitHardwareU3Ed__20_t5C6E3DCE55B4734BD1D628EB615B97D4AEC70867, ___U3CU3E1__state_0)); }
+	inline static int32_t get_offset_of_U3CU3E1__state_0() { return static_cast<int32_t>(offsetof(U3CInitHardwareU3Ed__21_t0346A49D0C7D783B33AF5C2792D653565E4895AD, ___U3CU3E1__state_0)); }
 	inline int32_t get_U3CU3E1__state_0() const { return ___U3CU3E1__state_0; }
 	inline int32_t* get_address_of_U3CU3E1__state_0() { return &___U3CU3E1__state_0; }
 	inline void set_U3CU3E1__state_0(int32_t value)
@@ -10279,7 +10279,7 @@ public:
 		___U3CU3E1__state_0 = value;
 	}
 
-	inline static int32_t get_offset_of_U3CU3Et__builder_1() { return static_cast<int32_t>(offsetof(U3CInitHardwareU3Ed__20_t5C6E3DCE55B4734BD1D628EB615B97D4AEC70867, ___U3CU3Et__builder_1)); }
+	inline static int32_t get_offset_of_U3CU3Et__builder_1() { return static_cast<int32_t>(offsetof(U3CInitHardwareU3Ed__21_t0346A49D0C7D783B33AF5C2792D653565E4895AD, ___U3CU3Et__builder_1)); }
 	inline AsyncVoidMethodBuilder_t44E3C9B52B019BB5BDCC0E1BB83188B536161CFF  get_U3CU3Et__builder_1() const { return ___U3CU3Et__builder_1; }
 	inline AsyncVoidMethodBuilder_t44E3C9B52B019BB5BDCC0E1BB83188B536161CFF * get_address_of_U3CU3Et__builder_1() { return &___U3CU3Et__builder_1; }
 	inline void set_U3CU3Et__builder_1(AsyncVoidMethodBuilder_t44E3C9B52B019BB5BDCC0E1BB83188B536161CFF  value)
@@ -10287,7 +10287,7 @@ public:
 		___U3CU3Et__builder_1 = value;
 	}
 
-	inline static int32_t get_offset_of_U3CU3E4__this_2() { return static_cast<int32_t>(offsetof(U3CInitHardwareU3Ed__20_t5C6E3DCE55B4734BD1D628EB615B97D4AEC70867, ___U3CU3E4__this_2)); }
+	inline static int32_t get_offset_of_U3CU3E4__this_2() { return static_cast<int32_t>(offsetof(U3CInitHardwareU3Ed__21_t0346A49D0C7D783B33AF5C2792D653565E4895AD, ___U3CU3E4__this_2)); }
 	inline MPU6050_t0C410A8414574468B440DEB07CCAD8108B188A92 * get_U3CU3E4__this_2() const { return ___U3CU3E4__this_2; }
 	inline MPU6050_t0C410A8414574468B440DEB07CCAD8108B188A92 ** get_address_of_U3CU3E4__this_2() { return &___U3CU3E4__this_2; }
 	inline void set_U3CU3E4__this_2(MPU6050_t0C410A8414574468B440DEB07CCAD8108B188A92 * value)
@@ -10296,7 +10296,7 @@ public:
 		Il2CppCodeGenWriteBarrier((&___U3CU3E4__this_2), value);
 	}
 
-	inline static int32_t get_offset_of_U3CU3Eu__1_3() { return static_cast<int32_t>(offsetof(U3CInitHardwareU3Ed__20_t5C6E3DCE55B4734BD1D628EB615B97D4AEC70867, ___U3CU3Eu__1_3)); }
+	inline static int32_t get_offset_of_U3CU3Eu__1_3() { return static_cast<int32_t>(offsetof(U3CInitHardwareU3Ed__21_t0346A49D0C7D783B33AF5C2792D653565E4895AD, ___U3CU3Eu__1_3)); }
 	inline TaskAwaiter_1_t325C97E6C136F306CC070DB48ECEBD92997F3E53  get_U3CU3Eu__1_3() const { return ___U3CU3Eu__1_3; }
 	inline TaskAwaiter_1_t325C97E6C136F306CC070DB48ECEBD92997F3E53 * get_address_of_U3CU3Eu__1_3() { return &___U3CU3Eu__1_3; }
 	inline void set_U3CU3Eu__1_3(TaskAwaiter_1_t325C97E6C136F306CC070DB48ECEBD92997F3E53  value)
@@ -10304,7 +10304,7 @@ public:
 		___U3CU3Eu__1_3 = value;
 	}
 
-	inline static int32_t get_offset_of_U3CU3Eu__2_4() { return static_cast<int32_t>(offsetof(U3CInitHardwareU3Ed__20_t5C6E3DCE55B4734BD1D628EB615B97D4AEC70867, ___U3CU3Eu__2_4)); }
+	inline static int32_t get_offset_of_U3CU3Eu__2_4() { return static_cast<int32_t>(offsetof(U3CInitHardwareU3Ed__21_t0346A49D0C7D783B33AF5C2792D653565E4895AD, ___U3CU3Eu__2_4)); }
 	inline TaskAwaiter_1_t9D92A8E4110B8CF1C04031A3019CBD634FBAF3E2  get_U3CU3Eu__2_4() const { return ___U3CU3Eu__2_4; }
 	inline TaskAwaiter_1_t9D92A8E4110B8CF1C04031A3019CBD634FBAF3E2 * get_address_of_U3CU3Eu__2_4() { return &___U3CU3Eu__2_4; }
 	inline void set_U3CU3Eu__2_4(TaskAwaiter_1_t9D92A8E4110B8CF1C04031A3019CBD634FBAF3E2  value)
@@ -10312,7 +10312,7 @@ public:
 		___U3CU3Eu__2_4 = value;
 	}
 
-	inline static int32_t get_offset_of_U3CU3Eu__3_5() { return static_cast<int32_t>(offsetof(U3CInitHardwareU3Ed__20_t5C6E3DCE55B4734BD1D628EB615B97D4AEC70867, ___U3CU3Eu__3_5)); }
+	inline static int32_t get_offset_of_U3CU3Eu__3_5() { return static_cast<int32_t>(offsetof(U3CInitHardwareU3Ed__21_t0346A49D0C7D783B33AF5C2792D653565E4895AD, ___U3CU3Eu__3_5)); }
 	inline TaskAwaiter_t0CDE8DBB564F0A0EA55FA6B3D43EEF96BC26252F  get_U3CU3Eu__3_5() const { return ___U3CU3Eu__3_5; }
 	inline TaskAwaiter_t0CDE8DBB564F0A0EA55FA6B3D43EEF96BC26252F * get_address_of_U3CU3Eu__3_5() { return &___U3CU3Eu__3_5; }
 	inline void set_U3CU3Eu__3_5(TaskAwaiter_t0CDE8DBB564F0A0EA55FA6B3D43EEF96BC26252F  value)
@@ -10324,30 +10324,30 @@ public:
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // U3CINITHARDWAREU3ED__20_T5C6E3DCE55B4734BD1D628EB615B97D4AEC70867_H
-#ifndef U3CDMPINITIALIZEU3ED__79_TFBD26E8F7170B6A80E5E08309C8B6C9F0482EFC0_H
-#define U3CDMPINITIALIZEU3ED__79_TFBD26E8F7170B6A80E5E08309C8B6C9F0482EFC0_H
+#endif // U3CINITHARDWAREU3ED__21_T0346A49D0C7D783B33AF5C2792D653565E4895AD_H
+#ifndef U3CDMPINITIALIZEU3ED__81_T3ACD0B2B73A32CB800A14201BD5D8C31BF2D2ADB_H
+#define U3CDMPINITIALIZEU3ED__81_T3ACD0B2B73A32CB800A14201BD5D8C31BF2D2ADB_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 
-// MPU6050.MPU6050/<dmpInitialize>d__79
-struct  U3CdmpInitializeU3Ed__79_tFBD26E8F7170B6A80E5E08309C8B6C9F0482EFC0 
+// MPU6050.MPU6050/<dmpInitialize>d__81
+struct  U3CdmpInitializeU3Ed__81_t3ACD0B2B73A32CB800A14201BD5D8C31BF2D2ADB 
 {
 public:
-	// System.Int32 MPU6050.MPU6050/<dmpInitialize>d__79::<>1__state
+	// System.Int32 MPU6050.MPU6050/<dmpInitialize>d__81::<>1__state
 	int32_t ___U3CU3E1__state_0;
-	// System.Runtime.CompilerServices.AsyncVoidMethodBuilder MPU6050.MPU6050/<dmpInitialize>d__79::<>t__builder
+	// System.Runtime.CompilerServices.AsyncVoidMethodBuilder MPU6050.MPU6050/<dmpInitialize>d__81::<>t__builder
 	AsyncVoidMethodBuilder_t44E3C9B52B019BB5BDCC0E1BB83188B536161CFF  ___U3CU3Et__builder_1;
-	// MPU6050.MPU6050 MPU6050.MPU6050/<dmpInitialize>d__79::<>4__this
+	// MPU6050.MPU6050 MPU6050.MPU6050/<dmpInitialize>d__81::<>4__this
 	MPU6050_t0C410A8414574468B440DEB07CCAD8108B188A92 * ___U3CU3E4__this_2;
-	// System.Runtime.CompilerServices.TaskAwaiter MPU6050.MPU6050/<dmpInitialize>d__79::<>u__1
+	// System.Runtime.CompilerServices.TaskAwaiter MPU6050.MPU6050/<dmpInitialize>d__81::<>u__1
 	TaskAwaiter_t0CDE8DBB564F0A0EA55FA6B3D43EEF96BC26252F  ___U3CU3Eu__1_3;
 
 public:
-	inline static int32_t get_offset_of_U3CU3E1__state_0() { return static_cast<int32_t>(offsetof(U3CdmpInitializeU3Ed__79_tFBD26E8F7170B6A80E5E08309C8B6C9F0482EFC0, ___U3CU3E1__state_0)); }
+	inline static int32_t get_offset_of_U3CU3E1__state_0() { return static_cast<int32_t>(offsetof(U3CdmpInitializeU3Ed__81_t3ACD0B2B73A32CB800A14201BD5D8C31BF2D2ADB, ___U3CU3E1__state_0)); }
 	inline int32_t get_U3CU3E1__state_0() const { return ___U3CU3E1__state_0; }
 	inline int32_t* get_address_of_U3CU3E1__state_0() { return &___U3CU3E1__state_0; }
 	inline void set_U3CU3E1__state_0(int32_t value)
@@ -10355,7 +10355,7 @@ public:
 		___U3CU3E1__state_0 = value;
 	}
 
-	inline static int32_t get_offset_of_U3CU3Et__builder_1() { return static_cast<int32_t>(offsetof(U3CdmpInitializeU3Ed__79_tFBD26E8F7170B6A80E5E08309C8B6C9F0482EFC0, ___U3CU3Et__builder_1)); }
+	inline static int32_t get_offset_of_U3CU3Et__builder_1() { return static_cast<int32_t>(offsetof(U3CdmpInitializeU3Ed__81_t3ACD0B2B73A32CB800A14201BD5D8C31BF2D2ADB, ___U3CU3Et__builder_1)); }
 	inline AsyncVoidMethodBuilder_t44E3C9B52B019BB5BDCC0E1BB83188B536161CFF  get_U3CU3Et__builder_1() const { return ___U3CU3Et__builder_1; }
 	inline AsyncVoidMethodBuilder_t44E3C9B52B019BB5BDCC0E1BB83188B536161CFF * get_address_of_U3CU3Et__builder_1() { return &___U3CU3Et__builder_1; }
 	inline void set_U3CU3Et__builder_1(AsyncVoidMethodBuilder_t44E3C9B52B019BB5BDCC0E1BB83188B536161CFF  value)
@@ -10363,7 +10363,7 @@ public:
 		___U3CU3Et__builder_1 = value;
 	}
 
-	inline static int32_t get_offset_of_U3CU3E4__this_2() { return static_cast<int32_t>(offsetof(U3CdmpInitializeU3Ed__79_tFBD26E8F7170B6A80E5E08309C8B6C9F0482EFC0, ___U3CU3E4__this_2)); }
+	inline static int32_t get_offset_of_U3CU3E4__this_2() { return static_cast<int32_t>(offsetof(U3CdmpInitializeU3Ed__81_t3ACD0B2B73A32CB800A14201BD5D8C31BF2D2ADB, ___U3CU3E4__this_2)); }
 	inline MPU6050_t0C410A8414574468B440DEB07CCAD8108B188A92 * get_U3CU3E4__this_2() const { return ___U3CU3E4__this_2; }
 	inline MPU6050_t0C410A8414574468B440DEB07CCAD8108B188A92 ** get_address_of_U3CU3E4__this_2() { return &___U3CU3E4__this_2; }
 	inline void set_U3CU3E4__this_2(MPU6050_t0C410A8414574468B440DEB07CCAD8108B188A92 * value)
@@ -10372,7 +10372,7 @@ public:
 		Il2CppCodeGenWriteBarrier((&___U3CU3E4__this_2), value);
 	}
 
-	inline static int32_t get_offset_of_U3CU3Eu__1_3() { return static_cast<int32_t>(offsetof(U3CdmpInitializeU3Ed__79_tFBD26E8F7170B6A80E5E08309C8B6C9F0482EFC0, ___U3CU3Eu__1_3)); }
+	inline static int32_t get_offset_of_U3CU3Eu__1_3() { return static_cast<int32_t>(offsetof(U3CdmpInitializeU3Ed__81_t3ACD0B2B73A32CB800A14201BD5D8C31BF2D2ADB, ___U3CU3Eu__1_3)); }
 	inline TaskAwaiter_t0CDE8DBB564F0A0EA55FA6B3D43EEF96BC26252F  get_U3CU3Eu__1_3() const { return ___U3CU3Eu__1_3; }
 	inline TaskAwaiter_t0CDE8DBB564F0A0EA55FA6B3D43EEF96BC26252F * get_address_of_U3CU3Eu__1_3() { return &___U3CU3Eu__1_3; }
 	inline void set_U3CU3Eu__1_3(TaskAwaiter_t0CDE8DBB564F0A0EA55FA6B3D43EEF96BC26252F  value)
@@ -10384,7 +10384,7 @@ public:
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // U3CDMPINITIALIZEU3ED__79_TFBD26E8F7170B6A80E5E08309C8B6C9F0482EFC0_H
+#endif // U3CDMPINITIALIZEU3ED__81_T3ACD0B2B73A32CB800A14201BD5D8C31BF2D2ADB_H
 #ifndef U3CINNERREADU3ED__25_TCE25EDB99323C3358577085230EE086DE0CADA5E_H
 #define U3CINNERREADU3ED__25_TCE25EDB99323C3358577085230EE086DE0CADA5E_H
 #ifdef __clang__
@@ -15585,16 +15585,16 @@ extern "C" IL2CPP_METHOD_ATTR void AsyncTaskMethodBuilder_1_Start_TisRuntimeObje
 extern "C" IL2CPP_METHOD_ATTR Task_1_t1359D75350E9D976BFA28AD96E417450DE277673 * AsyncTaskMethodBuilder_1_get_Task_mB90A654E7FBAE31DB64597AA0B3B5ED3712E2966_gshared (AsyncTaskMethodBuilder_1_t66ED1808B26B8081A2804D6A750D13386E360BD9 * __this, const RuntimeMethod* method);
 // System.Void System.Runtime.CompilerServices.AsyncVoidMethodBuilder::AwaitUnsafeOnCompleted<System.Object,System.Object>(TAwaiter&,TStateMachine&)
 extern "C" IL2CPP_METHOD_ATTR void AsyncVoidMethodBuilder_AwaitUnsafeOnCompleted_TisRuntimeObject_TisRuntimeObject_m9F5910EF685A7EA3E00A5974D7A3ED407088D5F9_gshared (AsyncVoidMethodBuilder_t44E3C9B52B019BB5BDCC0E1BB83188B536161CFF * __this, RuntimeObject ** ___awaiter0, RuntimeObject ** ___stateMachine1, const RuntimeMethod* method);
-// System.Void System.Runtime.CompilerServices.AsyncVoidMethodBuilder::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter,MPU6050.MPU6050/<InitHardware>d__20>(TAwaiter&,TStateMachine&)
-extern "C" IL2CPP_METHOD_ATTR void AsyncVoidMethodBuilder_AwaitUnsafeOnCompleted_TisTaskAwaiter_t0CDE8DBB564F0A0EA55FA6B3D43EEF96BC26252F_TisU3CInitHardwareU3Ed__20_t5C6E3DCE55B4734BD1D628EB615B97D4AEC70867_m60EAA61D42605B5B0679C5533B608193E6BFE28F_gshared (AsyncVoidMethodBuilder_t44E3C9B52B019BB5BDCC0E1BB83188B536161CFF * __this, TaskAwaiter_t0CDE8DBB564F0A0EA55FA6B3D43EEF96BC26252F * ___awaiter0, U3CInitHardwareU3Ed__20_t5C6E3DCE55B4734BD1D628EB615B97D4AEC70867 * ___stateMachine1, const RuntimeMethod* method);
-// System.Void System.Runtime.CompilerServices.AsyncVoidMethodBuilder::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter,MPU6050.MPU6050/<dmpInitialize>d__79>(TAwaiter&,TStateMachine&)
-extern "C" IL2CPP_METHOD_ATTR void AsyncVoidMethodBuilder_AwaitUnsafeOnCompleted_TisTaskAwaiter_t0CDE8DBB564F0A0EA55FA6B3D43EEF96BC26252F_TisU3CdmpInitializeU3Ed__79_tFBD26E8F7170B6A80E5E08309C8B6C9F0482EFC0_mA031644BFECE1A26E511652932AB9ED0B1BEF1BF_gshared (AsyncVoidMethodBuilder_t44E3C9B52B019BB5BDCC0E1BB83188B536161CFF * __this, TaskAwaiter_t0CDE8DBB564F0A0EA55FA6B3D43EEF96BC26252F * ___awaiter0, U3CdmpInitializeU3Ed__79_tFBD26E8F7170B6A80E5E08309C8B6C9F0482EFC0 * ___stateMachine1, const RuntimeMethod* method);
-// System.Void System.Runtime.CompilerServices.AsyncVoidMethodBuilder::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<System.Object>,MPU6050.MPU6050/<InitHardware>d__20>(TAwaiter&,TStateMachine&)
-extern "C" IL2CPP_METHOD_ATTR void AsyncVoidMethodBuilder_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t8CDB78D2A4D48E80C35A8FF6FC04A82B9FC35977_TisU3CInitHardwareU3Ed__20_t5C6E3DCE55B4734BD1D628EB615B97D4AEC70867_m36A2D4F6E4ADFE9D8B99986473F097A756E30FF5_gshared (AsyncVoidMethodBuilder_t44E3C9B52B019BB5BDCC0E1BB83188B536161CFF * __this, TaskAwaiter_1_t8CDB78D2A4D48E80C35A8FF6FC04A82B9FC35977 * ___awaiter0, U3CInitHardwareU3Ed__20_t5C6E3DCE55B4734BD1D628EB615B97D4AEC70867 * ___stateMachine1, const RuntimeMethod* method);
-// System.Void System.Runtime.CompilerServices.AsyncVoidMethodBuilder::Start<MPU6050.MPU6050/<InitHardware>d__20>(TStateMachine&)
-extern "C" IL2CPP_METHOD_ATTR void AsyncVoidMethodBuilder_Start_TisU3CInitHardwareU3Ed__20_t5C6E3DCE55B4734BD1D628EB615B97D4AEC70867_m16CEC524811D728461CEF5C68315737110C108D2_gshared (AsyncVoidMethodBuilder_t44E3C9B52B019BB5BDCC0E1BB83188B536161CFF * __this, U3CInitHardwareU3Ed__20_t5C6E3DCE55B4734BD1D628EB615B97D4AEC70867 * ___stateMachine0, const RuntimeMethod* method);
-// System.Void System.Runtime.CompilerServices.AsyncVoidMethodBuilder::Start<MPU6050.MPU6050/<dmpInitialize>d__79>(TStateMachine&)
-extern "C" IL2CPP_METHOD_ATTR void AsyncVoidMethodBuilder_Start_TisU3CdmpInitializeU3Ed__79_tFBD26E8F7170B6A80E5E08309C8B6C9F0482EFC0_mA9AA586F9663CA2B94C1C05B7E45A916077586E1_gshared (AsyncVoidMethodBuilder_t44E3C9B52B019BB5BDCC0E1BB83188B536161CFF * __this, U3CdmpInitializeU3Ed__79_tFBD26E8F7170B6A80E5E08309C8B6C9F0482EFC0 * ___stateMachine0, const RuntimeMethod* method);
+// System.Void System.Runtime.CompilerServices.AsyncVoidMethodBuilder::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter,MPU6050.MPU6050/<InitHardware>d__21>(TAwaiter&,TStateMachine&)
+extern "C" IL2CPP_METHOD_ATTR void AsyncVoidMethodBuilder_AwaitUnsafeOnCompleted_TisTaskAwaiter_t0CDE8DBB564F0A0EA55FA6B3D43EEF96BC26252F_TisU3CInitHardwareU3Ed__21_t0346A49D0C7D783B33AF5C2792D653565E4895AD_mE05252DAEBD30F827BE112F78E6B4F0554B83FE7_gshared (AsyncVoidMethodBuilder_t44E3C9B52B019BB5BDCC0E1BB83188B536161CFF * __this, TaskAwaiter_t0CDE8DBB564F0A0EA55FA6B3D43EEF96BC26252F * ___awaiter0, U3CInitHardwareU3Ed__21_t0346A49D0C7D783B33AF5C2792D653565E4895AD * ___stateMachine1, const RuntimeMethod* method);
+// System.Void System.Runtime.CompilerServices.AsyncVoidMethodBuilder::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter,MPU6050.MPU6050/<dmpInitialize>d__81>(TAwaiter&,TStateMachine&)
+extern "C" IL2CPP_METHOD_ATTR void AsyncVoidMethodBuilder_AwaitUnsafeOnCompleted_TisTaskAwaiter_t0CDE8DBB564F0A0EA55FA6B3D43EEF96BC26252F_TisU3CdmpInitializeU3Ed__81_t3ACD0B2B73A32CB800A14201BD5D8C31BF2D2ADB_mCA8B27C9D1B475811B15E19797E38268AE0CB2C2_gshared (AsyncVoidMethodBuilder_t44E3C9B52B019BB5BDCC0E1BB83188B536161CFF * __this, TaskAwaiter_t0CDE8DBB564F0A0EA55FA6B3D43EEF96BC26252F * ___awaiter0, U3CdmpInitializeU3Ed__81_t3ACD0B2B73A32CB800A14201BD5D8C31BF2D2ADB * ___stateMachine1, const RuntimeMethod* method);
+// System.Void System.Runtime.CompilerServices.AsyncVoidMethodBuilder::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<System.Object>,MPU6050.MPU6050/<InitHardware>d__21>(TAwaiter&,TStateMachine&)
+extern "C" IL2CPP_METHOD_ATTR void AsyncVoidMethodBuilder_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t8CDB78D2A4D48E80C35A8FF6FC04A82B9FC35977_TisU3CInitHardwareU3Ed__21_t0346A49D0C7D783B33AF5C2792D653565E4895AD_m3A394EBF2DA4430CB70B11B52E918676246E73DB_gshared (AsyncVoidMethodBuilder_t44E3C9B52B019BB5BDCC0E1BB83188B536161CFF * __this, TaskAwaiter_1_t8CDB78D2A4D48E80C35A8FF6FC04A82B9FC35977 * ___awaiter0, U3CInitHardwareU3Ed__21_t0346A49D0C7D783B33AF5C2792D653565E4895AD * ___stateMachine1, const RuntimeMethod* method);
+// System.Void System.Runtime.CompilerServices.AsyncVoidMethodBuilder::Start<MPU6050.MPU6050/<InitHardware>d__21>(TStateMachine&)
+extern "C" IL2CPP_METHOD_ATTR void AsyncVoidMethodBuilder_Start_TisU3CInitHardwareU3Ed__21_t0346A49D0C7D783B33AF5C2792D653565E4895AD_m34C1C0A73EAB71B2CF4D76413D7084C2D990CFAE_gshared (AsyncVoidMethodBuilder_t44E3C9B52B019BB5BDCC0E1BB83188B536161CFF * __this, U3CInitHardwareU3Ed__21_t0346A49D0C7D783B33AF5C2792D653565E4895AD * ___stateMachine0, const RuntimeMethod* method);
+// System.Void System.Runtime.CompilerServices.AsyncVoidMethodBuilder::Start<MPU6050.MPU6050/<dmpInitialize>d__81>(TStateMachine&)
+extern "C" IL2CPP_METHOD_ATTR void AsyncVoidMethodBuilder_Start_TisU3CdmpInitializeU3Ed__81_t3ACD0B2B73A32CB800A14201BD5D8C31BF2D2ADB_m1745F2D03F7DE629E5A02E75937C29441B1B229B_gshared (AsyncVoidMethodBuilder_t44E3C9B52B019BB5BDCC0E1BB83188B536161CFF * __this, U3CdmpInitializeU3Ed__81_t3ACD0B2B73A32CB800A14201BD5D8C31BF2D2ADB * ___stateMachine0, const RuntimeMethod* method);
 // System.Void System.Runtime.CompilerServices.AsyncVoidMethodBuilder::Start<System.Object>(TStateMachine&)
 extern "C" IL2CPP_METHOD_ATTR void AsyncVoidMethodBuilder_Start_TisRuntimeObject_m0853517F037A559FE0FBD5B4CF52B7FA39AF2748_gshared (AsyncVoidMethodBuilder_t44E3C9B52B019BB5BDCC0E1BB83188B536161CFF * __this, RuntimeObject ** ___stateMachine0, const RuntimeMethod* method);
 // System.Collections.Generic.List`1<T> UnityEngine.UI.ListPool`1<System.Object>::Get()
@@ -15844,34 +15844,34 @@ inline void AsyncVoidMethodBuilder_AwaitUnsafeOnCompleted_TisRuntimeObject_TisRu
 }
 // System.Void System.Runtime.CompilerServices.TaskAwaiter::UnsafeOnCompleted(System.Action)
 extern "C" IL2CPP_METHOD_ATTR void TaskAwaiter_UnsafeOnCompleted_mE7225A8038BD7F4A0BEED46F45FC83EA784D4AE4 (TaskAwaiter_t0CDE8DBB564F0A0EA55FA6B3D43EEF96BC26252F * __this, Action_t591D2A86165F896B4B800BB5C25CE18672A55579 * ___continuation0, const RuntimeMethod* method);
-// System.Void System.Runtime.CompilerServices.AsyncVoidMethodBuilder::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter,MPU6050.MPU6050/<InitHardware>d__20>(TAwaiter&,TStateMachine&)
-inline void AsyncVoidMethodBuilder_AwaitUnsafeOnCompleted_TisTaskAwaiter_t0CDE8DBB564F0A0EA55FA6B3D43EEF96BC26252F_TisU3CInitHardwareU3Ed__20_t5C6E3DCE55B4734BD1D628EB615B97D4AEC70867_m60EAA61D42605B5B0679C5533B608193E6BFE28F (AsyncVoidMethodBuilder_t44E3C9B52B019BB5BDCC0E1BB83188B536161CFF * __this, TaskAwaiter_t0CDE8DBB564F0A0EA55FA6B3D43EEF96BC26252F * ___awaiter0, U3CInitHardwareU3Ed__20_t5C6E3DCE55B4734BD1D628EB615B97D4AEC70867 * ___stateMachine1, const RuntimeMethod* method)
+// System.Void System.Runtime.CompilerServices.AsyncVoidMethodBuilder::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter,MPU6050.MPU6050/<InitHardware>d__21>(TAwaiter&,TStateMachine&)
+inline void AsyncVoidMethodBuilder_AwaitUnsafeOnCompleted_TisTaskAwaiter_t0CDE8DBB564F0A0EA55FA6B3D43EEF96BC26252F_TisU3CInitHardwareU3Ed__21_t0346A49D0C7D783B33AF5C2792D653565E4895AD_mE05252DAEBD30F827BE112F78E6B4F0554B83FE7 (AsyncVoidMethodBuilder_t44E3C9B52B019BB5BDCC0E1BB83188B536161CFF * __this, TaskAwaiter_t0CDE8DBB564F0A0EA55FA6B3D43EEF96BC26252F * ___awaiter0, U3CInitHardwareU3Ed__21_t0346A49D0C7D783B33AF5C2792D653565E4895AD * ___stateMachine1, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncVoidMethodBuilder_t44E3C9B52B019BB5BDCC0E1BB83188B536161CFF *, TaskAwaiter_t0CDE8DBB564F0A0EA55FA6B3D43EEF96BC26252F *, U3CInitHardwareU3Ed__20_t5C6E3DCE55B4734BD1D628EB615B97D4AEC70867 *, const RuntimeMethod*))AsyncVoidMethodBuilder_AwaitUnsafeOnCompleted_TisTaskAwaiter_t0CDE8DBB564F0A0EA55FA6B3D43EEF96BC26252F_TisU3CInitHardwareU3Ed__20_t5C6E3DCE55B4734BD1D628EB615B97D4AEC70867_m60EAA61D42605B5B0679C5533B608193E6BFE28F_gshared)(__this, ___awaiter0, ___stateMachine1, method);
+	((  void (*) (AsyncVoidMethodBuilder_t44E3C9B52B019BB5BDCC0E1BB83188B536161CFF *, TaskAwaiter_t0CDE8DBB564F0A0EA55FA6B3D43EEF96BC26252F *, U3CInitHardwareU3Ed__21_t0346A49D0C7D783B33AF5C2792D653565E4895AD *, const RuntimeMethod*))AsyncVoidMethodBuilder_AwaitUnsafeOnCompleted_TisTaskAwaiter_t0CDE8DBB564F0A0EA55FA6B3D43EEF96BC26252F_TisU3CInitHardwareU3Ed__21_t0346A49D0C7D783B33AF5C2792D653565E4895AD_mE05252DAEBD30F827BE112F78E6B4F0554B83FE7_gshared)(__this, ___awaiter0, ___stateMachine1, method);
 }
-// System.Void System.Runtime.CompilerServices.AsyncVoidMethodBuilder::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter,MPU6050.MPU6050/<dmpInitialize>d__79>(TAwaiter&,TStateMachine&)
-inline void AsyncVoidMethodBuilder_AwaitUnsafeOnCompleted_TisTaskAwaiter_t0CDE8DBB564F0A0EA55FA6B3D43EEF96BC26252F_TisU3CdmpInitializeU3Ed__79_tFBD26E8F7170B6A80E5E08309C8B6C9F0482EFC0_mA031644BFECE1A26E511652932AB9ED0B1BEF1BF (AsyncVoidMethodBuilder_t44E3C9B52B019BB5BDCC0E1BB83188B536161CFF * __this, TaskAwaiter_t0CDE8DBB564F0A0EA55FA6B3D43EEF96BC26252F * ___awaiter0, U3CdmpInitializeU3Ed__79_tFBD26E8F7170B6A80E5E08309C8B6C9F0482EFC0 * ___stateMachine1, const RuntimeMethod* method)
+// System.Void System.Runtime.CompilerServices.AsyncVoidMethodBuilder::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter,MPU6050.MPU6050/<dmpInitialize>d__81>(TAwaiter&,TStateMachine&)
+inline void AsyncVoidMethodBuilder_AwaitUnsafeOnCompleted_TisTaskAwaiter_t0CDE8DBB564F0A0EA55FA6B3D43EEF96BC26252F_TisU3CdmpInitializeU3Ed__81_t3ACD0B2B73A32CB800A14201BD5D8C31BF2D2ADB_mCA8B27C9D1B475811B15E19797E38268AE0CB2C2 (AsyncVoidMethodBuilder_t44E3C9B52B019BB5BDCC0E1BB83188B536161CFF * __this, TaskAwaiter_t0CDE8DBB564F0A0EA55FA6B3D43EEF96BC26252F * ___awaiter0, U3CdmpInitializeU3Ed__81_t3ACD0B2B73A32CB800A14201BD5D8C31BF2D2ADB * ___stateMachine1, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncVoidMethodBuilder_t44E3C9B52B019BB5BDCC0E1BB83188B536161CFF *, TaskAwaiter_t0CDE8DBB564F0A0EA55FA6B3D43EEF96BC26252F *, U3CdmpInitializeU3Ed__79_tFBD26E8F7170B6A80E5E08309C8B6C9F0482EFC0 *, const RuntimeMethod*))AsyncVoidMethodBuilder_AwaitUnsafeOnCompleted_TisTaskAwaiter_t0CDE8DBB564F0A0EA55FA6B3D43EEF96BC26252F_TisU3CdmpInitializeU3Ed__79_tFBD26E8F7170B6A80E5E08309C8B6C9F0482EFC0_mA031644BFECE1A26E511652932AB9ED0B1BEF1BF_gshared)(__this, ___awaiter0, ___stateMachine1, method);
+	((  void (*) (AsyncVoidMethodBuilder_t44E3C9B52B019BB5BDCC0E1BB83188B536161CFF *, TaskAwaiter_t0CDE8DBB564F0A0EA55FA6B3D43EEF96BC26252F *, U3CdmpInitializeU3Ed__81_t3ACD0B2B73A32CB800A14201BD5D8C31BF2D2ADB *, const RuntimeMethod*))AsyncVoidMethodBuilder_AwaitUnsafeOnCompleted_TisTaskAwaiter_t0CDE8DBB564F0A0EA55FA6B3D43EEF96BC26252F_TisU3CdmpInitializeU3Ed__81_t3ACD0B2B73A32CB800A14201BD5D8C31BF2D2ADB_mCA8B27C9D1B475811B15E19797E38268AE0CB2C2_gshared)(__this, ___awaiter0, ___stateMachine1, method);
 }
-// System.Void System.Runtime.CompilerServices.AsyncVoidMethodBuilder::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<System.Object>,MPU6050.MPU6050/<InitHardware>d__20>(TAwaiter&,TStateMachine&)
-inline void AsyncVoidMethodBuilder_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t8CDB78D2A4D48E80C35A8FF6FC04A82B9FC35977_TisU3CInitHardwareU3Ed__20_t5C6E3DCE55B4734BD1D628EB615B97D4AEC70867_m36A2D4F6E4ADFE9D8B99986473F097A756E30FF5 (AsyncVoidMethodBuilder_t44E3C9B52B019BB5BDCC0E1BB83188B536161CFF * __this, TaskAwaiter_1_t8CDB78D2A4D48E80C35A8FF6FC04A82B9FC35977 * ___awaiter0, U3CInitHardwareU3Ed__20_t5C6E3DCE55B4734BD1D628EB615B97D4AEC70867 * ___stateMachine1, const RuntimeMethod* method)
+// System.Void System.Runtime.CompilerServices.AsyncVoidMethodBuilder::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<System.Object>,MPU6050.MPU6050/<InitHardware>d__21>(TAwaiter&,TStateMachine&)
+inline void AsyncVoidMethodBuilder_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t8CDB78D2A4D48E80C35A8FF6FC04A82B9FC35977_TisU3CInitHardwareU3Ed__21_t0346A49D0C7D783B33AF5C2792D653565E4895AD_m3A394EBF2DA4430CB70B11B52E918676246E73DB (AsyncVoidMethodBuilder_t44E3C9B52B019BB5BDCC0E1BB83188B536161CFF * __this, TaskAwaiter_1_t8CDB78D2A4D48E80C35A8FF6FC04A82B9FC35977 * ___awaiter0, U3CInitHardwareU3Ed__21_t0346A49D0C7D783B33AF5C2792D653565E4895AD * ___stateMachine1, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncVoidMethodBuilder_t44E3C9B52B019BB5BDCC0E1BB83188B536161CFF *, TaskAwaiter_1_t8CDB78D2A4D48E80C35A8FF6FC04A82B9FC35977 *, U3CInitHardwareU3Ed__20_t5C6E3DCE55B4734BD1D628EB615B97D4AEC70867 *, const RuntimeMethod*))AsyncVoidMethodBuilder_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t8CDB78D2A4D48E80C35A8FF6FC04A82B9FC35977_TisU3CInitHardwareU3Ed__20_t5C6E3DCE55B4734BD1D628EB615B97D4AEC70867_m36A2D4F6E4ADFE9D8B99986473F097A756E30FF5_gshared)(__this, ___awaiter0, ___stateMachine1, method);
+	((  void (*) (AsyncVoidMethodBuilder_t44E3C9B52B019BB5BDCC0E1BB83188B536161CFF *, TaskAwaiter_1_t8CDB78D2A4D48E80C35A8FF6FC04A82B9FC35977 *, U3CInitHardwareU3Ed__21_t0346A49D0C7D783B33AF5C2792D653565E4895AD *, const RuntimeMethod*))AsyncVoidMethodBuilder_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t8CDB78D2A4D48E80C35A8FF6FC04A82B9FC35977_TisU3CInitHardwareU3Ed__21_t0346A49D0C7D783B33AF5C2792D653565E4895AD_m3A394EBF2DA4430CB70B11B52E918676246E73DB_gshared)(__this, ___awaiter0, ___stateMachine1, method);
 }
-// System.Void MPU6050.MPU6050/<InitHardware>d__20::MoveNext()
-extern "C" IL2CPP_METHOD_ATTR void U3CInitHardwareU3Ed__20_MoveNext_mBB6794285EECF87918EDAC0E839DF525C0540115 (U3CInitHardwareU3Ed__20_t5C6E3DCE55B4734BD1D628EB615B97D4AEC70867 * __this, const RuntimeMethod* method);
-// System.Void System.Runtime.CompilerServices.AsyncVoidMethodBuilder::Start<MPU6050.MPU6050/<InitHardware>d__20>(TStateMachine&)
-inline void AsyncVoidMethodBuilder_Start_TisU3CInitHardwareU3Ed__20_t5C6E3DCE55B4734BD1D628EB615B97D4AEC70867_m16CEC524811D728461CEF5C68315737110C108D2 (AsyncVoidMethodBuilder_t44E3C9B52B019BB5BDCC0E1BB83188B536161CFF * __this, U3CInitHardwareU3Ed__20_t5C6E3DCE55B4734BD1D628EB615B97D4AEC70867 * ___stateMachine0, const RuntimeMethod* method)
+// System.Void MPU6050.MPU6050/<InitHardware>d__21::MoveNext()
+extern "C" IL2CPP_METHOD_ATTR void U3CInitHardwareU3Ed__21_MoveNext_m84FF28D7230075893F146E9F0CFE8F6309D174DA (U3CInitHardwareU3Ed__21_t0346A49D0C7D783B33AF5C2792D653565E4895AD * __this, const RuntimeMethod* method);
+// System.Void System.Runtime.CompilerServices.AsyncVoidMethodBuilder::Start<MPU6050.MPU6050/<InitHardware>d__21>(TStateMachine&)
+inline void AsyncVoidMethodBuilder_Start_TisU3CInitHardwareU3Ed__21_t0346A49D0C7D783B33AF5C2792D653565E4895AD_m34C1C0A73EAB71B2CF4D76413D7084C2D990CFAE (AsyncVoidMethodBuilder_t44E3C9B52B019BB5BDCC0E1BB83188B536161CFF * __this, U3CInitHardwareU3Ed__21_t0346A49D0C7D783B33AF5C2792D653565E4895AD * ___stateMachine0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncVoidMethodBuilder_t44E3C9B52B019BB5BDCC0E1BB83188B536161CFF *, U3CInitHardwareU3Ed__20_t5C6E3DCE55B4734BD1D628EB615B97D4AEC70867 *, const RuntimeMethod*))AsyncVoidMethodBuilder_Start_TisU3CInitHardwareU3Ed__20_t5C6E3DCE55B4734BD1D628EB615B97D4AEC70867_m16CEC524811D728461CEF5C68315737110C108D2_gshared)(__this, ___stateMachine0, method);
+	((  void (*) (AsyncVoidMethodBuilder_t44E3C9B52B019BB5BDCC0E1BB83188B536161CFF *, U3CInitHardwareU3Ed__21_t0346A49D0C7D783B33AF5C2792D653565E4895AD *, const RuntimeMethod*))AsyncVoidMethodBuilder_Start_TisU3CInitHardwareU3Ed__21_t0346A49D0C7D783B33AF5C2792D653565E4895AD_m34C1C0A73EAB71B2CF4D76413D7084C2D990CFAE_gshared)(__this, ___stateMachine0, method);
 }
-// System.Void MPU6050.MPU6050/<dmpInitialize>d__79::MoveNext()
-extern "C" IL2CPP_METHOD_ATTR void U3CdmpInitializeU3Ed__79_MoveNext_m64CFABA2F0C33D24F5A07CDB2A39AD1528EF999B (U3CdmpInitializeU3Ed__79_tFBD26E8F7170B6A80E5E08309C8B6C9F0482EFC0 * __this, const RuntimeMethod* method);
-// System.Void System.Runtime.CompilerServices.AsyncVoidMethodBuilder::Start<MPU6050.MPU6050/<dmpInitialize>d__79>(TStateMachine&)
-inline void AsyncVoidMethodBuilder_Start_TisU3CdmpInitializeU3Ed__79_tFBD26E8F7170B6A80E5E08309C8B6C9F0482EFC0_mA9AA586F9663CA2B94C1C05B7E45A916077586E1 (AsyncVoidMethodBuilder_t44E3C9B52B019BB5BDCC0E1BB83188B536161CFF * __this, U3CdmpInitializeU3Ed__79_tFBD26E8F7170B6A80E5E08309C8B6C9F0482EFC0 * ___stateMachine0, const RuntimeMethod* method)
+// System.Void MPU6050.MPU6050/<dmpInitialize>d__81::MoveNext()
+extern "C" IL2CPP_METHOD_ATTR void U3CdmpInitializeU3Ed__81_MoveNext_m539F3E4721FF0F285E829963050FD71F03A659CE (U3CdmpInitializeU3Ed__81_t3ACD0B2B73A32CB800A14201BD5D8C31BF2D2ADB * __this, const RuntimeMethod* method);
+// System.Void System.Runtime.CompilerServices.AsyncVoidMethodBuilder::Start<MPU6050.MPU6050/<dmpInitialize>d__81>(TStateMachine&)
+inline void AsyncVoidMethodBuilder_Start_TisU3CdmpInitializeU3Ed__81_t3ACD0B2B73A32CB800A14201BD5D8C31BF2D2ADB_m1745F2D03F7DE629E5A02E75937C29441B1B229B (AsyncVoidMethodBuilder_t44E3C9B52B019BB5BDCC0E1BB83188B536161CFF * __this, U3CdmpInitializeU3Ed__81_t3ACD0B2B73A32CB800A14201BD5D8C31BF2D2ADB * ___stateMachine0, const RuntimeMethod* method)
 {
-	((  void (*) (AsyncVoidMethodBuilder_t44E3C9B52B019BB5BDCC0E1BB83188B536161CFF *, U3CdmpInitializeU3Ed__79_tFBD26E8F7170B6A80E5E08309C8B6C9F0482EFC0 *, const RuntimeMethod*))AsyncVoidMethodBuilder_Start_TisU3CdmpInitializeU3Ed__79_tFBD26E8F7170B6A80E5E08309C8B6C9F0482EFC0_mA9AA586F9663CA2B94C1C05B7E45A916077586E1_gshared)(__this, ___stateMachine0, method);
+	((  void (*) (AsyncVoidMethodBuilder_t44E3C9B52B019BB5BDCC0E1BB83188B536161CFF *, U3CdmpInitializeU3Ed__81_t3ACD0B2B73A32CB800A14201BD5D8C31BF2D2ADB *, const RuntimeMethod*))AsyncVoidMethodBuilder_Start_TisU3CdmpInitializeU3Ed__81_t3ACD0B2B73A32CB800A14201BD5D8C31BF2D2ADB_m1745F2D03F7DE629E5A02E75937C29441B1B229B_gshared)(__this, ___stateMachine0, method);
 }
 // System.Void System.Runtime.CompilerServices.AsyncVoidMethodBuilder::Start<System.Object>(TStateMachine&)
 inline void AsyncVoidMethodBuilder_Start_TisRuntimeObject_m0853517F037A559FE0FBD5B4CF52B7FA39AF2748 (AsyncVoidMethodBuilder_t44E3C9B52B019BB5BDCC0E1BB83188B536161CFF * __this, RuntimeObject ** ___stateMachine0, const RuntimeMethod* method)
@@ -32396,13 +32396,13 @@ extern "C"  void AsyncVoidMethodBuilder_AwaitUnsafeOnCompleted_TisRuntimeObject_
 	AsyncVoidMethodBuilder_t44E3C9B52B019BB5BDCC0E1BB83188B536161CFF * _thisAdjusted = reinterpret_cast<AsyncVoidMethodBuilder_t44E3C9B52B019BB5BDCC0E1BB83188B536161CFF *>(__this + 1);
 	AsyncVoidMethodBuilder_AwaitUnsafeOnCompleted_TisRuntimeObject_TisRuntimeObject_m9F5910EF685A7EA3E00A5974D7A3ED407088D5F9(_thisAdjusted, ___awaiter0, ___stateMachine1, method);
 }
-// System.Void System.Runtime.CompilerServices.AsyncVoidMethodBuilder::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter,MPU6050.MPU6050/<InitHardware>d__20>(TAwaiter&,TStateMachine&)
-extern "C" IL2CPP_METHOD_ATTR void AsyncVoidMethodBuilder_AwaitUnsafeOnCompleted_TisTaskAwaiter_t0CDE8DBB564F0A0EA55FA6B3D43EEF96BC26252F_TisU3CInitHardwareU3Ed__20_t5C6E3DCE55B4734BD1D628EB615B97D4AEC70867_m60EAA61D42605B5B0679C5533B608193E6BFE28F_gshared (AsyncVoidMethodBuilder_t44E3C9B52B019BB5BDCC0E1BB83188B536161CFF * __this, TaskAwaiter_t0CDE8DBB564F0A0EA55FA6B3D43EEF96BC26252F * ___awaiter0, U3CInitHardwareU3Ed__20_t5C6E3DCE55B4734BD1D628EB615B97D4AEC70867 * ___stateMachine1, const RuntimeMethod* method)
+// System.Void System.Runtime.CompilerServices.AsyncVoidMethodBuilder::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter,MPU6050.MPU6050/<InitHardware>d__21>(TAwaiter&,TStateMachine&)
+extern "C" IL2CPP_METHOD_ATTR void AsyncVoidMethodBuilder_AwaitUnsafeOnCompleted_TisTaskAwaiter_t0CDE8DBB564F0A0EA55FA6B3D43EEF96BC26252F_TisU3CInitHardwareU3Ed__21_t0346A49D0C7D783B33AF5C2792D653565E4895AD_mE05252DAEBD30F827BE112F78E6B4F0554B83FE7_gshared (AsyncVoidMethodBuilder_t44E3C9B52B019BB5BDCC0E1BB83188B536161CFF * __this, TaskAwaiter_t0CDE8DBB564F0A0EA55FA6B3D43EEF96BC26252F * ___awaiter0, U3CInitHardwareU3Ed__21_t0346A49D0C7D783B33AF5C2792D653565E4895AD * ___stateMachine1, const RuntimeMethod* method)
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_method (AsyncVoidMethodBuilder_AwaitUnsafeOnCompleted_TisTaskAwaiter_t0CDE8DBB564F0A0EA55FA6B3D43EEF96BC26252F_TisU3CInitHardwareU3Ed__20_t5C6E3DCE55B4734BD1D628EB615B97D4AEC70867_m60EAA61D42605B5B0679C5533B608193E6BFE28F_MetadataUsageId);
+		il2cpp_codegen_initialize_method (AsyncVoidMethodBuilder_AwaitUnsafeOnCompleted_TisTaskAwaiter_t0CDE8DBB564F0A0EA55FA6B3D43EEF96BC26252F_TisU3CInitHardwareU3Ed__21_t0346A49D0C7D783B33AF5C2792D653565E4895AD_mE05252DAEBD30F827BE112F78E6B4F0554B83FE7_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
 	MoveNextRunner_t6A0B9DE31628DAC797ABC84945D4C62B07C3E65A * V_0 = NULL;
@@ -32473,11 +32473,11 @@ IL_0034:
 			Task_t1F48C203E163126EBC69ACCA679D1A462DEE9EB2 * L_7 = AsyncVoidMethodBuilder_get_Task_m377181C7C834736C7408C015E65AB1F29D8AB3C8((AsyncVoidMethodBuilder_t44E3C9B52B019BB5BDCC0E1BB83188B536161CFF *)(AsyncVoidMethodBuilder_t44E3C9B52B019BB5BDCC0E1BB83188B536161CFF *)__this, /*hidden argument*/NULL);
 			NullCheck((Task_t1F48C203E163126EBC69ACCA679D1A462DEE9EB2 *)L_7);
 			int32_t L_8 = Task_get_Id_mA2A4DA7A476AFEF6FF4B4F29BF1F98D0481E28AD((Task_t1F48C203E163126EBC69ACCA679D1A462DEE9EB2 *)L_7, /*hidden argument*/NULL);
-			U3CInitHardwareU3Ed__20_t5C6E3DCE55B4734BD1D628EB615B97D4AEC70867 * L_9 = ___stateMachine1;
+			U3CInitHardwareU3Ed__21_t0346A49D0C7D783B33AF5C2792D653565E4895AD * L_9 = ___stateMachine1;
 			RuntimeObject * L_10 = Box(IL2CPP_RGCTX_DATA(method->rgctx_data, 0), L_9);
 			NullCheck((RuntimeObject *)L_10);
 			Type_t * L_11 = Object_GetType_m2E0B62414ECCAA3094B703790CE88CBB2F83EA60((RuntimeObject *)L_10, /*hidden argument*/NULL);
-			*L_9 = *(U3CInitHardwareU3Ed__20_t5C6E3DCE55B4734BD1D628EB615B97D4AEC70867 *)UnBox(L_10);
+			*L_9 = *(U3CInitHardwareU3Ed__21_t0346A49D0C7D783B33AF5C2792D653565E4895AD *)UnBox(L_10);
 			NullCheck((MemberInfo_t *)L_11);
 			String_t* L_12 = VirtFuncInvoker0< String_t* >::Invoke(7 /* System.String System.Reflection.MemberInfo::get_Name() */, (MemberInfo_t *)L_11);
 			String_t* L_13 = String_Concat_mB78D0094592718DA6D5DB6C712A9C225631666BE((String_t*)_stringLiteral5DF1FD1F43BB24443DE17E3357A31169F3FEAC32, (String_t*)L_12, /*hidden argument*/NULL);
@@ -32487,8 +32487,8 @@ IL_0034:
 IL_0062:
 		{
 			AsyncMethodBuilderCore_t4CE6C1E4B0621A6EC45CF6E0E8F1F633FFF9FF01 * L_14 = (AsyncMethodBuilderCore_t4CE6C1E4B0621A6EC45CF6E0E8F1F633FFF9FF01 *)__this->get_address_of_m_coreState_1();
-			U3CInitHardwareU3Ed__20_t5C6E3DCE55B4734BD1D628EB615B97D4AEC70867 * L_15 = ___stateMachine1;
-			U3CInitHardwareU3Ed__20_t5C6E3DCE55B4734BD1D628EB615B97D4AEC70867  L_16 = (*(U3CInitHardwareU3Ed__20_t5C6E3DCE55B4734BD1D628EB615B97D4AEC70867 *)L_15);
+			U3CInitHardwareU3Ed__21_t0346A49D0C7D783B33AF5C2792D653565E4895AD * L_15 = ___stateMachine1;
+			U3CInitHardwareU3Ed__21_t0346A49D0C7D783B33AF5C2792D653565E4895AD  L_16 = (*(U3CInitHardwareU3Ed__21_t0346A49D0C7D783B33AF5C2792D653565E4895AD *)L_15);
 			RuntimeObject * L_17 = Box(IL2CPP_RGCTX_DATA(method->rgctx_data, 0), &L_16);
 			MoveNextRunner_t6A0B9DE31628DAC797ABC84945D4C62B07C3E65A * L_18 = V_0;
 			AsyncMethodBuilderCore_PostBoxInitialization_mE935AC678191E0DD24290C8E986645E81BA18387((AsyncMethodBuilderCore_t4CE6C1E4B0621A6EC45CF6E0E8F1F633FFF9FF01 *)(AsyncMethodBuilderCore_t4CE6C1E4B0621A6EC45CF6E0E8F1F633FFF9FF01 *)L_14, (RuntimeObject*)L_17, (MoveNextRunner_t6A0B9DE31628DAC797ABC84945D4C62B07C3E65A *)L_18, (Task_t1F48C203E163126EBC69ACCA679D1A462DEE9EB2 *)NULL, /*hidden argument*/NULL);
@@ -32521,18 +32521,18 @@ IL_0091:
 		return;
 	}
 }
-extern "C"  void AsyncVoidMethodBuilder_AwaitUnsafeOnCompleted_TisTaskAwaiter_t0CDE8DBB564F0A0EA55FA6B3D43EEF96BC26252F_TisU3CInitHardwareU3Ed__20_t5C6E3DCE55B4734BD1D628EB615B97D4AEC70867_m60EAA61D42605B5B0679C5533B608193E6BFE28F_AdjustorThunk (RuntimeObject * __this, TaskAwaiter_t0CDE8DBB564F0A0EA55FA6B3D43EEF96BC26252F * ___awaiter0, U3CInitHardwareU3Ed__20_t5C6E3DCE55B4734BD1D628EB615B97D4AEC70867 * ___stateMachine1, const RuntimeMethod* method)
+extern "C"  void AsyncVoidMethodBuilder_AwaitUnsafeOnCompleted_TisTaskAwaiter_t0CDE8DBB564F0A0EA55FA6B3D43EEF96BC26252F_TisU3CInitHardwareU3Ed__21_t0346A49D0C7D783B33AF5C2792D653565E4895AD_mE05252DAEBD30F827BE112F78E6B4F0554B83FE7_AdjustorThunk (RuntimeObject * __this, TaskAwaiter_t0CDE8DBB564F0A0EA55FA6B3D43EEF96BC26252F * ___awaiter0, U3CInitHardwareU3Ed__21_t0346A49D0C7D783B33AF5C2792D653565E4895AD * ___stateMachine1, const RuntimeMethod* method)
 {
 	AsyncVoidMethodBuilder_t44E3C9B52B019BB5BDCC0E1BB83188B536161CFF * _thisAdjusted = reinterpret_cast<AsyncVoidMethodBuilder_t44E3C9B52B019BB5BDCC0E1BB83188B536161CFF *>(__this + 1);
-	AsyncVoidMethodBuilder_AwaitUnsafeOnCompleted_TisTaskAwaiter_t0CDE8DBB564F0A0EA55FA6B3D43EEF96BC26252F_TisU3CInitHardwareU3Ed__20_t5C6E3DCE55B4734BD1D628EB615B97D4AEC70867_m60EAA61D42605B5B0679C5533B608193E6BFE28F(_thisAdjusted, ___awaiter0, ___stateMachine1, method);
+	AsyncVoidMethodBuilder_AwaitUnsafeOnCompleted_TisTaskAwaiter_t0CDE8DBB564F0A0EA55FA6B3D43EEF96BC26252F_TisU3CInitHardwareU3Ed__21_t0346A49D0C7D783B33AF5C2792D653565E4895AD_mE05252DAEBD30F827BE112F78E6B4F0554B83FE7(_thisAdjusted, ___awaiter0, ___stateMachine1, method);
 }
-// System.Void System.Runtime.CompilerServices.AsyncVoidMethodBuilder::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter,MPU6050.MPU6050/<dmpInitialize>d__79>(TAwaiter&,TStateMachine&)
-extern "C" IL2CPP_METHOD_ATTR void AsyncVoidMethodBuilder_AwaitUnsafeOnCompleted_TisTaskAwaiter_t0CDE8DBB564F0A0EA55FA6B3D43EEF96BC26252F_TisU3CdmpInitializeU3Ed__79_tFBD26E8F7170B6A80E5E08309C8B6C9F0482EFC0_mA031644BFECE1A26E511652932AB9ED0B1BEF1BF_gshared (AsyncVoidMethodBuilder_t44E3C9B52B019BB5BDCC0E1BB83188B536161CFF * __this, TaskAwaiter_t0CDE8DBB564F0A0EA55FA6B3D43EEF96BC26252F * ___awaiter0, U3CdmpInitializeU3Ed__79_tFBD26E8F7170B6A80E5E08309C8B6C9F0482EFC0 * ___stateMachine1, const RuntimeMethod* method)
+// System.Void System.Runtime.CompilerServices.AsyncVoidMethodBuilder::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter,MPU6050.MPU6050/<dmpInitialize>d__81>(TAwaiter&,TStateMachine&)
+extern "C" IL2CPP_METHOD_ATTR void AsyncVoidMethodBuilder_AwaitUnsafeOnCompleted_TisTaskAwaiter_t0CDE8DBB564F0A0EA55FA6B3D43EEF96BC26252F_TisU3CdmpInitializeU3Ed__81_t3ACD0B2B73A32CB800A14201BD5D8C31BF2D2ADB_mCA8B27C9D1B475811B15E19797E38268AE0CB2C2_gshared (AsyncVoidMethodBuilder_t44E3C9B52B019BB5BDCC0E1BB83188B536161CFF * __this, TaskAwaiter_t0CDE8DBB564F0A0EA55FA6B3D43EEF96BC26252F * ___awaiter0, U3CdmpInitializeU3Ed__81_t3ACD0B2B73A32CB800A14201BD5D8C31BF2D2ADB * ___stateMachine1, const RuntimeMethod* method)
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_method (AsyncVoidMethodBuilder_AwaitUnsafeOnCompleted_TisTaskAwaiter_t0CDE8DBB564F0A0EA55FA6B3D43EEF96BC26252F_TisU3CdmpInitializeU3Ed__79_tFBD26E8F7170B6A80E5E08309C8B6C9F0482EFC0_mA031644BFECE1A26E511652932AB9ED0B1BEF1BF_MetadataUsageId);
+		il2cpp_codegen_initialize_method (AsyncVoidMethodBuilder_AwaitUnsafeOnCompleted_TisTaskAwaiter_t0CDE8DBB564F0A0EA55FA6B3D43EEF96BC26252F_TisU3CdmpInitializeU3Ed__81_t3ACD0B2B73A32CB800A14201BD5D8C31BF2D2ADB_mCA8B27C9D1B475811B15E19797E38268AE0CB2C2_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
 	MoveNextRunner_t6A0B9DE31628DAC797ABC84945D4C62B07C3E65A * V_0 = NULL;
@@ -32603,11 +32603,11 @@ IL_0034:
 			Task_t1F48C203E163126EBC69ACCA679D1A462DEE9EB2 * L_7 = AsyncVoidMethodBuilder_get_Task_m377181C7C834736C7408C015E65AB1F29D8AB3C8((AsyncVoidMethodBuilder_t44E3C9B52B019BB5BDCC0E1BB83188B536161CFF *)(AsyncVoidMethodBuilder_t44E3C9B52B019BB5BDCC0E1BB83188B536161CFF *)__this, /*hidden argument*/NULL);
 			NullCheck((Task_t1F48C203E163126EBC69ACCA679D1A462DEE9EB2 *)L_7);
 			int32_t L_8 = Task_get_Id_mA2A4DA7A476AFEF6FF4B4F29BF1F98D0481E28AD((Task_t1F48C203E163126EBC69ACCA679D1A462DEE9EB2 *)L_7, /*hidden argument*/NULL);
-			U3CdmpInitializeU3Ed__79_tFBD26E8F7170B6A80E5E08309C8B6C9F0482EFC0 * L_9 = ___stateMachine1;
+			U3CdmpInitializeU3Ed__81_t3ACD0B2B73A32CB800A14201BD5D8C31BF2D2ADB * L_9 = ___stateMachine1;
 			RuntimeObject * L_10 = Box(IL2CPP_RGCTX_DATA(method->rgctx_data, 0), L_9);
 			NullCheck((RuntimeObject *)L_10);
 			Type_t * L_11 = Object_GetType_m2E0B62414ECCAA3094B703790CE88CBB2F83EA60((RuntimeObject *)L_10, /*hidden argument*/NULL);
-			*L_9 = *(U3CdmpInitializeU3Ed__79_tFBD26E8F7170B6A80E5E08309C8B6C9F0482EFC0 *)UnBox(L_10);
+			*L_9 = *(U3CdmpInitializeU3Ed__81_t3ACD0B2B73A32CB800A14201BD5D8C31BF2D2ADB *)UnBox(L_10);
 			NullCheck((MemberInfo_t *)L_11);
 			String_t* L_12 = VirtFuncInvoker0< String_t* >::Invoke(7 /* System.String System.Reflection.MemberInfo::get_Name() */, (MemberInfo_t *)L_11);
 			String_t* L_13 = String_Concat_mB78D0094592718DA6D5DB6C712A9C225631666BE((String_t*)_stringLiteral5DF1FD1F43BB24443DE17E3357A31169F3FEAC32, (String_t*)L_12, /*hidden argument*/NULL);
@@ -32617,8 +32617,8 @@ IL_0034:
 IL_0062:
 		{
 			AsyncMethodBuilderCore_t4CE6C1E4B0621A6EC45CF6E0E8F1F633FFF9FF01 * L_14 = (AsyncMethodBuilderCore_t4CE6C1E4B0621A6EC45CF6E0E8F1F633FFF9FF01 *)__this->get_address_of_m_coreState_1();
-			U3CdmpInitializeU3Ed__79_tFBD26E8F7170B6A80E5E08309C8B6C9F0482EFC0 * L_15 = ___stateMachine1;
-			U3CdmpInitializeU3Ed__79_tFBD26E8F7170B6A80E5E08309C8B6C9F0482EFC0  L_16 = (*(U3CdmpInitializeU3Ed__79_tFBD26E8F7170B6A80E5E08309C8B6C9F0482EFC0 *)L_15);
+			U3CdmpInitializeU3Ed__81_t3ACD0B2B73A32CB800A14201BD5D8C31BF2D2ADB * L_15 = ___stateMachine1;
+			U3CdmpInitializeU3Ed__81_t3ACD0B2B73A32CB800A14201BD5D8C31BF2D2ADB  L_16 = (*(U3CdmpInitializeU3Ed__81_t3ACD0B2B73A32CB800A14201BD5D8C31BF2D2ADB *)L_15);
 			RuntimeObject * L_17 = Box(IL2CPP_RGCTX_DATA(method->rgctx_data, 0), &L_16);
 			MoveNextRunner_t6A0B9DE31628DAC797ABC84945D4C62B07C3E65A * L_18 = V_0;
 			AsyncMethodBuilderCore_PostBoxInitialization_mE935AC678191E0DD24290C8E986645E81BA18387((AsyncMethodBuilderCore_t4CE6C1E4B0621A6EC45CF6E0E8F1F633FFF9FF01 *)(AsyncMethodBuilderCore_t4CE6C1E4B0621A6EC45CF6E0E8F1F633FFF9FF01 *)L_14, (RuntimeObject*)L_17, (MoveNextRunner_t6A0B9DE31628DAC797ABC84945D4C62B07C3E65A *)L_18, (Task_t1F48C203E163126EBC69ACCA679D1A462DEE9EB2 *)NULL, /*hidden argument*/NULL);
@@ -32651,18 +32651,18 @@ IL_0091:
 		return;
 	}
 }
-extern "C"  void AsyncVoidMethodBuilder_AwaitUnsafeOnCompleted_TisTaskAwaiter_t0CDE8DBB564F0A0EA55FA6B3D43EEF96BC26252F_TisU3CdmpInitializeU3Ed__79_tFBD26E8F7170B6A80E5E08309C8B6C9F0482EFC0_mA031644BFECE1A26E511652932AB9ED0B1BEF1BF_AdjustorThunk (RuntimeObject * __this, TaskAwaiter_t0CDE8DBB564F0A0EA55FA6B3D43EEF96BC26252F * ___awaiter0, U3CdmpInitializeU3Ed__79_tFBD26E8F7170B6A80E5E08309C8B6C9F0482EFC0 * ___stateMachine1, const RuntimeMethod* method)
+extern "C"  void AsyncVoidMethodBuilder_AwaitUnsafeOnCompleted_TisTaskAwaiter_t0CDE8DBB564F0A0EA55FA6B3D43EEF96BC26252F_TisU3CdmpInitializeU3Ed__81_t3ACD0B2B73A32CB800A14201BD5D8C31BF2D2ADB_mCA8B27C9D1B475811B15E19797E38268AE0CB2C2_AdjustorThunk (RuntimeObject * __this, TaskAwaiter_t0CDE8DBB564F0A0EA55FA6B3D43EEF96BC26252F * ___awaiter0, U3CdmpInitializeU3Ed__81_t3ACD0B2B73A32CB800A14201BD5D8C31BF2D2ADB * ___stateMachine1, const RuntimeMethod* method)
 {
 	AsyncVoidMethodBuilder_t44E3C9B52B019BB5BDCC0E1BB83188B536161CFF * _thisAdjusted = reinterpret_cast<AsyncVoidMethodBuilder_t44E3C9B52B019BB5BDCC0E1BB83188B536161CFF *>(__this + 1);
-	AsyncVoidMethodBuilder_AwaitUnsafeOnCompleted_TisTaskAwaiter_t0CDE8DBB564F0A0EA55FA6B3D43EEF96BC26252F_TisU3CdmpInitializeU3Ed__79_tFBD26E8F7170B6A80E5E08309C8B6C9F0482EFC0_mA031644BFECE1A26E511652932AB9ED0B1BEF1BF(_thisAdjusted, ___awaiter0, ___stateMachine1, method);
+	AsyncVoidMethodBuilder_AwaitUnsafeOnCompleted_TisTaskAwaiter_t0CDE8DBB564F0A0EA55FA6B3D43EEF96BC26252F_TisU3CdmpInitializeU3Ed__81_t3ACD0B2B73A32CB800A14201BD5D8C31BF2D2ADB_mCA8B27C9D1B475811B15E19797E38268AE0CB2C2(_thisAdjusted, ___awaiter0, ___stateMachine1, method);
 }
-// System.Void System.Runtime.CompilerServices.AsyncVoidMethodBuilder::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<System.Object>,MPU6050.MPU6050/<InitHardware>d__20>(TAwaiter&,TStateMachine&)
-extern "C" IL2CPP_METHOD_ATTR void AsyncVoidMethodBuilder_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t8CDB78D2A4D48E80C35A8FF6FC04A82B9FC35977_TisU3CInitHardwareU3Ed__20_t5C6E3DCE55B4734BD1D628EB615B97D4AEC70867_m36A2D4F6E4ADFE9D8B99986473F097A756E30FF5_gshared (AsyncVoidMethodBuilder_t44E3C9B52B019BB5BDCC0E1BB83188B536161CFF * __this, TaskAwaiter_1_t8CDB78D2A4D48E80C35A8FF6FC04A82B9FC35977 * ___awaiter0, U3CInitHardwareU3Ed__20_t5C6E3DCE55B4734BD1D628EB615B97D4AEC70867 * ___stateMachine1, const RuntimeMethod* method)
+// System.Void System.Runtime.CompilerServices.AsyncVoidMethodBuilder::AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter`1<System.Object>,MPU6050.MPU6050/<InitHardware>d__21>(TAwaiter&,TStateMachine&)
+extern "C" IL2CPP_METHOD_ATTR void AsyncVoidMethodBuilder_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t8CDB78D2A4D48E80C35A8FF6FC04A82B9FC35977_TisU3CInitHardwareU3Ed__21_t0346A49D0C7D783B33AF5C2792D653565E4895AD_m3A394EBF2DA4430CB70B11B52E918676246E73DB_gshared (AsyncVoidMethodBuilder_t44E3C9B52B019BB5BDCC0E1BB83188B536161CFF * __this, TaskAwaiter_1_t8CDB78D2A4D48E80C35A8FF6FC04A82B9FC35977 * ___awaiter0, U3CInitHardwareU3Ed__21_t0346A49D0C7D783B33AF5C2792D653565E4895AD * ___stateMachine1, const RuntimeMethod* method)
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_method (AsyncVoidMethodBuilder_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t8CDB78D2A4D48E80C35A8FF6FC04A82B9FC35977_TisU3CInitHardwareU3Ed__20_t5C6E3DCE55B4734BD1D628EB615B97D4AEC70867_m36A2D4F6E4ADFE9D8B99986473F097A756E30FF5_MetadataUsageId);
+		il2cpp_codegen_initialize_method (AsyncVoidMethodBuilder_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t8CDB78D2A4D48E80C35A8FF6FC04A82B9FC35977_TisU3CInitHardwareU3Ed__21_t0346A49D0C7D783B33AF5C2792D653565E4895AD_m3A394EBF2DA4430CB70B11B52E918676246E73DB_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
 	MoveNextRunner_t6A0B9DE31628DAC797ABC84945D4C62B07C3E65A * V_0 = NULL;
@@ -32733,11 +32733,11 @@ IL_0034:
 			Task_t1F48C203E163126EBC69ACCA679D1A462DEE9EB2 * L_7 = AsyncVoidMethodBuilder_get_Task_m377181C7C834736C7408C015E65AB1F29D8AB3C8((AsyncVoidMethodBuilder_t44E3C9B52B019BB5BDCC0E1BB83188B536161CFF *)(AsyncVoidMethodBuilder_t44E3C9B52B019BB5BDCC0E1BB83188B536161CFF *)__this, /*hidden argument*/NULL);
 			NullCheck((Task_t1F48C203E163126EBC69ACCA679D1A462DEE9EB2 *)L_7);
 			int32_t L_8 = Task_get_Id_mA2A4DA7A476AFEF6FF4B4F29BF1F98D0481E28AD((Task_t1F48C203E163126EBC69ACCA679D1A462DEE9EB2 *)L_7, /*hidden argument*/NULL);
-			U3CInitHardwareU3Ed__20_t5C6E3DCE55B4734BD1D628EB615B97D4AEC70867 * L_9 = ___stateMachine1;
+			U3CInitHardwareU3Ed__21_t0346A49D0C7D783B33AF5C2792D653565E4895AD * L_9 = ___stateMachine1;
 			RuntimeObject * L_10 = Box(IL2CPP_RGCTX_DATA(method->rgctx_data, 0), L_9);
 			NullCheck((RuntimeObject *)L_10);
 			Type_t * L_11 = Object_GetType_m2E0B62414ECCAA3094B703790CE88CBB2F83EA60((RuntimeObject *)L_10, /*hidden argument*/NULL);
-			*L_9 = *(U3CInitHardwareU3Ed__20_t5C6E3DCE55B4734BD1D628EB615B97D4AEC70867 *)UnBox(L_10);
+			*L_9 = *(U3CInitHardwareU3Ed__21_t0346A49D0C7D783B33AF5C2792D653565E4895AD *)UnBox(L_10);
 			NullCheck((MemberInfo_t *)L_11);
 			String_t* L_12 = VirtFuncInvoker0< String_t* >::Invoke(7 /* System.String System.Reflection.MemberInfo::get_Name() */, (MemberInfo_t *)L_11);
 			String_t* L_13 = String_Concat_mB78D0094592718DA6D5DB6C712A9C225631666BE((String_t*)_stringLiteral5DF1FD1F43BB24443DE17E3357A31169F3FEAC32, (String_t*)L_12, /*hidden argument*/NULL);
@@ -32747,8 +32747,8 @@ IL_0034:
 IL_0062:
 		{
 			AsyncMethodBuilderCore_t4CE6C1E4B0621A6EC45CF6E0E8F1F633FFF9FF01 * L_14 = (AsyncMethodBuilderCore_t4CE6C1E4B0621A6EC45CF6E0E8F1F633FFF9FF01 *)__this->get_address_of_m_coreState_1();
-			U3CInitHardwareU3Ed__20_t5C6E3DCE55B4734BD1D628EB615B97D4AEC70867 * L_15 = ___stateMachine1;
-			U3CInitHardwareU3Ed__20_t5C6E3DCE55B4734BD1D628EB615B97D4AEC70867  L_16 = (*(U3CInitHardwareU3Ed__20_t5C6E3DCE55B4734BD1D628EB615B97D4AEC70867 *)L_15);
+			U3CInitHardwareU3Ed__21_t0346A49D0C7D783B33AF5C2792D653565E4895AD * L_15 = ___stateMachine1;
+			U3CInitHardwareU3Ed__21_t0346A49D0C7D783B33AF5C2792D653565E4895AD  L_16 = (*(U3CInitHardwareU3Ed__21_t0346A49D0C7D783B33AF5C2792D653565E4895AD *)L_15);
 			RuntimeObject * L_17 = Box(IL2CPP_RGCTX_DATA(method->rgctx_data, 0), &L_16);
 			MoveNextRunner_t6A0B9DE31628DAC797ABC84945D4C62B07C3E65A * L_18 = V_0;
 			AsyncMethodBuilderCore_PostBoxInitialization_mE935AC678191E0DD24290C8E986645E81BA18387((AsyncMethodBuilderCore_t4CE6C1E4B0621A6EC45CF6E0E8F1F633FFF9FF01 *)(AsyncMethodBuilderCore_t4CE6C1E4B0621A6EC45CF6E0E8F1F633FFF9FF01 *)L_14, (RuntimeObject*)L_17, (MoveNextRunner_t6A0B9DE31628DAC797ABC84945D4C62B07C3E65A *)L_18, (Task_t1F48C203E163126EBC69ACCA679D1A462DEE9EB2 *)NULL, /*hidden argument*/NULL);
@@ -32784,18 +32784,18 @@ IL_0091:
 		return;
 	}
 }
-extern "C"  void AsyncVoidMethodBuilder_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t8CDB78D2A4D48E80C35A8FF6FC04A82B9FC35977_TisU3CInitHardwareU3Ed__20_t5C6E3DCE55B4734BD1D628EB615B97D4AEC70867_m36A2D4F6E4ADFE9D8B99986473F097A756E30FF5_AdjustorThunk (RuntimeObject * __this, TaskAwaiter_1_t8CDB78D2A4D48E80C35A8FF6FC04A82B9FC35977 * ___awaiter0, U3CInitHardwareU3Ed__20_t5C6E3DCE55B4734BD1D628EB615B97D4AEC70867 * ___stateMachine1, const RuntimeMethod* method)
+extern "C"  void AsyncVoidMethodBuilder_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t8CDB78D2A4D48E80C35A8FF6FC04A82B9FC35977_TisU3CInitHardwareU3Ed__21_t0346A49D0C7D783B33AF5C2792D653565E4895AD_m3A394EBF2DA4430CB70B11B52E918676246E73DB_AdjustorThunk (RuntimeObject * __this, TaskAwaiter_1_t8CDB78D2A4D48E80C35A8FF6FC04A82B9FC35977 * ___awaiter0, U3CInitHardwareU3Ed__21_t0346A49D0C7D783B33AF5C2792D653565E4895AD * ___stateMachine1, const RuntimeMethod* method)
 {
 	AsyncVoidMethodBuilder_t44E3C9B52B019BB5BDCC0E1BB83188B536161CFF * _thisAdjusted = reinterpret_cast<AsyncVoidMethodBuilder_t44E3C9B52B019BB5BDCC0E1BB83188B536161CFF *>(__this + 1);
-	AsyncVoidMethodBuilder_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t8CDB78D2A4D48E80C35A8FF6FC04A82B9FC35977_TisU3CInitHardwareU3Ed__20_t5C6E3DCE55B4734BD1D628EB615B97D4AEC70867_m36A2D4F6E4ADFE9D8B99986473F097A756E30FF5(_thisAdjusted, ___awaiter0, ___stateMachine1, method);
+	AsyncVoidMethodBuilder_AwaitUnsafeOnCompleted_TisTaskAwaiter_1_t8CDB78D2A4D48E80C35A8FF6FC04A82B9FC35977_TisU3CInitHardwareU3Ed__21_t0346A49D0C7D783B33AF5C2792D653565E4895AD_m3A394EBF2DA4430CB70B11B52E918676246E73DB(_thisAdjusted, ___awaiter0, ___stateMachine1, method);
 }
-// System.Void System.Runtime.CompilerServices.AsyncVoidMethodBuilder::Start<MPU6050.MPU6050/<InitHardware>d__20>(TStateMachine&)
-extern "C" IL2CPP_METHOD_ATTR void AsyncVoidMethodBuilder_Start_TisU3CInitHardwareU3Ed__20_t5C6E3DCE55B4734BD1D628EB615B97D4AEC70867_m16CEC524811D728461CEF5C68315737110C108D2_gshared (AsyncVoidMethodBuilder_t44E3C9B52B019BB5BDCC0E1BB83188B536161CFF * __this, U3CInitHardwareU3Ed__20_t5C6E3DCE55B4734BD1D628EB615B97D4AEC70867 * ___stateMachine0, const RuntimeMethod* method)
+// System.Void System.Runtime.CompilerServices.AsyncVoidMethodBuilder::Start<MPU6050.MPU6050/<InitHardware>d__21>(TStateMachine&)
+extern "C" IL2CPP_METHOD_ATTR void AsyncVoidMethodBuilder_Start_TisU3CInitHardwareU3Ed__21_t0346A49D0C7D783B33AF5C2792D653565E4895AD_m34C1C0A73EAB71B2CF4D76413D7084C2D990CFAE_gshared (AsyncVoidMethodBuilder_t44E3C9B52B019BB5BDCC0E1BB83188B536161CFF * __this, U3CInitHardwareU3Ed__21_t0346A49D0C7D783B33AF5C2792D653565E4895AD * ___stateMachine0, const RuntimeMethod* method)
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_method (AsyncVoidMethodBuilder_Start_TisU3CInitHardwareU3Ed__20_t5C6E3DCE55B4734BD1D628EB615B97D4AEC70867_m16CEC524811D728461CEF5C68315737110C108D2_MetadataUsageId);
+		il2cpp_codegen_initialize_method (AsyncVoidMethodBuilder_Start_TisU3CInitHardwareU3Ed__21_t0346A49D0C7D783B33AF5C2792D653565E4895AD_m34C1C0A73EAB71B2CF4D76413D7084C2D990CFAE_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
 	ExecutionContextSwitcher_t739C861A327D724A4E59DE865463B32097395159  V_0;
@@ -32812,7 +32812,7 @@ extern "C" IL2CPP_METHOD_ATTR void AsyncVoidMethodBuilder_Start_TisU3CInitHardwa
 	{
 		ArgumentNullException_t581DF992B1F3E0EC6EFB30CC5DC43519A79B27AD * L_1 = (ArgumentNullException_t581DF992B1F3E0EC6EFB30CC5DC43519A79B27AD *)il2cpp_codegen_object_new(ArgumentNullException_t581DF992B1F3E0EC6EFB30CC5DC43519A79B27AD_il2cpp_TypeInfo_var);
 		ArgumentNullException__ctor_mEE0C0D6FCB2D08CD7967DBB1329A0854BBED49ED(L_1, (String_t*)_stringLiteral1C8728773F47B06B3495EFEE77C3BE7FB67037E3, /*hidden argument*/NULL);
-		IL2CPP_RAISE_MANAGED_EXCEPTION(L_1, NULL, AsyncVoidMethodBuilder_Start_TisU3CInitHardwareU3Ed__20_t5C6E3DCE55B4734BD1D628EB615B97D4AEC70867_m16CEC524811D728461CEF5C68315737110C108D2_RuntimeMethod_var);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_1, NULL, AsyncVoidMethodBuilder_Start_TisU3CInitHardwareU3Ed__21_t0346A49D0C7D783B33AF5C2792D653565E4895AD_m34C1C0A73EAB71B2CF4D76413D7084C2D990CFAE_RuntimeMethod_var);
 	}
 
 IL_0018:
@@ -32826,8 +32826,8 @@ IL_0025:
 	{ // begin try (depth: 1)
 		IL2CPP_RUNTIME_CLASS_INIT(ExecutionContext_t0E11C30308A4CC964D8A2EA9132F9BDCE5362C70_il2cpp_TypeInfo_var);
 		ExecutionContext_EstablishCopyOnWriteScope_mCB6F76C243352732B36223FBE3EB97653CDA39C1((ExecutionContextSwitcher_t739C861A327D724A4E59DE865463B32097395159 *)(ExecutionContextSwitcher_t739C861A327D724A4E59DE865463B32097395159 *)(&V_0), /*hidden argument*/NULL);
-		U3CInitHardwareU3Ed__20_t5C6E3DCE55B4734BD1D628EB615B97D4AEC70867 * L_2 = ___stateMachine0;
-		U3CInitHardwareU3Ed__20_MoveNext_mBB6794285EECF87918EDAC0E839DF525C0540115((U3CInitHardwareU3Ed__20_t5C6E3DCE55B4734BD1D628EB615B97D4AEC70867 *)(U3CInitHardwareU3Ed__20_t5C6E3DCE55B4734BD1D628EB615B97D4AEC70867 *)L_2, /*hidden argument*/NULL);
+		U3CInitHardwareU3Ed__21_t0346A49D0C7D783B33AF5C2792D653565E4895AD * L_2 = ___stateMachine0;
+		U3CInitHardwareU3Ed__21_MoveNext_m84FF28D7230075893F146E9F0CFE8F6309D174DA((U3CInitHardwareU3Ed__21_t0346A49D0C7D783B33AF5C2792D653565E4895AD *)(U3CInitHardwareU3Ed__21_t0346A49D0C7D783B33AF5C2792D653565E4895AD *)L_2, /*hidden argument*/NULL);
 		IL2CPP_LEAVE(0x42, FINALLY_003a);
 	} // end try (depth: 1)
 	catch(Il2CppExceptionWrapper& e)
@@ -32852,18 +32852,18 @@ IL_0042:
 		return;
 	}
 }
-extern "C"  void AsyncVoidMethodBuilder_Start_TisU3CInitHardwareU3Ed__20_t5C6E3DCE55B4734BD1D628EB615B97D4AEC70867_m16CEC524811D728461CEF5C68315737110C108D2_AdjustorThunk (RuntimeObject * __this, U3CInitHardwareU3Ed__20_t5C6E3DCE55B4734BD1D628EB615B97D4AEC70867 * ___stateMachine0, const RuntimeMethod* method)
+extern "C"  void AsyncVoidMethodBuilder_Start_TisU3CInitHardwareU3Ed__21_t0346A49D0C7D783B33AF5C2792D653565E4895AD_m34C1C0A73EAB71B2CF4D76413D7084C2D990CFAE_AdjustorThunk (RuntimeObject * __this, U3CInitHardwareU3Ed__21_t0346A49D0C7D783B33AF5C2792D653565E4895AD * ___stateMachine0, const RuntimeMethod* method)
 {
 	AsyncVoidMethodBuilder_t44E3C9B52B019BB5BDCC0E1BB83188B536161CFF * _thisAdjusted = reinterpret_cast<AsyncVoidMethodBuilder_t44E3C9B52B019BB5BDCC0E1BB83188B536161CFF *>(__this + 1);
-	AsyncVoidMethodBuilder_Start_TisU3CInitHardwareU3Ed__20_t5C6E3DCE55B4734BD1D628EB615B97D4AEC70867_m16CEC524811D728461CEF5C68315737110C108D2(_thisAdjusted, ___stateMachine0, method);
+	AsyncVoidMethodBuilder_Start_TisU3CInitHardwareU3Ed__21_t0346A49D0C7D783B33AF5C2792D653565E4895AD_m34C1C0A73EAB71B2CF4D76413D7084C2D990CFAE(_thisAdjusted, ___stateMachine0, method);
 }
-// System.Void System.Runtime.CompilerServices.AsyncVoidMethodBuilder::Start<MPU6050.MPU6050/<dmpInitialize>d__79>(TStateMachine&)
-extern "C" IL2CPP_METHOD_ATTR void AsyncVoidMethodBuilder_Start_TisU3CdmpInitializeU3Ed__79_tFBD26E8F7170B6A80E5E08309C8B6C9F0482EFC0_mA9AA586F9663CA2B94C1C05B7E45A916077586E1_gshared (AsyncVoidMethodBuilder_t44E3C9B52B019BB5BDCC0E1BB83188B536161CFF * __this, U3CdmpInitializeU3Ed__79_tFBD26E8F7170B6A80E5E08309C8B6C9F0482EFC0 * ___stateMachine0, const RuntimeMethod* method)
+// System.Void System.Runtime.CompilerServices.AsyncVoidMethodBuilder::Start<MPU6050.MPU6050/<dmpInitialize>d__81>(TStateMachine&)
+extern "C" IL2CPP_METHOD_ATTR void AsyncVoidMethodBuilder_Start_TisU3CdmpInitializeU3Ed__81_t3ACD0B2B73A32CB800A14201BD5D8C31BF2D2ADB_m1745F2D03F7DE629E5A02E75937C29441B1B229B_gshared (AsyncVoidMethodBuilder_t44E3C9B52B019BB5BDCC0E1BB83188B536161CFF * __this, U3CdmpInitializeU3Ed__81_t3ACD0B2B73A32CB800A14201BD5D8C31BF2D2ADB * ___stateMachine0, const RuntimeMethod* method)
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_method (AsyncVoidMethodBuilder_Start_TisU3CdmpInitializeU3Ed__79_tFBD26E8F7170B6A80E5E08309C8B6C9F0482EFC0_mA9AA586F9663CA2B94C1C05B7E45A916077586E1_MetadataUsageId);
+		il2cpp_codegen_initialize_method (AsyncVoidMethodBuilder_Start_TisU3CdmpInitializeU3Ed__81_t3ACD0B2B73A32CB800A14201BD5D8C31BF2D2ADB_m1745F2D03F7DE629E5A02E75937C29441B1B229B_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
 	ExecutionContextSwitcher_t739C861A327D724A4E59DE865463B32097395159  V_0;
@@ -32880,7 +32880,7 @@ extern "C" IL2CPP_METHOD_ATTR void AsyncVoidMethodBuilder_Start_TisU3CdmpInitial
 	{
 		ArgumentNullException_t581DF992B1F3E0EC6EFB30CC5DC43519A79B27AD * L_1 = (ArgumentNullException_t581DF992B1F3E0EC6EFB30CC5DC43519A79B27AD *)il2cpp_codegen_object_new(ArgumentNullException_t581DF992B1F3E0EC6EFB30CC5DC43519A79B27AD_il2cpp_TypeInfo_var);
 		ArgumentNullException__ctor_mEE0C0D6FCB2D08CD7967DBB1329A0854BBED49ED(L_1, (String_t*)_stringLiteral1C8728773F47B06B3495EFEE77C3BE7FB67037E3, /*hidden argument*/NULL);
-		IL2CPP_RAISE_MANAGED_EXCEPTION(L_1, NULL, AsyncVoidMethodBuilder_Start_TisU3CdmpInitializeU3Ed__79_tFBD26E8F7170B6A80E5E08309C8B6C9F0482EFC0_mA9AA586F9663CA2B94C1C05B7E45A916077586E1_RuntimeMethod_var);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_1, NULL, AsyncVoidMethodBuilder_Start_TisU3CdmpInitializeU3Ed__81_t3ACD0B2B73A32CB800A14201BD5D8C31BF2D2ADB_m1745F2D03F7DE629E5A02E75937C29441B1B229B_RuntimeMethod_var);
 	}
 
 IL_0018:
@@ -32894,8 +32894,8 @@ IL_0025:
 	{ // begin try (depth: 1)
 		IL2CPP_RUNTIME_CLASS_INIT(ExecutionContext_t0E11C30308A4CC964D8A2EA9132F9BDCE5362C70_il2cpp_TypeInfo_var);
 		ExecutionContext_EstablishCopyOnWriteScope_mCB6F76C243352732B36223FBE3EB97653CDA39C1((ExecutionContextSwitcher_t739C861A327D724A4E59DE865463B32097395159 *)(ExecutionContextSwitcher_t739C861A327D724A4E59DE865463B32097395159 *)(&V_0), /*hidden argument*/NULL);
-		U3CdmpInitializeU3Ed__79_tFBD26E8F7170B6A80E5E08309C8B6C9F0482EFC0 * L_2 = ___stateMachine0;
-		U3CdmpInitializeU3Ed__79_MoveNext_m64CFABA2F0C33D24F5A07CDB2A39AD1528EF999B((U3CdmpInitializeU3Ed__79_tFBD26E8F7170B6A80E5E08309C8B6C9F0482EFC0 *)(U3CdmpInitializeU3Ed__79_tFBD26E8F7170B6A80E5E08309C8B6C9F0482EFC0 *)L_2, /*hidden argument*/NULL);
+		U3CdmpInitializeU3Ed__81_t3ACD0B2B73A32CB800A14201BD5D8C31BF2D2ADB * L_2 = ___stateMachine0;
+		U3CdmpInitializeU3Ed__81_MoveNext_m539F3E4721FF0F285E829963050FD71F03A659CE((U3CdmpInitializeU3Ed__81_t3ACD0B2B73A32CB800A14201BD5D8C31BF2D2ADB *)(U3CdmpInitializeU3Ed__81_t3ACD0B2B73A32CB800A14201BD5D8C31BF2D2ADB *)L_2, /*hidden argument*/NULL);
 		IL2CPP_LEAVE(0x42, FINALLY_003a);
 	} // end try (depth: 1)
 	catch(Il2CppExceptionWrapper& e)
@@ -32920,10 +32920,10 @@ IL_0042:
 		return;
 	}
 }
-extern "C"  void AsyncVoidMethodBuilder_Start_TisU3CdmpInitializeU3Ed__79_tFBD26E8F7170B6A80E5E08309C8B6C9F0482EFC0_mA9AA586F9663CA2B94C1C05B7E45A916077586E1_AdjustorThunk (RuntimeObject * __this, U3CdmpInitializeU3Ed__79_tFBD26E8F7170B6A80E5E08309C8B6C9F0482EFC0 * ___stateMachine0, const RuntimeMethod* method)
+extern "C"  void AsyncVoidMethodBuilder_Start_TisU3CdmpInitializeU3Ed__81_t3ACD0B2B73A32CB800A14201BD5D8C31BF2D2ADB_m1745F2D03F7DE629E5A02E75937C29441B1B229B_AdjustorThunk (RuntimeObject * __this, U3CdmpInitializeU3Ed__81_t3ACD0B2B73A32CB800A14201BD5D8C31BF2D2ADB * ___stateMachine0, const RuntimeMethod* method)
 {
 	AsyncVoidMethodBuilder_t44E3C9B52B019BB5BDCC0E1BB83188B536161CFF * _thisAdjusted = reinterpret_cast<AsyncVoidMethodBuilder_t44E3C9B52B019BB5BDCC0E1BB83188B536161CFF *>(__this + 1);
-	AsyncVoidMethodBuilder_Start_TisU3CdmpInitializeU3Ed__79_tFBD26E8F7170B6A80E5E08309C8B6C9F0482EFC0_mA9AA586F9663CA2B94C1C05B7E45A916077586E1(_thisAdjusted, ___stateMachine0, method);
+	AsyncVoidMethodBuilder_Start_TisU3CdmpInitializeU3Ed__81_t3ACD0B2B73A32CB800A14201BD5D8C31BF2D2ADB_m1745F2D03F7DE629E5A02E75937C29441B1B229B(_thisAdjusted, ___stateMachine0, method);
 }
 // System.Void System.Runtime.CompilerServices.AsyncVoidMethodBuilder::Start<System.Object>(TStateMachine&)
 extern "C" IL2CPP_METHOD_ATTR void AsyncVoidMethodBuilder_Start_TisRuntimeObject_m0853517F037A559FE0FBD5B4CF52B7FA39AF2748_gshared (AsyncVoidMethodBuilder_t44E3C9B52B019BB5BDCC0E1BB83188B536161CFF * __this, RuntimeObject ** ___stateMachine0, const RuntimeMethod* method)

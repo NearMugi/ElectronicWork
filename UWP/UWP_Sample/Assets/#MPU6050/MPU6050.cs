@@ -59,6 +59,9 @@ namespace MPU6050
         public String mpu6050Msg = "";
         public bool isInitErr;
 
+        public bool isInitHardware;
+
+
 #if WINDOWS_UWP
         I2cDevice _mpu6050Device = null;
         private GpioController IoController;
@@ -80,9 +83,10 @@ namespace MPU6050
         {
             if (isInitErr) devStatus = 5;
         }
-
+        
         public async void InitHardware()
         {
+            isInitHardware = false;
             try
             {
 #if WINDOWS_UWP
@@ -99,7 +103,7 @@ namespace MPU6050
                 _mpu6050Device = await I2cDevice.FromIdAsync(collection[0].Id, settings);
 
                 await Task.Delay(3); // wait power up sequence
-                
+                isInitHardware = true;
 #endif
             }
             catch (Exception ex)

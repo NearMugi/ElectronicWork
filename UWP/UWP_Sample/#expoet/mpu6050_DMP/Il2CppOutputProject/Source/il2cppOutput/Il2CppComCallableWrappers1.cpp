@@ -948,28 +948,32 @@ public:
 	String_t* ___mpu6050Msg_1;
 	// System.Boolean MPU6050.MPU6050::isInitErr
 	bool ___isInitErr_2;
+	// System.Boolean MPU6050.MPU6050::isInitHardware
+	bool ___isInitHardware_3;
 	// Windows.Devices.I2c.I2cDevice MPU6050.MPU6050::_mpu6050Device
-	I2cDevice_t98FC86BEF8346B93999084F247BB5BDE4D946128 * ____mpu6050Device_3;
+	I2cDevice_t98FC86BEF8346B93999084F247BB5BDE4D946128 * ____mpu6050Device_4;
 	// Windows.Devices.Gpio.GpioController MPU6050.MPU6050::IoController
-	GpioController_t9EC04AE9960323D7AD5D38705D1A92E5DF62079D * ___IoController_4;
+	GpioController_t9EC04AE9960323D7AD5D38705D1A92E5DF62079D * ___IoController_5;
 	// System.Boolean MPU6050.MPU6050::disposedValue
-	bool ___disposedValue_5;
+	bool ___disposedValue_6;
+	// System.Boolean MPU6050.MPU6050::isdmpInitialize
+	bool ___isdmpInitialize_7;
 	// System.Byte MPU6050.MPU6050::devStatus
-	uint8_t ___devStatus_6;
+	uint8_t ___devStatus_8;
 	// System.Byte[] MPU6050.MPU6050::dmpMemory
-	ByteU5BU5D_tD06FDBE8142446525DF1C40351D523A228373821* ___dmpMemory_10;
+	ByteU5BU5D_tD06FDBE8142446525DF1C40351D523A228373821* ___dmpMemory_12;
 	// System.Byte[] MPU6050.MPU6050::dmpConfig
-	ByteU5BU5D_tD06FDBE8142446525DF1C40351D523A228373821* ___dmpConfig_11;
+	ByteU5BU5D_tD06FDBE8142446525DF1C40351D523A228373821* ___dmpConfig_13;
 	// System.Byte[] MPU6050.MPU6050::dmpUpdates
-	ByteU5BU5D_tD06FDBE8142446525DF1C40351D523A228373821* ___dmpUpdates_12;
+	ByteU5BU5D_tD06FDBE8142446525DF1C40351D523A228373821* ___dmpUpdates_14;
 	// System.Byte[] MPU6050.MPU6050::dmpPacketBuffer
-	ByteU5BU5D_tD06FDBE8142446525DF1C40351D523A228373821* ___dmpPacketBuffer_349;
+	ByteU5BU5D_tD06FDBE8142446525DF1C40351D523A228373821* ___dmpPacketBuffer_351;
 	// System.UInt32 MPU6050.MPU6050::dmpPacketSize
-	uint32_t ___dmpPacketSize_350;
+	uint32_t ___dmpPacketSize_352;
 	// System.Byte MPU6050.MPU6050::devAddr
-	uint8_t ___devAddr_351;
+	uint8_t ___devAddr_353;
 	// System.Byte[] MPU6050.MPU6050::buffer
-	ByteU5BU5D_tD06FDBE8142446525DF1C40351D523A228373821* ___buffer_352;
+	ByteU5BU5D_tD06FDBE8142446525DF1C40351D523A228373821* ___buffer_354;
 
 public:
 	inline static int32_t get_offset_of_timeout_0() { return static_cast<int32_t>(offsetof(MPU6050_t0C410A8414574468B440DEB07CCAD8108B188A92, ___timeout_0)); }
@@ -997,99 +1001,115 @@ public:
 		___isInitErr_2 = value;
 	}
 
-	inline static int32_t get_offset_of__mpu6050Device_3() { return static_cast<int32_t>(offsetof(MPU6050_t0C410A8414574468B440DEB07CCAD8108B188A92, ____mpu6050Device_3)); }
-	inline I2cDevice_t98FC86BEF8346B93999084F247BB5BDE4D946128 * get__mpu6050Device_3() const { return ____mpu6050Device_3; }
-	inline I2cDevice_t98FC86BEF8346B93999084F247BB5BDE4D946128 ** get_address_of__mpu6050Device_3() { return &____mpu6050Device_3; }
-	inline void set__mpu6050Device_3(I2cDevice_t98FC86BEF8346B93999084F247BB5BDE4D946128 * value)
+	inline static int32_t get_offset_of_isInitHardware_3() { return static_cast<int32_t>(offsetof(MPU6050_t0C410A8414574468B440DEB07CCAD8108B188A92, ___isInitHardware_3)); }
+	inline bool get_isInitHardware_3() const { return ___isInitHardware_3; }
+	inline bool* get_address_of_isInitHardware_3() { return &___isInitHardware_3; }
+	inline void set_isInitHardware_3(bool value)
 	{
-		____mpu6050Device_3 = value;
-		Il2CppCodeGenWriteBarrier((&____mpu6050Device_3), value);
+		___isInitHardware_3 = value;
 	}
 
-	inline static int32_t get_offset_of_IoController_4() { return static_cast<int32_t>(offsetof(MPU6050_t0C410A8414574468B440DEB07CCAD8108B188A92, ___IoController_4)); }
-	inline GpioController_t9EC04AE9960323D7AD5D38705D1A92E5DF62079D * get_IoController_4() const { return ___IoController_4; }
-	inline GpioController_t9EC04AE9960323D7AD5D38705D1A92E5DF62079D ** get_address_of_IoController_4() { return &___IoController_4; }
-	inline void set_IoController_4(GpioController_t9EC04AE9960323D7AD5D38705D1A92E5DF62079D * value)
+	inline static int32_t get_offset_of__mpu6050Device_4() { return static_cast<int32_t>(offsetof(MPU6050_t0C410A8414574468B440DEB07CCAD8108B188A92, ____mpu6050Device_4)); }
+	inline I2cDevice_t98FC86BEF8346B93999084F247BB5BDE4D946128 * get__mpu6050Device_4() const { return ____mpu6050Device_4; }
+	inline I2cDevice_t98FC86BEF8346B93999084F247BB5BDE4D946128 ** get_address_of__mpu6050Device_4() { return &____mpu6050Device_4; }
+	inline void set__mpu6050Device_4(I2cDevice_t98FC86BEF8346B93999084F247BB5BDE4D946128 * value)
 	{
-		___IoController_4 = value;
-		Il2CppCodeGenWriteBarrier((&___IoController_4), value);
+		____mpu6050Device_4 = value;
+		Il2CppCodeGenWriteBarrier((&____mpu6050Device_4), value);
 	}
 
-	inline static int32_t get_offset_of_disposedValue_5() { return static_cast<int32_t>(offsetof(MPU6050_t0C410A8414574468B440DEB07CCAD8108B188A92, ___disposedValue_5)); }
-	inline bool get_disposedValue_5() const { return ___disposedValue_5; }
-	inline bool* get_address_of_disposedValue_5() { return &___disposedValue_5; }
-	inline void set_disposedValue_5(bool value)
+	inline static int32_t get_offset_of_IoController_5() { return static_cast<int32_t>(offsetof(MPU6050_t0C410A8414574468B440DEB07CCAD8108B188A92, ___IoController_5)); }
+	inline GpioController_t9EC04AE9960323D7AD5D38705D1A92E5DF62079D * get_IoController_5() const { return ___IoController_5; }
+	inline GpioController_t9EC04AE9960323D7AD5D38705D1A92E5DF62079D ** get_address_of_IoController_5() { return &___IoController_5; }
+	inline void set_IoController_5(GpioController_t9EC04AE9960323D7AD5D38705D1A92E5DF62079D * value)
 	{
-		___disposedValue_5 = value;
+		___IoController_5 = value;
+		Il2CppCodeGenWriteBarrier((&___IoController_5), value);
 	}
 
-	inline static int32_t get_offset_of_devStatus_6() { return static_cast<int32_t>(offsetof(MPU6050_t0C410A8414574468B440DEB07CCAD8108B188A92, ___devStatus_6)); }
-	inline uint8_t get_devStatus_6() const { return ___devStatus_6; }
-	inline uint8_t* get_address_of_devStatus_6() { return &___devStatus_6; }
-	inline void set_devStatus_6(uint8_t value)
+	inline static int32_t get_offset_of_disposedValue_6() { return static_cast<int32_t>(offsetof(MPU6050_t0C410A8414574468B440DEB07CCAD8108B188A92, ___disposedValue_6)); }
+	inline bool get_disposedValue_6() const { return ___disposedValue_6; }
+	inline bool* get_address_of_disposedValue_6() { return &___disposedValue_6; }
+	inline void set_disposedValue_6(bool value)
 	{
-		___devStatus_6 = value;
+		___disposedValue_6 = value;
 	}
 
-	inline static int32_t get_offset_of_dmpMemory_10() { return static_cast<int32_t>(offsetof(MPU6050_t0C410A8414574468B440DEB07CCAD8108B188A92, ___dmpMemory_10)); }
-	inline ByteU5BU5D_tD06FDBE8142446525DF1C40351D523A228373821* get_dmpMemory_10() const { return ___dmpMemory_10; }
-	inline ByteU5BU5D_tD06FDBE8142446525DF1C40351D523A228373821** get_address_of_dmpMemory_10() { return &___dmpMemory_10; }
-	inline void set_dmpMemory_10(ByteU5BU5D_tD06FDBE8142446525DF1C40351D523A228373821* value)
+	inline static int32_t get_offset_of_isdmpInitialize_7() { return static_cast<int32_t>(offsetof(MPU6050_t0C410A8414574468B440DEB07CCAD8108B188A92, ___isdmpInitialize_7)); }
+	inline bool get_isdmpInitialize_7() const { return ___isdmpInitialize_7; }
+	inline bool* get_address_of_isdmpInitialize_7() { return &___isdmpInitialize_7; }
+	inline void set_isdmpInitialize_7(bool value)
 	{
-		___dmpMemory_10 = value;
-		Il2CppCodeGenWriteBarrier((&___dmpMemory_10), value);
+		___isdmpInitialize_7 = value;
 	}
 
-	inline static int32_t get_offset_of_dmpConfig_11() { return static_cast<int32_t>(offsetof(MPU6050_t0C410A8414574468B440DEB07CCAD8108B188A92, ___dmpConfig_11)); }
-	inline ByteU5BU5D_tD06FDBE8142446525DF1C40351D523A228373821* get_dmpConfig_11() const { return ___dmpConfig_11; }
-	inline ByteU5BU5D_tD06FDBE8142446525DF1C40351D523A228373821** get_address_of_dmpConfig_11() { return &___dmpConfig_11; }
-	inline void set_dmpConfig_11(ByteU5BU5D_tD06FDBE8142446525DF1C40351D523A228373821* value)
+	inline static int32_t get_offset_of_devStatus_8() { return static_cast<int32_t>(offsetof(MPU6050_t0C410A8414574468B440DEB07CCAD8108B188A92, ___devStatus_8)); }
+	inline uint8_t get_devStatus_8() const { return ___devStatus_8; }
+	inline uint8_t* get_address_of_devStatus_8() { return &___devStatus_8; }
+	inline void set_devStatus_8(uint8_t value)
 	{
-		___dmpConfig_11 = value;
-		Il2CppCodeGenWriteBarrier((&___dmpConfig_11), value);
+		___devStatus_8 = value;
 	}
 
-	inline static int32_t get_offset_of_dmpUpdates_12() { return static_cast<int32_t>(offsetof(MPU6050_t0C410A8414574468B440DEB07CCAD8108B188A92, ___dmpUpdates_12)); }
-	inline ByteU5BU5D_tD06FDBE8142446525DF1C40351D523A228373821* get_dmpUpdates_12() const { return ___dmpUpdates_12; }
-	inline ByteU5BU5D_tD06FDBE8142446525DF1C40351D523A228373821** get_address_of_dmpUpdates_12() { return &___dmpUpdates_12; }
-	inline void set_dmpUpdates_12(ByteU5BU5D_tD06FDBE8142446525DF1C40351D523A228373821* value)
+	inline static int32_t get_offset_of_dmpMemory_12() { return static_cast<int32_t>(offsetof(MPU6050_t0C410A8414574468B440DEB07CCAD8108B188A92, ___dmpMemory_12)); }
+	inline ByteU5BU5D_tD06FDBE8142446525DF1C40351D523A228373821* get_dmpMemory_12() const { return ___dmpMemory_12; }
+	inline ByteU5BU5D_tD06FDBE8142446525DF1C40351D523A228373821** get_address_of_dmpMemory_12() { return &___dmpMemory_12; }
+	inline void set_dmpMemory_12(ByteU5BU5D_tD06FDBE8142446525DF1C40351D523A228373821* value)
 	{
-		___dmpUpdates_12 = value;
-		Il2CppCodeGenWriteBarrier((&___dmpUpdates_12), value);
+		___dmpMemory_12 = value;
+		Il2CppCodeGenWriteBarrier((&___dmpMemory_12), value);
 	}
 
-	inline static int32_t get_offset_of_dmpPacketBuffer_349() { return static_cast<int32_t>(offsetof(MPU6050_t0C410A8414574468B440DEB07CCAD8108B188A92, ___dmpPacketBuffer_349)); }
-	inline ByteU5BU5D_tD06FDBE8142446525DF1C40351D523A228373821* get_dmpPacketBuffer_349() const { return ___dmpPacketBuffer_349; }
-	inline ByteU5BU5D_tD06FDBE8142446525DF1C40351D523A228373821** get_address_of_dmpPacketBuffer_349() { return &___dmpPacketBuffer_349; }
-	inline void set_dmpPacketBuffer_349(ByteU5BU5D_tD06FDBE8142446525DF1C40351D523A228373821* value)
+	inline static int32_t get_offset_of_dmpConfig_13() { return static_cast<int32_t>(offsetof(MPU6050_t0C410A8414574468B440DEB07CCAD8108B188A92, ___dmpConfig_13)); }
+	inline ByteU5BU5D_tD06FDBE8142446525DF1C40351D523A228373821* get_dmpConfig_13() const { return ___dmpConfig_13; }
+	inline ByteU5BU5D_tD06FDBE8142446525DF1C40351D523A228373821** get_address_of_dmpConfig_13() { return &___dmpConfig_13; }
+	inline void set_dmpConfig_13(ByteU5BU5D_tD06FDBE8142446525DF1C40351D523A228373821* value)
 	{
-		___dmpPacketBuffer_349 = value;
-		Il2CppCodeGenWriteBarrier((&___dmpPacketBuffer_349), value);
+		___dmpConfig_13 = value;
+		Il2CppCodeGenWriteBarrier((&___dmpConfig_13), value);
 	}
 
-	inline static int32_t get_offset_of_dmpPacketSize_350() { return static_cast<int32_t>(offsetof(MPU6050_t0C410A8414574468B440DEB07CCAD8108B188A92, ___dmpPacketSize_350)); }
-	inline uint32_t get_dmpPacketSize_350() const { return ___dmpPacketSize_350; }
-	inline uint32_t* get_address_of_dmpPacketSize_350() { return &___dmpPacketSize_350; }
-	inline void set_dmpPacketSize_350(uint32_t value)
+	inline static int32_t get_offset_of_dmpUpdates_14() { return static_cast<int32_t>(offsetof(MPU6050_t0C410A8414574468B440DEB07CCAD8108B188A92, ___dmpUpdates_14)); }
+	inline ByteU5BU5D_tD06FDBE8142446525DF1C40351D523A228373821* get_dmpUpdates_14() const { return ___dmpUpdates_14; }
+	inline ByteU5BU5D_tD06FDBE8142446525DF1C40351D523A228373821** get_address_of_dmpUpdates_14() { return &___dmpUpdates_14; }
+	inline void set_dmpUpdates_14(ByteU5BU5D_tD06FDBE8142446525DF1C40351D523A228373821* value)
 	{
-		___dmpPacketSize_350 = value;
+		___dmpUpdates_14 = value;
+		Il2CppCodeGenWriteBarrier((&___dmpUpdates_14), value);
 	}
 
-	inline static int32_t get_offset_of_devAddr_351() { return static_cast<int32_t>(offsetof(MPU6050_t0C410A8414574468B440DEB07CCAD8108B188A92, ___devAddr_351)); }
-	inline uint8_t get_devAddr_351() const { return ___devAddr_351; }
-	inline uint8_t* get_address_of_devAddr_351() { return &___devAddr_351; }
-	inline void set_devAddr_351(uint8_t value)
+	inline static int32_t get_offset_of_dmpPacketBuffer_351() { return static_cast<int32_t>(offsetof(MPU6050_t0C410A8414574468B440DEB07CCAD8108B188A92, ___dmpPacketBuffer_351)); }
+	inline ByteU5BU5D_tD06FDBE8142446525DF1C40351D523A228373821* get_dmpPacketBuffer_351() const { return ___dmpPacketBuffer_351; }
+	inline ByteU5BU5D_tD06FDBE8142446525DF1C40351D523A228373821** get_address_of_dmpPacketBuffer_351() { return &___dmpPacketBuffer_351; }
+	inline void set_dmpPacketBuffer_351(ByteU5BU5D_tD06FDBE8142446525DF1C40351D523A228373821* value)
 	{
-		___devAddr_351 = value;
+		___dmpPacketBuffer_351 = value;
+		Il2CppCodeGenWriteBarrier((&___dmpPacketBuffer_351), value);
 	}
 
-	inline static int32_t get_offset_of_buffer_352() { return static_cast<int32_t>(offsetof(MPU6050_t0C410A8414574468B440DEB07CCAD8108B188A92, ___buffer_352)); }
-	inline ByteU5BU5D_tD06FDBE8142446525DF1C40351D523A228373821* get_buffer_352() const { return ___buffer_352; }
-	inline ByteU5BU5D_tD06FDBE8142446525DF1C40351D523A228373821** get_address_of_buffer_352() { return &___buffer_352; }
-	inline void set_buffer_352(ByteU5BU5D_tD06FDBE8142446525DF1C40351D523A228373821* value)
+	inline static int32_t get_offset_of_dmpPacketSize_352() { return static_cast<int32_t>(offsetof(MPU6050_t0C410A8414574468B440DEB07CCAD8108B188A92, ___dmpPacketSize_352)); }
+	inline uint32_t get_dmpPacketSize_352() const { return ___dmpPacketSize_352; }
+	inline uint32_t* get_address_of_dmpPacketSize_352() { return &___dmpPacketSize_352; }
+	inline void set_dmpPacketSize_352(uint32_t value)
 	{
-		___buffer_352 = value;
-		Il2CppCodeGenWriteBarrier((&___buffer_352), value);
+		___dmpPacketSize_352 = value;
+	}
+
+	inline static int32_t get_offset_of_devAddr_353() { return static_cast<int32_t>(offsetof(MPU6050_t0C410A8414574468B440DEB07CCAD8108B188A92, ___devAddr_353)); }
+	inline uint8_t get_devAddr_353() const { return ___devAddr_353; }
+	inline uint8_t* get_address_of_devAddr_353() { return &___devAddr_353; }
+	inline void set_devAddr_353(uint8_t value)
+	{
+		___devAddr_353 = value;
+	}
+
+	inline static int32_t get_offset_of_buffer_354() { return static_cast<int32_t>(offsetof(MPU6050_t0C410A8414574468B440DEB07CCAD8108B188A92, ___buffer_354)); }
+	inline ByteU5BU5D_tD06FDBE8142446525DF1C40351D523A228373821* get_buffer_354() const { return ___buffer_354; }
+	inline ByteU5BU5D_tD06FDBE8142446525DF1C40351D523A228373821** get_address_of_buffer_354() { return &___buffer_354; }
+	inline void set_buffer_354(ByteU5BU5D_tD06FDBE8142446525DF1C40351D523A228373821* value)
+	{
+		___buffer_354 = value;
+		Il2CppCodeGenWriteBarrier((&___buffer_354), value);
 	}
 };
 

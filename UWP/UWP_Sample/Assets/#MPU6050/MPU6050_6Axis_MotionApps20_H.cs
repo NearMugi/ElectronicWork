@@ -43,7 +43,7 @@ namespace MPU6050
 {
     public partial class MPU6050
     {
-
+        public bool isdmpInitialize;
         public byte devStatus;
 
         const uint MPU6050_DMP_CODE_SIZE = 1929;    // dmpMemory[]
@@ -257,10 +257,10 @@ namespace MPU6050
 
         public async void dmpInitialize()
         {
-            devStatus = 3;
             if (isInitErr) return;
 
-            devStatus = 0;
+            isdmpInitialize = false;
+
             // reset device
             //Debug.Log("Resetting MPU6050...");
             reset();
@@ -321,18 +321,13 @@ namespace MPU6050
             await Task.Delay(20);
             //delay(20);
 
-
-#if WINDOWS_UWP
-            devStatus = 4;
-            return;
-#endif
-
             // load DMP code into memory banks
             ////Debug_PRINT(F("Writing DMP code to MPU memory banks ("));
             ////Debug_PRINT(MPU6050_DMP_CODE_SIZE);
             ////Debug_PRINTLN(F(" bytes)"));
-            if (writeProgMemoryBlock(dmpMemory, MPU6050_DMP_CODE_SIZE,0,0,true))
+            if (writeProgMemoryBlock(dmpMemory, MPU6050_DMP_CODE_SIZE, 0, 0, true))
             {
+#if false
                 ////Debug_PRINTLN(F("Success! DMP code written and verified."));
 
                 // write DMP configuration
@@ -492,18 +487,23 @@ namespace MPU6050
                 {
                     ////Debug_PRINTLN(F("ERROR! DMP configuration verification failed."));
                     devStatus = 2;
+                    isdmpInitialize = true;
                     isInitErr = true;
                     return; // configuration block loading failed
                 }
+#endif
             }
             else
             {
                 ////Debug_PRINTLN(F("ERROR! DMP code verification failed."));
                 devStatus = 1;
+                isdmpInitialize = true;
                 isInitErr = true;
                 return; // main binary block loading failed
             }
             mpu6050Msg = "Success dmpInitialize\n";
+            isdmpInitialize = true;
+            devStatus = 0;
             return; // success
         }
 
