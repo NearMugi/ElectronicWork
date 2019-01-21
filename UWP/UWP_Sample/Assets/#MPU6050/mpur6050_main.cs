@@ -14,7 +14,11 @@ public class mpur6050_main : MonoBehaviour
     Text txt_Debug;
     String Msg = String.Empty;
 
-    public float[] eulerAngle = new float[3];
+    [SerializeField]
+    Transform plane;
+
+    float[] qu = new float[4];
+    float[] eulerAngle = new float[3];
 
     byte initStatus; //0 : 初期化前
                      //1 : InitHardware終了待ち
@@ -28,11 +32,11 @@ public class mpur6050_main : MonoBehaviour
     MPU6050.MPU6050 _mpu;
 
     // orientation/motion vars
-    MPU6050.MPU6050.Quaternion q;           // [w, x, y, z]         quaternion container
-    MPU6050.MPU6050.VectorInt16 aa;         // [x, y, z]            accel sensor measurements
-    MPU6050.MPU6050.VectorInt16 aaReal;     // [x, y, z]            gravity-free accel sensor measurements
-    MPU6050.MPU6050.VectorInt16 aaWorld;    // [x, y, z]            world-frame accel sensor measurements
-    MPU6050.MPU6050.VectorFloat gravity;    // [x, y, z]            gravity vector
+    MPU6050.MPU6050.Quaternion q = new MPU6050.MPU6050.Quaternion();           // [w, x, y, z]         quaternion container
+    MPU6050.MPU6050.VectorInt16 aa = new MPU6050.MPU6050.VectorInt16();         // [x, y, z]            accel sensor measurements
+    MPU6050.MPU6050.VectorInt16 aaReal = new MPU6050.MPU6050.VectorInt16();     // [x, y, z]            gravity-free accel sensor measurements
+    MPU6050.MPU6050.VectorInt16 aaWorld = new MPU6050.MPU6050.VectorInt16();    // [x, y, z]            world-frame accel sensor measurements
+    MPU6050.MPU6050.VectorFloat gravity = new MPU6050.MPU6050.VectorFloat();    // [x, y, z]            gravity vector
     float[] euler = new float[3];         // [psi, theta, phi]    Euler angle container
     float[] ypr = new float[3];           // [yaw, pitch, roll]   yaw/pitch/roll container and gravity vector
 
@@ -75,7 +79,7 @@ public class mpur6050_main : MonoBehaviour
             }
             else if ((mpuIntStatus & 0x02) != 0 && (packetSize <= fifoCount))
             {
-                Msg = "Read FIFO Data\n";
+                Msg = "Read FIFO Data\n"; // + fifoCount + "\n";
                 // データの読み出し可能
                 // FIFOよりデータを読み出す
                 _mpu.getFIFOBytes(ref fifoBuffer, packetSize);
@@ -128,7 +132,7 @@ public class mpur6050_main : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        eulerAngle = new float[] { 0.0f, 0.0f, 0.0f };
+        qu = new float[] {0.0f, 0.0f, 0.0f, 0.0f };
         initStatus = 0;
 
         CalOfs = new int[] { 167, -27, -18, 1072 };
@@ -157,11 +161,10 @@ public class mpur6050_main : MonoBehaviour
             case 2:
                 if (!_mpu.isdmpInitialize) return;
 
-#if false                
-                _mpu.setXGyroOffset(CalOfs[0]);
-                _mpu.setYGyroOffset(CalOfs[1]);
-                _mpu.setZGyroOffset(CalOfs[2]);
-                _mpu.setZAccelOffset(CalOfs[3]);
+//                _mpu.setXGyroOffset(CalOfs[0]);
+//                _mpu.setYGyroOffset(CalOfs[1]);
+//                _mpu.setZGyroOffset(CalOfs[2]);
+//                _mpu.setZAccelOffset(CalOfs[3]);
 
                 // make sure it worked (returns 0 if so)
                 if (_mpu.devStatus == 0)
@@ -195,14 +198,14 @@ public class mpur6050_main : MonoBehaviour
                     //Serial.println(F(")"));
                     _mpu.devStatus = 2;
                 }
-#endif
 
                 initStatus = 3;
                 break;
 
             case 3:
-                //        updateValue();
-                //        getEulerAngle(ref eulerAngle);                
+                updateValue();
+                getEulerAngle(ref eulerAngle);
+                getQuaternion(ref qu);                
                 break;
 
             default:
@@ -214,38 +217,49 @@ public class mpur6050_main : MonoBehaviour
 
 
 
-
-        _mpu.ischkInitErr();
-        switch (_mpu.devStatus)
+        if(initStatus != 3)
         {
-            case 0:
-                Msg = "Error is Nothing\n";
-                break;
-            case 1:
-                Msg = "initial memory load failed\n";
-                break;
-            case 2:
-                Msg = "DMP configuration updates failed\n";
-                break;
-            case 3:
-                Msg = "Init Error\n";
-                break;
-            case 4:
-                Msg = "Debug Return\n";
-                break;
-            case 5:
-                Msg = "isInitErr True \n";
-                break;
+            _mpu.ischkInitErr();
+            switch (_mpu.devStatus)
+            {
+                case 0:
+                    Msg = "Error is Nothing\n";
+                    break;
+                case 1:
+                    Msg = "initial memory load failed\n";
+                    break;
+                case 2:
+                    Msg = "DMP configuration updates failed\n";
+                    break;
+                case 3:
+                    Msg = "Init Error\n";
+                    break;
+                case 4:
+                    Msg = "Debug Return\n";
+                    break;
+                case 5:
+                    Msg = "isInitErr True \n";
+                    break;
 
-            default:
-                break;
+                default:
+                    break;
+            }
+
+
         }
 
-        txt_Debug.text = initStatus.ToString();
-        txt_Debug.text += "\n";
+        txt_Debug.text = String.Empty;
+//        txt_Debug.text += initStatus.ToString();
+//        txt_Debug.text += "\n";
         txt_Debug.text += _mpu.mpu6050Msg;
         txt_Debug.text += Msg;
-        txt_Debug.text += eulerAngle[0];
+        txt_Debug.text += eulerAngle[0].ToString("0.00");
+        txt_Debug.text += ",";
+        txt_Debug.text += eulerAngle[1].ToString("0.00");
+        txt_Debug.text += ",";
+        txt_Debug.text += eulerAngle[2].ToString("0.00");
 
+        //plane.localRotation = new Quaternion(qu[1], qu[2], qu[3], qu[0]);
+        plane.localEulerAngles = new Vector3(eulerAngle[0], eulerAngle[1], eulerAngle[2]);
     }
 }

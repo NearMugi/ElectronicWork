@@ -516,10 +516,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   txt_Debug: {fileID: 1198056275}
-  eulerAngle:
-  - 0
-  - 0
-  - 0
+  plane: {fileID: 13511115}
 --- !u!1 &1198056274
 GameObject:
   m_ObjectHideFlags: 0

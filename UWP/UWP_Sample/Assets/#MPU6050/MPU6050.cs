@@ -241,7 +241,6 @@ namespace MPU6050
 
         public void getFIFOBytes(ref byte[] data, uint length)
         {
-            data = new byte[data.Length];
             if (length > 0)
             {
                 readBytes(devAddr, MPU6050_RA_FIFO_R_W, (byte)length, ref data);            
@@ -344,35 +343,27 @@ namespace MPU6050
             writeByte(devAddr, MPU6050_RA_MEM_START_ADDR, address);
         }
 
-        void readMemoryBlock(byte[] data, int ofs, uint dataSize, byte bank, byte address)
+        //1か所からしか呼ばれない
+        //chunkSize = dataSizeで問題ない
+        void readMemoryBlock(ref byte[] data, uint dataSize, byte bank, byte address)
         {
             setMemoryBank(bank,false,false);
             setMemoryStartAddress(address);
-            byte chunkSize;
             for (uint i = 0; i < dataSize;)
             {
-                // determine correct chunk size according to bank position and data size
-                chunkSize = MPU6050_DMP_MEMORY_CHUNK_SIZE;
-
-                // make sure we don't go past the data size
-                if (i + chunkSize > dataSize) chunkSize = (byte)(dataSize - i);
-
-                // make sure this chunk doesn't go past the bank boundary (256 bytes)
-                if (chunkSize > 256 - address) chunkSize = (byte)(256 - address);
-
                 // read the chunk of data as specified
-                byte[] _tmp = new byte[chunkSize];
-                readBytes(devAddr, MPU6050_RA_MEM_R_W, chunkSize, ref _tmp);
-                for(int j = 0; j < chunkSize; j++)
+                byte[] _tmp = new byte[dataSize];
+                readBytes(devAddr, MPU6050_RA_MEM_R_W, (byte)dataSize, ref _tmp);
+                for(int j = 0; j < dataSize; j++)
                 {
-                    data[ofs + j] = _tmp[j];
+                    data[j] = _tmp[j];
                 }
 
                 // increase byte index by [chunkSize]
-                i += chunkSize;
+                i += dataSize;
 
                 // byte automatically wraps to 0 at 256
-                address += chunkSize;
+                address += (byte)dataSize;
 
                 // if we aren't done, update bank (if necessary) and address
                 if (i < dataSize)
@@ -399,34 +390,19 @@ namespace MPU6050
             return ret;
         }
 
-//        bool writeMemoryBlock(const byte* data, uint dataSize, byte bank, byte address, bool verify, bool useProgMem) {        
-        bool writeMemoryBlock(byte[] data, int ofs, uint dataSize, byte bank, byte address, bool verify, bool useProgMem) {
+        //bool writeMemoryBlock(const byte* data, uint dataSize, byte bank, byte address, bool verify, bool useProgMem) {  
+        //verifyはTrueしかない。
+        //dataは定数の配列
+        //useProgMemに関係なく同じ処理になる
+        bool writeMemoryBlock(byte[] data, uint dataSize, byte bank, byte address) {
+            byte chunkSize;
+            byte[] verifyBuffer = new byte[MPU6050_DMP_MEMORY_CHUNK_SIZE];
+            byte[] progBuffer; //byte*
+
             setMemoryBank(bank, false, false);
             setMemoryStartAddress(address);
-            byte chunkSize;
-            byte[] verifyBuffer; //byte*
-            byte[] progBuffer; //byte*
-            uint i;
-            byte j;
 
-            if (verify)
-            {
-                verifyBuffer = new byte[MPU6050_DMP_MEMORY_CHUNK_SIZE];
-            } else
-            {
-                verifyBuffer = new byte[] { 0 };
-            }
-
-
-            if (useProgMem)
-            {
-                progBuffer = new byte[MPU6050_DMP_MEMORY_CHUNK_SIZE];
-            } else
-            {
-                progBuffer = new byte[] { 0 };
-            }
-
-            for (i = 0; i < dataSize;)
+            for (int i = 0; i < dataSize;)
             {
                 // determine correct chunk size according to bank position and data size
                 chunkSize = MPU6050_DMP_MEMORY_CHUNK_SIZE;
@@ -437,31 +413,20 @@ namespace MPU6050
                 // make sure this chunk doesn't go past the bank boundary (256 bytes)
                 if (chunkSize > 256 - address) chunkSize = (byte)(256 - address);
 
-                if (useProgMem)
-                {
-                    // write the chunk of data as specified
-                    for (j = 0; j < chunkSize; j++) progBuffer[j] = data[ofs + i + j]; //pgm_read_byte(data + i + j)
-                }
-                else
-                {
-                    // write the chunk of data as specified
-                    progBuffer[0] = data[ofs + i];
-                }
+
+                // write the chunk of data as specified
+                progBuffer = new byte[chunkSize];
+                for (int j = 0; j < chunkSize; j++) progBuffer[j] = data[i + j]; //pgm_read_byte(data + i + j)
 
                 writeBytes(devAddr, MPU6050_RA_MEM_R_W, chunkSize, progBuffer);
 
-                // verify data if needed
-                if (verify) //verify && verifyBuffer
+                // verify data
+                setMemoryBank(bank, false, false);
+                setMemoryStartAddress(address);
+                readBytes(devAddr, MPU6050_RA_MEM_R_W, chunkSize, ref verifyBuffer);
+                if (memcmp(progBuffer, verifyBuffer, chunkSize) != 0)
                 {
-                    setMemoryBank(bank, false, false);
-                    setMemoryStartAddress(address);
-                    readBytes(devAddr, MPU6050_RA_MEM_R_W, chunkSize, ref verifyBuffer);
-                    if (memcmp(progBuffer, verifyBuffer, chunkSize) != 0)
-                    {
-                        //free(verifyBuffer);
-                        //if (useProgMem) free(progBuffer);
-                        return false; // uh oh.
-                    }
+                    return false; // uh oh.
                 }
 
                 // increase byte index by [chunkSize]
@@ -478,86 +443,52 @@ namespace MPU6050
                     setMemoryStartAddress(address);
                 }
             }
-            //if (verify) free(verifyBuffer);
-            //if (useProgMem) free(progBuffer);
             return true;
         }
 
         //bool writeProgMemoryBlock(const byte* data, uint dataSize, byte bank, byte address, bool verify)
-        bool writeProgMemoryBlock(byte[] data, uint dataSize, byte bank, byte address, bool verify)
+        bool writeProgMemoryBlock(byte[] data, uint dataSize, byte bank, byte address)
         {
-            return writeMemoryBlock(data, 0, dataSize, bank, address, verify, true);
+            return writeMemoryBlock(data, dataSize, bank, address);
         }
 
-        //        bool writeDMPConfigurationSet(const byte* data, uint dataSize, bool useProgMem)
-        bool writeDMPConfigurationSet(ref byte[] data, uint dataSize, bool useProgMem)
+        //bool writeDMPConfigurationSet(const byte* data, uint dataSize, bool useProgMem)
+        //useProgMemはTrueしかない。
+        //data -> dmpConfig
+        //dataSize -> MPU6050_DMP_CONFIG_SIZE(192)
+        bool writeDMPConfigurationSet()
         {
-            byte[] progBuffer;
-            bool success;
-            byte special;
-            uint i, j;
-
-            if (useProgMem)
-            {
-                progBuffer = new byte[8]; // assume 8-byte blocks, realloc later if necessary
-            } else
-            {
-                progBuffer = new byte[] { 0 };
-            }
+            
+            bool success = true;
 
             // config set data is a long string of blocks with the following structure:
             // [bank] [offset] [length] [byte[0], byte[1], ..., byte[length]]
             byte bank, offset, length;
-            for (i = 0; i < dataSize;)
+            for (int i = 0; i < MPU6050_DMP_CONFIG_SIZE;)
             {
-                //違いが分からない・・・
-                if (useProgMem)
-                {
-                    bank = data[i++]; //pgm_read_byte(data + i++);
-                    offset = data[i++]; //pgm_read_byte(data + i++);
-                    length = data[i++]; //pgm_read_byte(data + i++);
-                }
-                else
-                {
-                    bank = data[i++];
-                    offset = data[i++];
-                    length = data[i++];
-                }
+                //最初の3バイトはBank,Offset,Length
+                bank = dmpConfig[i]; //pgm_read_byte(data + i++);
+                offset = dmpConfig[i+1]; //pgm_read_byte(data + i++);
+                length = dmpConfig[i+2]; //pgm_read_byte(data + i++);
+                i += 3;
 
                 // write data or perform special action
                 if (length > 0)
                 {
-                    //何をしているのかさっぱり・・・
-                    if (useProgMem)
+                    byte[] progBuffer = new byte[length];
+                    for (int j = 0; j < length; j++)
                     {
-                        if (progBuffer.Length < length)
-                        {
-                            //progBuffer = (byte*)realloc(progBuffer, length);
-                            for(int k = 0; k < length; k++)
-                            {
-                                progBuffer[k] = progBuffer[k];
-                            }
-                        }
-                        for (j = 0; j < length; j++) progBuffer[j] = data[i + j]; // pgm_read_byte(data + i + j);
+                        progBuffer[j] = dmpConfig[i + j]; // pgm_read_byte(data + i + j);
                     }
-                    else
-                    {
-                        progBuffer[0] = data[i];
-                    }
-                    success = writeMemoryBlock(progBuffer, 0, length, bank, offset, true, false);
+                    //success = writeMemoryBlock(progBuffer, length, bank, offset, true, false);
+                    success = writeMemoryBlock(progBuffer, length, bank, offset);
                     i += length;
                 }
                 else
                 {
-                    //違いが分からない・・・
-                    if (useProgMem)
-                    {
-                        special = data[i++];  //pgm_read_byte(data + i++);
-                    }
-                    else
-                    {
-                        special = data[i++];
-                    }
+                    //dmpConfigの中で1か所だけ該当。
+                    //0x00,   0x00,   0x00,   0x01,                     // SET INT_ENABLE at i=22, SPECIAL INSTRUCTION
+                    byte special = dmpConfig[i++];  //pgm_read_byte(data + i++);
                     if (special == 0x01)
                     {
                         writeByte(devAddr, MPU6050_RA_INT_ENABLE, 0x32);  // single operation
@@ -573,18 +504,11 @@ namespace MPU6050
 
                 if (!success)
                 {
-                    //if (useProgMem) free(progBuffer);
                     return false; // uh oh
                 }
             }
-            //if (useProgMem) free(progBuffer);
+            
             return true;
-        }
-
-        //        bool writeProgDMPConfigurationSet(const byte* data, uint dataSize)
-        bool writeProgDMPConfigurationSet(ref byte[] data, uint dataSize)
-        {
-            return writeDMPConfigurationSet(ref data, dataSize, true);
         }
         
         void setDMPConfig1(byte config)

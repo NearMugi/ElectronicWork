@@ -227,8 +227,9 @@ namespace MPU6050
             0x04,   0x02,   0x03,   0x0D, 0x35, 0x5D,         // CFG_MOTION_BIAS inv_turn_on_bias_from_no_motion
             0x04,   0x09,   0x04,   0x87, 0x2D, 0x35, 0x3D,   // FCFG_5 inv_set_bias_update
             0x00,   0xA3,   0x01,   0x00,                     // D_0_163 inv_set_dead_zone
-                         // SPECIAL 0x01 = enable interrupts
-            0x00,   0x00,   0x00,   0x01, // SET INT_ENABLE at i=22, SPECIAL INSTRUCTION
+            
+            // SPECIAL 0x01 = enable interrupts
+            0x00,   0x00,   0x00,   0x01,                     // SET INT_ENABLE at i=22, SPECIAL INSTRUCTION
             0x07,   0x86,   0x01,   0xFE,                     // CFG_6 inv_set_fifo_interupt
             0x07,   0x41,   0x05,   0xF1, 0x20, 0x28, 0x30, 0x38, // CFG_8 inv_send_quaternion
             0x07,   0x7E,   0x01,   0x30,                     // CFG_16 inv_set_footer
@@ -325,17 +326,17 @@ namespace MPU6050
             ////Debug_PRINT(F("Writing DMP code to MPU memory banks ("));
             ////Debug_PRINT(MPU6050_DMP_CODE_SIZE);
             ////Debug_PRINTLN(F(" bytes)"));
-            if (writeProgMemoryBlock(dmpMemory, MPU6050_DMP_CODE_SIZE, 0, 0, true))
+            if (writeProgMemoryBlock(dmpMemory, MPU6050_DMP_CODE_SIZE, 0, 0))
             {
-#if false
                 ////Debug_PRINTLN(F("Success! DMP code written and verified."));
 
                 // write DMP configuration
                 ////Debug_PRINT(F("Writing DMP configuration to MPU memory banks ("));
                 ////Debug_PRINT(MPU6050_DMP_CONFIG_SIZE);
                 ////Debug_PRINTLN(F(" bytes in config def)"));
-                if (writeProgDMPConfigurationSet(ref dmpConfig, MPU6050_DMP_CONFIG_SIZE))
+                if (writeDMPConfigurationSet())
                 {
+#if true
                     ////Debug_PRINTLN(F("Success! DMP configuration written and verified."));
 
                     ////Debug_PRINTLN(F("Setting clock source to Z Gyro..."));
@@ -376,15 +377,14 @@ namespace MPU6050
                     //setZGyroOffset(0);
 
                     ////Debug_PRINTLN(F("Writing final memory update 1/7 (function unknown)..."));
-                    byte[] dmpUpdate = new byte[16];
-                    byte j;
+                    //dmpUpdatesの反映(1/7)
                     uint pos = 0;
-                    for (j = 0; j < 4 || j < dmpUpdate[2] + 3; j++, pos++) dmpUpdate[j] = dmpUpdates[pos]; //pgm_read_byte(&dmpUpdates[pos]);
-                    writeMemoryBlock(dmpUpdate, 3, dmpUpdate[2], dmpUpdate[0], dmpUpdate[1], true, false);
+                    pos = writeMemoriBlock_dmpUpdates(pos);
 
                     ////Debug_PRINTLN(F("Writing final memory update 2/7 (function unknown)..."));
-                    for (j = 0; j < 4 || j < dmpUpdate[2] + 3; j++, pos++) dmpUpdate[j] = dmpUpdates[pos]; //pgm_read_byte(&dmpUpdates[pos]);
-                    writeMemoryBlock(dmpUpdate, 3, dmpUpdate[2], dmpUpdate[0], dmpUpdate[1], true, false);
+                    //dmpUpdatesの反映(2/7)
+                    pos = writeMemoriBlock_dmpUpdates(pos);
+
 
                     ////Debug_PRINTLN(F("Resetting FIFO..."));
                     resetFIFO();
@@ -422,16 +422,16 @@ namespace MPU6050
                     resetDMP();
 
                     ////Debug_PRINTLN(F("Writing final memory update 3/7 (function unknown)..."));
-                    for (j = 0; j < 4 || j < dmpUpdate[2] + 3; j++, pos++) dmpUpdate[j] = dmpUpdates[pos]; //pgm_read_byte(&dmpUpdates[pos]);
-                    writeMemoryBlock(dmpUpdate, 3, dmpUpdate[2], dmpUpdate[0], dmpUpdate[1], true, false);
+                    //dmpUpdatesの反映(3/7)
+                    pos = writeMemoriBlock_dmpUpdates(pos);
 
                     ////Debug_PRINTLN(F("Writing final memory update 4/7 (function unknown)..."));
-                    for (j = 0; j < 4 || j < dmpUpdate[2] + 3; j++, pos++) dmpUpdate[j] = dmpUpdates[pos]; //pgm_read_byte(&dmpUpdates[pos]);
-                    writeMemoryBlock(dmpUpdate, 3, dmpUpdate[2], dmpUpdate[0], dmpUpdate[1], true, false);
+                    //dmpUpdatesの反映(4/7)
+                    pos = writeMemoriBlock_dmpUpdates(pos);
 
                     ////Debug_PRINTLN(F("Writing final memory update 5/7 (function unknown)..."));
-                    for (j = 0; j < 4 || j < dmpUpdate[2] + 3; j++, pos++) dmpUpdate[j] = dmpUpdates[pos]; //pgm_read_byte(&dmpUpdates[pos]);
-                    writeMemoryBlock(dmpUpdate, 3, dmpUpdate[2], dmpUpdate[0], dmpUpdate[1], true, false);
+                    //dmpUpdatesの反映(5/7)
+                    pos = writeMemoriBlock_dmpUpdates(pos);
 
                     ////Debug_PRINTLN(F("Waiting for FIFO count > 2..."));
                     while ((fifoCount = getFIFOCount()) < 3) ;
@@ -447,8 +447,8 @@ namespace MPU6050
                     ////Debug_PRINTLNF(getIntStatus(), HEX);
 
                     ////Debug_PRINTLN(F("Reading final memory update 6/7 (function unknown)..."));
-                    for (j = 0; j < 4 || j < dmpUpdate[2] + 3; j++, pos++) dmpUpdate[j] = dmpUpdates[pos]; //pgm_read_byte(&dmpUpdates[pos]);
-                    readMemoryBlock(dmpUpdate, 3, dmpUpdate[2], dmpUpdate[0], dmpUpdate[1]);
+                    //dmpUpdatesの反映(6/7) ※Read！
+                    pos = ReadMemoriBlock_dmpUpdates(pos);
 
                     ////Debug_PRINTLN(F("Waiting for FIFO count > 2..."));
                     while ((fifoCount = getFIFOCount()) < 3) ;
@@ -465,8 +465,8 @@ namespace MPU6050
                     ////Debug_PRINTLNF(getIntStatus(), HEX);
 
                     ////Debug_PRINTLN(F("Writing final memory update 7/7 (function unknown)..."));
-                    for (j = 0; j < 4 || j < dmpUpdate[2] + 3; j++, pos++) dmpUpdate[j] = dmpUpdates[pos]; //pgm_read_byte(&dmpUpdates[pos]);
-                    writeMemoryBlock(dmpUpdate, 3, dmpUpdate[2], dmpUpdate[0], dmpUpdate[1], true, false);
+                    //dmpUpdatesの反映(7/7)
+                    pos = writeMemoriBlock_dmpUpdates(pos);
 
                     ////Debug_PRINTLN(F("DMP is good to go! Finally."));
 
@@ -482,6 +482,8 @@ namespace MPU6050
                     //Debug.Log("Resetting FIFO and clearing INT status one last time...");
                     resetFIFO();
                     getIntStatus();
+#endif
+
                 }
                 else
                 {
@@ -491,7 +493,6 @@ namespace MPU6050
                     isInitErr = true;
                     return; // configuration block loading failed
                 }
-#endif
             }
             else
             {
@@ -501,11 +502,63 @@ namespace MPU6050
                 isInitErr = true;
                 return; // main binary block loading failed
             }
+
+
             mpu6050Msg = "Success dmpInitialize\n";
             isdmpInitialize = true;
             devStatus = 0;
             return; // success
         }
+
+
+        uint writeMemoriBlock_dmpUpdates(uint targetPos)
+        {
+            uint retPos = 0;
+
+            uint pos = targetPos;
+            byte[] dmpUpdate;
+            uint dataSize; byte bank; byte address;
+
+            dataSize = dmpUpdates[targetPos + 2];
+            bank = dmpUpdates[targetPos];
+            address = dmpUpdates[pos + 1];
+            dmpUpdate = new byte[dataSize];
+            pos += 3;
+            for (int j = 0; j < dataSize; j++, pos++)
+            {
+                dmpUpdate[j] = dmpUpdates[pos];
+            }
+            writeMemoryBlock(dmpUpdate, dataSize, bank, address);
+            retPos = targetPos + 3 + dataSize;
+
+            return retPos;
+        }
+
+        uint ReadMemoriBlock_dmpUpdates(uint targetPos)
+        {
+            uint retPos = 0;
+
+            uint pos = targetPos;
+            byte[] dmpUpdate;
+            uint dataSize; byte bank; byte address;
+
+            dataSize = dmpUpdates[targetPos + 2];
+            bank = dmpUpdates[targetPos];
+            address = dmpUpdates[pos + 1];
+            dmpUpdate = new byte[dataSize];
+            pos += 3;
+            for (int j = 0; j < dataSize; j++, pos++)
+            {
+                dmpUpdate[j] = dmpUpdates[pos];
+            }
+            readMemoryBlock(ref dmpUpdate, dataSize, bank, address);
+            retPos = targetPos + 3 + dataSize;
+
+            return retPos;
+        }
+
+
+
 
         bool dmpPacketAvailable()
         {
