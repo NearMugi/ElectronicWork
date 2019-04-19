@@ -1,3 +1,4 @@
 # ElectronicWork
 電子パーツをArduinoで動かす。  
-Arudinoのサンプルプログラムを管理する。
+Arudinoなどのサンプルプログラムを管理する。
+ESP32は別のリポジトリで管理。
