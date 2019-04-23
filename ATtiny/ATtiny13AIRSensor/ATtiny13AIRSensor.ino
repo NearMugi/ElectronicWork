@@ -1,4 +1,6 @@
 // ATtiny13Aで赤外線リモコン受信
+
+//ボードは「MicroCore」のATtiny13を使用する
 // 利用パッケージ：https://github.com/MCUdude/MicroCore
 // 注意： core_settings.h の#ENABLE_MICROS を有効にする必要あり
 //
@@ -23,12 +25,17 @@
 #define IR_PININ      PINB
 #define IRbitRead()   (IR_PININ&_BV(IR))   //※受信データはH/L反転で読まれる
 #define RC_RDH_TS     9000    // リーダコードOFF間隔  9ms判定用
-#define RC_RDL_TS     3800    // リーダコードON間隔   4.5ms判定用
+#define RC_RDL_TS     4300    // リーダコードON間隔   4.5ms判定用
 #define RC_BITLOW_TS  1000    // ビットデータON間隔   1.69ms判定用  
 #define RC_TMOVER     8000    // タイムオバー
 
 #define READ_ERR 0xFFFFFFFF
 #define READ_REPEAT 0xFFFF0000
+
+#define POWER 0x001B
+#define BTN_A 0x001F
+#define BTN_B 0x001E
+#define BTN_C 0x001A
 
 uint32_t rc;
 uint16_t custmerCode;
@@ -98,8 +105,28 @@ void loop() {
     custmerCode = rc >> 16;
     readData = rc >> 8 & 0xff;
   }
+
+  //画面に表示
   serOutHex(custmerCode);
   serOut(" ");
   serOutHex(readData);
+
+  switch (readData) {
+    case POWER:
+      serOut(" POWER");
+      break;
+    case BTN_A:
+      serOut(" A");
+      break;
+    case BTN_B:
+      serOut(" B");
+      break;
+    case BTN_C:
+      serOut(" C");
+      break;
+  }
+
+  if (rc == READ_REPEAT) serOut(" Repeat");
+
   serOut("\n\r");
 }
