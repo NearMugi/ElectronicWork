@@ -2,23 +2,31 @@
 #include "ShiftRegister.h"
 
 //コンストラクタ
-ShiftRegisterManage::ShiftRegisterManage() {
-
+ShiftRegisterManage::ShiftRegisterManage()
+{
 }
 
 //initialize
-void ShiftRegisterManage::Init() {
+void ShiftRegisterManage::Init()
+{
   pinMode(PIN_LATCH, OUTPUT);
   pinMode(PIN_CLOCK, OUTPUT);
   pinMode(PIN_DATA, OUTPUT);
 }
 
-void ShiftRegisterManage::SendData(byte b){
+void ShiftRegisterManage::SendData(int b[], int sendDataSize)
+{
   // 送信中のPIN_LATCHはグランド(LOW)レベル
   digitalWrite(PIN_LATCH, LOW);
   // シフト演算を使って点灯するパネルを指定
-  shiftOut(PIN_DATA, PIN_CLOCK, LSBFIRST, b);
+  for (int i = sendDataSize; i >= 0; i--)
+  {
+    //Serial.print(b[i]);
+    digitalWrite(PIN_DATA, b[i]);
+    digitalWrite(PIN_CLOCK, HIGH);
+    digitalWrite(PIN_CLOCK, LOW);
+  }
   // 送信終了後PIN_LATCHをHIGHにする
   digitalWrite(PIN_LATCH, HIGH);
+  //Serial.println("");
 }
-
