@@ -1,6 +1,8 @@
 #include "Arduino.h"
 #include "Lump.h"
-#include "LumpPtn.h"
+//#include "LumpPtn.h"
+//#include "LumpPtn_2.h"
+#include "LumpPtn_3.h"
 
 void LumpManage::SetLumpTable(int no, const int ptn[], int _size)
 {
