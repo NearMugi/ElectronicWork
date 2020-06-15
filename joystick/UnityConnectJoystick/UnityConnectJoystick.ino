@@ -1,4 +1,4 @@
-//Arduino <-> Unity Connect
+// Arduino <-> Unity Connect
 #include "ConnectUnityManage.h"
 #include "interval.h"
 #include <FlexiTimer2.h>
@@ -10,15 +10,13 @@
 ConnectUnityManage con;
 
 //SendData Format ※別の変数にコピーしてから置換する
-String sendData = "255,@1,@2\t"; //ヘッダー0xFF
+String sendData = "255,@1\t"; //ヘッダー0xFF
 
 const unsigned int LOOP_TIME_US = 16600; //ループ関数の周期(μsec)
 
 #define PIN_SW 8
 #define PIN_X A0
 #define PIN_Y A1
-
-#define PIN_BTN 4
 
 bool isOn;
 bool isWait;
@@ -30,7 +28,6 @@ void setup()
 {
   con.Init();
   pinMode(PIN_SW, INPUT_PULLUP);
-  pinMode(PIN_BTN, INPUT_PULLUP);
 
   isWait = false;
   waitTime = millis();
@@ -83,8 +80,7 @@ void SetSendData()
   con.sendData = "";
   String _tmp = "";
   _tmp = sendData;
-  _tmp.replace("@1", String(digitalRead(PIN_BTN)));
-  _tmp.replace("@2", String(isOn));
+  _tmp.replace("@1", String(isOn));
   con.sendData = _tmp;
 
   //送信
