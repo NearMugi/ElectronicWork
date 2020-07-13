@@ -1,60 +1,36 @@
 // PhotoInterrupter
 // KODENSHI SG2A02
+#include <FlexiTimer2.h>
 #include "intervalMs.h"
+#include "photoInterrupter.h"
 #define PIN_ON A0
-#define MAX_CNT 7
-#define ON_THRESHOLD 5
-int inputBox[MAX_CNT];
-int inputMax;
+#define CHECK_INTERRUPT 15
+#define ON_THRESHOLD 75
+photoInterrupter pi;
 
-// 入力値を保存する箱を初期化
-void initInputBox()
+#define LOOPTIME_LOG 5
+
+//割り込み処理
+void interrupt_loop()
 {
-    for (int i = 0; i < MAX_CNT; i++)
-    {
-        inputBox[i] = 0;
-    }
-}
-
-// 最大値が閾値を超えたか判定する
-bool jdgThreshold(int _v)
-{
-    inputMax = _v;
-    bool isOn = false;
-    // 箱に入れる
-    for (int i = 0; i < MAX_CNT - 1; i++)
-    {
-        inputBox[i] = inputBox[i + 1];
-        if (inputBox[i] > inputMax)
-        {
-            inputMax = inputBox[i];
-        }
-    }
-    inputBox[MAX_CNT - 1] = _v;
-
-    if (inputMax >= ON_THRESHOLD)
-        isOn = true;
-    return isOn;
+    pi.chkLoopTime();
 }
 
 void setup()
 {
     Serial.begin(115200);
-    initInputBox();
+    //割込み
+    FlexiTimer2::set(CHECK_INTERRUPT, interrupt_loop);
+    FlexiTimer2::start();
+    pi.init(ON_THRESHOLD, PIN_ON);
 }
 
 void loop()
 {
-    interval<10>::run([] {
-        int v = analogRead(PIN_ON);
-        bool isOn = jdgThreshold(v);
-        Serial.println(isOn);
-#if false
-        Serial.print(v);
+    interval<LOOPTIME_LOG>::run([] {
+        Serial.print((float)(pi.analogData) / ON_THRESHOLD);
         Serial.print(",");
-        Serial.print(inputMax);
-        Serial.print(",");
-        Serial.println(isOn);
-#endif
+        Serial.print(pi.isOn);
+        Serial.println("");
     });
 }
